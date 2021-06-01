@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>masscan</id>
+    <version>1.3.2.1</version>
+    <title>MASSCAN</title>
+    <authors>robertdavidgraham</authors>
+    <owners>asheroto</owners>
+    <licenseUrl>https://github.com/robertdavidgraham/masscan/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/robertdavidgraham/masscan</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+### MASSCAN: Mass IP port scanner
+This is an Internet-scale port scanner. It can scan the entire Internet in under 5 minutes, transmitting 10 million packets per second, from a single machine.
+
+Its usage (parameters, output) is similar to nmap, the most famous port scanner. When in doubt, try one of those features -- features that support widespread scanning of many machines are supported, while in-depth scanning of single machines aren't.
+
+Internally, it uses asynchronous transmission, similar to port scanners like scanrand, unicornscan, and ZMap. It's more flexible, allowing arbitrary port and address ranges.
+
+NOTE: masscan uses its own ad hoc TCP/IP stack. Anything other than simple port scans may cause conflict with the local TCP/IP stack. This means you need to use either the --src-ip option to run from a different IP address, or use --src-port to configure which source ports masscan uses, then also configure the internal firewall (like pf or iptables) to firewall those ports from the rest of the operating system.
+
+**[PACKAGE NOTES](https://github.com/asheroto/ChocolateyPackages/blob/master/masscan/readme.md)**</description>
+    <summary>Internet-scale port scanner. It can scan the entire Internet in under 5 minutes.</summary>
+    <releaseNotes>https://github.com/robertdavidgraham/masscan/releases</releaseNotes>
+    <tags>masscan ip port scanner network</tags>
+    <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/masscan</packageSourceUrl>
+    <docsUrl>https://github.com/robertdavidgraham/masscan</docsUrl>
+  </metadata>
+</package>
+
