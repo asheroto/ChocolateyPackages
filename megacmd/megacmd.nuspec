@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>megacmd</id>
-    <version>1.4.0.0</version>
+    <version>1.4.1.0</version>
     <title>MEGAcmd</title>
     <authors>Mega Limited</authors>
     <owners>asheroto</owners>

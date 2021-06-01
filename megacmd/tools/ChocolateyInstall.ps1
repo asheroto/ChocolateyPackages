@@ -7,9 +7,9 @@ $url32          = 'https://mega.nz/MEGAcmdSetup32.exe'
 $checksum32     = '2c618a7030f251873aefba685ae84adf3b2d5696f9b421c04f5be6ef70f83136'
 $url64          = 'https://mega.nz/MEGAcmdSetup64.exe'
 $checksum64     = '6150fa3da6bc43fc597901fcd3ae3fae6cfd79ae94f362277d64f6d205939e91'
-$silentArgs     = '/s'
+$silentArgs     = '/S'
 $validExitCodes = @(0)
-$fileLocation   = "$toolsPath\MEGAcmdSetup.1.4.0.0.exe"
+$fileLocation   = "$toolsPath\MEGAcmdSetup.exe"
 
 if($bits -eq 64) {
     $url = $url64
