@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>mega-chrome</id>
+    <version>3.119.0</version>
+    <title>MEGA for Chrome</title>
+    <authors>Mega Limited</authors>
+    <owners>asheroto</owners>
+    <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/mega-chrome</packageSourceUrl>
+    <projectUrl>https://chrome.google.com/webstore/detail/mega/bigefpfhnfcobdlfbedofhhaibnlghod</projectUrl>
+    <bugTrackerUrl>https://chrome.google.com/webstore/detail/mega/bigefpfhnfcobdlfbedofhhaibnlghod</bugTrackerUrl>
+    <iconUrl>https://lh3.googleusercontent.com/RPhHkr43fHnROzpXY6q03k9OaWHIbU9LGM0Yb7TJ1qdNDEcidqWNZ8DResTLqdp0zg_5WIcVsNmvCM5xyGRnSk9BTA=w128-h128-e365-rj-sc0x00ffffff</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+##MEGA for Chrome
+
+MEGA web extension app.
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary>MEGA Chrome addon</summary>
+    <tags>chrome extension mega</tags>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

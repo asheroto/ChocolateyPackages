@@ -31,21 +31,21 @@ The Collection Library makes it easy to see which computers have out-of-date pop
 ### Find What You Want, When You Want
 PDQ Inventory offers customization in what data is gathered and when. Make sure the information most important to you is at hand at the time it’s needed. Easily scan for:
 
-* Active Directory	
-* Applications	
-* Computer Details 
-* Disks	
-* Displays	
-* Environment Variables 
-* Files	
-* Hardware Devices	
-* Hot Fixes 
-* Memory Modules	
-* Network Adapters	
-* Printers Registry	Services	
-* Shares 
-* Users and Groups	
-* Windows Features	
+* Active Directory
+* Applications
+* Computer Details
+* Disks
+* Displays
+* Environment Variables
+* Files
+* Hardware Devices
+* Hot Fixes
+* Memory Modules
+* Network Adapters
+* Printers Registry	Services
+* Shares
+* Users and Groups
+* Windows Features
 
 ### Multi-Admin Access With a Shared Database
 Share your reports and collections with other admins by creating a server/client relationship. Maybe they’ll buy you a drink for all of the work you saved them.
