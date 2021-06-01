@@ -7,17 +7,17 @@
     <title>MEGA for Chrome</title>
     <authors>Mega Limited</authors>
     <owners>asheroto</owners>
-    <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/mega-chrome</packageSourceUrl>
+    <packageSourceUrl>https://github.com/meganz/web-extension</packageSourceUrl>
     <projectUrl>https://chrome.google.com/webstore/detail/mega/bigefpfhnfcobdlfbedofhhaibnlghod</projectUrl>
     <bugTrackerUrl>https://chrome.google.com/webstore/detail/mega/bigefpfhnfcobdlfbedofhhaibnlghod</bugTrackerUrl>
-    <iconUrl>https://lh3.googleusercontent.com/RPhHkr43fHnROzpXY6q03k9OaWHIbU9LGM0Yb7TJ1qdNDEcidqWNZ8DResTLqdp0zg_5WIcVsNmvCM5xyGRnSk9BTA=w128-h128-e365-rj-sc0x00ffffff</iconUrl>
+    <iconUrl>https://i.imgur.com/sjCn9vK.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-##MEGA for Chrome
+## MEGA for Chrome
 
 MEGA web extension app.
 	
-####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+#### PACKAGE NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
     <summary>MEGA Chrome addon</summary>
     <tags>chrome extension mega</tags>
@@ -27,3 +27,4 @@ MEGA web extension app.
     </dependencies>
   </metadata>
 </package>
+

@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $bits = Get-ProcessorBits
 $packageName = 'mega-chrome'
 $extensionID = 'bigefpfhnfcobdlfbedofhhaibnlghod'
