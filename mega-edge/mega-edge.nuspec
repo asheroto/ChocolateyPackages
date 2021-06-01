@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>mega-edge</id>
+    <version>3.119.0</version>
+    <title>MEGA for Edge</title>
+    <authors>Mega Limited</authors>
+    <owners>asheroto</owners>
+    <packageSourceUrl>https://github.com/meganz/web-extension</packageSourceUrl>
+    <projectUrl>https://microsoftedge.microsoft.com/addons/detail/mega/jemjknhgpjaacbghpdhgchbgccbpkkgf</projectUrl>
+    <bugTrackerUrl>https://microsoftedge.microsoft.com/addons/detail/mega/jemjknhgpjaacbghpdhgchbgccbpkkgf</bugTrackerUrl>
+    <iconUrl>https://i.imgur.com/sjCn9vK.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+## MEGA for Edge
+
+MEGA web extension app.
+	
+#### PACKAGE NOTE: This installs no software. It installs a registry key for the extension that Edge will see and then ask you for permission to enable the extension if you are in Edge or on the next run. Edge will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Edge will handle updates to the extension.
+	</description>
+    <summary>MEGA Edge addon</summary>
+    <tags>edge extension mega</tags>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="microsoft-edge" />
+    </dependencies>
+  </metadata>
+</package>
+
