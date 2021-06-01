@@ -18,7 +18,7 @@ Hide/show users on Windows logon screen.
 **[PACKAGE NOTES](https://github.com/asheroto/ChocolateyPackages/blob/master/hideuser/README.md)**</description>
     <summary>Hide/show users on Windows logon screen</summary>
     <releaseNotes>https://github.com/asheroto/hideuser/releases</releaseNotes>
-    <tags>masscan ip port scanner network</tags>
+    <tags>hideuser hide user show list windows logon login screen</tags>
     <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/hideuser</packageSourceUrl>
     <docsUrl>https://github.com/asheroto/hideuser</docsUrl>
   </metadata>

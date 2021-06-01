@@ -1,3 +1,3 @@
-This is a repository for the deployment of [masscan](https://github.com/asheroto/hideuser) with [Chocolatey](https://chocolatey.org/).
+This is a repository for the deployment of [GenerateCerts](https://github.com/asheroto/generatecerts) with [Chocolatey](https://chocolatey.org/).
 
-Chocolatey Package URL: https://community.chocolatey.org/packages/hideuser
+Chocolatey Package URL: https://community.chocolatey.org/packages/generatecerts
