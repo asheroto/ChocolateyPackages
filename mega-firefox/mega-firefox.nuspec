@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>mega-firefox</id>
+    <version>3.119.0</version>
+    <title>MEGA for firefox</title>
+    <authors>Mega Limited</authors>
+    <owners>asheroto</owners>
+    <packageSourceUrl>https://github.com/meganz/web-extension</packageSourceUrl>
+    <projectUrl>https://mega.io/extensions</projectUrl>
+    <iconUrl>https://i.imgur.com/sjCn9vK.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+## MEGA for Firefox
+
+MEGA web extension app.
+	
+#### PACKAGE NOTE: This installs no software. It installs a registry key for the extension that Firefox will see and then ask you for permission to enable the extension if you are in Firefox or on the next run. Firefox will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Firefox will handle updates to the extension.
+	</description>
+    <summary>MEGA Firefox addon</summary>
+    <tags>firefox extension mega</tags>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="firefox" />
+    </dependencies>
+  </metadata>
+</package>
