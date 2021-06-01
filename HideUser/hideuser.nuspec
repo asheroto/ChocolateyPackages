@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>hideuser</id>
+    <version>0.0.4</version>
+    <title>HideUser</title>
+    <authors>asher.tools</authors>
+    <owners>asheroto</owners>
+    <licenseUrl>https://github.com/asheroto/hideuser/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/asheroto/hideuser</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+### HideUser
+
+Hide/show users on Windows logon screen.
+
+**[PACKAGE NOTES](https://github.com/asheroto/ChocolateyPackages/blob/master/hideuser/README.md)**</description>
+    <summary>Hide/show users on Windows logon screen</summary>
+    <releaseNotes>https://github.com/asheroto/hideuser/releases</releaseNotes>
+    <tags>masscan ip port scanner network</tags>
+    <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/hideuser</packageSourceUrl>
+    <docsUrl>https://github.com/asheroto/hideuser</docsUrl>
+  </metadata>
+</package>
+
