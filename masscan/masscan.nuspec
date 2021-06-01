@@ -20,7 +20,7 @@ Internally, it uses asynchronous transmission, similar to port scanners like sca
 
 NOTE: masscan uses its own ad hoc TCP/IP stack. Anything other than simple port scans may cause conflict with the local TCP/IP stack. This means you need to use either the --src-ip option to run from a different IP address, or use --src-port to configure which source ports masscan uses, then also configure the internal firewall (like pf or iptables) to firewall those ports from the rest of the operating system.
 
-**[PACKAGE NOTES](https://github.com/asheroto/ChocolateyPackages/blob/master/masscan/readme.md)**</description>
+**[PACKAGE NOTES](https://github.com/asheroto/ChocolateyPackages/blob/master/masscan/README.md)**</description>
     <summary>Internet-scale port scanner. It can scan the entire Internet in under 5 minutes.</summary>
     <releaseNotes>https://github.com/robertdavidgraham/masscan/releases</releaseNotes>
     <tags>masscan ip port scanner network</tags>
