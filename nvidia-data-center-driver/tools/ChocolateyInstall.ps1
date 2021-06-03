@@ -19,5 +19,12 @@ $packageArgs = @{
   validExitCodes= $validExitCodes
   softwareName  = $softwareName
 }
- 
+
+Write-Color
+Write-Color -Text "If the installation ", "SUCCEEDS", ", you may need to restart your computer to fully load everything" -Color Yellow,Green,Yellow
+Write-Color
+Write-Color -Text "If the installation ", "FAILS", ", your graphics card may not be compatible. You can download and run the install manually:" -Color Yellow,Red,Yellow
+Write-Color -Text "$url" -Color Yellow
+Write-Color
+
 Install-ChocolateyPackage @packageArgs
