@@ -9,6 +9,7 @@
     <owners>asheroto</owners>
     <licenseUrl>https://github.com/asheroto/generatecerts/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/asheroto/generatecerts</projectUrl>
+    <iconUrl>https://i.imgur.com/dpSOWXq.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ### Generate Certs
