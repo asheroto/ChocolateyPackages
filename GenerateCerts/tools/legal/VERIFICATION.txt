@@ -1,0 +1,14 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community in verifying that this package's contents are trustworthy.
+
+To verify the files using the project source:
+
+1. Please go to the project source location (https://github.com/asheroto/GenerateCerts);
+2. Download the source files for the module you want to verify. Make sure the version of the file you download is the same version as the files from the package you want to verify;
+3. For each source file use Get-FileHash -Path <FILE TO VERIFY> to get the file hash value from both the downloaded file (from step 1 above) and the file from the package and compare them;
+
+---
+
+SHA256
+x32: a8f9f77c72f3cacc5fba3d0c44862315c2fee65ca546d74c0d9c88f1858b14a3
+x64: 0fb9273aebb18a1fa01028434c3ae6d591bac5924fea349e94d0aacfe5d6e75e

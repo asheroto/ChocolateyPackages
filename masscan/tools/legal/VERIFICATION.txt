@@ -1,0 +1,14 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community in verifying that this package's contents are trustworthy.
+
+To verify the files using the project source:
+
+1. Please go to the project source location (https://github.com/robertdavidgraham/masscan);
+2. Download the source files for the module you want to verify. Make sure the version of the file you download is the same version as the files from the package you want to verify;
+3. For each source file use Get-FileHash -Path <FILE TO VERIFY> to get the file hash value from both the downloaded file (from step 1 above) and the file from the package and compare them;
+
+---
+
+SHA256
+x32: F7FDD3A41C6343631E427EB6DE75AF30AE20675A9169CF2359DFF5A16BFC91CF
+x64: 2A18A25F9CFF7F244414D21032A41A06DC5283F5936D683658E62C36DFB75B11
