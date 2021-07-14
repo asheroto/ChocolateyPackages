@@ -1,0 +1,13 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community in verifying that this package's contents are trustworthy.
+
+To verify the files using the project source:
+
+1. Please go to the project source location (https://github.com/robertdavidgraham/masscan);
+2. Download the source files for the module you want to verify. Make sure the version of the file you download is the same version as the files from the package you want to verify;
+3. For each source file use Get-FileHash -Path <FILE TO VERIFY> to get the file hash value from both the downloaded file (from step 1 above) and the file from the package and compare them;
+
+---
+
+SHA256
+Inventory_19.3.48.0.exe: ebf79ee948a375a833cdf37bb867c4943a7ad8eb41d575a8b163ba7f3af03a4e
