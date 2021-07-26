@@ -10,7 +10,7 @@
         <packageSourceUrl>https://github.com/meganz/MEGAcmd</packageSourceUrl>
         <projectUrl>https://mega.io/cmd</projectUrl>
         <bugTrackerUrl>https://mega.io/cmd</bugTrackerUrl>
-        <iconUrl>https://cdn.statically.io/gh/:asheroto/:ChocolateyPackages/:tag/:file</iconUrl>
+        <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/76f20ceb/megacmd/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>
 ## MEGAcmd
@@ -20,10 +20,9 @@ A command line tool to work with your MEGA account and files.
         <summary>MEGAcmd</summary>
         <tags>mega megacmd cmd</tags>
         <releaseNotes></releaseNotes>
-        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/megacmd</packageSourceUrl>
     </metadata>
     <files>
-        <file src="**" exclude="**\*.md" />
+        <file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
     </files>
 </package>
 
