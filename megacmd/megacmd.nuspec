@@ -1,25 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-  <metadata>
-    <id>megacmd</id>
-    <version>1.4.1.0</version>
-    <title>MEGAcmd</title>
-    <authors>Mega Limited</authors>
-    <owners>asheroto</owners>
-    <packageSourceUrl>https://github.com/meganz/MEGAcmd</packageSourceUrl>
-    <projectUrl>https://mega.io/cmd</projectUrl>
-    <bugTrackerUrl>https://mega.io/cmd</bugTrackerUrl>
-    <iconUrl>https://i.imgur.com/sjCn9vK.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
+    <metadata>
+        <id>megacmd</id>
+        <version>1.4.1.0</version>
+        <title>MEGAcmd</title>
+        <authors>Mega Limited</authors>
+        <owners>asheroto</owners>
+        <packageSourceUrl>https://github.com/meganz/MEGAcmd</packageSourceUrl>
+        <projectUrl>https://mega.io/cmd</projectUrl>
+        <bugTrackerUrl>https://mega.io/cmd</bugTrackerUrl>
+        <iconUrl>https://cdn.statically.io/gh/:asheroto/:ChocolateyPackages/:tag/:file</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>
 ## MEGAcmd
 
 A command line tool to work with your MEGA account and files.
-	</description>
-    <summary>MEGAcmd</summary>
-    <tags>mega megacmd cmd</tags>
-    <releaseNotes></releaseNotes>
-  </metadata>
+        </description>
+        <summary>MEGAcmd</summary>
+        <tags>mega megacmd cmd</tags>
+        <releaseNotes></releaseNotes>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/megacmd</packageSourceUrl>
+    </metadata>
+    <files>
+        <file src="**" exclude="**\*.md" />
+    </files>
 </package>
 
