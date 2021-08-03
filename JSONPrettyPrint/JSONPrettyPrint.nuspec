@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <id>JSONPrettyPrint</id>
+        <version>1.0.0</version>
+        <title>JSONPrettyPrint</title>
+        <authors>asheroto</authors>
+        <owners>asheroto</owners>
+        <licenseUrl>https://github.com/asheroto/JSONPrettyPrint/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/asheroto/JSONPrettyPrint</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/sss/JSONPrettyPrint/icon.png</iconUrl>
+        <description>
+### JSONPrettyPrint
+
+Pipe JSON data to make it pretty! Works on Windows, Linux, Mac.
+
+**[PACKAGE NOTES](https://github.com/asheroto/ChocolateyPackages/blob/master/JSONPrettyPrint/README.md)**</description>
+        <summary>Pipe JSON data to make it pretty! Works on Windows, Linux, Mac.</summary>
+        <releaseNotes>https://github.com/asheroto/JSONPrettyPrint/releases</releaseNotes>
+        <tags>JSONPrettyPrint JSON pretty print beautifier</tags>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/JSONPrettyPrint</packageSourceUrl>
+        <docsUrl>https://github.com/asheroto/JSONPrettyPrint</docsUrl>
+    </metadata>
+    <files>
+        <file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+    </files>
+</package>
+
