@@ -1,0 +1,23 @@
+Logipole Software License Agreement
+
+This is a legal agreement between you and Logipole covering your use of Konvertor (the "Software").
+
+This user license agreement (the "AGREEMENT") is an agreement between you (individual or single entity) and Logipole, for Konvertor (the "SOFTWARE") that is accompanying this AGREEMENT.
+The SOFTWARE is the property of Logipole and is protected by copyright laws and international copyright treaties. The SOFTWARE is not sold, it is a freeware.
+
+If you accept the terms and conditions of this AGREEMENT, you have certain rights and obligations as follow:
+
+You may:
+Install and use an unlimited number of copies of the SOFTWARE. Copy and distribute freely the software (see 'DISTRIBUTION').
+
+You may not:
+Rent or lease the SOFTWARE or any portion of it. Decompile, disassemble, reverse engineer or modify the SOFTWARE or any portion of it.
+
+Distribution
+You are hereby licensed to make as many copies of the SOFTWARE as you wish and distribute it to anyone provided that all files are intact. You must distribute the install form of the software (not the files resulting of an installation). You are not allowed to sell the software (except for shipment and handling charges).
+
+Warranty disclaimer
+The SOFTWARE is supplied "AS IS". Logipole disclaims all warranties, expressed or implied, including, without limitation, the warranties of merchantability and of fitness for any purpose. The user must assume the entire risk of using the SOFTWARE.
+
+Disclaimer of damages
+Logipole assumes no liability for damages, direct or consequential, which may result from the use of the SOFTWARE, even if Logipole has been advised of the possibility of such damages.

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <id>metadataplusplus</id>
+        <version>2.00.4</version>
+        <title>Metadata++</title>
+        <authors>Logipole</authors>
+        <owners>asheroto</owners>
+        <licenseUrl>https://logipole.com/eula-en.htm</licenseUrl>
+        <projectUrl>https://logipole.com/metadata++-en.htm</projectUrl>
+        <iconUrl></iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Windows 10, 8, 7 Support
+Metadata++ works seamlessly with 64-bit Windows 10.
+
+Performance
+Metadata++ is designed to be as fast as possible: quick navigation among directories, fast directories reading, fast and smooth painting of panels and thumbnails. In its portable version Metadata++ is configured to store all configuration and settings in the same folder that it is run from.
+
+Images / Photos Formats
+Support almost all kind of image formats able to carry metadata: CR2, CRW, JPEG, PNG, TIFF, RAW, WEBM...
+
+Audio Formats
+Support almost all kind of audio formats able to carry metadata: MP3, MP4, OGG, WAV...
+
+Video Formats
+Support almost all kind of video formats able to carry metadata: AVI, MP4, DivX, WEBM...
+
+Text Formats
+Support almost all kind of text formats able to carry metadata: XML, OOXML, PDF, RTF...
+
+All formats
+Metadata++ is able to create sidecars containing your own metadata, even for files that normally cant't include metadata.
+For example you can rate any kind of file format.
+
+Much much more
+Metadata++ has much more useful features built in, including native UNICODE display, Search plugin, Interface in English, French, Spanish, Russian...
+
+Do I have to uninstall Metadata++ before applying an update?
+No, the update will be installed on top of every old installation. But don't forget to close every running instance of Metadata++ before installing.</description>
+        <summary>Metadata++ is a fast and effective metadata viewer/editor with support for all common file formats.</summary>
+        <releaseNotes>https://logipole.com/metadata++-whatsnew-en.htm</releaseNotes>
+        <copyright>Copyright © 1998-2021 Jean Piquemal. All rights reserved.</copyright>
+        <docsUrl>https://logipole.com/metadata++-en.htm</docsUrl>
+        <tags>metadata++ metadataplusplus metadatapp metadata editor viewer tool</tags>
+    </metadata>
+    <files>
+        <file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+    </files>
+</package>
+
