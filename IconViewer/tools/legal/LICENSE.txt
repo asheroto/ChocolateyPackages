@@ -1,0 +1,10 @@
+IconViewer License
+You are hereby licensed to: use the freeware version of this software for an unlimited period; make as many copies of the freeware version of this software and documentation as you wish; give complete and exact copies of this freeware version of the software and documentation in its unmodified form via electronic means. There is no charge for any of the above.
+
+Copies of the freeware version of IconViewer may be distributed without charge or further permission from the author provided that exact copies of the freeware version are distributed. This software is provided as freeware and cannot be sold. This software can not be bundled with any commercial package without express permission from the author. You may not disassemble, decompose, reverse engineer or alter any of the files in the package.
+
+Copyright
+IconViewer and its documentation are copyright 2008 Bot Productions.
+
+Disclaimer
+Bot Productions accepts no responsibility for damages resulting from the use of this product and makes no warranty or representation, either express or implied, including but not limited to, any implied warranty of merchantability or fitness for a particular purpose. This software is provided "AS IS", and you, its user, assume all risks when using it.

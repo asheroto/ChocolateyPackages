@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <id>IconViewer</id>
+        <version>3.02</version>
+        <title>IconViewer</title>
+        <authors>Bot Productions</authors>
+        <owners>asheroto</owners>
+        <licenseUrl>https://www.botproductions.com/iconview/license.html</licenseUrl>
+        <projectUrl>https://www.botproductions.com/iconview/iconview.html</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>IconViewer is a free Windows Explorer extension that lets you easily view, copy, and save icons contained within programs and libraries. Open a file's Properties box, select the "Icons" tab, and view the icons contained in the file.</description>
+        <summary>IconViewer is a free Windows Explorer extension that lets you easily view, copy, and save icons contained within programs and libraries. Open a file's Properties box, select the "Icons" tab, and view the icons contained in the file.</summary>
+        <releaseNotes>https://www.botproductions.com/iconview/download.html</releaseNotes>
+        <copyright>©2020 Bot Productions. All rights reserved.</copyright>
+        <docsUrl>https://www.botproductions.com/iconview/setup.html</docsUrl>
+        <tags>iconviewer icon viewer properties extract tool tab save</tags>
+    </metadata>
+    <files>
+        <file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+    </files>
+</package>
+
