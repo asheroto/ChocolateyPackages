@@ -1,3 +1,0 @@
-SHA256
-
-ExpanDrive_Setup_2021.8.3.exe: d8401aa3f3ad7bb0d4735a1e4c4bfce08178052e0da340cc6b0ac814eaaa4d4b
