@@ -1,20 +1,21 @@
-﻿$ErrorActionPreference = 'Stop'
-$packageName   = 'expandrive' 
-$url           = 'https://secure.expandrive.com/expandrive/download_win' 
-$checksum      = 'd96ff1ab26bf77327753665eb81a10cc47f8db4d7253a64343ca8869438afd0a'
+﻿$ErrorActionPreference	= 'Stop'
+$packageName			= 'ExpanDrive'
+$softwareName			= 'ExpanDrive*'
+$toolsPath				= Split-Path $MyInvocation.MyCommand.Definition
+$checksum				= 'd8401aa3f3ad7bb0d4735a1e4c4bfce08178052e0da340cc6b0ac814eaaa4d4b'
+$silentArgs				= '/quiet'
+$validExitCodes			= @(0)
+$fileLocation			= "$toolsPath\ExpanDrive_Setup_2021.8.3.exe"
 
 $packageArgs = @{
-  packageName    = $packageName
-  fileType       = 'EXE'
-  url            = $url
-  validExitCodes = @(0, 3010, 1641)
-  silentArgs     = ''
-  softwareName   = 'Expandrive*'
-  checksum       = $checksum
-  checksumType   = 'sha256' 
+	packageName    = $packageName
+	fileType       = 'exe'
+	file           = $fileLocation
+	checksum       = $checksum
+	checksumType   = 'sha256'
+	silentArgs     = $silentArgs
+	validExitCodes = $validExitCodes
+	softwareName   = $softwareName
 }
-
-Start-CheckandStop "ExpanDrive"
+ 
 Install-ChocolateyPackage @packageArgs
-if ($ProcessWasRunning -eq $False) {Start-WaitandStop "ExpanDrive"}
-if ($ProcessWasRunning -eq $False) {Start-WaitandStop "ExpanDrive"}
