@@ -9,7 +9,7 @@
 		<owners>asheroto</owners>
 		<licenseUrl>http://www.expandrive.com/license-terms/</licenseUrl>
 		<projectUrl>http://www.expandrive.com/apps/expandrive/</projectUrl>
-		<iconUrl>https://i.imgur.com/aZZaY58.png</iconUrl>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/cb02782b/ExpanDrive/icon.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>---
 
