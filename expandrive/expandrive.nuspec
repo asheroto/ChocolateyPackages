@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-  <metadata>
-    <id>expandrive</id>
-    <version>7.7.9</version>
-    <title>ExpanDrive (Trial) (Install)</title>
-    <authors>ExpanDrive, Inc.</authors>
-    <owners>asheroto</owners>
-    <licenseUrl>http://www.expandrive.com/license-terms/</licenseUrl>
-    <projectUrl>http://www.expandrive.com/apps/expandrive/</projectUrl>
-    <iconUrl>https://i.imgur.com/aZZaY58.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>---
+	<metadata>
+		<id>expandrive</id>
+		<version>2021.08.03</version>
+		<title>ExpanDrive (Trial)</title>
+		<authors>ExpanDrive, Inc.</authors>
+		<owners>asheroto</owners>
+		<licenseUrl>http://www.expandrive.com/license-terms/</licenseUrl>
+		<projectUrl>http://www.expandrive.com/apps/expandrive/</projectUrl>
+		<iconUrl>https://i.imgur.com/aZZaY58.png</iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>---
 
 ### [choco://expandrive](choco://expandrive)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
 
-## The Best Gets Even Better - Say Hello to ExpanDrive 7
-
-ExpanDrive is a fast network drive and browser for cloud storage.
+**ExpanDrive** is a fast network drive and browser for cloud storage.
 Securely access the cloud from any application, including Finder and Explorer.
 
 ### Built into Finder and Explorer
@@ -56,19 +54,18 @@ Connect to all major cloud storage providers, or your own server. With a single 
 * SMB/Windows File Sharing
 
 #### ExpanDrive runs unlicensed and fully featured for 7 days giving you a chance to try everything out. Once the trial period ends you'll need to buy a license or you will be limited to 20 minutes of use.
-#### Single User license is $49.95, lifetime upgrades - +$29.95
+#### Single User license is $49.95, lifetime upgrades is +$29.95
 
 [ExpanDrive Blog](http://www.expandrive.com/blog/)
-
-</description>
-    <summary>Fast Network Drive for Cloud Storage</summary>
-    <releaseNotes>http://updates.expandrive.com/release_notes/expandrive_win</releaseNotes>
-    <copyright>© ExpanDrive, Inc.</copyright>
-    <tags>expandrive cloud backup box amazon dropbox google openstack onedrive sftp webdav nextcloud wasabi backblaze sharepoint cross-platform trial</tags>
-    <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/expandrive</packageSourceUrl>
-    <docsUrl>http://www.expandrive.com/docs/</docsUrl>
-    <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
-    </dependencies>
-  </metadata>
+		</description>
+		<summary>Fast Network Drive for Cloud Storage</summary>
+		<releaseNotes>http://updates.expandrive.com/release_notes/expandrive_win</releaseNotes>
+		<copyright>© ExpanDrive, Inc.</copyright>
+		<tags>expandrive cloud backup box amazon dropbox google openstack onedrive sftp webdav nextcloud wasabi backblaze sharepoint cross-platform trial</tags>
+		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/expandrive</packageSourceUrl>
+		<docsUrl>http://www.expandrive.com/docs/</docsUrl>
+	</metadata>
+	<files>
+		<file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+	</files>
 </package>
