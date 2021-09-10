@@ -62,7 +62,7 @@ Connect to all major cloud storage providers, or your own server. With a single 
 		<releaseNotes>http://updates.expandrive.com/release_notes/expandrive_win</releaseNotes>
 		<copyright>© ExpanDrive, Inc.</copyright>
 		<tags>expandrive cloud backup box amazon dropbox google openstack onedrive sftp webdav nextcloud wasabi backblaze sharepoint cross-platform trial</tags>
-		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/expandrive</packageSourceUrl>
+		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/ExpanDrive</packageSourceUrl>
 		<docsUrl>http://www.expandrive.com/docs/</docsUrl>
 	</metadata>
 	<files>
