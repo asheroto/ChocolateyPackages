@@ -7,7 +7,7 @@
         <title>IconViewer</title>
         <authors>Bot Productions</authors>
         <owners>asheroto</owners>
-		<iconUrl></iconUrl>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/4f9048b3/IconViewer/icon.png</iconUrl>
         <licenseUrl>https://www.botproductions.com/iconview/license.html</licenseUrl>
         <projectUrl>https://www.botproductions.com/iconview/iconview.html</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -9,11 +9,11 @@ $validExitCodes 		= @(0)
 
 $packageArgs = @{
 	packageName    = $packageName
-	fileType       = $fileType
-	file           = $fileLocation
-	silentArgs     = $silentArgs
-	validExitCodes = $validExitCodes
 	softwareName   = $softwareName
+	silentArgs     = $silentArgs
+	file           = $fileLocation
+	fileType       = $fileType
+	validExitCodes = $validExitCodes
 }
 
-Install-ChocolateyInstallPackage @packageArgs
+Install-ChocolateyInstallPackage $packageArgs
