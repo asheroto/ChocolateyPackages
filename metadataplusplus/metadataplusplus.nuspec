@@ -9,7 +9,7 @@
         <owners>asheroto</owners>
         <licenseUrl>https://logipole.com/eula-en.htm</licenseUrl>
         <projectUrl>https://logipole.com/metadata++-en.htm</projectUrl>
-        <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/97126f3d/metadataplusplus/icon.png</iconUrl>
+        <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/eb9b246b/metadataplusplus/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Windows 10, 8, 7 Support
 Metadata++ works seamlessly with 64-bit Windows 10.
@@ -43,6 +43,7 @@ No, the update will be installed on top of every old installation. But don't for
         <copyright>Copyright © 1998-2021 Jean Piquemal. All rights reserved.</copyright>
         <docsUrl>https://logipole.com/metadata++-en.htm</docsUrl>
         <tags>metadata++ metadataplusplus metadatapp metadata editor viewer tool</tags>
+		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/metadataplusplus</packageSourceUrl>
     </metadata>
     <files>
         <file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
