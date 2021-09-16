@@ -7,6 +7,7 @@
         <title>IconViewer</title>
         <authors>Bot Productions</authors>
         <owners>asheroto</owners>
+		<iconUrl></iconUrl>
         <licenseUrl>https://www.botproductions.com/iconview/license.html</licenseUrl>
         <projectUrl>https://www.botproductions.com/iconview/iconview.html</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -16,6 +17,7 @@
         <copyright>©2020 Bot Productions. All rights reserved.</copyright>
         <docsUrl>https://www.botproductions.com/iconview/setup.html</docsUrl>
         <tags>iconviewer icon viewer properties extract tool tab save</tags>
+		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/IconViewer</packageSourceUrl>
     </metadata>
     <files>
         <file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />

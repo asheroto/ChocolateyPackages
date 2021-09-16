@@ -1,3 +1,24 @@
-SHA256
-IconViewer3.02-Setup-x64.exe: 3be3664cfac0b9270da161c2c4c323499b4fe40a8e68a2d34cd4425b12ef223f
-IconViewer3.02-Setup-x86.exe: 2eb365ea3e2f20848206b0b1835c58cc71e2aca1323a19319896b3c8e3bf3956
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download location below
+and can be verified by doing the following:
+
+1. Download the following:
+
+	x64 software: https://www.botproductions.com/iconview/download/IconViewer3.02-Setup-x64.exe
+	x86 software: https://www.botproductions.com/iconview/download/IconViewer3.02-Setup-x86.exe
+
+2. Get the checksum using one of the following methods:
+
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+  
+3. The checksums should match the following:
+
+	checksum type: sha256
+	checksum64: 3be3664cfac0b9270da161c2c4c323499b4fe40a8e68a2d34cd4425b12ef223f
+	checksum86: 2eb365ea3e2f20848206b0b1835c58cc71e2aca1323a19319896b3c8e3bf3956
+
+The file 'LICENSE.txt' has been obtained from https://www.botproductions.com/iconview/license.html
