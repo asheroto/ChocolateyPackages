@@ -1,0 +1,22 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>visualstudio2022-community-preview</id>
+    <version>17.0</version>
+    <title>Visual Studio 2022 - Community Preview</title>
+    <authors>Microsoft</authors>
+    <owners>asheroto</owners>
+    <licenseUrl>https://visualstudio.microsoft.com/license-terms/</licenseUrl>
+    <projectUrl>https://visualstudio.microsoft.com/</projectUrl>
+    <iconUrl></iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Preview release of Visual Studio Community 2022.</description>
+    <summary>Installs the preview release of Visual Studio Community 2022.</summary>
+    <releaseNotes>[Visual Studio 2022 Preview Release Notes](https://docs.microsoft.com/en-us/visualstudio/releases/2022/release-notes-preview)</releaseNotes>
+    <copyright>https://www.microsoft.com/en-us/legal/intellectualproperty/permissions</copyright>
+    <tags>microsoft visual studio visualstudio vs 2022 preview community instaler install setup</tags>
+    <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/visualstudio2022-preview-community</packageSourceUrl>
+    <docsUrl>https://docs.microsoft.com/en-us/visualstudio/ide/</docsUrl>
+    <bugTrackerUrl>https://developercommunity.visualstudio.com/</bugTrackerUrl>
+  </metadata>
+</package>

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>JSONPrettyPrint</id>
-        <version>1.0.1</version>
+        <version>1.0.2.0</version>
         <title>JSONPrettyPrint</title>
         <authors>asheroto</authors>
         <owners>asheroto</owners>
@@ -14,7 +14,7 @@
         <description>
 ### JSONPrettyPrint
 
-Pipe JSON data to make it pretty! Works on Windows, Linux, Mac.
+Pipe JSON data to make it pretty! Works on Windows, Linux, Mac. See the package repository for more information.
 
 **[PACKAGE NOTES](https://github.com/asheroto/ChocolateyPackages/blob/master/JSONPrettyPrint/README.md)**</description>
         <summary>Pipe JSON data to make it pretty! Works on Windows, Linux, Mac.</summary>

@@ -12,5 +12,5 @@ if($bits -eq 64) {
 }
 
 Write-Output "---------------------------"
-Write-Output "Type ""$friendlyBinaryName"" and press enter to use"
+Write-Output "Type ""$friendlyBinaryName"" and press enter for more information"
 Write-Output "---------------------------"
