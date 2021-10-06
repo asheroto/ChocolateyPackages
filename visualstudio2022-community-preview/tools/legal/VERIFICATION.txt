@@ -1,2 +1,0 @@
-File: vs_community_2022.exe
-SHA-256: 20771ce23081d52d3a714f2650ecb8fa86981ce62ccfa8064cf08c6e07ca161c
