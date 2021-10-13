@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-  <metadata>
-    <id>pdq-inventory</id>
-    <version>19.3.48.0</version>
-    <title>PDQ Inventory (Install)</title>
-    <authors>PDQ</authors>
-    <owners>asheroto</owners>
-    <licenseUrl>https://www.pdq.com/licensing/</licenseUrl>
-    <projectUrl>https://www.pdq.com/pdq-inventory/</projectUrl>
-    <iconUrl>https://i.imgur.com/7nZnun7.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>![Screenshot of PDQ Inventory](https://i.imgur.com/W2rsWbz.png)
+	<metadata>
+		<id>pdq-inventory</id>
+		<version>19.3.48.0</version>
+		<title>PDQ Inventory (Install)</title>
+		<authors>PDQ</authors>
+		<owners>asheroto</owners>
+		<licenseUrl>https://www.pdq.com/licensing/</licenseUrl>
+		<projectUrl>https://www.pdq.com/pdq-inventory/</projectUrl>
+		<iconUrl></iconUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>![Screenshot of PDQ Inventory](https://i.imgur.com/W2rsWbz.png)
 
 ### Intelligent Data Tracking
 Out of the box, computers are automatically grouped based on common data. View computers that have the same installed applications, hardware, operating systems, and even Windows updates. Additionally, create groups based on your own criteria.
@@ -60,15 +60,18 @@ Share your reports and collections with other admins by creating a server/client
 [Twitter](https://twitter.com/AdmArsenal) | [YouTube](https://www.linkedin.com/company/pdq.com) | [Linkedin](https://www.linkedin.com/company/pdq.com) | [spiceworks](https://community.spiceworks.com/pages/pdq)
 
 **[PACKAGE NOTES](https://github.com/asheroto/ChocolateyPackages/blob/master/pdq-inventory/README.md)**</description>
-    <summary>PDQ Inventory is a systems management tool that scans Windows computers to collect hardware, software, and Windows configuration data.</summary>
-    <releaseNotes>https://www.pdq.com/releases/</releaseNotes>
-    <copyright>Copyright (C) PDQ.com Corporation</copyright>
-    <tags>arsenal pdq inventory tool software hardware scanning trial</tags>
-    <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/pdq-inventory</packageSourceUrl>
-    <docsUrl>https://www.pdq.com/documentation/</docsUrl>
-    <dependencies>
-      <dependency id="dotnet4.6.1" />
-    </dependencies>
-  </metadata>
+		<summary>PDQ Inventory is a systems management tool that scans Windows computers to collect hardware, software, and Windows configuration data.</summary>
+		<releaseNotes>https://www.pdq.com/releases/</releaseNotes>
+		<copyright>Copyright (C) PDQ.com Corporation</copyright>
+		<tags>arsenal pdq inventory tool software hardware scanning trial</tags>
+		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/pdq-inventory</packageSourceUrl>
+		<docsUrl>https://www.pdq.com/documentation/</docsUrl>
+		<dependencies>
+			<dependency id="dotnet4.6.1" />
+		</dependencies>
+	</metadata>
+	<files>
+		<file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg;**\screenshot.png;**\screenshot.jpg;**\screenshot.svg" />
+	</files>
 </package>
 

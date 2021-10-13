@@ -1,0 +1,29 @@
+URL: https://www.pdq.com/licensing/
+
+One license per admin, plain and simple.
+Licensing is not based on managed computers, the number of PDQ consoles, where PDQ.com software is installed, shared credentials, or whether or not you only gain access through the command line (CLI).  The number of licenses you need is based solely on the number of living, breathing admins actually using the software. If you have three admins, you will need three licenses (sorry, no sharing).
+
+We offer subscription-based licensing, so one license is good for a full year.
+
+Frequently asked questions
+Can I use your software free without licensing?
+Can I try the software for free?
+Can I extend my trial?
+Do upgrades of PDQ.com software cost money?
+
+Can I use your software free without licensing?
+Definitely! All software running in Free mode is 100% free to use in any setting: commercial, government, educational, or criminal. (Well, maybe not that last one.)
+
+Can I try the software for free?
+Absolutely. We offer a 14-day free trial of Enterprise mode. Please note, PDQ Deploy trial is limited to your choice of any three (3) packages from the Package Library.
+
+Can I extend my trial?
+In most cases, yes. Please shoot us an email at sales@pdq.com or call us at (801) 657-4657 to make a request.
+
+Do upgrades of PDQ.com software cost money?
+No. Free mode can be upgraded at any time. Licensed software includes all versions released during your subscription period. Any versions released outside your subscription period can still be upgraded; however, features will be lost without a current subscription.
+
+Didn’t Answer Your Question?
+If you have any additional questions about how our licensing works or how to get started, feel free to contact us! 
+
+Email: sales@pdq.comCall: (801) 657-4657Or, visit our support community to see if your question already has an answer!

@@ -1,0 +1,15 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The installer have been downloaded from tableplus.com and can be verified like this:
+
+1. Download the following installers:
+  32-Bit: <https://github.com/ventoy/Ventoy/releases/download/v1.0.54/ventoy-1.0.54-windows.zip>
+
+2. You can use one of the following methods to obtain the checksum
+  - Use powershell function 'Get-Filehash'
+  - Use chocolatey utility 'checksum.exe'
+
+  checksum type: sha256
+  checksum32: 40E2B22A8BF66D0DB6134FFB50857EACECE8A933108ED9CD715BCA66446FE85B

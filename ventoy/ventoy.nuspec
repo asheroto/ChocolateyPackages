@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ventoy</id>
+    <version>1.0.54</version>
+    <title>Ventoy</title>
+    <authors>ventoy.net</authors>
+    <owners>Yato</owners>
+    <licenseUrl>https://www.ventoy.net/doc_license.html</licenseUrl>
+    <projectUrl>https://www.ventoy.net</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/iYato/chocolatey-packages/ventoy/icon.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Ventoy is an open source tool to create bootable USB drive for ISO files.
+With ventoy, you don't need to format the disk again and again, you just need to copy the iso file to the USB drive and boot it.
+You can copy many iso files at a time and ventoy will give you a boot menu to select them.
+Both Legacy BIOS and UEFI are supported in the same way. 200+ ISO files are tested.
+A "Ventoy Compatible" concept is introduced by ventoy, which can help to support any ISO file.
+
+See [ventoy.net](https://www.ventoy.net/) for detail.</description>
+    <summary>Ventoy is an open source tool to create bootable USB drive for ISO files.</summary>
+    <releaseNotes>https://github.com/ventoy/Ventoy/releases</releaseNotes>
+    <copyright>Copyright © 2019-2020 longpanda</copyright>
+    <tags>ventoy</tags>
+    <projectSourceUrl>https://github.com/ventoy/Ventoy</projectSourceUrl>
+    <packageSourceUrl>https://github.com/iYato/chocolatey-packages/tree/master/ventoy</packageSourceUrl>
+    <docsUrl>https://www.ventoy.net/doc_news.html</docsUrl>
+    <bugTrackerUrl>https://github.com/ventoy/Ventoy/issues</bugTrackerUrl>
+  </metadata>
+</package>
