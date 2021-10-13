@@ -3,15 +3,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
 	<metadata>
 		<id>pdq-inventory</id>
-		<version>19.3.48.0</version>
+		<version>19.3.83.0</version>
 		<title>PDQ Inventory (Install)</title>
 		<authors>PDQ</authors>
 		<owners>asheroto</owners>
 		<licenseUrl>https://www.pdq.com/licensing/</licenseUrl>
 		<projectUrl>https://www.pdq.com/pdq-inventory/</projectUrl>
-		<iconUrl></iconUrl>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/1a99fbb8/pdq-inventory/icon.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<description>![Screenshot of PDQ Inventory](https://i.imgur.com/W2rsWbz.png)
+		<description>![Screenshot of PDQ Inventory](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/1a99fbb8/pdq-inventory/screenshot.png)
 
 ### Intelligent Data Tracking
 Out of the box, computers are automatically grouped based on common data. View computers that have the same installed applications, hardware, operating systems, and even Windows updates. Additionally, create groups based on your own criteria.
@@ -52,7 +52,7 @@ Share your reports and collections with other admins by creating a server/client
 
 **Memory Requirements:** 4 GB RAM, 8 GB recommended
 
-**OS Requirements:** Windows 10, 8x, Server 2012x or higher
+**OS Requirements:** Windows 10, 11, 8x, Server 2012x or higher
 
 [Comparison of PDQ Inventory Free/Paid](https://www.pdq.com/compare/)
 
