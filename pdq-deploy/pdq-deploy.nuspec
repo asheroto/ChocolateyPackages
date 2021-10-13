@@ -9,7 +9,7 @@
 		<owners>asheroto</owners>
 		<licenseUrl>https://www.pdq.com/licensing/</licenseUrl>
 		<projectUrl>https://www.pdq.com/pdq-deploy/</projectUrl>
-		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/b7157f61/pdq-deploy/icon.png</iconUrl>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/f8e5bf05/pdq-deploy/icon.png</iconUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>![Screenshot of PDQ Deploy](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/b7157f61/pdq-deploy/screenshot.png)
 
