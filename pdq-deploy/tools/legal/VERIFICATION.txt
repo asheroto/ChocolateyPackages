@@ -5,7 +5,7 @@ To verify the files using the author's download URL:
 
 1. Please go to the author's download URL
 	http://www2.adminarsenal.com/download-pdqdeploy
-2. Use Get-FileHash -Path <FILE TO VERIFY> to get the file hash value from both the downloaded file (from step 1 above) and the file from the package and compare them;
+2. Use Get-FileHash -Path <FILE TO VERIFY> to get the file hash value from both the downloaded file (from step 1 above) and the file from the package and compare them
 
 ---
 
