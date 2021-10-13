@@ -13,23 +13,23 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>![Screenshot of PDQ Deploy](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/b7157f61/pdq-deploy/screenshot.png)
 
-##What Can PDQ Deploy Do?
+## What Can PDQ Deploy Do?
 
-###Install MSIs to Multiple Computers
+### Install MSIs to Multiple Computers
 Need to install an MSI? Just create a new PDQ Package and point it to the MSI. If the installation has more than a single MSI file, be sure to check the “Include Entire Directory” checkbox.
 
-###Install EXEs to Multiple Computers
+### Install EXEs to Multiple Computers
 Need to install an EXE? All you need to do is verify that the application can be installed silently. (By default MSIs have this ability, but EXEs need to be explicitly told to run silently.) Not every EXE supports this feature, but most do.
 
 The challenge will be to determine the correct method to run it silently. The silent parameter (sometimes called a switch) can be /s or /S, /q or /Q, /quiet, /qn, and a host of other options. Sometimes the installations are case sensitive, so be sure to use exactly what the vendor states is the correct switch.
 
-###Ready-to-Deploy Installs in the Package Library
+### Ready-to-Deploy Installs in the Package Library
 We created the Package Library so that our users wouldn’t have to spend time with every Java or Flash update that comes down the pike. When you are a Pro or Enterprise mode customer you get access to the Package Library you can get common apps that are already in PDQ Packages, and are ready for deploying to all your computers. See the full list of ready-to-go silent installs.
 
-###Customize Your Installs
+### Customize Your Installs
 With PDQ Deploy you can install just about any application or patch just by pointing a PDQ Deploy package to an EXE or MSI. You can also make changes to the packages that you downloaded from the Package Library.
 
-###What if my Installation has more files than just an MSI or EXE?
+### What if my Installation has more files than just an MSI or EXE?
 Many installations require more than a single install file.
 
 To be sure that these files are used during the installation, be sure to check the “Include Entire Directory” checkbox when you point the PDQ Package to the MSI or EXE.
@@ -39,8 +39,6 @@ To be sure that these files are used during the installation, be sure to check t
 **OS Requirements:** Windows 10, 11, 8x, Server 2012x or higher
 
 [MORE INFO ON WEBSITE](https://www.pdq.com/pdq-deploy/)
-
-[Comparison of PDQ Deploy Free/Pro/Enterprise](https://www.pdq.com/compare/)
 
 **SOCIAL MEDIA:**
 [Twitter](https://twitter.com/AdmArsenal) | [YouTube](https://www.linkedin.com/company/pdq.com) | [Linkedin](https://www.linkedin.com/company/pdq.com) | [spiceworks](https://community.spiceworks.com/pages/pdq)</description>
