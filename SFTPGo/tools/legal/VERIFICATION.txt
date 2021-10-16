@@ -1,0 +1,18 @@
+------------------------------------------------------
+How to verify package files
+------------------------------------------------------
+Package files are located in Chocolatey's lib folder located here:
+	%ChocolateyInstall%\lib\sftpgo\tools
+
+Download:
+	https://github.com/drakkan/sftpgo/releases/download/v2.1.2/sftpgo_v2.1.2_windows_x86_64.exe
+
+Open PowerShell, change directory to where you downloaded the files and type:
+	Get-FileHash .\sftpgo_v2.1.2_windows_x86_64.exe
+
+Hashes should match what's listed in the "file hashes" section.
+
+------------------------------------------------------
+File hashes
+------------------------------------------------------
+SHA256          86E744E9056B7376A0EB66D027E983843126C3617773C410B1F9DC38E172FDD7       sftpgo_v2.1.2_windows_x86_64.exe

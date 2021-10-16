@@ -1,13 +1,10 @@
-$bits           = Get-ProcessorBits
 $ErrorActionPreference  = 'Stop'
 $packageName    = 'sftpgo'
 $softwareName   = 'SFTPgo'
-$toolsPath      = Split-Path $MyInvocation.MyCommand.Definition
-$url            = 'https://github.com/drakkan/sftpgo/releases/download/v2.0.4/sftpgo_v2.0.4_windows_x86_64.exe'
-$checksum       = '4fd3ef2647e561fbd43b57774e9d7725345231f0312c021c95e36e6cc665b0ee'
+$url            = 'https://github.com/drakkan/sftpgo/releases/download/v2.1.2/sftpgo_v2.1.2_windows_x86_64.exe'
+$checksum       = '86E744E9056B7376A0EB66D027E983843126C3617773C410B1F9DC38E172FDD7'
 $silentArgs     = '/VERYSILENT'
 $validExitCodes = @(0)
-$fileLocation   = "$toolsPath\SFTPGo_Setup.exe"
 
 $packageArgs = @{
   packageName   = $packageName
@@ -23,22 +20,16 @@ $packageArgs = @{
 
 Install-ChocolateyPackage @packageArgs
 
-if($bits -eq 64) {
-    $ProgFiles = ${ENV:ProgramFiles}
-} else {
-    $ProgFiles = ${ENV:ProgramFiles(x86)}
-}
-
-Start-Process -FilePath "$ProgFiles\SFTPGo\sftpgo.exe" -ArgumentList {"serve"} -WorkingDirectory "$ENV:ProgramData\SFTPGo"
-
 Write-Output "---------------------------"
 Write-Output ""
 Write-Output "If you have never used SFTPGo before, the default installation is at:"
 Write-Output "  https://localhost:8080"
 Write-Output ""
-Write-Output "By default data is stored in:"
+Write-Output "The default SFTP port is 2022"
+Write-Output ""
+Write-Output "The default data:"
 Write-Output "  $ENV:ProgramData\SFTPGo"
 Write-Output ""
-Write-Output "Please read the README at https://github.com/drakkan/sftpgo for more information"
+Write-Output "See the README at https://github.com/drakkan/sftpgo for more information"
 Write-Output ""
 Write-Output "---------------------------"
