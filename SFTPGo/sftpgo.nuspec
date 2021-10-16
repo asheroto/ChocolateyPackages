@@ -14,7 +14,7 @@
 		<description>
 ### SFTPGo
 
-Fully featured and highly configurable SFTP server with optional FTP/S and WebDAV support, written in Go. Several storage backends are supported: local filesystem, encrypted local filesystem, S3 (compatible) Object Storage, Google Cloud Storage, Azure Blob Storage, SFTP.
+Fully featured, highly configurable, and extremely fast SFTP server with optional FTP/S and WebDAV support, written in Go. Several storage backends are supported: local filesystem, encrypted local filesystem, S3 (compatible) Object Storage, Google Cloud Storage, Azure Blob Storage, SFTP.
 
 - Support for serving local filesystem, encrypted local filesystem, S3 Compatible Object Storage, Google Cloud Storage, Azure Blob Storage or other SFTP accounts over SFTP/SCP/FTP/WebDAV.
 - Virtual folders are supported: a virtual folder can use any of the supported storage backends. So you can have, for example, an S3 user that exposes a GCS bucket (or part of it) on a specified path and an encrypted local filesystem on another one. Virtual folders can be private or shared among multiple users, for shared virtual folders you can define different quota limits for each user.
@@ -31,13 +31,10 @@ Fully featured and highly configurable SFTP server with optional FTP/S and WebDA
 - [url=https://github.com/drakkan/sftpgo/blob/main/docs/dare.md]Data At Rest Encryption[/url].
 - Quota support: accounts can have individual quota expressed as max total size and/or max number of files.
 - Bandwidth throttling, with distinct settings for upload and download.
-- Per-protocol [url=https://github.com/drakkan/sftpgo/blob/main/docs/rate-limiting.md]rate limiting[/url] is supported and can be optionally connected to the built-in defender to automatically block hosts that repeatedly exceed the configured limit.
 - Per user maximum concurrent sessions.
 - Per user and global IP filters: login can be restricted to specific ranges of IP addresses or to a specific IP address.
 - Per user and per directory shell like patterns filters: files can be allowed or denied based on shell like patterns.
-- Automatically terminating idle connections.
 - Automatic blocklist management using the built-in [url=https://github.com/drakkan/sftpgo/blob/main/docs/defender.md]defender[/url].
-- Atomic uploads are configurable.
 - Per user files/folders ownership mapping: you can map all the users to the system account that runs SFTPGo (all platforms are supported) or you can run SFTPGo as root user and map each user or group of users to a different system account (*NIX only).
 - Support for Git repositories over SSH.
 - SCP and rsync are supported.
@@ -47,7 +44,7 @@ Fully featured and highly configurable SFTP server with optional FTP/S and WebDA
 		<summary>Fully featured and highly configurable SFTP server with optional FTP/S and WebDAV support, written in Go.</summary>
 		<releaseNotes>https://github.com/drakkan/sftpgo/releases</releaseNotes>
 		<tags>sftpgo sftp go server</tags>
-		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/sftpgo</packageSourceUrl>
+		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/SFTPGo</packageSourceUrl>
 		<docsUrl>https://github.com/drakkan/sftpgo</docsUrl>
 	</metadata>
 	<files>
