@@ -1,5 +1,31 @@
-File: JSONPrettyPrint_win-x86.exe
-SHA-256: 5e979b399697dc92f88b3df9bf940b1668ffd7b414cea82b5a4f05395e9b1f70
+------------------------------------------------------
+How to verify package files
+------------------------------------------------------
+Package files are located in Chocolatey's lib folder located here:
+	%ChocolateyInstall%\lib\JSONPrettyPrint\tools
 
-File: JSONPrettyPrint_win-x64.exe
-SHA-256: 7d29e3bbe86e665639ba0d580355155e396eb3191e1d226f8bc6defc674de581
+Open PowerShell and type:
+	cd "$ENV:ChocolateyInstall\lib\JSONPrettyPrint\tools"
+	Get-FileHash .\JSONPrettyPrint_win-x64.exe
+	Get-FileHash .\JSONPrettyPrint_win-x86.exe
+
+Hashes should match what's listed in the "file hashes" section.
+
+------------------------------------------------------
+How to verify files from package repository (if desired)
+------------------------------------------------------
+Download:
+	https://github.com/asheroto/JSONPrettyPrint/releases/latest/download/JSONPrettyPrint_win-x64.exe
+	https://github.com/asheroto/JSONPrettyPrint/releases/latest/download/JSONPrettyPrint_win-x86.exe
+
+Open PowerShell, change directory to where you downloaded the files and type:
+	Get-FileHash .\JSONPrettyPrint_win-x64.exe
+	Get-FileHash .\JSONPrettyPrint_win-x86.exe
+
+Hashes should match what's listed in the "file hashes" section.
+
+------------------------------------------------------
+File hashes
+------------------------------------------------------
+SHA256          4C333E5D2E5A69D1CE45252ED77E91EC06117DB9ADA1059781626FA9679A9027       JSONPrettyPrint_win-x64.exe
+SHA256          FEB3850A47EDBC87DE3A7DF0547785E8B0F34F25441CF66A3EA9DF7C872E6BE4       JSONPrettyPrint_win-x86.exe
