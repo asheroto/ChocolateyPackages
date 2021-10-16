@@ -1,4 +1,4 @@
-$ErrorActionPreference  = 'Stop'
+﻿$ErrorActionPreference  = 'Stop'
 $packageName    = 'sftpgo'
 $softwareName   = 'SFTPgo'
 $url            = 'https://github.com/drakkan/sftpgo/releases/download/v2.1.2/sftpgo_v2.1.2_windows_x86_64.exe'

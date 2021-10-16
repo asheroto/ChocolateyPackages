@@ -4,11 +4,12 @@
 	<metadata>
 		<id>sftpgo</id>
 		<version>2.1.2</version>
-		<title>sftpgo</title>
+		<title>SFTPGo</title>
 		<authors>drakkan</authors>
 		<owners>asheroto</owners>
-		<licenseUrl>https://github.com/drakkan/sftpgo/LICENSE</licenseUrl>
+		<licenseUrl>https://github.com/drakkan/sftpgo/blob/main/LICENSE</licenseUrl>
 		<projectUrl>https://github.com/drakkan/sftpgo</projectUrl>
+		<projectSourceUrl>https://github.com/drakkan/sftpgo</projectSourceUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<description>
 ### SFTPGo
@@ -20,19 +21,14 @@ Fully featured and highly configurable SFTP server with optional FTP/S and WebDA
 - Configurable custom commands and/or HTTP hooks on file upload, pre-upload, download, pre-download, delete, pre-delete, rename, on SSH commands and on user add, update and delete.
 - Virtual accounts stored within a "data provider".
 - SQLite, MySQL, PostgreSQL, CockroachDB, Bolt (key/value store in pure Go) and in-memory data providers are supported.
-- Chroot isolation for local accounts. Cloud-based accounts can be restricted to a certain base path.
 - Per user and per directory virtual permissions, for each exposed path you can allow or deny: directory listing, upload, overwrite, download, delete, rename, create directories, create symlinks, change owner/group/file mode.
 - [url=https://github.com/drakkan/sftpgo/blob/main/docs/rest-api.md]REST API[/url] for users and folders management, backup, restore and real time reports of the active connections with possibility of forcibly closing a connection.
 - [url=https://github.com/drakkan/sftpgo/blob/main/docs/web-admin.md]Web based administration interface[/url] to easily manage users, folders and connections.
 - [url=https://github.com/drakkan/sftpgo/blob/main/docs/web-client.md]Web client interface[/url] so that end users can change their credentials and browse their files.
 - Public key and password authentication. Multiple public keys per user are supported.
 - SSH user [url=https://cvsweb.openbsd.org/src/usr.bin/ssh/PROTOCOL.certkeys?rev=1.8]certificate authentication[/url].
-- Keyboard interactive authentication. You can easily setup a customizable multi-factor authentication.
-- Partial authentication. You can configure multi-step authentication requiring, for example, the user password after successful public key authentication.
-- Per user authentication methods.
 - Custom authentication via external programs/HTTP API.
 - [url=https://github.com/drakkan/sftpgo/blob/main/docs/dare.md]Data At Rest Encryption[/url].
-- Dynamic user modification before login via external programs/HTTP API.
 - Quota support: accounts can have individual quota expressed as max total size and/or max number of files.
 - Bandwidth throttling, with distinct settings for upload and download.
 - Per-protocol [url=https://github.com/drakkan/sftpgo/blob/main/docs/rate-limiting.md]rate limiting[/url] is supported and can be optionally connected to the built-in defender to automatically block hosts that repeatedly exceed the configured limit.
@@ -47,18 +43,7 @@ Fully featured and highly configurable SFTP server with optional FTP/S and WebDA
 - SCP and rsync are supported.
 - FTP/S is supported. You can configure the FTP service to require TLS for both control and data connections.
 - [url=https://github.com/drakkan/sftpgo/blob/main/docs/webdav.md]WebDAV[/url] is supported.
-- Two-Way TLS authentication, aka TLS with client certificate authentication, is supported for REST API/Web Admin, FTPS and WebDAV over HTTPS.
-- Per user protocols restrictions. You can configure the allowed protocols (SSH/FTP/WebDAV) for each user.
-- [url=https://github.com/drakkan/sftpgo/blob/main/docs/metrics.md]Prometheus metrics[/url] are exposed.
-- Support for HAProxy PROXY protocol: you can proxy and/or load balance the SFTP/SCP/FTP/WebDAV service without losing the information about the client's address.
-- Easy [url=https://github.com/drakkan/sftpgo/blob/main/examples/convertusers]migration[/url] from Linux system user accounts.
-- [url=https://github.com/drakkan/sftpgo/blob/main/docs/portable-mode.md]Portable mode[/url]: a convenient way to share a single directory on demand.
-- [url=https://github.com/drakkan/sftpgo/blob/main/docs/sftp-subsystem.md]SFTP subsystem mode[/url]: you can use SFTPGo as OpenSSH's SFTP subsystem.
-- Performance analysis using built-in [url=https://github.com/drakkan/sftpgo/blob/main/docs/profiling.md]profiler[/url].
-- Configuration format is at your choice: JSON, TOML, YAML, HCL, envfile are supported.
-- Log files are accurate and they are saved in the easily parsable JSON format ([url=https://github.com/drakkan/sftpgo/blob/main/docs/logs.md]more information[/url]).
-
-**[PACKAGE NOTES](https://github.com/asheroto/ChocolateyPackages/blob/master/sftpgo/README.md)**</description>
+- and much more!</description>
 		<summary>Fully featured and highly configurable SFTP server with optional FTP/S and WebDAV support, written in Go.</summary>
 		<releaseNotes>https://github.com/drakkan/sftpgo/releases</releaseNotes>
 		<tags>sftpgo sftp go server</tags>
