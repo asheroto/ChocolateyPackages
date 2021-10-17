@@ -23,7 +23,7 @@ Install-ChocolateyPackage @packageArgs
 Write-Output "---------------------------"
 Write-Output ""
 Write-Output "If you have never used SFTPGo before, the default installation is at:"
-Write-Output "  https://localhost:8080"
+Write-Output "  http://localhost:8080"
 Write-Output ""
 Write-Output "The default SFTP port is 2022"
 Write-Output ""
