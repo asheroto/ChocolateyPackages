@@ -11,7 +11,7 @@
 		<projectUrl>https://github.com/drakkan/sftpgo</projectUrl>
 		<bugTrackerUrl>https://github.com/drakkan/sftpgo/issues</bugTrackerUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl></iconUrl>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/fc13e588/SFTPGo/icon.png</iconUrl>
 		<description>### SFTPGo
 
 Fully featured, highly configurable, and extremely fast SFTP server with optional FTP/S and WebDAV support, written in Go. Several storage backends are supported: local filesystem, encrypted local filesystem, S3 (compatible) Object Storage, Google Cloud Storage, Azure Blob Storage, SFTP.
