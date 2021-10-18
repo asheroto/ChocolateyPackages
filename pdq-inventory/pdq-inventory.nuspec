@@ -67,7 +67,7 @@ Share your reports and collections with other admins by creating a server/client
 		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/pdq-inventory</packageSourceUrl>
 		<docsUrl>https://www.pdq.com/documentation/</docsUrl>
 		<dependencies>
-			<dependency id="dotnet4.6.1" />
+			<dependency id="dotnet4.6.1" version="4.6.01055.00" />
 		</dependencies>
 	</metadata>
 	<files>

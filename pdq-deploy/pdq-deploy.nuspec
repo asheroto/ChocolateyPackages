@@ -49,7 +49,7 @@ To be sure that these files are used during the installation, be sure to check t
 		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/pdq-deploy</packageSourceUrl>
 		<docsUrl>https://www.pdq.com/documentation/</docsUrl>
 		<dependencies>
-			<dependency id="dotnet4.6.1" />
+			<dependency id="dotnet4.6.1" version="4.6.01055.00" />
 		</dependencies>
 	</metadata>
 	<files>
