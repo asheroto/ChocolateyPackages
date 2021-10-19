@@ -12,36 +12,20 @@
 		<bugTrackerUrl>https://github.com/drakkan/sftpgo/issues</bugTrackerUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/fc13e588/SFTPGo/icon.png</iconUrl>
-		<description>### SFTPGo
+		<description>SFTPGo allows to securely share your files over SFTP and optionally FTP/S and WebDAV as well.
+Several storage backends are supported and they are configurable per user, so you can serve a local directory for a user and an S3 bucket (or part of it) for another one.
+SFTPGo also supports virtual folders, a virtual folder can use any of the supported storage backends. So you can have, for example, an S3 user that exposes a GCS bucket (or part of it) on a specified path and an encrypted local filesystem on another one.
+Virtual folders can be private or shared among multiple users, for shared virtual folders you can define different quota limits for each user.
 
-Fully featured, highly configurable, and extremely fast SFTP server with optional FTP/S and WebDAV support, written in Go. Several storage backends are supported: local filesystem, encrypted local filesystem, S3 (compatible) Object Storage, Google Cloud Storage, Azure Blob Storage, SFTP.
+SFTPGo is highly customizable and extensible to suit your needs.
 
-- Support for serving local filesystem, encrypted local filesystem, S3 Compatible Object Storage, Google Cloud Storage, Azure Blob Storage or other SFTP accounts over SFTP/SCP/FTP/WebDAV.
-- Virtual folders are supported: a virtual folder can use any of the supported storage backends. So you can have, for example, an S3 user that exposes a GCS bucket (or part of it) on a specified path and an encrypted local filesystem on another one. Virtual folders can be private or shared among multiple users, for shared virtual folders you can define different quota limits for each user.
-- Configurable custom commands and/or HTTP hooks on file upload, pre-upload, download, pre-download, delete, pre-delete, rename, on SSH commands and on user add, update and delete.
-- Virtual accounts stored within a "data provider".
-- SQLite, MySQL, PostgreSQL, CockroachDB, Bolt (key/value store in pure Go) and in-memory data providers are supported.
-- Per user and per directory virtual permissions, for each exposed path you can allow or deny: directory listing, upload, overwrite, download, delete, rename, create directories, create symlinks, change owner/group/file mode.
-- [url=https://github.com/drakkan/sftpgo/blob/main/docs/rest-api.md]REST API[/url] for users and folders management, backup, restore and real time reports of the active connections with possibility of forcibly closing a connection.
-- [url=https://github.com/drakkan/sftpgo/blob/main/docs/web-admin.md]Web based administration interface[/url] to easily manage users, folders and connections.
-- [url=https://github.com/drakkan/sftpgo/blob/main/docs/web-client.md]Web client interface[/url] so that end users can change their credentials and browse their files.
-- Public key and password authentication. Multiple public keys per user are supported.
-- SSH user [url=https://cvsweb.openbsd.org/src/usr.bin/ssh/PROTOCOL.certkeys?rev=1.8]certificate authentication[/url].
-- Custom authentication via external programs/HTTP API.
-- [url=https://github.com/drakkan/sftpgo/blob/main/docs/dare.md]Data At Rest Encryption[/url].
-- Quota support: accounts can have individual quota expressed as max total size and/or max number of files.
-- Bandwidth throttling, with distinct settings for upload and download.
-- Per user maximum concurrent sessions.
-- Per user and global IP filters: login can be restricted to specific ranges of IP addresses or to a specific IP address.
-- Per user and per directory shell like patterns filters: files can be allowed or denied based on shell like patterns.
-- Automatic blocklist management using the built-in [url=https://github.com/drakkan/sftpgo/blob/main/docs/defender.md]defender[/url].
-- Per user files/folders ownership mapping: you can map all the users to the system account that runs SFTPGo (all platforms are supported) or you can run SFTPGo as root user and map each user or group of users to a different system account (*NIX only).
-- Support for Git repositories over SSH.
-- SCP and rsync are supported.
-- FTP/S is supported. You can configure the FTP service to require TLS for both control and data connections.
-- [url=https://github.com/drakkan/sftpgo/blob/main/docs/webdav.md]WebDAV[/url] is supported.
-- and much more!</description>
-		<summary>Fully featured and highly configurable SFTP server with optional FTP/S and WebDAV support, written in Go.</summary>
+You can find more info [here](https://github.com/drakkan/sftpgo).
+
+### Notes
+
+* This package installs SFTPGo as Windows Service.
+* After the first installation please take a look at the [Getting Started Guide](https://github.com/drakkan/sftpgo/blob/main/docs/howto/getting-started.md).</description>
+		<summary>Fully featured and highly configurable SFTP server with optional FTP/S and WebDAV support.</summary>
 		<releaseNotes>https://github.com/drakkan/sftpgo/releases</releaseNotes>
 		<tags>sftpgo sftp go server</tags>
 		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/SFTPGo</packageSourceUrl>
