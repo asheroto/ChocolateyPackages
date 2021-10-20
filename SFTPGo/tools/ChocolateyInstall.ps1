@@ -27,7 +27,7 @@ $DefaultConfigurationFilePath = Join-Path -Path $DefaultDataPath -ChildPath "con
 Write-Output "---------------------------"
 Write-Output ""
 Write-Output "If you have never used SFTPGo before, the web administration panel is located here:"
-Write-Output "`thttp://localhost:8080"
+Write-Output "`thttp://localhost:8080/web/admin"
 Write-Output ""
 Write-Output "Default web administration port:"
 Write-Output "`t8080"
