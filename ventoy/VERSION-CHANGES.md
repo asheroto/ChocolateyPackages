@@ -1,0 +1,3 @@
+- Change ChocolateyInstall.ps1
+- Change ventoy.nuspec
+- Change verification
