@@ -1,3 +1,4 @@
-- Change ChocolateyInstall.ps1
-- Change ventoy.nuspec
-- Change verification
+- Download latest version
+- Change filename in ChocolateyInstall.ps1
+- Change version in ventoy.nuspec
+- Change change URL of file and sha256 hash in verification
