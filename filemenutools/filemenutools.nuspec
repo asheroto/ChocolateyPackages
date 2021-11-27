@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>filemenutools</id>
+    <version>7.8.4</version>
+    <title>FileMenu Tools</title>
+    <authors>LopeSoft</authors>
+    <owners>asheroto</owners>
+    <licenseUrl>https://github.com/twbs/bootstrap/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://www.lopesoft.com/index.php/en/products/filemenutools</projectUrl>
+    <iconUrl></iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>FileMenu Tools is an application which lets you customize the context menu of Windows File Explorer.
+
+The main features are the following:
+
+• Add some built-in utilities that perform operations on files and folders. These utilities are explained below in more detail.
+• Add custom commands which run a specific action. The possible actions are the following:
+	- Run external applications
+	- Copy/move to a specific folder
+	- Delete specific file types
+	- Send the selected files as attachments to e-mail recipient(s)
+	- Rename the selected files using a set of rules
+• Configure the "Send to..." submenu
+• Enable/disable commands which are added by other applications to the context menu</description>
+    <summary>FileMenu Tools is an application which lets you customize the context menu of Windows File Explorer.</summary>
+    <releaseNotes>https://www.lopesoft.com/index.php/en/filemenutools/changelog</releaseNotes>
+    <tags>filemenu tools file menu lopesoft lope soft</tags>
+    <docsUrl>https://www.lopesoft.com/index.php/en/filemenutools</docsUrl>
+  </metadata>
+  <files>
+    <file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+  </files>
+</package>
