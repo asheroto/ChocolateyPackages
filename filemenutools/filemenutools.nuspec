@@ -9,7 +9,7 @@
     <owners>asheroto</owners>
     <licenseUrl>https://github.com/twbs/bootstrap/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://www.lopesoft.com/index.php/en/products/filemenutools</projectUrl>
-    <iconUrl></iconUrl>
+    <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/9920db2661e0073ecaabd56aaccfa1991f8da805/filemenutools/icon.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>FileMenu Tools is an application which lets you customize the context menu of Windows File Explorer.
 

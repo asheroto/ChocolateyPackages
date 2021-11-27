@@ -1,26 +1,19 @@
-﻿# exe location
-# ventoy-$version
-# └── Ventoy2Disk.exe
-
-$ErrorActionPreference = 'Stop';
-
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileName32 = 'ventoy-1.0.61-windows.zip'
-$packageName = $env:ChocolateyPackageName
-$shortcutPath = [Environment]::GetFolderPath("Programs") + '\Ventoy.lnk'
-$unzipLocation = "$Env:LOCALAPPDATA\$packageName"
-$version = $env:ChocolateyPackageVersion
+﻿$ErrorActionPreference 	= 'Stop'
+$packageName 			= 'filemenutools'
+$softwareName 			= 'FileMenu Tools*'
+$silentArgs 			= '/VERYSILENT /NORESTART'
+$toolsPath      		= "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
+$fileLocation			= "$toolsPath\FileMenuTools-setup.exe"
+$fileType 				= 'exe'
+$validExitCodes 		= @(0)
 
 $packageArgs = @{
-	packageName   = $packageName
-	unzipLocation = $unzipLocation
-	file          = "$toolsDir\$fileName32"
+	packageName    = $packageName
+	fileType       = $fileType
+	file           = $fileLocation
+	silentArgs     = $silentArgs
+	validExitCodes = $validExitCodes
+	softwareName   = $softwareName
 }
 
-Install-ChocolateyZipPackage @packageArgs
-
-Copy-Item -Path "$unzipLocation/ventoy-$version/*" -Destination $unzipLocation -Force -Recurse -ErrorAction SilentlyContinue
-Remove-Item "$unzipLocation/ventoy-$version" -Force -Recurse -ErrorAction SilentlyContinue
-
-$exePath = (Get-ChildItem $unzipLocation -Filter "Ventoy2Disk.exe" -Recurse).FullName
-Install-ChocolateyShortcut -shortcutFilePath $shortcutPath -Target "$exePath" -WorkingDirectory $unzipLocation
+Install-ChocolateyInstallPackage @packageArgs
