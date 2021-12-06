@@ -22,7 +22,7 @@ See [ventoy.net](https://www.ventoy.net/) for detail.</description>
 		<copyright>Copyright © 2019-2021 longpanda</copyright>
 		<tags>ventoy</tags>
 		<projectSourceUrl>https://github.com/ventoy/Ventoy</projectSourceUrl>
-		<packageSourceUrl>https://github.com/iYato/chocolatey-packages/tree/master/ventoy</packageSourceUrl>
+		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/ventoy</packageSourceUrl>
 		<docsUrl>https://www.ventoy.net/doc_news.html</docsUrl>
 		<bugTrackerUrl>https://github.com/ventoy/Ventoy/issues</bugTrackerUrl>
 	</metadata>
