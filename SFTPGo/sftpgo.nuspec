@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
 	<metadata>
 		<id>sftpgo</id>
-		<version>2.2.0</version>
+		<version>2.2.1</version>
 		<title>SFTPGo</title>
 		<authors>drakkan</authors>
 		<owners>asheroto</owners>
@@ -11,7 +11,7 @@
 		<projectUrl>https://github.com/drakkan/sftpgo</projectUrl>
 		<bugTrackerUrl>https://github.com/drakkan/sftpgo/issues</bugTrackerUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/fc13e588/SFTPGo/icon.png</iconUrl>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/732e57df/SFTPGo/icon.png</iconUrl>
 		<description>SFTPGo allows to securely share your files over SFTP and optionally FTP/S and WebDAV as well.
 Several storage backends are supported and they are configurable per user, so you can serve a local directory for a user and an S3 bucket (or part of it) for another one.
 SFTPGo also supports virtual folders, a virtual folder can use any of the supported storage backends. So you can have, for example, an S3 user that exposes a GCS bucket (or part of it) on a specified path and an encrypted local filesystem on another one.

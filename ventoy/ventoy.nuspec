@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 	<metadata>
 		<id>ventoy</id>
-		<version>1.0.63</version>
+		<version>1.0.64</version>
 		<title>Ventoy</title>
 		<authors>ventoy.net</authors>
 		<owners>Yato</owners>
