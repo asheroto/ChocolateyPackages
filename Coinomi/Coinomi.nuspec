@@ -10,7 +10,7 @@
 		<licenseUrl>https://www.coinomi.com/en/terms/</licenseUrl>
 		<projectUrl>https://www.coinomi.com/</projectUrl>
 		<requireLicenseAcceptance>true</requireLicenseAcceptance>
-		<iconUrl></iconUrl>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/e930cb26/Coinomi/icon.png</iconUrl>
 		<description>THE BLOCKCHAIN WALLET TRUSTED BY MILLIONS
 Securely store, manage and exchange Bitcoin, Ethereum, and more than 1,770 other blockchain assets.</description>
 		<summary>Cryptocurrency wallet supporting more than 1,770 blockchain assets</summary>
