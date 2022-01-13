@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+	<metadata>
+		<id>Coinomi</id>
+		<version>1.3.0</version>
+		<title>Coinomi Wallet</title>
+		<authors>Coinomi</authors>
+		<owners>asheroto</owners>
+		<licenseUrl>https://www.coinomi.com/en/terms/</licenseUrl>
+		<projectUrl>https://www.coinomi.com/</projectUrl>
+		<requireLicenseAcceptance>true</requireLicenseAcceptance>
+		<iconUrl></iconUrl>
+		<description>THE BLOCKCHAIN WALLET TRUSTED BY MILLIONS
+Securely store, manage and exchange Bitcoin, Ethereum, and more than 1,770 other blockchain assets.</description>
+		<summary>Cryptocurrency wallet supporting more than 1,770 blockchain assets</summary>
+		<tags>coinomi wallet crypto cryptocurrency blockchain assets bitcoin monero ethereum</tags>
+		<docsUrl>https://coinomi.freshdesk.com/support/home</docsUrl>
+	</metadata>
+	<files>
+		<file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+	</files>
+</package>
