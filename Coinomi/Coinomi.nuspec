@@ -16,6 +16,7 @@ Securely store, manage and exchange Bitcoin, Ethereum, and more than 1,770 other
 		<summary>Cryptocurrency wallet supporting more than 1,770 blockchain assets</summary>
 		<tags>coinomi wallet crypto cryptocurrency blockchain assets bitcoin monero ethereum</tags>
 		<docsUrl>https://coinomi.freshdesk.com/support/home</docsUrl>
+		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/Coinomi</packageSourceUrl>
 	</metadata>
 	<files>
 		<file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
