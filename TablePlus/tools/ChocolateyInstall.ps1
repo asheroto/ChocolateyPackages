@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference  = 'Stop'
-$packageName    = 'sftpgo'
-$softwareName   = 'SFTPGo'
+$packageName    = 'TablePlus'
+$softwareName   = 'TablePlus'
 $url            = 'https://download.tableplus.com/windows/4.8.6/TablePlusSetup.exe'
 $checksum       = '7AA7F6BF8FF724C4135F967F1BC51198E97ACF9AF94D2FBFAE944AB0F1305797'
 $silentArgs     = '/VERYSILENT'
