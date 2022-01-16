@@ -8,7 +8,7 @@
 		<owners>Yato, asheroto</owners>
 		<licenseUrl>https://tableplus.com/blog/2018/01/license-agreement.html</licenseUrl>
 		<projectUrl>https://tableplus.com/windows</projectUrl>
-		<iconUrl></iconUrl>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/21ff9d1aeb3f9da5138c8b6e01efd89e8bb22505/TablePlus/icon.png</iconUrl>
 		<requireLicenseAcceptance>true</requireLicenseAcceptance>
 		<description>Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite, MongoDB, &amp; more
 
