@@ -1,8 +1,8 @@
-$packageName 		= 'Messages for web'
+$packageName 		= 'MessagesForWeb'
 [array]$key 		= Get-UninstallRegistryKey -SoftwareName "Messages for web*"
 $uninstallString 	= $key.UninstallString
 $file 				= $uninstallString
-$silentArgs 		= '{E4D364B1-9D31-471A-A747-CEFB8C8F7712} /qn'
+$silentArgs 		= $uninstallString.Replace("MsiExec.exe /X", "") + " /qn"
 $fileType			= 'msi'
 $validExitCodes 	= @(0);
 
@@ -13,5 +13,7 @@ $packageArgs = @{
 	fileType       = $fileType
 	validExitCodes = $validExitCodes
 }
+
+Stop-Process -Name $packageName -ErrorAction SilentlyContinue
 
 Uninstall-ChocolateyPackage @packageArgs
