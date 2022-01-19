@@ -11,7 +11,7 @@
 		<projectUrl>https://github.com/asheroto/MessagesForWeb</projectUrl>
 		<bugTrackerUrl>https://github.com/asheroto/MessagesForWeb/issues</bugTrackerUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl></iconUrl>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/030999ae/MessagesForWeb/icon.png</iconUrl>
 		<description>Google Message for Web in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Win+M to show the window.</description>
 		<summary>Google Message for Web in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Win+M to show the window.</summary>
 		<releaseNotes>https://github.com/asheroto/MessagesForWeb/releases</releaseNotes>
