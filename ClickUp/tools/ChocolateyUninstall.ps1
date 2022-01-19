@@ -1,8 +1,8 @@
 $packageName 		= 'ClickUp'
-[array]$key 		= Get-UninstallRegistryKey -SoftwareName "ClickUp*"
+[array]$key 		= Get-UninstallRegistryKey -SoftwareName "$packageName*"
 $uninstallString 	= $key.UninstallString
 $file 				= $uninstallString
-$silentArgs 		= '{EADA8BB4-9DBE-473B-B990-28D6538BC5B2} /qn'
+$silentArgs 		= $uninstallString.Replace("MsiExec.exe /X", "") + " /qn"
 $fileType			= 'msi'
 $validExitCodes 	= @(0);
 
@@ -13,5 +13,7 @@ $packageArgs = @{
 	fileType       = $fileType
 	validExitCodes = $validExitCodes
 }
+
+Stop-Process -Name $packageName -ErrorAction SilentlyContinue
 
 Uninstall-ChocolateyPackage @packageArgs
