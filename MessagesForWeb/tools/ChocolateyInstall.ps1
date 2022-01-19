@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference  = 'Stop'
-$packageName    = 'ClickUp'
-$softwareName   = 'ClickUp'
-$url            = 'https://github.com/asheroto/ClickUp/releases/download/0.0.4.4/ClickUp.exe'
-$checksum       = '80ABEAD286958C7015C690682A1B866FD8C2E8EF761A0F587631C42E6ECADA4B'
+$packageName    = 'MessagesForWeb'
+$softwareName   = 'MessagesForWeb'
+$url            = 'https://github.com/asheroto/MessagesForWeb/releases/download/0.0.1.0/MessagesForWeb.exe'
+$checksum       = '9E13B45B50013FAC6AA7BB25002F84FD1625056B6056CA0B6DA80B6D213C5BB6'
 $silentArgs     = '/quiet'
 $validExitCodes = @(0)
 
