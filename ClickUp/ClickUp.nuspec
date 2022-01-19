@@ -2,7 +2,7 @@
 <!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
 	<metadata>
-		<id>clickup</id>
+		<id>ClickUp</id>
 		<version>0.0.1.2</version>
 		<title>ClickUp</title>
 		<authors>asheroto</authors>
@@ -11,7 +11,7 @@
 		<projectUrl>https://github.com/asheroto/ClickUp</projectUrl>
 		<bugTrackerUrl>https://github.com/asheroto/ClickUp/issues</bugTrackerUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl></iconUrl>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/5f3689f7479feda96b30cbfcf7acdc4204843345/ClickUp/icon.png</iconUrl>
 		<description>Clickup.com in a native Windows application.</description>
 		<summary>ClickUp.com in a native Windows application.</summary>
 		<releaseNotes>https://github.com/asheroto/ClickUp/releases</releaseNotes>
