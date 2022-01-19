@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference  = 'Stop'
 $packageName    = 'ClickUp'
 $softwareName   = 'ClickUp'
-$url            = 'https://github.com/asheroto/ClickUp/releases/download/0.0.2.1/ClickUp.exe'
-$checksum       = '419F76E15F5D545E72F1FDAE6D4757E2E9D6A867189F03A80926DA62E5CA2826'
+$url            = 'https://github.com/asheroto/ClickUp/releases/download/0.0.3.0/ClickUp.exe'
+$checksum       = '2C896A60F2AAB914CC4D44A91595498C3AF32388174D4C7816FAD53BF55F7926'
 $silentArgs     = '/quiet'
 $validExitCodes = @(0)
 
