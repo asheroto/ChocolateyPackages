@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+	<metadata>
+		<id>clickup</id>
+		<version>0.0.1.2</version>
+		<title>ClickUp</title>
+		<authors>asheroto</authors>
+		<owners>asheroto</owners>
+		<licenseUrl>https://github.com/asheroto/ClickUp/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/asheroto/ClickUp</projectUrl>
+		<bugTrackerUrl>https://github.com/asheroto/ClickUp/issues</bugTrackerUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<iconUrl></iconUrl>
+		<description>Clickup.com in a native Windows application.</description>
+		<summary>ClickUp.com in a native Windows application.</summary>
+		<releaseNotes>https://github.com/asheroto/ClickUp/releases</releaseNotes>
+		<tags>clickup click up clickup.com project task organization organizer</tags>
+		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/ClickUp</packageSourceUrl>
+		<docsUrl>https://github.com/asheroto/ClickUp</docsUrl>
+	</metadata>
+	<files>
+		<file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+	</files>
+</package>
