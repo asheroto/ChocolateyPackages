@@ -2,7 +2,7 @@ $packageName 		= 'ClickUp'
 [array]$key 		= Get-UninstallRegistryKey -SoftwareName "ClickUp*"
 $uninstallString 	= $key.UninstallString
 $file 				= $uninstallString
-$silentArgs 		= '{B99169CC-B41D-4EC3-89FC-B46BA85414F5} /qn'
+$silentArgs 		= '{50089E6C-44CC-42AC-B6CE-E7C70FC4436D} /qn'
 $fileType			= 'msi'
 $validExitCodes 	= @(0);
 
