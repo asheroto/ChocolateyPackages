@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-  <metadata>
-    <id>TablePlus</id>
-    <version>4.8.6</version>
-    <title>TablePlus (Install)</title>
-    <authors>TablePlus Inc</authors>
-    <owners>Yato, asheroto</owners>
-    <licenseUrl>https://tableplus.com/blog/2018/01/license-agreement.html</licenseUrl>
-    <projectUrl>https://tableplus.com/windows</projectUrl>
-    <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/21ff9d1aeb3f9da5138c8b6e01efd89e8bb22505/TablePlus/icon.png</iconUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite, MongoDB, &amp; more
+	<metadata>
+		<id>TablePlus</id>
+		<version>4.8.6</version>
+		<title>TablePlus (Install)</title>
+		<authors>TablePlus Inc</authors>
+		<owners>Yato, asheroto</owners>
+		<licenseUrl>https://tableplus.com/blog/2018/01/license-agreement.html</licenseUrl>
+		<projectUrl>https://tableplus.com/windows</projectUrl>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/21ff9d1aeb3f9da5138c8b6e01efd89e8bb22505/TablePlus/icon.png</iconUrl>
+		<requireLicenseAcceptance>true</requireLicenseAcceptance>
+		<description>Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite, MongoDB, &amp; more
 
 More description at official [website](https://tableplus.com/windows)</description>
-    <summary>Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite, MongoDB, &amp; more</summary>
-    <releaseNotes>https://tableplus.com/blog/2018/09/changelogs-windows.html</releaseNotes>
-    <copyright>© 2022 TablePlus Inc. 1100-1959 Upper Water Street, Halifax NS Canada. All rights reserved</copyright>
-    <tags>tableplus database-management postgresql mysql sql-server redis mariadb sqlite amazon-redshift</tags>
-    <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/TablePlus</packageSourceUrl>
-    <docsUrl>https://tableplus.com/</docsUrl>
-    <bugTrackerUrl>https://github.com/TablePlus/TablePlus/issues</bugTrackerUrl>
-  </metadata>
-  <files>
-    <file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
-  </files>
+		<summary>Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite, MongoDB, &amp; more</summary>
+		<releaseNotes>https://tableplus.com/blog/2018/09/changelogs-windows.html</releaseNotes>
+		<copyright>© 2022 TablePlus Inc. 1100-1959 Upper Water Street, Halifax NS Canada. All rights reserved</copyright>
+		<tags>tableplus database-management postgresql mysql sql-server redis mariadb sqlite amazon-redshift</tags>
+		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/TablePlus</packageSourceUrl>
+		<docsUrl>https://tableplus.com/</docsUrl>
+		<bugTrackerUrl>https://github.com/TablePlus/TablePlus/issues</bugTrackerUrl>
+	</metadata>
+	<files>
+		<file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+	</files>
 </package>
