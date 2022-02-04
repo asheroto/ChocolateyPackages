@@ -5,16 +5,16 @@
 $ErrorActionPreference = 'Stop';
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$fileName32 = 'ventoy-1.0.64-windows.zip'
+$fileName32 = 'ventoy-1.0.65-windows.zip'
 $packageName = $env:ChocolateyPackageName
 $shortcutPath = [Environment]::GetFolderPath("Programs") + '\Ventoy.lnk'
 $unzipLocation = "$Env:LOCALAPPDATA\$packageName"
 $version = $env:ChocolateyPackageVersion
 
 $packageArgs = @{
-	packageName   = $packageName
-	unzipLocation = $unzipLocation
-	file          = "$toolsDir\$fileName32"
+	packageName		= $packageName
+	unzipLocation	= $unzipLocation
+	file			= "$toolsDir\$fileName32"
 }
 
 Install-ChocolateyZipPackage @packageArgs
