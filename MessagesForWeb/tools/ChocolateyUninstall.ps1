@@ -1,5 +1,5 @@
 $packageName 		= 'MessagesForWeb'
-[array]$key 		= Get-UninstallRegistryKey -SoftwareName "Messages for web*"
+[array]$key 		= Get-UninstallRegistryKey -SoftwareName "Messages for Web*"
 $uninstallString 	= $key.UninstallString
 $file 				= $uninstallString
 $silentArgs 		= $uninstallString.Replace("MsiExec.exe /X", "") + " /qn"

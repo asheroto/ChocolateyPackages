@@ -1,3 +1,2 @@
 - Change filename in ChocolateyInstall.ps1
-- Change uninstall string in ChocolateyUninstall.ps1
 - Change version in MessagesForWeb.nuspec
