@@ -22,16 +22,3 @@ Stop-Process -Name $packageName -ErrorAction SilentlyContinue
 
 # Install the package
 Install-ChocolateyPackage @packageArgs
-
-# Start the process
-$ClickUpPath = Join-Path -Path (Get-InstallRegistryKey ClickUp).InstallLocation -ChildPath "ClickUp.exe"
-$ClickUpSilentArgs = "-startup"
-Start-Process -FilePath $ClickUpPath -ArgumentList $ClickUpSilentArgs
-
-# `t = tab
-Write-Output $("-" * 25)
-Write-Output ""
-Write-Output "ClickUp is now running from the system tray. Press Alt-Esc to activate it."
-Write-Output "ClickUp is installed and will automatically start on Windows login."
-Write-Output ""
-Write-Output $("-" * 25)
