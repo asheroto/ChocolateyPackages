@@ -9,7 +9,7 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<licenseUrl>https://github.com/coreybutler/nvm-windows/blob/master/LICENSE</licenseUrl>
 		<projectUrl>https://github.com/coreybutler/nvm-windows</projectUrl>
-		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/45f8a9748bd22a244725a459af7027b8976fed31/nvm/icon.png</iconUrl>
+		<iconUrl></iconUrl>
 		<description>Manage multiple installations of node.js on a Windows computer.</description>
 		<summary>A node.js version management utility for Windows.</summary>
 		<copyright></copyright>
