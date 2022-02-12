@@ -3,18 +3,18 @@
 # └── Ventoy2Disk.exe
 
 $ErrorActionPreference	= 'Stop';
-$packageName			= "ventoy"
-$fileName				= "ventoy-1.0.65-windows.zip"
-$toolsDir				= $(Split-Path -Parent $MyInvocation.MyCommand.Definition)
-$file					= Join-Path $toolsDir $fileName
-$shortcutPath			= Join-Path ([Environment]::GetFolderPath("Programs")) "Ventoy.lnk"
-$unzipLocation			= Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
-$version				= [Environment]::GetEnvironmentVariable("ChocolateyPackageVersion")
+$packageName = "ventoy"
+$fileName = "ventoy-1.0.65-windows.zip"
+$toolsDir = $(Split-Path -Parent $MyInvocation.MyCommand.Definition)
+$file = Join-Path $toolsDir $fileName
+$shortcutPath = Join-Path ([Environment]::GetFolderPath("Programs")) "Ventoy.lnk"
+$unzipLocation = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
+$version = [Environment]::GetEnvironmentVariable("ChocolateyPackageVersion")
 
 $packageArgs = @{
-	packageName		= $packageName
+	packageName   = $packageName
 	unzipLocation	= $unzipLocation
-	file			= $file
+	file          = $file
 }
 
 Install-ChocolateyZipPackage @packageArgs
