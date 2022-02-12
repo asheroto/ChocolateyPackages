@@ -5,7 +5,7 @@
 		<version>1.1.9</version>
 		<title>NVM</title>
 		<authors>coreybutler</authors>
-		<owners>Ariel Jannai,Ethan Spoelstra</owners>
+		<owners>asheroto</owners>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<licenseUrl>https://github.com/coreybutler/nvm-windows/blob/master/LICENSE</licenseUrl>
 		<projectUrl>https://github.com/coreybutler/nvm-windows</projectUrl>
@@ -14,6 +14,7 @@
 		<summary>A node.js version management utility for Windows.</summary>
 		<copyright></copyright>
 		<tags>nvm node nodejs node.js version management windows admin</tags>
+		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/nvm</packageSourceUrl>
 	</metadata>
 	<files>
 		<file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
