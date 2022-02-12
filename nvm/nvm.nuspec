@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata>
+		<id>nvm</id>
+		<version>1.1.9</version>
+		<title>NVM</title>
+		<authors>coreybutler</authors>
+		<owners>Ariel Jannai,Ethan Spoelstra</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<licenseUrl>https://github.com/coreybutler/nvm-windows/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/coreybutler/nvm-windows</projectUrl>
+		<iconUrl></iconUrl>
+		<description>Manage multiple installations of node.js on a Windows computer.</description>
+		<summary>A node.js version management utility for Windows.</summary>
+		<copyright></copyright>
+		<tags>nvm node nodejs node.js version management windows admin</tags>
+	</metadata>
+	<files>
+		<file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+	</files>
+</package>
