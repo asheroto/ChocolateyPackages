@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
 	<metadata>
 		<id>ClickUp</id>
-		<version>0.0.5.0</version>
+		<version>0.0.6.0</version>
 		<title>ClickUp</title>
 		<authors>asheroto</authors>
 		<owners>asheroto</owners>
@@ -11,7 +11,7 @@
 		<projectUrl>https://github.com/asheroto/ClickUp</projectUrl>
 		<bugTrackerUrl>https://github.com/asheroto/ClickUp/issues</bugTrackerUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/341c27c6/ClickUp/icon.png</iconUrl>
+		<iconUrl></iconUrl>
 		<description>ClickUp.com in a native Windows application that runs on startup and hides to the system tray. Press Win+ESC to show the window.</description>
 		<summary>ClickUp.com in a native Windows application that runs on startup and hides to the system tray. Press Win+ESC to show the window.</summary>
 		<releaseNotes>https://github.com/asheroto/ClickUp/releases</releaseNotes>
