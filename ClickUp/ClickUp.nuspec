@@ -11,7 +11,7 @@
 		<projectUrl>https://github.com/asheroto/ClickUp</projectUrl>
 		<bugTrackerUrl>https://github.com/asheroto/ClickUp/issues</bugTrackerUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl></iconUrl>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/e7a0cb9e69990a17b97247459b260e0d5ab583f0/ClickUp/icon.png</iconUrl>
 		<description>ClickUp.com in a native Windows application that runs on startup and hides to the system tray. Press Win+ESC to show the window.</description>
 		<summary>ClickUp.com in a native Windows application that runs on startup and hides to the system tray. Press Win+ESC to show the window.</summary>
 		<releaseNotes>https://github.com/asheroto/ClickUp/releases</releaseNotes>
