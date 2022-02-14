@@ -1,10 +1,10 @@
 $packageName 		= 'MessagesForWeb'
 [array]$key 		= Get-UninstallRegistryKey -SoftwareName "Messages for Web*"
-$uninstallString 	= $key[0].UninstallString
 
 # Exit if the package is already uninstalled
-if($uninstallString.length -eq 0) { Return 0 }
+if($key.length -eq 0) { Return 0 }
 
+$uninstallString 	= $key[0].UninstallString
 $file 				= $uninstallString
 $silentArgs 		= $uninstallString.Replace("MsiExec.exe /X", "") + " /qn"
 $fileType			= 'msi'
