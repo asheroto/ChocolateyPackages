@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
 	<metadata>
 		<id>sftpgo</id>
-		<version>2.2.1</version>
+		<version>2.2.2</version>
 		<title>SFTPGo</title>
 		<authors>drakkan</authors>
 		<owners>asheroto</owners>
@@ -11,11 +11,13 @@
 		<projectUrl>https://github.com/drakkan/sftpgo</projectUrl>
 		<bugTrackerUrl>https://github.com/drakkan/sftpgo/issues</bugTrackerUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/732e57df/SFTPGo/icon.png</iconUrl>
-		<description>SFTPGo allows to securely share your files over SFTP and optionally FTP/S and WebDAV as well.
+		<iconUrl>https://raw.githubusercontent.com/drakkan/sftpgo/main/docs/howto/img/logo.png</iconUrl>
+		<description>SFTPGo allows to securely share your files over SFTP, HTTP/S and optionally FTP/S and WebDAV as well.
 Several storage backends are supported and they are configurable per user, so you can serve a local directory for a user and an S3 bucket (or part of it) for another one.
 
 SFTPGo also supports virtual folders. A virtual folder can use any of the supported storage backends. So you can have, for example, an S3 user that exposes a GCS bucket (or part of it) on a specified path and an encrypted local filesystem on another one. Virtual folders can be private or shared among multiple users, for shared virtual folders you can define different quota limits for each user.
+
+SFTPGo allows to create HTTP/S links to externally share files and folders securely, by setting limits to the number of downloads/uploads, protecting the share with a password, limiting access by source IP address, setting an automatic expiration date.
 
 SFTPGo is highly customizable and extensible to suit your needs.
 
@@ -25,7 +27,7 @@ You can find more info [here](https://github.com/drakkan/sftpgo).
 
 * This package installs SFTPGo as Windows Service.
 * After the first installation please take a look at the [Getting Started Guide](https://github.com/drakkan/sftpgo/blob/main/docs/howto/getting-started.md).</description>
-		<summary>Fully featured and highly configurable SFTP server with optional FTP/S and WebDAV support.</summary>
+		<summary>Fully featured and highly configurable SFTP server with optional HTTP/S,FTP/S and WebDAV support.</summary>
 		<releaseNotes>https://github.com/drakkan/sftpgo/releases</releaseNotes>
 		<tags>sftp sftp-server ftp webdav s3 azure-blob google-cloud-storage cloud-storage scp data-at-rest-encryption multi-factor-authentication multi-step-authentication</tags>
 		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/SFTPGo</packageSourceUrl>
