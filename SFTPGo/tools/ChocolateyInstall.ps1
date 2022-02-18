@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference  = 'Stop'
 $packageName    = 'sftpgo'
 $softwareName   = 'SFTPGo'
-$url            = 'https://github.com/drakkan/sftpgo/releases/download/v2.2.1/sftpgo_v2.2.1_windows_x86_64.exe'
-$checksum       = '9BA42FD43E3402165572D7A7C7F4E6CF10CEA927700F63EA714BA947DDE620F0'
+$url            = 'https://github.com/drakkan/sftpgo/releases/download/v2.2.2/sftpgo_v2.2.2_windows_x86_64.exe'
+$checksum       = '8A00EA6848796DE4A5DB7C9ABFE7EA8BF3FB14012D15322013D3F3A7FE9E295F'
 $silentArgs     = '/VERYSILENT'
 $validExitCodes = @(0)
 
@@ -21,7 +21,7 @@ $packageArgs = @{
 Install-ChocolateyPackage @packageArgs
 
 $DefaultDataPath = Join-Path -Path $ENV:ProgramData -ChildPath "SFTPGo"
-$DefaultConfigurationFilePath = Join-Path -Path $DefaultDataPath -ChildPath "config.json"
+$DefaultConfigurationFilePath = Join-Path -Path $DefaultDataPath -ChildPath "sftpgo.json"
 
 # `t = tab
 Write-Output "---------------------------"
@@ -39,8 +39,13 @@ Write-Output "`t$DefaultDataPath"
 Write-Output "Default configuration file location:"
 Write-Output "`t$DefaultConfigurationFilePath"
 Write-Output ""
+Write-Output "If the SFTPGo service does not start, make sure that TCP ports 2022 and 8080 are"
+Write-Output "not used by other services or change the SFTPGo configuration to suit your needs."
+Write-Output ""
 Write-Output "General information (README) location:"
 Write-Output "`thttps://github.com/drakkan/sftpgo"
+Write-Output "Getting start guide location:"
+Write-Output "`thttps://github.com/drakkan/sftpgo/blob/main/docs/howto/getting-started.md"
 Write-Output "Detailed information (docs folder) location:"
 Write-Output "`thttps://github.com/drakkan/sftpgo/tree/main/docs"
 Write-Output ""
