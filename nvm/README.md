@@ -1,3 +1,3 @@
-This is a repository for the deployment of [ClickUp on Windows](https://github.com/asheroto/ClickUp) with [Chocolatey](https://chocolatey.org/).
+This is a repository for the deployment of [nvm](https://github.com/coreybutler/nvm-windows) with [Chocolatey](https://chocolatey.org/).
 
-Chocolatey Package URL: https://community.chocolatey.org/packages/ClickUp
+Chocolatey Package URL: https://community.chocolatey.org/packages/nvm
