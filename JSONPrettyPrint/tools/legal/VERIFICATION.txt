@@ -27,5 +27,5 @@ Hashes should match what's listed in the "file hashes" section.
 ------------------------------------------------------
 File hashes
 ------------------------------------------------------
-SHA256          4C333E5D2E5A69D1CE45252ED77E91EC06117DB9ADA1059781626FA9679A9027       JSONPrettyPrint_win-x64.exe
-SHA256          FEB3850A47EDBC87DE3A7DF0547785E8B0F34F25441CF66A3EA9DF7C872E6BE4       JSONPrettyPrint_win-x86.exe
+SHA256          774C23A3A4ACBC3273E78FEFFE692B108B695776DB3FF40DA4D77B2868A2DA74       JSONPrettyPrint_win-x64.exe
+SHA256          39BE30B5371F324BAD677677056DEC204B85E57F398ECAB9AEC3AFDD03C40423       JSONPrettyPrint_win-x86.exe

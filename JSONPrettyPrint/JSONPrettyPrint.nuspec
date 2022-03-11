@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>jsonprettyprint</id>
-        <version>1.0.3.0</version>
+        <version>1.0.4.0</version>
         <title>JSONPrettyPrint</title>
         <authors>asheroto</authors>
         <owners>asheroto</owners>
@@ -27,4 +27,3 @@ Pipe JSON data to make it pretty! Works on Windows, Linux, Mac. See the package 
         <file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
     </files>
 </package>
-
