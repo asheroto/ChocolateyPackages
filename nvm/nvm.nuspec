@@ -12,7 +12,7 @@
 		<projectUrl>https://github.com/coreybutler/nvm-windows</projectUrl>
 		<projectSourceUrl>https://github.com/coreybutler/nvm-windows</projectSourceUrl>
 		<bugTrackerUrl>https://github.com/coreybutler/nvm-windows/issues</bugTrackerUrl>
-		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/3f06ff4f574f4cab6d9b145966b6a9f5481328d3/nvm/icon.png</iconUrl>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/87103057415203f72ab21b17cab6177c2d54f96b/nvm/icon.png</iconUrl>
 		<description>Manage multiple installations of node.js on a Windows computer.</description>
 		<summary>A node.js version management utility for Windows.</summary>
 		<tags>nvm node nodejs node.js version management windows admin</tags>
