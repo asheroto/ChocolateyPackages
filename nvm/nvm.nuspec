@@ -8,11 +8,13 @@
 		<owners>asheroto</owners>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<licenseUrl>https://github.com/coreybutler/nvm-windows/blob/master/LICENSE</licenseUrl>
+		<docsUrl>https://github.com/coreybutler/nvm-windows/wiki</docsUrl>
 		<projectUrl>https://github.com/coreybutler/nvm-windows</projectUrl>
+		<projectSourceUrl>https://github.com/coreybutler/nvm-windows</projectSourceUrl>
+		<bugTrackerUrl>https://github.com/coreybutler/nvm-windows/issues</bugTrackerUrl>
 		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/3f06ff4f574f4cab6d9b145966b6a9f5481328d3/nvm/icon.png</iconUrl>
 		<description>Manage multiple installations of node.js on a Windows computer.</description>
 		<summary>A node.js version management utility for Windows.</summary>
-		<copyright></copyright>
 		<tags>nvm node nodejs node.js version management windows admin</tags>
 		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/nvm</packageSourceUrl>
 	</metadata>

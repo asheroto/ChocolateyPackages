@@ -1,4 +1,6 @@
-﻿The MIT License (MIT)
+﻿From: https://github.com/coreybutler/nvm-windows/blob/master/LICENSE
+
+The MIT License (MIT)
 
 Copyright (c) 2021 Ecor Ventures LLC.
 
