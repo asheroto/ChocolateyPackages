@@ -4,7 +4,7 @@
 
 $ErrorActionPreference	= 'Stop';
 $packageName = "ventoy"
-$fileName = "ventoy-1.0.71-windows.zip"
+$fileName = "ventoy-1.0.72-windows.zip"
 $toolsDir = $(Split-Path -Parent $MyInvocation.MyCommand.Definition)
 $file = Join-Path $toolsDir $fileName
 $shortcutPath = Join-Path ([Environment]::GetFolderPath("Programs")) "Ventoy.lnk"
