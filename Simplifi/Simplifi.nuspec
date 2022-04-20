@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+	<metadata>
+		<id>Simplifi</id>
+		<version>0.0.3.1</version>
+		<title>Simplifi</title>
+		<authors>asheroto</authors>
+		<owners>asheroto</owners>
+		<licenseUrl>https://github.com/asheroto/Simplifi/blob/master/LICENSE</licenseUrl>
+		<projectUrl>https://github.com/asheroto/Simplifi</projectUrl>
+		<bugTrackerUrl>https://github.com/asheroto/Simplifi/issues</bugTrackerUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/030999ae/Simplifi/icon.png</iconUrl>
+		<description>Simplifi (by Quicken) in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Alt+I to show the window.</description>
+		<summary>Simplifi (by Quicken) in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Alt+I to show the window.</summary>
+		<releaseNotes>https://github.com/asheroto/Simplifi/releases</releaseNotes>
+		<tags>Simplifi click up Simplifi.com project task organization organizer</tags>
+		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/Simplifi</packageSourceUrl>
+		<docsUrl>https://github.com/asheroto/Simplifi</docsUrl>
+	</metadata>
+	<files>
+		<file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+	</files>
+</package>

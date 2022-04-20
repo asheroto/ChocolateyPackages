@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
 	<metadata>
 		<id>MessagesForWeb</id>
-		<version>0.0.6.1</version>
+		<version>0.0.6.5</version>
 		<title>Messages for Web</title>
 		<authors>asheroto</authors>
 		<owners>asheroto</owners>
@@ -12,8 +12,8 @@
 		<bugTrackerUrl>https://github.com/asheroto/MessagesForWeb/issues</bugTrackerUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/030999ae/MessagesForWeb/icon.png</iconUrl>
-		<description>Google Messages for Web in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Win+M to show the window.</description>
-		<summary>Google Messages for Web in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Win+M to show the window.</summary>
+		<description>Google Messages for Web in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Alt+M to show the window.</description>
+		<summary>Google Messages for Web in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Alt+M to show the window.</summary>
 		<releaseNotes>https://github.com/asheroto/MessagesForWeb/releases</releaseNotes>
 		<tags>MessagesForWeb click up MessagesForWeb.com project task organization organizer</tags>
 		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/MessagesForWeb</packageSourceUrl>
