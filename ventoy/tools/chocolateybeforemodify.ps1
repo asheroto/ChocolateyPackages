@@ -1,1 +1,1 @@
-﻿Get-Process Ventoy2Disk -ErrorAction SilentlyContinue | Stop-Process -ErrorAction Stop
+﻿AGet-Process Ventoy2Disk -ErrorAction SilentlyContinue | Stop-Process -ErrorAction Stop

@@ -2,7 +2,7 @@
 $packageName    = 'Simplifi'
 $softwareName   = 'Simplifi'
 $url            = 'https://github.com/asheroto/Simplifi/releases/download/0.0.3.3/Simplifi.exe'
-$checksum       = '4F298559AB5B8FF4ABB6A8292E2768E3969D08A234F2A96203700B6186A6964A'
+$checksum       = '87060C7F105BBAD078BC66BD7A04F919AED480A988E740EA554B7B029F7B035E'
 $silentArgs     = '/quiet'
 $validExitCodes = @(0)
 

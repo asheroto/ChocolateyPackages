@@ -1,4 +1,3 @@
 - Open verification.txt and change version number, then download
 - Change filename in ChocolateyInstall.ps1 (one change)
 - Change version in ventoy.nuspec
-- Change URL of file and sha256 hash in verification
