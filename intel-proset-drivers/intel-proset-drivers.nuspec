@@ -9,7 +9,7 @@
 		<title>Intel PROSet/Wireless Drivers</title>
 		<authors>Intel Corporation</authors>
 		<projectUrl>https://downloadcenter.intel.com/download/30567</projectUrl>
-		<iconUrl>https://cdn.staticaly.com/gh/asheroto/ChocolateyPackages/master/intel-proset-drivers/icon.png</iconUrl>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/master/intel-proset-drivers/icon.png</iconUrl>
 		<copyright>© Intel Corporation</copyright>
 		<licenseUrl>https://www-ssl.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
