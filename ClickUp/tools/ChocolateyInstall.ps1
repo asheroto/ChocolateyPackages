@@ -1,7 +1,7 @@
 ﻿$packageName    = 'ClickUp'
 $softwareName   = 'ClickUp'
-$url            = 'https://github.com/asheroto/ClickUp/releases/download/0.0.6.0/ClickUp.exe'
-$checksum       = 'BD8C15FF8627E1C0F5221D479E958ECEFE5450C2260BFFEEC247CA0DD2D220D6'
+$url            = 'https://github.com/asheroto/ClickUp/releases/download/0.0.6.1/ClickUp.exe'
+$checksum       = '2E4C1729E714863079C025100301900409D40EE4F04091B41204EC52604280B6'
 $silentArgs     = '/quiet'
 $validExitCodes = @(0)
 
