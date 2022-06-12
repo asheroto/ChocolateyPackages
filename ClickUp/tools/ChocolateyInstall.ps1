@@ -1,7 +1,7 @@
 ﻿$packageName    = 'ClickUp'
 $softwareName   = 'ClickUp'
 $url            = 'https://github.com/asheroto/ClickUp/releases/download/0.0.6.1/ClickUp.exe'
-$checksum       = '635A6174E852E75900027D9479F06C8B90CE09D619A844B55528C974AB25D378'
+$checksum       = '1A48018604FACB00F5BD7602A3F9B638168AD9193136B2D3F982AC79C254A28F'
 $silentArgs     = '/quiet'
 $validExitCodes = @(0)
 
@@ -18,7 +18,7 @@ $packageArgs = @{
 }
 
 # Stop the process
-Stop-Process -Name $packageName -ErrorAction SilentlyContinue
+Stop-Process -Name $packageName -ErrorAction SilentlyContinue -Force
 
 # Install the package
 Install-ChocolateyPackage @packageArgs
