@@ -13,7 +13,7 @@ $packageArgs = @{
 
 	softwareName   = 'SoftPerfect Network Scanner*'
 
-	checksum       = '058DEE2770FBDE09D0C6CAE9B89B98F8ABC6BBA56A5F06EA43326E07D544944B'
+	checksum       = '55D79FA1517CE9416AB00F7C55A6939D969F8E84DD456E648E9E6E56520DB152'
 	checksumType   = 'sha256'
 	checksum64     = $checksum
 	checksumType64 = 'sha256'
