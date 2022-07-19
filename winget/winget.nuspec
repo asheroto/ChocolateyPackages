@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+	<metadata>
+		<id>winget</id>
+		<version>0.0.4</version>
+		<title>winget installer</title>
+		<authors>asheroto</authors>
+		<owners>asheroto</owners>
+		<projectUrl>https://github.com/asheroto/winget-installer</projectUrl>
+		<bugTrackerUrl>hhttps://github.com/asheroto/winget-installer/issues</bugTrackerUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>Installs all of the prerequisites necessary to install winget, then installs winget itself.</description>
+		<summary>Installs all of the prerequisites necessary to install winget, then installs winget itself.</summary>
+		<releaseNotes>https://github.com/asheroto/winget-installer/releases</releaseNotes>
+		<tags>winget install installer setup</tags>
+		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/winget</packageSourceUrl>
+		<docsUrl>https://github.com/asheroto/winget-installer</docsUrl>
+	</metadata>
+	<files>
+		<file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+	</files>
+</package>
