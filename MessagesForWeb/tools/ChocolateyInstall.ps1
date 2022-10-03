@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference  = 'Stop'
 $packageName    = 'MessagesForWeb'
 $softwareName   = 'Messages for Web'
-$url            = 'https://github.com/asheroto/MessagesForWeb/releases/download/0.0.7.1/MessagesForWeb.exe'
-$checksum       = 'CDC3CD2E0B8BBD301058798382B478452256D6020341693F3DD18D66E843F44F'
+$url            = 'https://github.com/asheroto/MessagesForWeb/releases/download/v0.0.7.3/MessagesForWeb.exe'
+$checksum       = '96CD8D34C6AE67B42F9E2D22AB884AA08FED550E599A0AD523D8266CBEE80741'
 $silentArgs     = '/quiet'
 $validExitCodes = @(0)
 
