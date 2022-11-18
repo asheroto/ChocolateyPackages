@@ -4,10 +4,10 @@
 # Then look at C:\log.txt to confirm the installation.
 
 $ErrorActionPreference = 'Stop'
-$packageName    = 'intel-proset-drivers' 
-$softwareName   = 'intel-proset-drivers' 
-$url            = "https://downloadmirror.intel.com/715194/WiFi-22.110.1-Driver64-Win10-Win11.exe"
-$checksum       = '8656D874A21A66A42DC70BA5D90B438FBD8A36073F7A82AFE6A2F470E52C8F2C'
+$packageName    = 'intel-proset-drivers'
+$softwareName   = 'intel-proset-drivers'
+$url            = "https://downloadmirror.intel.com/757346/WiFi-22.180.0-Driver64-Win10-Win11.exe"
+$checksum       = 'FF87654A5D7F512E5C279456F21AD04693E1BC70007679FE6AC38C0F61FBEF9F'
 $silentArgs     = '-silent'
 $validExitCodes = @(0)
 

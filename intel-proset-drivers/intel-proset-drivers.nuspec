@@ -3,42 +3,28 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
 	<metadata>
 		<id>intel-proset-drivers</id>
-		<version>22.110.1</version>
+		<version>22.180.0</version>
 		<owners>asheroto, bcurran3</owners>
 		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/intel-proset-drivers</packageSourceUrl>
 		<title>Intel PROSet/Wireless Drivers</title>
 		<authors>Intel Corporation</authors>
-		<projectUrl>https://downloadcenter.intel.com/download/30567</projectUrl>
+		<projectUrl>https://www.intel.com/content/www/us/en/download/19351/windows-10-and-windows-11-wi-fi-drivers-for-intel-wireless-adapters.html</projectUrl>
 		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/master/intel-proset-drivers/icon.png</iconUrl>
 		<copyright>© Intel Corporation</copyright>
 		<licenseUrl>https://www-ssl.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<tags>intel proset wifi network adapter nic driver drivers windows</tags>
 		<summary>Intel® PROSet/Wireless Drivers</summary>
-		<description>---
-### [choco://intel-proset-drivers](choco://intel-proset-drivers)
+		<description>### [choco://intel-proset-drivers](choco://intel-proset-drivers)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
 
 Package Note: The downloaded file is an EXE that contains only the drivers.
 
-This download record installs the Windows® 10 and Windows 11* WiFi package drivers 22.110.1 for the Wi-Fi 6E/Wi-Fi 6/9000/8000 series Intel® Wireless Adapters.
+This download record installs the Windows® 10 and Windows 11* WiFi package drivers 22.180.0 for the Wi-Fi 6E/Wi-Fi 6/9000/8000 series Intel® Wireless Adapters.
 
-Driver package 22.110.1 has been validated to support Microsoft Windows 11*
-
-From the Wi-Fi release 22.100.X package onwards, there will be one INF file as part of the installation package that will support all Intel Wi-Fi 6E adapters. The INF file (Netwtw06e.INF) will provide installation support for current and newer Wi-Fi 6E adapters.
-
-The 22.100.1 package installs the Windows® 10 and Windows 11* Wi-Fi drivers for the following Intel® Wireless Adapters:
-
-- 22.110.1.1 for AX411/AX211/AX210/AX201/AX200/9560/9260/9462/9461 (Only available in 64-bit version)
-- 20.70.27.1 for 8265/8260 (Only available in 64-bit version)
-- 19.51.38.2 for 7265(Rev. D)/3165/3168
-
-Note: This software release version does not include new drivers for the Intel® Wireless 7265 Family (Rev.C), Intel® Dual Band Wireless-AC 3160 and Intel® Wireless 7260 Family adapters.
-
----</description>
-		<releaseNotes>https://downloadmirror.intel.com/715194/ReleaseNotes_WiFi_22.110.1.pdf</releaseNotes>
+Driver package 22.180.0 has been validated to support Microsoft Windows 10 64-bit and 11 64-bit</description>
 	</metadata>
 	<files>
 		<file src="tools\**" target="tools" />
