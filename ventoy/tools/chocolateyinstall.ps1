@@ -4,7 +4,7 @@
 
 $ErrorActionPreference	= 'Stop';
 $packageName = "ventoy"
-$fileName = "ventoy-1.0.82-windows.zip"
+$fileName = "ventoy-1.0.84-windows.zip"
 $toolsDir = $(Split-Path -Parent $MyInvocation.MyCommand.Definition)
 $file = Join-Path $toolsDir $fileName
 $unzipLocation = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
