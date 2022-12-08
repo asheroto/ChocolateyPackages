@@ -7,7 +7,6 @@ $packageName = "ventoy"
 $fileName = "ventoy-1.0.85-windows.zip"
 $toolsDir = $(Split-Path -Parent $MyInvocation.MyCommand.Definition)
 $file = Join-Path $toolsDir $fileName
-$shortcutPath = Join-Path ([Environment]::GetFolderPath("Programs")) "Ventoy.lnk"
 $unzipLocation = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
 $version = [Environment]::GetEnvironmentVariable("ChocolateyPackageVersion")
 
@@ -23,5 +22,15 @@ Install-ChocolateyZipPackage @packageArgs
 Copy-Item -Path "$unzipLocation\ventoy-$version\*" -Destination $unzipLocation -Force -Recurse -ErrorAction SilentlyContinue
 Remove-Item "$unzipLocation\ventoy-$version" -Force -Recurse -ErrorAction SilentlyContinue
 
-$exePath = Join-Path $unzipLocation "Ventoy2Disk.exe"
-Install-ChocolateyShortcut -ShortcutFilePath $shortcutPath -Target $exePath -WorkingDirectory $unzipLocation
+# Create shortcuts
+@(
+	,@('Ventoy', 'Ventoy2Disk.exe')
+	,@('Ventoy Plugson', 'VentoyPlugson.exe')
+) | ForEach-Object {
+	$shortcutPath = Join-Path ([Environment]::GetFolderPath("Programs")) "$($_[0]).lnk"
+	$exePath = Join-Path $unzipLocation $_[1]
+	Install-ChocolateyShortcut `
+		-ShortcutFilePath $shortcutPath `
+		-Target $exePath `
+		-WorkingDirectory $unzipLocation
+}
