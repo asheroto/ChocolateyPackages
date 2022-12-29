@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>metadataplusplus</id>
-        <version>2.00.4</version>
+        <version>2.02.3</version>
         <title>Metadata++</title>
         <authors>Logipole</authors>
         <owners>asheroto</owners>
@@ -11,8 +11,7 @@
         <projectUrl>https://logipole.com/metadata++-en.htm</projectUrl>
         <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/eb9b246b/metadataplusplus/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Windows 10, 8, 7 Support
-Metadata++ works seamlessly with 64-bit Windows 10.
+        <description>Metadata++ works seamlessly with 64-bit Windows 10/11.
 
 Performance
 Metadata++ is designed to be as fast as possible: quick navigation among directories, fast directories reading, fast and smooth painting of panels and thumbnails. In its portable version Metadata++ is configured to store all configuration and settings in the same folder that it is run from.
@@ -40,7 +39,7 @@ Do I have to uninstall Metadata++ before applying an update?
 No, the update will be installed on top of every old installation. But don't forget to close every running instance of Metadata++ before installing.</description>
         <summary>Metadata++ is a fast and effective metadata viewer/editor with support for all common file formats.</summary>
         <releaseNotes>https://logipole.com/metadata++-whatsnew-en.htm</releaseNotes>
-        <copyright>Copyright © 1998-2021 Jean Piquemal. All rights reserved.</copyright>
+        <copyright>Copyright © 1998-2022 Jean Piquemal. All rights reserved.</copyright>
         <docsUrl>https://logipole.com/metadata++-en.htm</docsUrl>
         <tags>metadata++ metadataplusplus metadatapp metadata editor viewer tool</tags>
 		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/metadataplusplus</packageSourceUrl>
@@ -49,4 +48,3 @@ No, the update will be installed on top of every old installation. But don't for
         <file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
     </files>
 </package>
-
