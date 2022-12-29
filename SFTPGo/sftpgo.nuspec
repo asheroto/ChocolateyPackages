@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
 	<metadata>
 		<id>sftpgo</id>
-		<version>2.3.0</version>
+		<version>2.4.2</version>
 		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/SFTPGo</packageSourceUrl>
 		<owners>asheroto</owners>
 		<title>SFTPGo</title>
@@ -32,7 +32,7 @@ You can find more info [here](https://github.com/drakkan/sftpgo).
 
 * This package installs SFTPGo as Windows Service.
 * After the first installation please take a look at the [Getting Started Guide](https://github.com/drakkan/sftpgo/blob/main/docs/howto/getting-started.md).</description>
-		<releaseNotes>https://github.com/drakkan/sftpgo/releases/tag/v2.3.0</releaseNotes>
+		<releaseNotes>https://github.com/drakkan/sftpgo/releases/tag/v2.4.2</releaseNotes>
 	</metadata>
 	<files>
 		<file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
