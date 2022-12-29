@@ -3,10 +3,10 @@ $ErrorActionPreference = 'Stop'
 $packageName    = 'pdq-deploy'
 $softwareName   = 'PDQ Deploy*'
 $toolsPath      = Split-Path $MyInvocation.MyCommand.Definition
-$checksum       = 'E89963511EF3D22B51C0B51450FAC2A5433AC9C35F3F6860551B0163DCD63970'		
+$checksum       = 'CEE22FEE9503C2F34962E069D7422BD6D237996530971420DBAEFFC2818F8625'
 $silentArgs     = '/s'
 $validExitCodes = @(0)
-$fileLocation   = "$toolsPath\Deploy_19.3.83.0.exe"
+$fileLocation   = "$toolsPath\Deploy_19.3.360.0.exe"
 
 $packageArgs = @{
   packageName   = $packageName
@@ -18,5 +18,5 @@ $packageArgs = @{
   validExitCodes= $validExitCodes
   softwareName  = $softwareName
 }
- 
+
 Install-ChocolateyPackage @packageArgs
