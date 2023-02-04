@@ -1,4 +1,3 @@
 - Download latest version
 - Change filename in ChocolateyInstall.ps1
-- Change version in ventoy.nuspec
-- Change URL of file and sha256 hash in verification
+- Change version in filemenutools.nuspec
