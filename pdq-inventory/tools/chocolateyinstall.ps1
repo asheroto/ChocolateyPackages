@@ -3,10 +3,10 @@ $ErrorActionPreference = 'Stop'
 $packageName    = 'pdq-inventory'
 $softwareName   = 'PDQ Inventory*'
 $toolsPath      = Split-Path $MyInvocation.MyCommand.Definition
-$checksum       = '2D8F0BF932EEEBB02D998A2E6296CD4A32364795D5D1C6D9B7126360F461CFB0'
+$checksum       = 'D52477F7F6634C43C5E6B70AB27952EDD8BC8797A6924F737FE27FAC3D9C4828'
 $silentArgs     = '/s'
 $validExitCodes = @(0)
-$fileLocation   = "$toolsPath\Inventory_19.3.360.0.exe"
+$fileLocation   = "$toolsPath\Inventory_19.3.409.0.exe"
 
 $packageArgs = @{
   packageName   = $packageName
