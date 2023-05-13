@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+	<metadata>
+		<id>fxsound</id>
+		<title>FxSound</title>
+		<version>1.1.6.0</version>
+		<authors>FxSound LLC</authors>
+		<owners>asheroto</owners>
+		<projectUrl>https://www.fxsound.com/</projectUrl>
+		<summary>Boost volume, bass and sound quality on windows</summary>
+		<description>## Amazing sound for everything you listen to
+
+### Music
+
+FxSound corrects the limitations of your devices and compressed audio.
+
+### Video Games
+
+Surround sound to create full immersion into your virtual world.
+
+### TV and Movies
+
+FxSound smooths and improves audio for your favorite shows and movies.
+
+### Transcription
+
+FxSound boosts your clarity to save your sanity. Rewind less, get paid more.
+
+## Customize your sound to your exact taste
+
+### EQ
+
+Balanced your sound with our 9-band EQ with customizable center frequencies.
+
+### Visualizer
+
+Feel your music in a new way.
+
+### Effects
+
+Boosted bass and volume that will make your neighbors complain.
+
+### Presets
+
+Presets professionally designed for music, gaming, movies, transcription, and more.
+
+## Perfect sound on any hardware
+
+### Get the sound you deserve
+
+Hear the expert-designed processing engine that's 20 years in the making.
+
+### Don't break the bank
+
+You don't need to spend thousands to get audiophile sound.</description>
+		<docsUrl>https://www.fxsound.com/learning-center</docsUrl>
+		<tags>fxsound fx sound volume boost booster bass audio equalizer adjust adjustment quality</tags>
+		<copyright>2022 FxSound LLC</copyright>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<iconUrl></iconUrl>
+		<releaseNotes>https://www.fxsound.com/changelog</releaseNotes>
+	</metadata>
+	<files>
+		<file src="tools\**" target="tools" />
+	</files>
+</package>
