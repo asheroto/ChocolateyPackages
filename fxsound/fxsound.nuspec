@@ -58,7 +58,8 @@ You don't need to spend thousands to get audiophile sound.</description>
 		<tags>fxsound fx sound volume boost booster bass audio equalizer adjust adjustment quality</tags>
 		<copyright>2022 FxSound LLC</copyright>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl></iconUrl>
+		<licenseUrl>https://forum.fxsound.com/tos</licenseUrl>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/093acc183da465f30e835201c287cadb2d6da703/fxsound/icon.png</iconUrl>
 		<releaseNotes>https://www.fxsound.com/changelog</releaseNotes>
 	</metadata>
 	<files>
