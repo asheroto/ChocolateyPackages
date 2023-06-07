@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
 	<metadata>
 		<id>MessagesForWeb</id>
-		<version>0.0.7.3</version>
+		<version>1.0.0</version>
 		<title>Messages for Web</title>
 		<authors>asheroto</authors>
 		<owners>asheroto</owners>

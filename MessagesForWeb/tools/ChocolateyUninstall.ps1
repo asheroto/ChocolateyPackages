@@ -18,6 +18,4 @@ $packageArgs = @{
 	validExitCodes = $validExitCodes
 }
 
-Stop-Process -Name $packageName -ErrorAction SilentlyContinue
-
 Uninstall-ChocolateyPackage @packageArgs

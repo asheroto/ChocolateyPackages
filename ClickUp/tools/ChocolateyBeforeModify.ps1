@@ -1,0 +1,1 @@
+﻿Get-Process ClickUp -ErrorAction SilentlyContinue | Stop-Process -ErrorAction Stop
