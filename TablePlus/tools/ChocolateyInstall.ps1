@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference  = 'Stop'
 $packageName    = 'TablePlus'
 $softwareName   = 'TablePlus'
-$url            = 'https://download.tableplus.com/windows/5.2.6/TablePlusSetup.exe'
-$checksum       = '79C05FB231B75204149D9D116C0F2FE736F7567EF4E6B8CFE2AC7A2737FD8BAF'
+$url            = 'https://download.tableplus.com/windows/5.3.8/TablePlusSetup.exe'
+$checksum       = '58C009BED6C64BE0EE088D7D96B491E666DA090ACDC2EB710E1B87FE0656F3CB'
 $silentArgs     = '/VERYSILENT'
 $validExitCodes = @(0)
 

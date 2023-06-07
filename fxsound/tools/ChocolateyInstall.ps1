@@ -3,7 +3,7 @@ $ErrorActionPreference = 'Stop'
 $packageName    = 'fxsound'
 $softwareName   = 'FxSound*'
 $toolsPath      = Split-Path $MyInvocation.MyCommand.Definition
-$checksum       = '30B83FFBB9CC218AAB58696DEE25856C98359D5DF2157503E010DDD91E24D1A9'
+$checksum       = '3E28779529180D53B21E78708E1C7411FF0312D8416151AC8312DE19D43F80AE'
 $silentArgs     = '/exenoui /qn /norestart'
 $validExitCodes = @(0)
 $fileLocation   = "$toolsPath\fxsound_setup.exe"
@@ -19,4 +19,4 @@ $packageArgs = @{
   softwareName  = $softwareName
 }
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs

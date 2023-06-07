@@ -1,2 +1,2 @@
 - Change filename in ChocolateyInstall.ps1
-- Change version in ClickUp.nuspec
+- Change version in TablePlus.nuspec
