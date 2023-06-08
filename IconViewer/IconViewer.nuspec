@@ -17,10 +17,9 @@
         <copyright>©2020 Bot Productions. All rights reserved.</copyright>
         <docsUrl>https://www.botproductions.com/iconview/setup.html</docsUrl>
         <tags>iconviewer icon viewer properties extract tool tab save</tags>
-		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/IconViewer</packageSourceUrl>
+		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/intel-rst-driver</packageSourceUrl>
     </metadata>
     <files>
         <file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
     </files>
 </package>
-

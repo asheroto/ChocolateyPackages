@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+	<metadata>
+		<id>intel-rst-driver</id>
+		<version>18.7.6.1010</version>
+		<title>Intel® Rapid Storage Technology (Intel® RST) User Interface and Driver (Install)</title>
+		<authors>Intel Corporation</authors>
+		<owners>bcurran3, asheroto</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<licenseUrl>https://software.intel.com/en-us/articles/end-user-license-agreement</licenseUrl>
+		<projectUrl>https://www.intel.com/content/www/us/en/download/19512/intel-rapid-storage-technology-driver-installation-software-with-intel-optane-memory-10th-and-11th-gen-platforms.html</projectUrl>
+		<iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>
+		<description>---
+
+### [choco://intel-rst-driver](choco://intel-rst-driver)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+### Detailed Description
+
+**Note:** Intel recommends that end users utilize driver updates provided by their system manufacturer/provider or via Windows* Update to eliminate the potential impact caused by loading non-customized drivers. System manufacturers regularly customize Intel generic drivers to meet the needs of their specific system design. In such cases, use of the Intel generic driver update is not recommended.
+
+The SetupRST.exe is the new installer that will install the Intel RST driver and start the process of installing the Intel® Optane™ Memory and Storage Management application from the Microsoft Store*
+
+### Purpose
+
+The Intel® Rapid Storage Technology (Intel® RST) Driver 18.7.6.1010.3 supports the configuration and enabling of multiple features including:
+
+- System acceleration with Intel® Optane™ memory
+- Configuration and maintenance of RAID 0/1/5/10
+- Intel® VMD support on 11th Gen platforms (See more details [here](https://www.intel.com/content/www/us/en/support/articles/000057787/memory-and-storage/intel-optane-memory.html))
+
+To manage these capabilities, download the Intel® Optane™ Memory and Storage Management application found on the Microsoft Store.
+
+**Notes:**
+
+- Support for Microsoft Windows* 11 x64 OS
+- The Intel® Rapid Storage Technology (Intel® RST) Driver 18.7.6.1010.3 supports 10th Gen and 11th Gen Intel Core platforms.
+- See the Release Notes or Readme files for installation instructions, supported hardware, what is new, bug fixes, and known issues.
+- For RST File Extraction (.zip file creation), refer to section 6.3 of the Readme file: Pre-Installation of Intel® RST driver using the Load Driver method.
+- Additional assistance can be found here:
+- RAID related support: Intel® Rapid Storage Technology Support page
+- Intel® Optane™ Memory User and Installation Guide
+- Intel® Optane™ memory-related support: Intel® Optane™ Memory support</description>
+		<summary>Intel® Rapid Storage Technology (Intel® RST) User Interface and Driver for Windows 10/Server 2016</summary>
+		<releaseNotes>https://downloadmirror.intel.com/773229/Release_Notes_18_7_6_1010_3_enduser_PV.pdf</releaseNotes>
+		<copyright>© Intel Corporation</copyright>
+		<tags>intel rst storage driver rapid storage technology</tags>
+		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/IconViewer</packageSourceUrl>
+	</metadata>
+	<files>
+		<file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+	</files>
+</package>
