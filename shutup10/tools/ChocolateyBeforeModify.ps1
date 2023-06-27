@@ -1,0 +1,1 @@
+﻿Get-Process OOSU10 -ErrorAction SilentlyContinue | Stop-Process -ErrorAction Stop
