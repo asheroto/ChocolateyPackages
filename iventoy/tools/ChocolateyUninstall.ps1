@@ -1,6 +1,7 @@
 ﻿$ErrorActionPreference	= 'Stop';
 
-$unzipPath = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) ([Environment]::GetEnvironmentVariable("ChocolateyPackageName"))
+$packageName = "iventoy"
+$unzipLocation = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
 
 @(
 	, @('iVentoy', 'iVentoy_64.exe')
@@ -15,7 +16,7 @@ $unzipPath = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) ([
 	Remove-Item -Path $shortcutPath -ErrorAction SilentlyContinue
 }
 
-if (Test-Path $unzipPath) {
+if (Test-Path $unzipLocation) {
 	# Remove all files/folders except the iso folder
-	Get-ChildItem -Path $unzipPath | Where-Object { $_.Name -ne "iso" } | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
+	Get-ChildItem -Path $unzipLocation | Where-Object { $_.Name -ne "iso" } | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
 }

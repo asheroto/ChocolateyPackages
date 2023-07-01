@@ -1,6 +1,7 @@
 ﻿$ErrorActionPreference	= 'Stop';
 
-$unzipPath = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) ([Environment]::GetEnvironmentVariable("ChocolateyPackageName"))
+$packageName = "ventoy"
+$unzipPath = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
 
 @(
 	,@('Ventoy', 'Ventoy2Disk.exe')
