@@ -10,6 +10,6 @@ $unzipPath = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) ([
 	Remove-Item -Path $shortcutPath -ErrorAction SilentlyContinue
 }
 
-if (Test-Path $unzipPath) { 
+if (Test-Path $unzipPath) {
 	Remove-Item -Path $unzipPath -Recurse -Force -ErrorAction SilentlyContinue
 }
