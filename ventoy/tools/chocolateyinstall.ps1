@@ -4,7 +4,7 @@
 # └── Ventoy2Disk.exe
 # └── other data
 
-$ErrorActionPreference	= 'Stop';
+$ErrorActionPreference = 'Stop';
 $packageName = "ventoy"
 $version = "1.0.93" # Chocolatey package version may differ from the filename version
 $fileName = "$packageName-$version-windows.zip"
