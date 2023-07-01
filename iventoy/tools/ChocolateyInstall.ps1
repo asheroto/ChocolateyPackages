@@ -1,5 +1,7 @@
 ﻿# exe location
-# iventoy-$version
+# └── iVentoy_64.exe
+# └── iso
+# └── other data
 
 $ErrorActionPreference	= 'Stop';
 

@@ -1,14 +1,16 @@
 ﻿# exe location
 # ventoy-$version
+# └── Ventoy.exe
 # └── Ventoy2Disk.exe
+# └── other data
 
 $ErrorActionPreference	= 'Stop';
 $packageName = "ventoy"
-$fileName = "ventoy-1.0.93-windows.zip"
+$version = "1.0.93" # Chocolatey package version may differ from the filename version
+$fileName = "$packageName-$version-windows.zip"
 $toolsDir = $(Split-Path -Parent $MyInvocation.MyCommand.Definition)
 $file = Join-Path $toolsDir $fileName
 $unzipLocation = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
-$version = [Environment]::GetEnvironmentVariable("ChocolateyPackageVersion")
 
 $packageArgs = @{
 	packageName = $packageName
