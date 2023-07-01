@@ -1,16 +1,17 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-	<metadata>
-		<id>iventoy</id>
-		<version>1.0.06</version>
-		<title>iVentoy</title>
-		<authors>iventoy.com</authors>
-		<owners>Yato, asheroto</owners>
-		<licenseUrl>https://www.iventoy.com/en/doc_license.html</licenseUrl>
-		<projectUrl>https://www.iventoy.com</projectUrl>
-		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/86ac1a70/iventoy/icon.png</iconUrl>
-		<requireLicenseAcceptance>true</requireLicenseAcceptance>
-		<description>![iventoy](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/86ac1a70/iventoy/boot_ground.png)
+  <metadata>
+    <id>iventoy</id>
+    <version>1.0.06</version>
+    <title>iVentoy</title>
+    <authors>iventoy.com</authors>
+    <owners>Yato, asheroto</owners>
+    <licenseUrl>https://www.iventoy.com/en/doc_license.html</licenseUrl>
+    <projectUrl>https://www.iventoy.com</projectUrl>
+    <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/86ac1a70/iventoy/icon.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>![iventoy](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/86ac1a70/iventoy/boot_ground.png)
 		
 		iVentoy is an enhanced version of the PXE server.
 With iVentoy you can boot and install OS on multiple machines at the same time through the network.
@@ -23,7 +24,7 @@ Simple to use [Get Started](https://www.iventoy.com/en/doc_start.html)
 Cross-platform, can run in both Windows and Linux.
 Specially optimized for PXE scenarios, with flexible functions.
 Directly boot ISO files, no extraction needed.
-Native boot menu style for Legacy & UEFI
+Native boot menu style for Legacy &amp; UEFI
 Directory layout corresponded boot menu.
 Supports Legacy BIOS and IA32/X86_64/ARM64 UEFI mode.
 Supports 110+ common types of OS (Windows/WinPE/Linux/VMware)
@@ -41,14 +42,14 @@ Variables Expansion supported for install script [Notes](https://www.iventoy.com
 Automatically solve the driver missing during Linux installation.
 
 See [iventoy.com](https://www.iventoy.com/) for details.</description>
-		<summary>Ventoy is an open source tool to create bootable USB drive for ISO files.</summary>
-		<releaseNotes>https://www.iventoy.com/en/doc_news.html</releaseNotes>
-		<copyright>Copyright © 2020-2023 longpanda</copyright>
-		<tags>iventoy pxe boot network ipxe f12</tags>
-		<docsUrl>https://www.iventoy.com/en/doc_start.html</docsUrl>
-		<bugTrackerUrl>https://forums.ventoy.net/forumdisplay.php?fid=8</bugTrackerUrl>
-	</metadata>
-	<files>
-		<file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg;boot_ground.png" />
-	</files>
+    <summary>Ventoy is an open source tool to create bootable USB drive for ISO files.</summary>
+    <releaseNotes>https://www.iventoy.com/en/doc_news.html</releaseNotes>
+    <copyright>Copyright © 2020-2023 longpanda</copyright>
+    <tags>iventoy pxe boot network ipxe f12</tags>
+    <docsUrl>https://www.iventoy.com/en/doc_start.html</docsUrl>
+    <bugTrackerUrl>https://forums.ventoy.net/forumdisplay.php?fid=8</bugTrackerUrl>
+  </metadata>
+  <files>
+    <file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg;boot_ground.png" />
+  </files>
 </package>
