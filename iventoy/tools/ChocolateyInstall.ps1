@@ -6,7 +6,7 @@
 $ErrorActionPreference	= 'Stop';
 
 $packageName = "iventoy"
-$version = "1.0.06" # Chocolatey package version differs from the filename version
+$version = "1.0.06" # Chocolatey package version may differ from the filename version
 $fileName = "$packageName-$version-win64.zip"
 $toolsDir = $(Split-Path -Parent $MyInvocation.MyCommand.Definition)
 $file = Join-Path $toolsDir $fileName
