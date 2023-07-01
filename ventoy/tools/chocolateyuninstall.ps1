@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference	= 'Stop';
 
 $packageName = "ventoy"
-$unzipPath = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
+$unzipLocation = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
 
 @(
 	,@('Ventoy', 'Ventoy2Disk.exe')
@@ -16,6 +16,6 @@ $unzipPath = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $p
 	Remove-Item -Path $shortcutPath -ErrorAction SilentlyContinue
 }
 
-if (Test-Path $unzipPath) {
-	Remove-Item -Path $unzipPath -Recurse -Force -ErrorAction SilentlyContinue
+if (Test-Path $unzipLocation) {
+	Remove-Item -Path $unzipLocation -Recurse -Force -ErrorAction SilentlyContinue
 }

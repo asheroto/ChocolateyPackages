@@ -1,3 +1,3 @@
 - Change version in ventoy.nuspec (one change)
-- Open verification.txt and change two version numbers, then download, update one hash (Get-FileHash) (three changes)
+- Open verification.txt, download, update one hash (Get-FileHash) (one change)
 - Change filename in ChocolateyInstall.ps1 (one change)
