@@ -18,9 +18,10 @@ $packageArgs = @{
 	file = $file
 }
 
+# Install Ventoy zip package
 Install-ChocolateyZipPackage @packageArgs
 
-# Keeping this logic as is - was from original maintainer script
+# Copy Ventoy.exe and Ventoy2Disk.exe to unzipLocation
 Copy-Item -Path "$unzipLocation\ventoy-$version\*" -Destination $unzipLocation -Force -Recurse -ErrorAction SilentlyContinue
 Remove-Item "$unzipLocation\ventoy-$version" -Force -Recurse -ErrorAction SilentlyContinue
 
