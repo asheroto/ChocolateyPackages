@@ -29,10 +29,13 @@ Remove-Item "$unzipLocation\ventoy-$version" -Force -Recurse -ErrorAction Silent
 	,@('Ventoy', 'Ventoy2Disk.exe')
 	,@('Ventoy Plugson', 'VentoyPlugson.exe')
 ) | ForEach-Object {
-	$shortcutPath = Join-Path ([Environment]::GetFolderPath("Programs")) "$($_[0]).lnk"
-	$exePath = Join-Path $unzipLocation $_[1]
-	Install-ChocolateyShortcut `
-		-ShortcutFilePath $shortcutPath `
-		-Target $exePath `
-		-WorkingDirectory $unzipLocation
+	$targetPath = Join-Path $unzipLocation $_[1]
+
+	# Create Programs shortcuts
+	$programsShortcutPath = Join-Path ([Environment]::GetFolderPath("Programs")) "$($_[0]).lnk"
+	Install-ChocolateyShortcut -ShortcutFilePath $programsShortcutPath -Target $targetPath -WorkingDirectory $unzipLocation
+
+	# Create Desktop shortcuts
+	$desktopShortcutPath = Join-Path ([Environment]::GetFolderPath("Desktop")) "$($_[0]).lnk"
+	Install-ChocolateyShortcut -ShortcutFilePath $desktopShortcutPath -Target $targetPath -WorkingDirectory $unzipLocation
 }
