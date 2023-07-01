@@ -5,7 +5,7 @@
 		<version>1.0.93</version>
 		<title>Ventoy</title>
 		<authors>ventoy.net</authors>
-		<owners>Yato</owners>
+		<owners>Yato, asheroto</owners>
 		<licenseUrl>https://www.ventoy.net/doc_license.html</licenseUrl>
 		<projectUrl>https://www.ventoy.net</projectUrl>
 		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/d8da4fbc2df61bf7e9bc2dd63b39571b93f3fe4d/ventoy/icon.png</iconUrl>
