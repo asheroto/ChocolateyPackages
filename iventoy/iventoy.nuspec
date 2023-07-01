@@ -9,9 +9,9 @@
     <owners>Yato, asheroto</owners>
     <licenseUrl>https://www.iventoy.com/en/doc_license.html</licenseUrl>
     <projectUrl>https://www.iventoy.com</projectUrl>
-    <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/86ac1a70/iventoy/icon.png</iconUrl>
+    <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/d91d69ab/iventoy/icon.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>![iventoy](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/86ac1a70/iventoy/boot_ground.png)
+    <description>![iventoy](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/d91d69ab/iventoy/boot_ground.png)
 		
 		iVentoy is an enhanced version of the PXE server.
 With iVentoy you can boot and install OS on multiple machines at the same time through the network.
