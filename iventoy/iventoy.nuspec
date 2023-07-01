@@ -6,7 +6,7 @@
     <version>1.0.06</version>
     <title>iVentoy</title>
     <authors>iventoy.com</authors>
-    <owners>Yato, asheroto</owners>
+    <owners>asheroto</owners>
     <licenseUrl>https://www.iventoy.com/en/doc_license.html</licenseUrl>
     <projectUrl>https://www.iventoy.com</projectUrl>
     <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/d91d69ab/iventoy/icon.png</iconUrl>
