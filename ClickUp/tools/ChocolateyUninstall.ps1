@@ -1,3 +1,5 @@
+﻿$ErrorActionPreference = 'Stop'
+
 $packageName 		= 'ClickUp'
 [array]$key 		= Get-UninstallRegistryKey -SoftwareName "$packageName"
 

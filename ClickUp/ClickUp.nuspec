@@ -4,7 +4,7 @@
 	<metadata>
 		<id>ClickUp</id>
 		<version>1.1.2</version>
-		<title>ClickUp</title>
+		<title>ClickUp (unofficial)</title>
 		<authors>asheroto</authors>
 		<owners>asheroto</owners>
 		<licenseUrl>https://github.com/asheroto/ClickUp/blob/master/LICENSE</licenseUrl>
@@ -24,6 +24,6 @@
 		</dependencies>
 	</metadata>
 	<files>
-		<file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+		<file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg" />
 	</files>
 </package>

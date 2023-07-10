@@ -1,4 +1,6 @@
-﻿$packageName = 'ClickUp'
+﻿$ErrorActionPreference = 'Stop'
+
+$packageName = 'ClickUp'
 $softwareName = 'ClickUp'
 $url = 'https://github.com/asheroto/ClickUp/releases/download/1.1.2/ClickUp.exe'
 $checksum = 'B5C8C4558601098FED5169A4511E97B66B099CB4CA484E64875481B2B2360E3A'
@@ -30,8 +32,8 @@ Write-Output ""
 Write-Output "ClickUp has been installed and will automatically start when you log in."
 Write-Output "It is currently running in the system tray."
 Write-Output ""
+Write-Output "Press Alt+Esc at any time to bring it to the foreground."
 Write-Output "Press Alt+F4 to close it to the system tray."
-Write-Output "Press Alt+Esc at any time to bring it back to the foreground."
 Write-Output ""
 Write-Output "---------------------------"
 Write-Output ""
