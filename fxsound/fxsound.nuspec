@@ -4,7 +4,7 @@
 	<metadata>
 		<id>fxsound</id>
 		<title>FxSound</title>
-		<version>1.1.17.0</version>
+		<version>1.1.18.0</version>
 		<authors>FxSound LLC</authors>
 		<owners>asheroto</owners>
 		<projectUrl>https://www.fxsound.com/</projectUrl>
@@ -63,6 +63,6 @@ You don't need to spend thousands to get audiophile sound.</description>
 		<releaseNotes>https://www.fxsound.com/changelog</releaseNotes>
 	</metadata>
 	<files>
-		<file src="tools\**" target="tools" />
+		<file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg" />
 	</files>
 </package>

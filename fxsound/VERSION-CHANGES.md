@@ -1,5 +1,5 @@
-- Change filename in ChocolateyInstall.ps1
 - Change version in fxsound.nuspec
-- Download the new installer from https://www.fxsound.com and replace the old one in the tools folder
+- Change filename in ChocolateyInstall.ps1
+- Download the new installer from https://www.fxsound.com/changelog and replace the old one in the tools folder
 - Update the checksum in ChocolateyInstall.ps1
 - Update VERIFICATION.txt
