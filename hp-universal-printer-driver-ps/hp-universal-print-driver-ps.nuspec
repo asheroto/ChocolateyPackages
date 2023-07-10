@@ -2,10 +2,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>hp-universal-print-driver-ps</id>
-    <version>7.0.0.24832</version>
+    <version>7.1.0.25570</version>
     <title>HP Universal Print Driver for Windows PS (Install)</title>
     <authors>HP Inc.</authors>
-    <owners>bcurran3</owners>
+    <owners>bcurran3, asheroto</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://support.hp.com/us-en/document/c00581401</licenseUrl>
     <projectUrl>https://www.hp.com/us-en/solutions/business-solutions/printingsolutions/UPD.html</projectUrl>
