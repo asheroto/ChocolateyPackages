@@ -2,10 +2,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>utorrent</id>
-    <version>3.5.5.45271</version>
+    <version>3.6.0.46830</version>
     <title>uTorrent Classic (Install)</title>
-    <authors>BitTorrent,Inc.</authors>
-    <owners>bcurran3</owners>
+    <authors>BitTorrent, Inc</authors>
+    <owners>bcurran3, asheroto</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>http://www.bittorrent.com/legal/eula</licenseUrl>
     <projectUrl>http://www.utorrent.com/</projectUrl>
@@ -44,19 +44,11 @@ Direct access to a over 10,000 artists and 2,000,000 pieces of content. Download
 **REMOTE PROGRAMS OF NOTE:**
 [Android µTorrent® Remote Client](https://play.google.com/store/apps/details?id=com.utorrent.web) | [uTorrent Link Sender for Chrome](https://chocolatey.org/packages/utorrent-link-sender-chrome) | [uTorrent easy client for Chrome](https://chocolatey.org/packages/utorrent-easy-client-chrome)
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/utorrent/readme.md)**
-
-    
-
----
-
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-
----</description>
+**[PACKAGE NOTES](https://github.com/asheroto/ChocolateyPackages/blob/master/utorrent)</description>
     <summary>A (very) tiny BitTorrent client.</summary>
     <releaseNotes>http://blog.utorrent.com/releases/windows/</releaseNotes>
-    <copyright>© BitTorrent, Inc.</copyright>
-    <tags>utorrent bittorrent torrent client p2p</tags>
+    <copyright>© BitTorrent, Inc</copyright>
+    <tags>utorrent bittorrent torrent client p2p magnet</tags>
     <dependencies>
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
