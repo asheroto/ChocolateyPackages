@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 # Define driver name
-$driverName = 'HP Universal Printing PS'
+$driverName = 'HP Universal Printing PCL 6'
 
 # Restart spooler service to avoid "The specified printer driver is currently in use" error
 Restart-Service -Name Spooler -Force

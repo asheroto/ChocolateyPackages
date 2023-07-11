@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageName    = 'hp-universal-print-driver-pcl'
 $url            = 'https://ftp.hp.com/pub/softlib/software13/printers/UPD/upd-pcl6-x32-7.1.0.25570.exe'

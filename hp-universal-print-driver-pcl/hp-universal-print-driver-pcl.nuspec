@@ -1,16 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn't appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-  <metadata>
-    <id>hp-universal-print-driver-pcl</id>
-    <version>7.1.0.25570</version>
-    <title>HP Universal Print Driver for Windows PCL (Install)</title>
-    <authors>HP Inc.</authors>
-    <owners>bcurran3, asheroto</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <licenseUrl>https://support.hp.com/us-en/document/c00581401</licenseUrl>
-    <projectUrl>https://support.hp.com/us-en/drivers/selfservice/upd/4157320</projectUrl>
-    <iconUrl>https://support.hp.com/static/hp-portal-theme-static/themes/Portal8.0/hp/images/hp-logo-modal.gif</iconUrl>
-    <description>---
+	<metadata>
+		<id>hp-universal-print-driver-pcl</id>
+		<version>7.1.0.25570</version>
+		<title>HP Universal Print Driver for Windows PCL (Install)</title>
+		<authors>HP Inc</authors>
+		<owners>bcurran3, asheroto</owners>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<licenseUrl>https://support.hp.com/us-en/document/c00581401</licenseUrl>
+		<projectUrl>https://support.hp.com/us-en/drivers/selfservice/upd/4157320</projectUrl>
+		<iconUrl>https://support.hp.com/static/hp-portal-theme-static/themes/Portal8.0/hp/images/hp-logo-modal.gif</iconUrl>
+		<docsUrl>https://support.hp.com/us-en/product/hp-universal-print-driver-series-for-windows/503548/manuals</docsUrl>
+		<description>---
 
 ### [choco://hp-universal-print-driver-pcl](choco://hp-universal-print-driver-pcl)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
@@ -19,7 +21,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 # One versatile print driver for your PC or laptop
 
-Automatically discover and print to supported HP devices and some non‑HP devices with a single print driver. When you install the free HP Universal Print Driver (UPD) on a PC or laptop, it communicates with the supported devices to determine the unique print capabilities installed on each device.
+Automatically discover and print to supported HP devices and some non-HP devices with a single print driver. When you install the free HP Universal Print Driver (UPD) on a PC or laptop, it communicates with the supported devices to determine the unique print capabilities installed on each device.
 
 You can easily locate and print to another printer within your network—in your current location or when visiting another company location. And the HP UPD allows you to add a new printer at any time—without the hassle of downloading another print driver.
 
@@ -31,24 +33,20 @@ Users are more self-sufficient when the HP UPD is deployed, reducing the need fo
 
 * One driver to configure—migrate to new devices, implement new technologies, and update operating systems.
 * Familiar printing experience—the HP UPD provides a consistent interface across a variety of HP printers, reducing the need for training and support.
-* Versatile support for desktop or on-the-go use—users can use Traditional mode when they stay in one location or Dynamic mode when they’re on the road or need to search for a new printer.
-* Real-time job and device information—the HP UPD’s real-time, graphical interface empowers users to resolve common problems themselves, improving printer uptime and increasing productivity.
+* Versatile support for desktop or on-the-go use—users can use Traditional mode when they stay in one location or Dynamic mode when they're on the road or need to search for a new printer.
+* Real-time job and device information—the HP UPD's real-time, graphical interface empowers users to resolve common problems themselves, improving printer uptime and increasing productivity.
 * Secure encrypted printing—make your printing environment more secure with print job encryption. Users can queue print jobs utilizing job storage and enter a PIN at the output device to print their documents.
-* Broad compatibility and global localization—most HP and some non‑HP printing devices are compatible with the HP UPD. It can be deployed via print server or direct IP. The HP UPD is available in PCL5, PCL6, and Postscript emulation and supports current Windows client and server operating systems (32‑bit and 64-bit), as well as Novell and Citrix. Local language drivers are available in 35 languages.
+* Broad compatibility and global localization—most HP and some non-HP printing devices are compatible with the HP UPD. It can be deployed via print server or direct IP. The HP UPD is available in PCL5, PCL6, and Postscript emulation and supports current Windows client and server operating systems (32-bit and 64-bit), as well as Novell and Citrix. Local language drivers are available in 35 languages.
 
-[HP Universal Print Driver Series for Windows - specifications](https://support.hp.com/gb-en/document/c04380141)
-
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/hp-universal-print-driver-pcl/readme.md)**
-
-***
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***</description>
-    <summary>HP Universal Print Driver for Windows (PCL6) - One versatile print driver for your PC or laptop</summary>
-    <releaseNotes>https://h10032.www1.hp.com/ctg/Manual/c03635717.pdf</releaseNotes>
-    <copyright>HP Inc.</copyright>
-    <tags>hp universal print printer driver pcl</tags>
-  </metadata>
-  <files>
-    <file src="tools\chocolateyinstall.ps1" target="tools\chocolateyinstall.ps1" />
-  </files>
+[HP Universal Print Driver Series for Windows - Supported Printers](https://support.hp.com/us-en/document/ish_4952109-2831856-16)
+[HP Universal Print Driver Series for Windows - Specifications](https://support.hp.com/au-en/product/hp-universal-print-driver-series-for-windows/503548/document/ish_5034432-5034489-16)</description>
+		<summary>HP Universal Print Driver for Windows (PS) - One versatile print driver for your PC or laptop</summary>
+		<releaseNotes>https://kaas.hpcloud.hp.com/pdf-public/pdf_8592592_en-US-1.pdf</releaseNotes>
+		<copyright>© 2023 Copyright HP Development Company, L.P.</copyright>
+		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/hp-universal-print-driver-pcl</packageSourceUrl>
+		<tags>hp universal print printer driver upd pcl pcl6</tags>
+	</metadata>
+	<files>
+		<file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg" />
+	</files>
 </package>

@@ -44,7 +44,7 @@ Users are more self-sufficient when the HP UPD is deployed, reducing the need fo
 		<releaseNotes>https://kaas.hpcloud.hp.com/pdf-public/pdf_8592592_en-US-1.pdf</releaseNotes>
 		<copyright>© 2023 Copyright HP Development Company, L.P.</copyright>
 		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/hp-universal-print-driver-ps</packageSourceUrl>
-		<tags>hp universal print printer driver upd pcl pcl6 ps postscript</tags>
+		<tags>hp universal print printer driver upd ps postscript</tags>
 	</metadata>
 	<files>
 		<file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg" />
