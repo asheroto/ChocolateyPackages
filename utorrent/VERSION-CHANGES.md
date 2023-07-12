@@ -1,3 +1,5 @@
-- Change version in iventoy.nuspec (one change)
-- Change filename in ChocolateyInstall.ps1 (two changes)
-- Change hashes in ChocolateyInstall.ps1 (two changes)
+- Download stable version from [uTorrent.com](https://www.utorrent.com/downloads/complete/track/stable/os/win/)
+- Rename to uTorrent_VERSION.exe
+- Change checksum in VERIFICATION (one change)
+- Change filename in ChocolateyInstall.ps1 (one change)
+- Update version in utorrent.nuspec (one change)
