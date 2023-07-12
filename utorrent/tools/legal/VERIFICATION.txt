@@ -1,0 +1,49 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The embedded software have been downloaded from the listed download location below
+and can be verified by doing the following:
+
+----------------------- VERIFICATION STEPS ----------------------- 
+1. Download the following:
+
+	http://download-new.utorrent.com/endpoint/utorrent/os/riserollout/track/stable
+
+2. Get the checksum using one of the following methods:
+
+  - Using powershell function 'Get-FileHash'
+  - Use Chocolatey utility 'checksum.exe'
+  
+3. The checksums should match the following:
+
+	checksum type: sha256
+	checksum: A0BEC6475244F461D3DD822A33038C34F897CB7FE66A0DB930AC859DD810F8AB
+------------------------------------------------------------------
+
+------------------------- PACKAGE NOTE ---------------------------
+uTorrent installer installs unwanted/questionable software by default, which can trigger A/V detections and is against the Chocolatey packaging guidelines.
+This package installs uTorrent without the additional software. EULA allows for distribution.
+
+The steps to download are listed below this section, but the details are contained herein:
+
+You can get the latest web installer here:
+	https://www.utorrent.com/downloads/complete/track/stable/os/win/
+
+That web installer downloads the standlone installer from here (USE THIS):
+	http://download-new.utorrent.com/endpoint/utorrent/os/riserollout/track/stable
+
+The standalone installer is what is used in this package.
+
+By default, the web installer will also download the unwanted/questionable software from here (DON'T USE):
+	https://darogjfc463nr.cloudfront.net/f/PlayaNext/files/1010/Standalone_Setup.zip
+------------------------------------------------------------------
+
+-------------------------- LEGAL NOTE ----------------------------
+The company name was changed from BitTorrent Inc to Rainberry Inc in 2017, but is the same application.
+Source: https://torrentfreak.com/bittorrent-inc-changed-its-name-to-rainberry-180512/
+The metadata of the package EXE says the publisher is BitTorrent Inc, but the legal name & copyright is Rainberry Inc.
+
+EULA source: https://www.bittorrent.com/legal/eula
+EULA source URL comes from the bottom of https://www.utorrent.com/
+------------------------------------------------------------------

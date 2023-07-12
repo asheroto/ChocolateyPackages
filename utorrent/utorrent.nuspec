@@ -4,12 +4,12 @@
 		<id>utorrent</id>
 		<version>3.6.0.46830</version>
 		<title>uTorrent Classic (Install)</title>
-		<authors>BitTorrent, Inc</authors>
+		<authors>Rainberry, Inc</authors>
 		<owners>bcurran3, asheroto</owners>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<licenseUrl>http://www.bittorrent.com/legal/eula</licenseUrl>
 		<projectUrl>http://www.utorrent.com/</projectUrl>
-		<iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/utorrent/utorrent_icon.png</iconUrl>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/0aa40962/utorrent/icon.png</iconUrl>
 		<description>---
 
 ###[choco://utorrent](choco://utorrent)
@@ -17,41 +17,46 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
+**Note**: Rainberry, Inc is formerly known as BitTorrent, Inc. The company changed its name in 2017.
 	
 ![Screenshot of uTorrent](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/66a651fb/utorrent/screenshot.jpg)	
 
-##The #1 torrent download client on desktops worldwide.
+### Features
 
-###Why It's Awesome
-
-####Lightweight
+#### Lightweight
 µTorrent is a little over 1 MB (smaller than a digital photo!). It installs ultra-fast and will never hog your valuable system resources.
 
-####Powerful
+#### Powerful
 Want total control? uTorrent offers advanced settings such as automation, scripting, remote management and more.
 
-####Fast
+#### Fast
 Download your files as quickly and efficiently as possible without slowing down your other online activities.
 
-####Bundles
-Direct access to a over 10,000 artists and 2,000,000 pieces of content. Download media directly from a variety of artists, bands, authors and filmmakers.
+#### Download torrents in bulk
+µTorrent Classic enables simultaneous torrent downloads that you can manage in a single location.
 
-**SOCIAL MEDIA:**
-[Facebook](https://www.facebook.com/utorrent/) | [Twitter](https://twitter.com/utorrent) | [Instagram](https://www.instagram.com/utorrent/) | [Blog](http://blog.utorrent.com/)
+#### Optimize your bandwidth
+µTorrent Classic auto-adjusts bandwidth usage, based on your network and internet connection, to ensure fast downloads.
+
+#### Schedule your downloads
+Set the day and time for your torrent downloads to start, stop or seed.
+
+#### Remotely connect to µTorrent Classic
+Add torrents to µTorrent Classic remotely from a web browser on any device.
 
 [uTorrent Remote Instructions](https://remote.utorrent.com/signup)
 
 **REMOTE PROGRAMS OF NOTE:**
-[Android µTorrent® Remote Client](https://play.google.com/store/apps/details?id=com.utorrent.web) | [uTorrent Link Sender for Chrome](https://chocolatey.org/packages/utorrent-link-sender-chrome) | [uTorrent easy client for Chrome](https://chocolatey.org/packages/utorrent-easy-client-chrome)
+[Android µTorrent®- Torrent Downloader](https://play.google.com/store/apps/details?id=com.utorrent.client) | [uTorrent Link Sender for Chrome](https://chocolatey.org/packages/utorrent-link-sender-chrome) | [uTorrent easy client for Chrome](https://chocolatey.org/packages/utorrent-easy-client-chrome)
+
+**SOCIAL MEDIA:**
+[Facebook](https://www.facebook.com/utorrent/) | [Twitter](https://twitter.com/utorrent) | [Instagram](https://www.instagram.com/utorrent/) | [Blog](http://blog.utorrent.com/)
 
 **[PACKAGE NOTES](https://github.com/asheroto/ChocolateyPackages/blob/master/utorrent)</description>
-		<summary>A (very) tiny BitTorrent client.</summary>
+		<summary>A (very) tiny torrent client.</summary>
 		<releaseNotes>http://blog.utorrent.com/releases/windows/</releaseNotes>
-		<copyright>© BitTorrent, Inc</copyright>
-		<tags>utorrent bittorrent torrent client p2p magnet</tags>
-		<dependencies>
-			<dependency id="chocolatey-misc-helpers.extension" />
-		</dependencies>
+		<copyright>©2023 µTorrent is a trademark of Rainberry Inc</copyright>
+		<tags>utorrent bittorrent rainberry torrent client p2p magnet</tags>
 	</metadata>
 	<files>
 		<file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg;screenshot.jpg;screenshot.png" />
