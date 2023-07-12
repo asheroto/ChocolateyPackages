@@ -25,7 +25,7 @@ $packageArgs = @{
   validExitCodes = @(0,1)
   softwareName   = 'uTorrent*'
 }
- 
+
 Start-CheckandStop "uTorrent"
 
 Install-ChocolateyPackage @packageArgs
