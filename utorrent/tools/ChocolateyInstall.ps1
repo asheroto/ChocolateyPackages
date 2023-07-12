@@ -42,7 +42,7 @@ $timeoutSeconds = 10
 $counter = 0
 $windowClosedSuccessfully = $false
 
-Write-Output "Attempting to close $packageName window."
+Write-Output "Attempting to close $packageName window..."
 while ($counter -lt $timeoutSeconds) {
     # Try to find the process, except the one in $env:TEMP
     $processes = Get-Process -Name $packageName -ErrorAction SilentlyContinue | Where-Object { $_.Path -ne $null -and $_.Path -notlike "$env:TEMP\*" }
