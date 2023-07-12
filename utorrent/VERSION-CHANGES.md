@@ -1,5 +1,5 @@
 - Download stable version from [uTorrent.com](https://www.utorrent.com/downloads/complete/track/stable/os/win/)
 - Rename to uTorrent_VERSION.exe
 - Change checksum in VERIFICATION (one change)
-- Change filename in ChocolateyInstall.ps1 (one change)
+- Change filename and checksum in ChocolateyInstall.ps1 (two changess)
 - Update version in utorrent.nuspec (one change)

@@ -2,15 +2,15 @@
 # This package installs uTorrent without the additional software. See VERIFICATION.txt for more information.
 
 # Define vars
-$ErrorActionPreference 	= "Stop"
-$packageName 			= "uTorrent"
-$softwareName 			= "uTorrent*"
-$fileName 				= "uTorrent_3.6.0.46830.exe"
-$toolsPath 				= Split-Path $MyInvocation.MyCommand.Definition
-$fileLocation 			= "$toolsPath\$fileName"
-$checksum 				= "A0BEC6475244F461D3DD822A33038C34F897CB7FE66A0DB930AC859DD810F8AB"
-$silentArgs 			= "/S"
-$validExitCodes 		= @(0)
+$ErrorActionPreference  = "Stop"
+$packageName            = "uTorrent"
+$softwareName           = "uTorrent*"
+$fileName               = "uTorrent_3.6.0.46830.exe"
+$toolsPath              = Split-Path $MyInvocation.MyCommand.Definition
+$fileLocation           = "$toolsPath\$fileName"
+$checksum               = "A0BEC6475244F461D3DD822A33038C34F897CB7FE66A0DB930AC859DD810F8AB"
+$silentArgs             = "/S"
+$validExitCodes         = @(0)
 
 # Define package args
 $packageArgs = @{
