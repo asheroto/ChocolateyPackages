@@ -9,7 +9,7 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<licenseUrl>http://www.bittorrent.com/legal/eula</licenseUrl>
 		<projectUrl>http://www.utorrent.com/</projectUrl>
-		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/0aa40962/utorrent/icon.png</iconUrl>
+		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/34c40047/utorrent/icon.png</iconUrl>
 		<description>---
 
 ###[choco://utorrent](choco://utorrent)
