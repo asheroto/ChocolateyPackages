@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference	= 'Stop';
 
 $packageName 	= "iventoy"
-$version 		= "1.0.10" # Chocolatey package version may differ from the filename version
-$url 			= 'https://github.com/ventoy/PXE/releases/download/v1.0.10/iventoy-1.0.10-win32.zip'
-$checksum 		= 'BB23BDA89FC2CA0911BCCFE1698D41E8297FB664B9969FAD2CE54ED91CB3FCC4'
-$url64 			= 'https://github.com/ventoy/PXE/releases/download/v1.0.10/iventoy-1.0.10-win64.zip'
-$checksum64 	= '40B6DFD30C70C9D91EA7EDEEE2900E16F8E918330DA6ECB313CC799B4B893D37'
+$version 		= "1.0.11" # Chocolatey package version may differ from the filename version
+$url 			= 'https://github.com/ventoy/PXE/releases/download/v1.0.11/iventoy-1.0.11-win32-free.zip'
+$checksum 		= 'B442DEF627A9585C83141CE6DA5A7D961D6CEB948A1B8A2FF8DDAC05D14F1D01'
+$url64 			= 'https://github.com/ventoy/PXE/releases/download/v1.0.11/iventoy-1.0.11-win64-free.zip'
+$checksum64 	= '109C6A47B75D0A9DDAA4050CF40CF5F22978330E49BFF18EC461F4C4964FEE73'
 $unzipLocation 	= Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
 
 $packageArgs = @{

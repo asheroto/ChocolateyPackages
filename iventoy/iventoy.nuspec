@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>iventoy</id>
-    <version>1.0.10</version>
+    <version>1.0.11</version>
     <title>iVentoy</title>
     <authors>iventoy.com</authors>
     <owners>asheroto</owners>
@@ -12,34 +12,36 @@
     <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/d91d69ab/iventoy/icon.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>![iventoy](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/d91d69ab/iventoy/boot_ground.png)
-		
-		iVentoy is an enhanced version of the PXE server.
-With iVentoy you can boot and install OS on multiple machines at the same time through the network.
-iVentoy is extremely easy to use, without complicated configuration, just put the ISO file in the specified location and select PXE boot in the client machine.
-iVentoy supports x86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode at the same time.
-iVentoy supports 110+ common types of OS (Windows/WinPE/Linux/VMware)
 
-## Features
-Simple to use [Get Started](https://www.iventoy.com/en/doc_start.html)
-Cross-platform, can run in both Windows and Linux.
-Specially optimized for PXE scenarios, with flexible functions.
-Directly boot ISO files, no extraction needed.
-Native boot menu style for Legacy &amp; UEFI
-Directory layout corresponded boot menu.
-Supports Legacy BIOS and IA32/X86_64/ARM64 UEFI mode.
-Supports 110+ common types of OS (Windows/WinPE/Linux/VMware)
-System or ISO level boot password protection.
-Multiple devices to install different OSs at the same time.
-Device filtering by MAC address.
-Support querying MAC address filtering status.
-Support MAC address attribution query.
-Client device information. (Manufacture, product name etc.)
-Directly get ISO internal files with HTTP. [Notes](https://www.iventoy.com/en/doc_http_url.html)
-File Injection feature. [Notes](https://www.iventoy.com/en/doc_injection.html)
-Windows auto installation supported. [Notes](https://www.iventoy.com/en/doc_autoinstall.html)
-Linux auto installation supported. [Notes](https://www.iventoy.com/en/doc_autoinstall.html)
-Variables Expansion supported for install script [Notes](https://www.iventoy.com/en/doc_autoinstall.html)
-Automatically solve the driver missing during Linux installation.
+##Summary
+
+- iVentoy is an enhanced version of the PXE server.
+- With iVentoy you can boot and install OS on multiple machines at the same time through the network.
+- iVentoy is extremely easy to use, without complicated configuration, just put the ISO file in the specified location and select PXE boot in the client machine.
+- iVentoy supports x86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode at the same time.
+- iVentoy supports 110+ common types of OS (Windows/WinPE/Linux/VMware).
+
+##Features
+- Simple to use [Get Started](https://www.iventoy.com/en/doc_start.html)
+- Cross-platform, can run in both Windows and Linux.
+- Specially optimized for PXE scenarios, with flexible functions.
+- Directly boot ISO files, no extraction needed.
+- Native boot menu style for Legacy &amp; UEFI
+- Directory layout corresponded boot menu.
+- Supports Legacy BIOS and IA32/X86_64/ARM64 UEFI mode.
+- Supports 110+ common types of OS (Windows/WinPE/Linux/VMware)
+- System or ISO level boot password protection.
+- Multiple devices to install different OSs at the same time.
+- Device filtering by MAC address.
+- Support querying MAC address filtering status.
+- Support MAC address attribution query.
+- Client device information. (Manufacture, product name etc.)
+- Directly get ISO internal files with HTTP. [Notes](https://www.iventoy.com/en/doc_http_url.html)
+- File Injection feature. [Notes](https://www.iventoy.com/en/doc_injection.html)
+- Windows auto installation supported. [Notes](https://www.iventoy.com/en/doc_autoinstall.html)
+- Linux auto installation supported. [Notes](https://www.iventoy.com/en/doc_autoinstall.html)
+- Variables Expansion supported for install script [Notes](https://www.iventoy.com/en/doc_autoinstall.html)
+- Automatically solve the driver missing during Linux installation.
 
 See [iventoy.com](https://www.iventoy.com/) for details.</description>
     <summary>Ventoy is an open source tool to create bootable USB drive for ISO files.</summary>
