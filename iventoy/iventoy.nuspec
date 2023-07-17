@@ -9,6 +9,7 @@
     <owners>asheroto</owners>
     <licenseUrl>https://www.iventoy.com/en/doc_license.html</licenseUrl>
     <projectUrl>https://www.iventoy.com</projectUrl>
+    <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/iventoy</packageSourceUrl>
     <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/d91d69ab/iventoy/icon.png</iconUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>![iventoy](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/d91d69ab/iventoy/boot_ground.png)
