@@ -1,2 +1,2 @@
 - Change version in iventoy.nuspec (one change)
-- Change version, filename, and hashes in ChocolateyInstall.ps1 (five changes)
+- Change version and hashes in ChocolateyInstall.ps1 (three changes)
