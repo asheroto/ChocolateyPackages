@@ -4,7 +4,7 @@
 	<metadata>
 		<id>fxsound</id>
 		<title>FxSound</title>
-		<version>1.1.18.0</version>
+		<version>1.1.19.0</version>
 		<authors>FxSound LLC</authors>
 		<owners>asheroto</owners>
 		<projectUrl>https://www.fxsound.com/</projectUrl>
@@ -61,6 +61,7 @@ You don't need to spend thousands to get audiophile sound.</description>
 		<licenseUrl>https://forum.fxsound.com/tos</licenseUrl>
 		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/093acc183da465f30e835201c287cadb2d6da703/fxsound/icon.png</iconUrl>
 		<releaseNotes>https://www.fxsound.com/changelog</releaseNotes>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/fxsound</packageSourceUrl>
 	</metadata>
 	<files>
 		<file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg" />
