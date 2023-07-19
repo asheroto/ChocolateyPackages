@@ -1,0 +1,14 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community in verifying that this package's contents are trustworthy.
+
+To verify the files using the author's download URL:
+
+1. Please go to the author's download URL
+	https://desktop.clickup.com/windows
+2. NOTE: There may not be a way to download specific versions, as the URL above is the latest version and no apparent old versions are available, although the changelog shows different file versions without a download link
+3. Use Get-FileHash -Path <FILE TO VERIFY> to get the file hash value from both the downloaded file (from step 1 above) and the file from the package and compare them
+
+---
+
+SHA256
+fxsound_setup.exe: 9051FC3CED88AFB143D9C56EF016D4659774DA9B812DFF49C44D0E020FE9CC1F

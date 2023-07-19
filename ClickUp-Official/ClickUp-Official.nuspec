@@ -11,13 +11,25 @@
         <projectUrl>https://clickup.com/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/e7a0cb9e69990a17b97247459b260e0d5ab583f0/ClickUp/icon.png</iconUrl>
-        <description>
-        ClickUp is a comprehensive productivity tool, serving as a one-stop solution for managing tasks, projects, and team collaboration. It seamlessly integrates various features such as to-do lists, document collaboration, spreadsheets, reminders, and more. Built to foster efficiency, it supports a multitude of views including Gantt charts, Kanban boards, and calendar views. ClickUp's intuitive interface and powerful features make it an ideal choice for teams aiming to streamline their workflow and enhance productivity.</description>
-        <summary>ClickUp: An all-in-one productivity platform that centralizes task management, project planning, and team collaboration. With its wide array of functionalities and user-friendly interface, ClickUp is your go-to solution for an efficient and streamlined workflow.</summary>
-        <releaseNotes>https://github.com/asheroto/ClickUp/releases</releaseNotes>
-        <tags>clickup click up clickup.com project task organization organizer</tags>
+        <description>![ClickUp screenshot](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/03093956/ClickUp-Official/screenshot.jpg)
+
+## Summary
+
+ClickUp is an all-in-one productivity platform designed to consolidate and streamline your workflow. With an impressive array of functionalities housed in a user-friendly interface, ClickUp serves as a comprehensive solution for task management, project planning, and team collaboration.
+
+## Features
+
+- **Task Management:** With ClickUp, manage your tasks effectively and keep track of all your projects. From simple to-do lists to complex workflows, ClickUp has got you covered.
+- **Project Planning:** Use Gantt charts, Kanban boards, or a simple list view to see the big picture of your projects. Easily assign tasks, set deadlines, and monitor progress.
+- **Team Collaboration:** ClickUp is not just a task manager, it's a platform for collaboration. Share documents, chat with team members, set up meetings, and collaborate in real time.
+- **Multiple Views:** Catering to individual preferences, ClickUp supports multiple views such as list, board, box, and more. Each member can choose the view they find the most comfortable to work with.
+- **Integration:** ClickUp offers integration with a multitude of other services like Google Drive, Dropbox, Slack, and more. This means you can centralize your work even if it's spread across different platforms.
+- **Customizability:** From custom statuses to custom fields, ClickUp is fully adaptable to your team's needs and your project's requirements.</description>
+        <summary>ClickUp: An all-in-one productivity platform that centralizes task management, project planning, and team collaboration.</summary>
+        <releaseNotes>hhttps://help.clickup.com/hc/en-us/articles/15087658515479-ClickUpdates-Release-Notes-</releaseNotes>
+        <tags>clickup click up clickup.com project task organization organizer organize productivity tool task management tracker organization collaboration teamwork</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/ClickUp-Official</packageSourceUrl>
-        <docsUrl>https://github.com/asheroto/ClickUp</docsUrl>
+        <docsUrl>https://help.clickup.com/hc/en-us</docsUrl>
     </metadata>
     <files>
         <file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg;screenshot.jpg" />
