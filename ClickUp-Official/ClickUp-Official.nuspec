@@ -20,6 +20,6 @@
         <docsUrl>https://github.com/asheroto/ClickUp</docsUrl>
     </metadata>
     <files>
-        <file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg;screenshot.png" />
+        <file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg;screenshot.jpg" />
     </files>
 </package>
