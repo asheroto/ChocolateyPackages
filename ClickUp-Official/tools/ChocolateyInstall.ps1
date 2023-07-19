@@ -4,7 +4,7 @@ $packageName    = "clickup-official"
 $softwareName   = "ClickUp*"
 $toolsPath      = Split-Path $MyInvocation.MyCommand.Definition
 $checksum       = "9051FC3CED88AFB143D9C56EF016D4659774DA9B812DFF49C44D0E020FE9CC1F"
-$silentArgs     = "/S"
+$silentArgs     = "/silent"
 $validExitCodes = @(0)
 $fileLocation   = "$toolsPath\ClickUp Setup 3.3.22-x64.exe"
 
