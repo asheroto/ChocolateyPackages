@@ -1,6 +1,6 @@
-﻿$ErrorActionPreference	= 'Stop';
+﻿$ErrorActionPreference = "Stop";
 
-$packageName = "ventoy"
+$packageName   = "ventoy"
 $unzipLocation = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
 
 @(
