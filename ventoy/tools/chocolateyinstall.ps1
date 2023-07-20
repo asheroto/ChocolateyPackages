@@ -6,11 +6,11 @@
 # └── other data
 
 # Release URL: https://github.com/ventoy/Ventoy/releases
-$packageName 	= "ventoy"
-$version 		= "1.0.94" # Chocolatey package version may differ from the filename version
+$packageName    = "ventoy"
+$version        = "1.0.94" # Chocolatey package version may differ from the filename version
 $url            = "https://github.com/ventoy/Ventoy/releases/download/v$($version)/$($packageName)-$($version)-windows.zip"
-$checksum 		= "EA03CC5031B397E43D316D466EB50A5C0A4C8F431CFBAECD0CE8F0B559038AAF"
-$unzipLocation 	= Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
+$checksum       = "EA03CC5031B397E43D316D466EB50A5C0A4C8F431CFBAECD0CE8F0B559038AAF"
+$unzipLocation  = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
 
 $packageArgs = @{
 	packageName    = $packageName
