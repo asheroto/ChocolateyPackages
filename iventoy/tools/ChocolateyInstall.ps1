@@ -1,13 +1,13 @@
 ﻿$ErrorActionPreference	= "Stop";
 
 # Release URL: https://github.com/ventoy/PXE/releases
-$packageName 	= "iventoy"
-$version 		= "1.0.16" # Chocolatey package version may differ from the filename version
+$packageName    = "iventoy"
+$version        = "1.0.16" # Chocolatey package version may differ from the filename version
 $url            = "https://github.com/ventoy/PXE/releases/download/v$($version)/iventoy-$($version)-win32-free.zip"
-$checksum 		= "36B160AA1D4AF84D7C9CACD122002B06C19FB9C8B2AF89985CBE1F6803EF7A86"
-$url64 			= "https://github.com/ventoy/PXE/releases/download/v$($version)/iventoy-$($version)-win64-free.zip";
-$checksum64 	= "24227B40B838F2C6C144046534FB46823971BBB2856C931B7C1AB01A5750D4F1"
-$unzipLocation 	= Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
+$checksum       = "36B160AA1D4AF84D7C9CACD122002B06C19FB9C8B2AF89985CBE1F6803EF7A86"
+$url64          = "https://github.com/ventoy/PXE/releases/download/v$($version)/iventoy-$($version)-win64-free.zip";
+$checksum64     = "24227B40B838F2C6C144046534FB46823971BBB2856C931B7C1AB01A5750D4F1"
+$unzipLocation  = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
 
 $packageArgs = @{
 	packageName    = $packageName
