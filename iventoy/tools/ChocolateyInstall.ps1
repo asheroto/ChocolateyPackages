@@ -1,5 +1,6 @@
-﻿$ErrorActionPreference	= 'Stop';
+﻿$ErrorActionPreference	= "Stop";
 
+# Release URL: https://github.com/ventoy/PXE/releases
 $packageName 	= "iventoy"
 $version 		= "1.0.16" # Chocolatey package version may differ from the filename version
 $url            = "https://github.com/ventoy/PXE/releases/download/v$($version)/iventoy-$($version)-win32-free.zip"
