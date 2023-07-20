@@ -14,15 +14,14 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <description>![iventoy](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/d91d69ab/iventoy/boot_ground.png)
 
-##Summary
-
+## Summary
 - iVentoy is an enhanced version of the PXE server.
 - With iVentoy you can boot and install OS on multiple machines at the same time through the network.
 - iVentoy is extremely easy to use, without complicated configuration, just put the ISO file in the specified location and select PXE boot in the client machine.
 - iVentoy supports x86 Legacy BIOS, IA32 UEFI, x86_64 UEFI and ARM64 UEFI mode at the same time.
 - iVentoy supports 110+ common types of OS (Windows/WinPE/Linux/VMware).
 
-##Features
+## Features
 - Simple to use [Get Started](https://www.iventoy.com/en/doc_start.html)
 - Cross-platform, can run in both Windows and Linux.
 - Specially optimized for PXE scenarios, with flexible functions.
