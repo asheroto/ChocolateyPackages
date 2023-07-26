@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName = 'intel-rst-driver' 
+$packageName = 'intel-rst-driver'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url = 'https://downloadmirror.intel.com/773229/SetupRST.exe'
 #                                                ^^^^^ is what changes with the version

@@ -1,17 +1,18 @@
 ﻿$ErrorActionPreference = "Stop"
 
+# Chocolatey package parameters
 $packageName    = "clickup-official"
 $softwareName   = "ClickUp*"
-$toolsPath      = Split-Path $MyInvocation.MyCommand.Definition
+$url            = "https://desktop.clickup.com/windows"
 $checksum       = "9051FC3CED88AFB143D9C56EF016D4659774DA9B812DFF49C44D0E020FE9CC1F"
 $silentArgs     = "/silent"
 $validExitCodes = @(0)
-$fileLocation   = "$toolsPath\ClickUp Setup 3.3.22-x64.exe"
 
+# Package args
 $packageArgs = @{
   packageName   = $packageName
   fileType      = "exe"
-  file          = $fileLocation
+  url           = $url
   checksum      = $checksum
   checksumType  = "sha256"
   silentArgs    = $silentArgs
@@ -19,4 +20,64 @@ $packageArgs = @{
   softwareName  = $softwareName
 }
 
-Install-ChocolateyInstallPackage @packageArgs
+# End ClickUp process
+Get-Process ClickUp -ErrorAction SilentlyContinue | Stop-Process -ErrorAction Stop
+
+# Install
+Install-ChocolateyPackage @packageArgs
+
+##################################################################################
+########## Close the main ClickUp screen that pops up after installing ##########
+##################################################################################
+
+# Over a span of 10 seconds, check every second for the process. If found (and not in $env:TEMP, which may be the installer),
+# attempt to close its window before a timeout occurs.
+
+# Wait a second
+Start-Sleep -Seconds 1
+
+# Define vars
+$packageName = "ClickUp"
+$timeoutSeconds = 10
+$counter = 0
+$windowClosedSuccessfully = $false
+
+Write-Output "Attempting to close $packageName window..."
+while ($counter -lt $timeoutSeconds) {
+    # Try to find the process, except the one in $env:TEMP
+    $processes = Get-Process -Name $packageName -ErrorAction SilentlyContinue | Where-Object { $_.Path -ne $null -and $_.Path -notlike "$env:TEMP\*" }
+
+    # Iterate over each process and attempt to close its window
+    foreach($process in $processes){
+        try {
+            # Attempt to close the window
+            $process.CloseMainWindow() | Out-Null
+            Start-Sleep -Seconds 1
+            $process.Refresh()
+
+            # Check if the window is successfully closed
+            if ($process.MainWindowHandle -eq 0) {
+                Write-Output "$packageName window has been closed successfully."
+                $windowClosedSuccessfully = $true
+                break
+            }
+        } catch {
+            Write-Warning "An error occurred trying to close the $packageName window: $_. Will try again."
+        }
+    }
+
+    # If the window was closed successfully, break out of the outer loop as well
+    if ($windowClosedSuccessfully) {
+        break
+    }
+
+    # Wait a second before next attempt
+    Start-Sleep -Seconds 1
+
+    # Increase the counter
+    $counter++
+}
+
+if (-not $windowClosedSuccessfully) {
+    Write-Warning "The $packageName window could not be closed within $timeoutSeconds seconds."
+}
