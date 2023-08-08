@@ -15,7 +15,7 @@
         
 With its simple yet powerful features, this lightweight native app runs like a Lambo, ensuring fast and secure performance.
 
-**Features**:
+## Features
 - **Database Security**: Equipped with multi-step authentication support, native libssh, and TLS encryption for secure connections.
 - **Customizable Appearance**: Personalize the interface with dark theme and configurations to match your taste.
 - **Intuitive GUI Client**: Browse, query, and edit your data and database structure with ease in a clean spreadsheet-like editor.
@@ -38,6 +38,6 @@ For more information, visit [TablePlus.com](https://www.tableplus.com/).</descri
         <bugTrackerUrl>https://github.com/TablePlus/TablePlus/issues</bugTrackerUrl>
     </metadata>
     <files>
-        <file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+        <file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg;screenshot.jpg;screenshot.png" />
     </files>
 </package>
