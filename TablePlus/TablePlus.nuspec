@@ -11,11 +11,11 @@
         <projectUrl>https://tableplus.com/windows</projectUrl>
         <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/f9dfc286/TablePlus/icon.png</iconUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
-        <description>Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite, MongoDB, Redis, &amp; more
+        <description>![Screenshot of TablePlus](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/32bfb9771cc2ec0fe7f79643251313a3490b7aa1/TablePlus/screenshot.png)
+        
+Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite, MongoDB, Redis, and more.
         
 With its simple yet powerful features, this lightweight native app runs like a Lambo, ensuring fast and secure performance.
-
-![Screenshot of TablePlus](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/32bfb9771cc2ec0fe7f79643251313a3490b7aa1/TablePlus/screenshot.png)
 
 ## Features
 - **Database Security**: Equipped with multi-step authentication support, native libssh, and TLS encryption for secure connections.
