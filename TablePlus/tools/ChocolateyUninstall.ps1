@@ -1,4 +1,5 @@
-﻿$packageName 		= 'TablePlus'
+﻿$ErrorActionPreference = 'Stop'
+$packageName 		= 'TablePlus'
 [array]$key 		= Get-UninstallRegistryKey -SoftwareName "TablePlus*"
 $uninstallString 	= $key.UninstallString
 $file 				= $uninstallString

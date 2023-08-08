@@ -1,27 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-	<metadata>
-		<id>TablePlus</id>
-		<version>5.3.8</version>
-		<title>TablePlus (Install)</title>
-		<authors>TablePlus Inc</authors>
-		<owners>Yato, asheroto</owners>
-		<licenseUrl>https://tableplus.com/blog/2018/01/license-agreement.html</licenseUrl>
-		<projectUrl>https://tableplus.com/windows</projectUrl>
-		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/f9dfc286/TablePlus/icon.png</iconUrl>
-		<requireLicenseAcceptance>true</requireLicenseAcceptance>
-		<description>Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite, MongoDB, &amp; more
+    <metadata>
+        <id>TablePlus</id>
+        <version>5.4.3</version>
+        <title>TablePlus (Install)</title>
+        <authors>TablePlus Inc</authors>
+        <owners>Yato, asheroto</owners>
+        <licenseUrl>https://tableplus.com/blog/2018/01/license-agreement.html</licenseUrl>
+        <projectUrl>https://tableplus.com/windows</projectUrl>
+        <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/f9dfc286/TablePlus/icon.png</iconUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite, MongoDB, Redis, &amp; more
+        
+With its simple yet powerful features, this lightweight native app runs like a Lambo, ensuring fast and secure performance.
 
-More description at official [website](https://tableplus.com/windows)</description>
-		<summary>Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite, MongoDB, &amp; more</summary>
-		<releaseNotes>https://tableplus.com/blog/2018/09/changelogs-windows.html</releaseNotes>
-		<copyright>© 2022 TablePlus Inc. 1100-1959 Upper Water Street, Halifax NS Canada. All rights reserved</copyright>
-		<tags>tableplus database-management postgresql mysql sql-server redis mariadb sqlite amazon-redshift</tags>
-		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/TablePlus</packageSourceUrl>
-		<docsUrl>https://tableplus.com/</docsUrl>
-		<bugTrackerUrl>https://github.com/TablePlus/TablePlus/issues</bugTrackerUrl>
-	</metadata>
-	<files>
-		<file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
-	</files>
+**Features**:
+- **Database Security**: Equipped with multi-step authentication support, native libssh, and TLS encryption for secure connections.
+- **Customizable Appearance**: Personalize the interface with dark theme and configurations to match your taste.
+- **Intuitive GUI Client**: Browse, query, and edit your data and database structure with ease in a clean spreadsheet-like editor.
+- **Metrics Board**: Build internal dashboards quickly.
+- **Inline Edit**: Edit data rows, table structure, or query results with just a click.
+- **Advanced Filters**: Quickly locate records with multiple advanced filters.
+- **Code Review &amp; Safe Mode**: Stay in control of your database changes.
+- **Export &amp; Import Database**: Swiftly migrate databases to another server with SQL Dump.
+- **Open Anything**: Easily jump to tables, schemas, databases, views, or functions from your connection.
+- **Multiple Tabs &amp; Windows**: Work with multiple databases or connections simultaneously.
+- **Smart Query Editor**: Best practices for SQL editing, with instant autocomplete, syntax highlighting, split panes, SQL reformatting, favorite &amp; history tracking, and streaming results.
+
+For more information, visit [TablePlus.com](https://www.tableplus.com/).</description>
+        <summary>Modern, native, and friendly GUI tool for relational databases: MySQL, PostgreSQL, SQLite, MongoDB, &amp; more</summary>
+        <releaseNotes>https://tableplus.com/blog/2018/09/changelogs-windows.html</releaseNotes>
+        <copyright>© 2023 TablePlus Inc. 1100-1959 Upper Water Street, Halifax NS Canada. All rights reserved</copyright>
+        <tags>tableplus database-management postgresql mysql sql-server redis mariadb sqlite amazon-redshift mongodb cassandra vertica database gui tool table plus client query editor</tags>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/TablePlus</packageSourceUrl>
+        <docsUrl>https://tableplus.com/</docsUrl>
+        <bugTrackerUrl>https://github.com/TablePlus/TablePlus/issues</bugTrackerUrl>
+    </metadata>
+    <files>
+        <file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+    </files>
 </package>
