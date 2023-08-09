@@ -9,10 +9,9 @@
         <owners>asheroto</owners>
         <licenseUrl>https://www.startisback.com/license.txt</licenseUrl>
         <projectUrl>https://www.startallback.com/</projectUrl>
-        <iconUrl></iconUrl>
+        <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/4865d54b6620d41e34eb8bfe64ebb495439b9536/StartAllBack/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>
-![Screenshot of StartAllBack](INSERT_IMAGE_URL_HERE)
+        <description>![Screenshot of StartAllBack](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/4865d54b6620d41e34eb8bfe64ebb495439b9536/StartAllBack/screenshot.jpg)
 
 **Introducing StartAllBack**: Windows 11 from a better timeline.
 
@@ -52,7 +51,9 @@ Embrace, enhance, unsweep classic UI from under the rug.
 -   Negative resource usage: fewer RAM used, fewer processes started
 
 ---
-For more information, visit [StartAllBack.com](https://startallback.com/). Free trial is installed by default. License can be purchased through the main website under "Purchase license key" for $4.99+. Release notes are located the main page beneath the "Download" button, click "Version History".</description>
+Free trial is installed by default. License can be purchased for a nominal price through the main website. Release notes are located the main page beneath the `Download` button under `Version History`.
+
+For more information, visit [StartAllBack.com](https://startallback.com/).</description>
         <summary>StartAllBack: Embrace, enhance, and unsweep classic UI from under the rug in Windows 11</summary>
         <releaseNotes>https://startallback.com/</releaseNotes>
         <copyright>Copyright (C) 2012-2022. Tihiy</copyright>
