@@ -1,2 +1,2 @@
 - Update filename & hash in ChocolateyInstall.ps1
-- Update version in TablePlus.nuspec
+- Update version in nuspec file
