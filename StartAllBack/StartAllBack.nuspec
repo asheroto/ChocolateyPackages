@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>StartAllBack</id>
+        <version>3.6.11</version>
+        <title>StartAllBack</title>
+        <authors>StartAllBack</authors>
+        <owners>asheroto</owners>
+        <licenseUrl>https://www.startisback.com/license.txt</licenseUrl>
+        <projectUrl>https://www.startallback.com/</projectUrl>
+        <iconUrl></iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>
+![Screenshot of StartAllBack](INSERT_IMAGE_URL_HERE)
+
+**Introducing StartAllBack**: Windows 11 from a better timeline.
+
+Embrace, enhance, unsweep classic UI from under the rug.
+
+## Features
+
+### Restore and improve taskbar
+-   Show labels on task icons
+-   Adjust icon size and margins
+-   Move taskbar to top, left or right edges
+-   Drag and drop stuff onto taskbar
+-   Center task icons but keep Start button on the left
+-   Split into segments, use dynamic translucency
+-   Separate corner icons with Windows 7/10 UI
+
+### Restore and improve File Explorer and Control Panel
+-   Ribbon and Command Bar revamped with translucent effects
+-   Details pane on bottom
+-   Old search box (the one which works)
+-   Dark mode support for more dialogs
+
+### Restore and improve context menus
+-   All new look with rounded acrylic menus
+-   Fast and responsive taskbar menus
+-   New fonts, better touch support
+
+### Restore and improve start menu
+-   Launch apps and go to system places in one click
+-   Navigate dropdown menus like a boss
+-   Enjoy fast and reliable search
+
+### Finally, lightweight styling and UI consistency
+-   Enjoy Windows 7, Windows 10 and third-party taskbar and start menu styles
+-   Fix UI inconsistencies in Win32 apps
+-   Don't be blue: recolor UI in all windows apps
+-   Negative resource usage: fewer RAM used, fewer processes started
+
+---
+For more information, visit [StartAllBack.com](https://startallback.com/). Free trial is installed by default. License can be purchased through the main website under "Purchase license key" for $4.99+. Release notes are located the main page beneath the "Download" button, click "Version History".</description>
+        <summary>StartAllBack: Embrace, enhance, and unsweep classic UI from under the rug in Windows 11</summary>
+        <releaseNotes>https://startallback.com/</releaseNotes>
+        <copyright>Copyright (C) 2012-2022. Tihiy</copyright>
+        <tags>startallback windows 11 win11 windows11 taskbar start-menu file-explorer explorer ribbon recolor style effects details-pane old-search ui customization classic classic-ui classic-shell classic-start</tags>
+        <docsUrl>https://www.startisback.com/#faq-tab</docsUrl>
+        <bugTrackerUrl>https://msfn.org/board/forum/181-startisback/</bugTrackerUrl>
+    </metadata>
+    <files>
+        <file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg;screenshot.jpg;screenshot.png" />
+    </files>
+</package>
