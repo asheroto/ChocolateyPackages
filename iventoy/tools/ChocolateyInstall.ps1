@@ -2,11 +2,11 @@
 
 # Release URL: https://github.com/ventoy/PXE/releases
 $packageName    = "iventoy"
-$version        = "1.0.17" # Chocolatey package version may differ from the filename version
+$version        = "1.0.18" # Chocolatey package version may differ from the filename version
 $url            = "https://github.com/ventoy/PXE/releases/download/v$($version)/iventoy-$($version)-win32-free.zip"
-$checksum       = "8B81B6459A931A138B07A0C9B2C5CF768D97E5E42FF106B712AC6FEEADCB6766"
+$checksum       = "B37891706FCEC473A17306E085A9229C851EA1FA6E1AB3B44EE1F8720513D9DA"
 $url64          = "https://github.com/ventoy/PXE/releases/download/v$($version)/iventoy-$($version)-win64-free.zip";
-$checksum64     = "C043FD4C5A7F63D3F4C4E980F5D0203D5F8D9E60E07150032DCD2E25A282DC1E"
+$checksum64     = "08D52D845DCB2A54170225168CFFBC580CEEA66C8548821712E7A7F376D9E776"
 $unzipLocation  = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
 
 $packageArgs = @{
