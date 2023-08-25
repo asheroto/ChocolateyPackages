@@ -11,14 +11,25 @@
         <docsUrl>https://learn.microsoft.com/en-us/windows/deployment/usmt/usmt-overview</docsUrl>
         <licenseUrl>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright</licenseUrl>
         <projectUrl>https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install</projectUrl>
-        <iconUrl>https://raw.github.com/keithga/Chocolatey/master/Resources/win_logo.png</iconUrl>
-        <description>The Windows Assessment and Deployment Kit (Windows ADK) encompasses a suite of tools designed for customizing, assessing, and deploying Windows operating systems to new computers. This particular package focuses on the silent installation of the User State Migration Tool, a component of the Windows ADK, to the default location. If the Windows ADK is already installed, this package will simply add that specific feature.</description>
-        <summary>This package silently installs the User State Migration Tool from the Windows Assessment and Deployment Kit to the default location, or adds the feature if the Windows ADK is already present.</summary>
-        <releaseNotes></releaseNotes>
+        <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/7eea144a74d80bd981802babbbed048363cf2560/windows-adk-usmt/icon.png</iconUrl>
+        <summary>Installs the User State Migration Tool from the Windows Assessment and Deployment Kit, and integrates it into the system's PATH environment variable.</summary>
+        <description>Effortlessly migrate user profiles, settings, and data between Windows systems with the USMT package. Deployed from the Windows ADK, it captures and restores user information during upgrades or replacements. Streamlined installation and integration into the PATH variable ensure easy access.
+
+The package downloads the Windows Assessment and Deployment Kit (Windows ADK) and installs the User State Migration Tool (USMT) feature. Uninstalling will not remove Windows ADK but will instead remove the system PATH variable integration. This is to avoid breaking other packages that may rely on the Windows ADK.
+        
+The USMT is composed of three main utilities: `scanstate`, `loadstate`, and `usmtutils`. You can view the syntax for `scanstate`, `loadstate`, and `usmtutils` by running `scanstate /?`, `loadstate /?`, and `usmtutils /?` respectively, or by visiting [this page](https://learn.microsoft.com/en-us/windows/deployment/usmt/usmt-command-line-syntax).
+
+| Command       | Purpose and Functionality                                       |
+|---------------|----------------------------------------------------------------|
+| `ScanState`   | Used for capturing user profiles, settings, and data from a source computer before migrating to a new system. Creates a migration store that holds the captured data, which can be stored on a network share or external storage. Captures files, settings, and user profiles based on defined rules and options. |
+| `LoadState`   | Used for restoring user profiles, settings, and data to a destination computer from a previously created migration store. Applies the captured data to the destination computer based on the rules and options specified during the `ScanState` process. Supports migrating user accounts, settings, files, and application data. |
+| `USMTUtils`   | Offers various functions for manipulating migration stores and data created during the `ScanState` and `LoadState` processes. Can be used to verify the integrity of migration stores, compress and decompress migration store files, and perform other maintenance tasks. Provides advanced options for managing migration data and troubleshooting migration issues. |</description>
         <copyright>Microsoft</copyright>
         <tags>adk winpe waik usmt user state migration tool windows assessment deployment kit</tags>
     </metadata>
     <files>
-        <file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg;**\screenshot.png;**\screenshot.jpg;**\screenshot.svg" />
+        <file src="tools\ChocolateyInstall.ps1" target="tools\ChocolateyInstall.ps1" />
+        <file src="tools\ChocolateyUninstall.ps1" target="tools\ChocolateyUninstall.ps1" />
+        <file src="tools\Functions.ps1" target="tools\Functions.ps1" />
     </files>
 </package>
