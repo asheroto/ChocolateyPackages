@@ -1,5 +1,15 @@
 ﻿$ErrorActionPreference = 'Stop'
 function Get-WindowsAdkPath {
+    <#
+        .SYNOPSIS
+        Gets the path to the Windows Assessment and Deployment Kit.
+
+        .DESCRIPTION
+        Gets the path to the Windows Assessment and Deployment Kit by checking the registry for the KitsRoot value and by checking the filesystem for the path.
+
+        .EXAMPLE
+        Get-WindowsAdkPath
+    #>
     $KitsRootRegPaths = @(
         'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Kits\Installed Roots',
         'Registry::HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows Kits\Installed Roots'
