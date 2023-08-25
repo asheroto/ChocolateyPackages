@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>windows-adk-usmt</id>
+        <version>10.1.22621.1</version>
+        <title>User State Migration Tool of the Windows Assessment and Deployment Kit</title>
+        <authors>Microsoft</authors>
+        <owners>asheroto</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <docsUrl>https://learn.microsoft.com/en-us/windows/deployment/usmt/usmt-overview</docsUrl>
+        <licenseUrl>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright</licenseUrl>
+        <projectUrl>https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install</projectUrl>
+        <iconUrl>https://raw.github.com/keithga/Chocolatey/master/Resources/win_logo.png</iconUrl>
+        <description>The Windows Assessment and Deployment Kit (Windows ADK) encompasses a suite of tools designed for customizing, assessing, and deploying Windows operating systems to new computers. This particular package focuses on the silent installation of the User State Migration Tool, a component of the Windows ADK, to the default location. If the Windows ADK is already installed, this package will simply add that specific feature.</description>
+        <summary>This package silently installs the User State Migration Tool from the Windows Assessment and Deployment Kit to the default location, or adds the feature if the Windows ADK is already present.</summary>
+        <releaseNotes></releaseNotes>
+        <copyright>Microsoft</copyright>
+        <tags>adk winpe waik usmt user state migration tool windows assessment deployment kit</tags>
+    </metadata>
+    <files>
+        <file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg;**\screenshot.png;**\screenshot.jpg;**\screenshot.svg" />
+    </files>
+</package>
