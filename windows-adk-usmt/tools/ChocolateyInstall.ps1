@@ -39,6 +39,7 @@ if ($null -ne $adkPath) {
         $PathType = [System.EnvironmentVariableTarget]::Machine
         Write-Host "The path '$usmtPath' will be added to PATH"
         Install-ChocolateyPath -pathToInstall $usmtPath -pathType $PathType
+        Update-SessionEnvironment
     } else {
         Write-Warning "Unable to find '$scanstatePath'"
     }

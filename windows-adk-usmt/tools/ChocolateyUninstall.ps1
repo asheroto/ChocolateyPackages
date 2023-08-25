@@ -30,9 +30,6 @@ if (-not (Test-Path -Path $usmtPath -ErrorAction SilentlyContinue)) {
 Update-SessionEnvironment
 $EnvPath = $env:PATH
 
-# Default success to false
-$success = $false
-
 # Check if the path to User State Migration Tool exists in the PATH variable
 if ($EnvPath.ToLower().Contains($usmtPath.ToLower())) {
     # Split the PATH variable into an array
@@ -54,16 +51,13 @@ if ($EnvPath.ToLower().Contains($usmtPath.ToLower())) {
 
     # Update session environment again
     Update-SessionEnvironment
-    $EnvPath = $env:PATH
 
     Write-Output "Testing scanstate.exe command..."
     if (Get-ScanStateStatus -eq $true) {
-        # If scanstate works, set success to false, because the PATH is not correct
+        # If scanstate works, PATH is not correct since uninstalling
         Write-Warning "scanstate.exe still works from the command line, please remove its folder from the PATH variable manually."
-        $success = $false
     } else {
-        # If scanstate does not work, set success to true, because the PATH is correct
+        # If scanstate does not work, PATH is correct since uninstalling
         Write-Output "scanstate.exe does not work from the command line, the PATH variable is correct and no action is required."
-        $success = $true
     }
 }
