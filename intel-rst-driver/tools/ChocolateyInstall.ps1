@@ -1,6 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 function Get-IntelProcessorGeneration {
+    <#
+    .SYNOPSIS
+        Returns the generation number of the Intel processor.
+    .DESCRIPTION
+        Returns the generation number of the Intel processor by parsing the processor name per https://www.intel.com/content/www/us/en/support/articles/000032203/processors/intel-core-processors.html
+    .EXAMPLE
+        PS C:\> Get-IntelProcessorGeneration
+    #>
     $ProcessorInfo = (Get-CimInstance -ClassName Win32_Processor).Name
 
     if ($ProcessorInfo -match 'i\d+-\d+') {
@@ -34,6 +42,11 @@ switch ($gen) {
         $checksum = 'A2B2E20D6D8100E9EE344746F80849524C64490B90686A13C09268CADB976B37'
     }
     { $_ -ge 12 -and $_ -le 13 } {
+        # May need to adjust this for 11th-13th, waiting to hear back from Intel
+        # May need to adjust this for 11th-13th, waiting to hear back from Intel
+        # May need to adjust this for 11th-13th, waiting to hear back from Intel
+        # May need to adjust this for 11th-13th, waiting to hear back from Intel
+        # May need to adjust this for 11th-13th, waiting to hear back from Intel
         # https://www.intel.com/content/www/us/en/download/720755/intel-rapid-storage-technology-driver-installation-software-with-intel-optane-memory-11th-and-12th-gen-platforms.html
         $url = 'https://downloadmirror.intel.com/751275/SetupRST.exe'
         $checksum = 'F671E1CBBD4313C40878A1AD6F4152585D0E10192CBAD39274E9D5EBE7276FE7'
