@@ -1,2 +1,2 @@
-- Change filename in ChocolateyInstall.ps1
+- Change filename and hash in ChocolateyInstall.ps1
 - Change version in Simplifi.nuspec

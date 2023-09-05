@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference  = 'Stop'
 $packageName    = 'Simplifi'
 $softwareName   = 'Simplifi'
-$url            = 'https://github.com/asheroto/Simplifi/releases/download/1.0.3/Simplifi.exe'
-$checksum       = '0F8BEA8AF21399E5FDF5EBA79A771BF32AA06AFD8304B7F219BD819ACEE2BC45'
+$url            = 'https://github.com/asheroto/Simplifi/releases/download/1.0.4/Simplifi.exe'
+$checksum       = '9FBBE11144DB2C57DC39509D36569715981FB1C1F05C9AE1D38731F4B7717BBC'
 $silentArgs     = '/quiet'
 $validExitCodes = @(0)
 

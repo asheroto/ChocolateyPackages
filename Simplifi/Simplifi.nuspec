@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
 	<metadata>
 		<id>Simplifi</id>
-		<version>1.0.3</version>
+		<version>1.0.4</version>
 		<title>Simplifi</title>
 		<authors>asheroto</authors>
 		<owners>asheroto</owners>
@@ -12,8 +12,8 @@
 		<bugTrackerUrl>https://github.com/asheroto/Simplifi/issues</bugTrackerUrl>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/fd7dd243/Simplifi/icon.png</iconUrl>
-		<description>Simplifi (by Quicken) in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Alt+I to show the window.</description>
-		<summary>Simplifi (by Quicken) in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Alt+I to show the window.</summary>
+		<description>Simplifi (by Quicken) in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Alt+I to show the window, press Alt+F4 to close the window to the system tray.</description>
+		<summary>Simplifi (by Quicken) in a native Windows application that runs on startup and hides to the system tray.</summary>
 		<releaseNotes>https://github.com/asheroto/Simplifi/releases</releaseNotes>
 		<tags>Simplifi click up Simplifi.com project task organization organizer</tags>
 		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/Simplifi</packageSourceUrl>
