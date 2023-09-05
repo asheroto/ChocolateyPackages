@@ -14,35 +14,28 @@ $ChocoPackage = @{
 # Install package
 Install-ChocolateyPackage @ChocoPackage
 
-#######################################
-# Add USMT to PATH
-#######################################
-
-# Output
-Write-Output "Adding the User State Migration Tool to the PATH environment variable..."
+#####################################################################################################################
+# scanstate/loadstate won't work unless you run them from the directory they're in since XML files are referenced
+#####################################################################################################################
 
 # Import the functions from the Functions.ps1 file
 . "$PSScriptRoot\Functions.ps1"
 
-# Call the function to get the KitsRoot
-$adkPath = Get-WindowsAdkPath
-if ($null -ne $adkPath) {
-    # Build the path to the User State Migration Tool
-    $usmtPath = Join-Path -Path $adkPath -ChildPath "User State Migration Tool\$($env:PROCESSOR_ARCHITECTURE)"
-
-    # Build the path to the scanstate.exe
-    $scanstatePath = Join-Path -Path $usmtPath -ChildPath "scanstate.exe"
-
-    # Verify that the scanstate.exe exists
-    if (Test-Path -Path $scanstatePath -ErrorAction SilentlyContinue) {
-        # If it exists, add it to the PATH
-        $PathType = [System.EnvironmentVariableTarget]::Machine
-        Write-Host "The path '$usmtPath' will be added to PATH"
-        Install-ChocolateyPath -pathToInstall $usmtPath -pathType $PathType
-        Update-SessionEnvironment
-    } else {
-        Write-Warning "Unable to find '$scanstatePath'"
-    }
-} else {
-    Write-Warning "Unable to find the path to Windows ADK. Please add the path to the User State Migration Tool manually."
+# Set up USMTPath environment variable
+$usmtPath = Get-USMTPath
+if ($null -ne $usmtPath) {
+    Set-EnvironmentVariable -Name 'USMTPath' -Value $usmtPath -Target 'Machine'
+    Update-SessionEnvironment
 }
+
+#######################################
+# How to use the User State Migration Tool (USMT)
+#######################################
+Write-Section "How to use the User State Migration Tool (USMT)"
+Write-Warning "To use this package you must first change directories to the USMT directory because scanstate/loadstate won't work unless you run them from the directory they're in since XML files are referenced.`n`nTo change directories quickly, type `"cd `$ENV:USMTPath`" and press Enter. Then you can run scanstate/loadstate commands below.`n"
+Write-Output ".\ScanState C:\MigrationStore /i:MigApp.xml /i:MigUser.xml /o /v:13 /l:ScanState.log"
+Write-Output "`tC:\MigrationStore: The path where migration files will be stored. Data is copied here.`n`t/i:MigApp.xml /i:MigUser.xml: Includes the standard migration rule files.`n`t/o: Overwrites the output location if it exists.`n`t/v:13: Sets the verbosity level for logging.`n`t/l:ScanState.log: Specifies the log file.`n"
+Write-Output ".\LoadState C:\MigrationStore /i:MigApp.xml /i:MigUser.xml /v:13 /l:LoadState.log /lac"
+Write-Output "`tC:\MigrationStore: The path where migration files are located.`n`t/i:MigApp.xml /i:MigUser.xml: Includes the standard migration rule files.`n`t/v:13: Sets the verbosity level for logging.`n`t/l:LoadState.log: Specifies the log file.`n`t/lac: Specifies that local accounts should be created if they do not exist on the destination computer.`n"
+Write-Output "More info: .\ScanState /? or .\LoadState /?"
+Write-Output "Documentation: https://learn.microsoft.com/en-us/windows/deployment/usmt/usmt-command-line-syntax`n"

@@ -2,21 +2,21 @@
 
 $packageName = 'ClickUp'
 $softwareName = 'ClickUp'
-$url = 'https://github.com/asheroto/ClickUp/releases/download/1.1.2/ClickUp.exe'
-$checksum = 'B5C8C4558601098FED5169A4511E97B66B099CB4CA484E64875481B2B2360E3A'
+$url = 'https://github.com/asheroto/ClickUp/releases/download/1.1.3/ClickUp.exe'
+$checksum = 'A17903A9C32F41C0777A689A3846D658BDBFC664451278DFB6B84810AA4C1C5C'
 $silentArgs = '/quiet'
 $validExitCodes = @(0)
 
 $packageArgs = @{
-	packageName    = $packageName
-	fileType       = 'exe'
-	file           = $fileLocation
-	url            = $url
-	checksum       = $checksum
-	checksumType   = 'sha256'
-	silentArgs     = $silentArgs
-	validExitCodes = $validExitCodes
-	softwareName   = $softwareName
+    packageName    = $packageName
+    fileType       = 'exe'
+    file           = $fileLocation
+    url            = $url
+    checksum       = $checksum
+    checksumType   = 'sha256'
+    silentArgs     = $silentArgs
+    validExitCodes = $validExitCodes
+    softwareName   = $softwareName
 }
 
 # Install the package
