@@ -6,6 +6,7 @@ function Get-IntelProcessorGeneration {
         Returns the generation number of the Intel processor.
     .DESCRIPTION
         Returns the generation number of the Intel processor by parsing the processor name.
+        More information: https://www.intel.com/content/www/us/en/support/articles/000032203/processors/intel-core-processors.html
     .EXAMPLE
         PS C:\> Get-IntelProcessorGeneration
     #>
