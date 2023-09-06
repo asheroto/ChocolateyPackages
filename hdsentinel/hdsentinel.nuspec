@@ -1,16 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-  <metadata>
-    <id>hdsentinel</id>
-    <version>6.10.4</version>
-    <title>Hard Disk Sentinel</title>
-    <authors>H.D.S. Hungary</authors>
-    <owners>asheroto, criography</owners>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <licenseUrl>https://www.hdsentinel.com/eula.php</licenseUrl>
-    <projectUrl>https://www.hdsentinel.com/hard_disk_sentinel.php</projectUrl>
-    <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/63d2bfa0f5384d1b5b2e48f7831e862a6ecd49dd/hdsentinel/icon.png</iconUrl>
-    <description>![screenshot](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/63d2bfa0f5384d1b5b2e48f7831e862a6ecd49dd/hdsentinel/screenshot.png)
+    <metadata>
+        <id>hdsentinel</id>
+        <version>6.10.4</version>
+        <title>Hard Disk Sentinel</title>
+        <authors>H.D.S. Hungary</authors>
+        <owners>asheroto</owners>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <licenseUrl>https://www.hdsentinel.com/eula.php</licenseUrl>
+        <projectUrl>https://www.hdsentinel.com/hard_disk_sentinel.php</projectUrl>
+        <docsUrl>https://www.hdsentinel.com/knowledgebase.php</docsUrl>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/hdsentinel</packageSourceUrl>
+        <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/63d2bfa0f5384d1b5b2e48f7831e862a6ecd49dd/hdsentinel/icon.png</iconUrl>
+        <description>![screenshot](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/63d2bfa0f5384d1b5b2e48f7831e862a6ecd49dd/hdsentinel/screenshot.png)
 
 **Hard Disk Sentinel (HDSentinel)** is a comprehensive monitoring and analysis tool designed for both SSDs and HDDs across multiple operating systems. The software aims to identify, test, diagnose, and repair disk drive issues while providing detailed reports on disk health and performance. It supports internal and external hard disks, SSDs, hybrid drives (SSHDs), RAID arrays, and even Network Attached Storage (NAS) devices.
 
@@ -26,13 +29,13 @@
 This is a commercial product, with a 30 day trial. This package is for the Standard version. [Edition comparison](https://www.hdsentinel.com/store.php)
 
 For more information, visit the [official website](https://www.hdsentinel.com/).</description>
-    <summary>Hard Disk Sentinel is an application designed to monitor HDD activity and track the disk temperature.</summary>
-    <releaseNotes>http://www.hdsentinel.com/revision.php</releaseNotes>
-    <copyright>© 2023 H.D.S. Hungary. All Rights Reserved.</copyright>
-    <tags>hdd-monitor disk-analyzer disk-temperature monitor analyzer analyze prevent hard disk drive sentinel alert analysis nas usb sd card sd-card smart report reporting health hdd ssd sshd nvme raid</tags>
-  </metadata>
-  <files>
-    <file src="tools\helpers\killAsap.ps1" target="tools\helpers\killAsap.ps1" />
-    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
-  </files>
+        <summary>Hard Disk Sentinel is an application designed to monitor HDD activity and track the disk temperature.</summary>
+        <releaseNotes>http://www.hdsentinel.com/revision.php</releaseNotes>
+        <copyright>© 2023 H.D.S. Hungary. All Rights Reserved.</copyright>
+        <tags>hdd-monitor disk-analyzer disk-temperature monitor analyzer analyze prevent hard disk drive sentinel alert analysis nas usb sd card sd-card smart report reporting health hdd ssd sshd nvme raid</tags>
+    </metadata>
+    <files>
+        <file src="tools\helpers\KillAsap.ps1" target="tools\helpers\KillAsap.ps1" />
+        <file src="tools\ChocolateyInstall.ps1" target="tools\ChocolateyInstall.ps1" />
+    </files>
 </package>

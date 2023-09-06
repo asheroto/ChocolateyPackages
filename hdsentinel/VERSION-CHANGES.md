@@ -1,0 +1,2 @@
+- Change filename in ChocolateyInstall.ps1
+- Change version in nuspec file

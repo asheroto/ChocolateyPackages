@@ -1,51 +1,61 @@
-# ====================================================
-# KillAsap
-# ====================================================
-# Iniates Kill Listener
-#
-# @param   {string}    Process Name
-# @return  {void}
-# ====================================================
-Function KillAsap([string]$appName) {
-    $timeout = 15 #seconds
+﻿$ErrorActionPreference = 'Stop'
 
-    KillAttempt $appName $timeout
+<#
+.SYNOPSIS
+    Initiates a listener to terminate a specified process.
+.DESCRIPTION
+    The function sets a timeout and initiates the KillAttempt function to terminate the process.
+.PARAMETER appName
+    The name of the process to terminate.
+.EXAMPLE
+    KillAsap -appName "notepad"
+#>
+Function KillAsap {
+    param (
+        [string]$appName
+    )
+    $timeout = 15 # Timeout duration in seconds
+    $timerStart = Get-Date # Initialize timer
+    KillAttempt -appName $appName -timeout $timeout -timerStart $timerStart
 }
 
-# ====================================================
-# KillAttempt
-# ====================================================
-# Check for given process and try to kill it.
-# If it doesn't exists, retry after specific delay.
-# If retries exceed max allowed duration, give up.
-#
-# @param   {string}    Process Name
-# @param   {int}       Timeout [s]
-# @return  {void}
-# ====================================================
-Function KillAttempt([string]$appName, [int]$timeout) {
-    $countdown = $timeout - ((Get-Date) - $timerStart).Seconds
+<#
+.SYNOPSIS
+    Attempts to terminate a given process within a specified timeout.
+.DESCRIPTION
+    The function tries to find and terminate the specified process. If the process is not found, it retries until the timeout is reached.
+.PARAMETER appName
+    The name of the process to terminate.
+.PARAMETER timeout
+    The timeout duration in seconds.
+.PARAMETER timerStart
+    The time when the timer was started.
+.EXAMPLE
+    KillAttempt -appName "notepad" -timeout 15 -timerStart (Get-Date)
+#>
+Function KillAttempt {
+    param (
+        [string]$appName,
+        [int]$timeout,
+        [datetime]$timerStart
+    )
+    $remainingTime = $timeout - ((Get-Date) - $timerStart).TotalSeconds
 
-    # Exit after $timeout seconds if unseccessful
-    if ($countdown -le 0) {
-        Write-Output "`nNo '$appName' windows found. Proceeding."
-        return;
+    # Exit if timeout is reached
+    if ($remainingTime -le 0) {
+        Write-Output "`nNo process named '$appName' found within timeout. Proceeding."
+        return
     }
 
-    # Kill the process if present, otherwise retry
-    if ($appName -ne $null) {
-        $process = (Get-Process $($appName) 2> $null)
+    # Attempt to terminate the process
+    $process = Get-Process -Name $appName -ErrorAction SilentlyContinue
 
-        if (!$process) {
-            Write-Output "`rWaiting for '$appName' to spawn its windows: $countdown "
-            Start-Sleep -m 250
-            KillAttempt $appName $timeout
-
-        } else {
-            $process | Stop-Process -force
-            Write-Output "'$appName' windows found and closed. Proceeding."
-
-        }
-
+    if ($process) {
+        $process | Stop-Process -Force
+        Write-Output "'$appName' process terminated. Proceeding."
+    } else {
+        Write-Output "`rWaiting for '$appName' to appear. Time remaining: ${remainingTime}s"
+        Start-Sleep -Milliseconds 250
+        KillAttempt -appName $appName -timeout $timeout -timerStart $timerStart
     }
 }
