@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>hdsentinel</id>
+    <version>6.10.4</version>
+    <title>Hard Disk Sentinel</title>
+    <authors>H.D.S. Hungary</authors>
+    <owners>asheroto, criography</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://www.hdsentinel.com/eula.php</licenseUrl>
+    <projectUrl>https://www.hdsentinel.com/hard_disk_sentinel.php</projectUrl>
+    <iconUrl></iconUrl>
+    <description>**Hard Disk Sentinel (HDSentinel)** is a comprehensive monitoring and analysis tool designed for both SSDs and HDDs across multiple operating systems. The software aims to identify, test, diagnose, and repair disk drive issues while providing detailed reports on disk health and performance. It supports internal and external hard disks, SSDs, hybrid drives (SSHDs), RAID arrays, and even Network Attached Storage (NAS) devices.
+
+## Features:
+
+- **Real-Time Monitoring**: Constantly checks disk health, temperature, and S.M.A.R.T. values.
+- **Quick Fix and Extended S.M.A.R.T.**: Introduced in Version 6, these features offer device-specific information and advanced monitoring capabilities.
+- **Multi-OS Support**: Compatible with various operating systems.
+- **Comprehensive Alerts**: Provides textual descriptions, tips, and multiple alert options for maximum data safety.
+- **Backup Options**: The Pro version includes scheduled and automatic backup features to prevent data loss from various causes, including hardware failure and malware attacks.
+- **Benchmarking**: Measures disk transfer speed in real-time.
+
+This is a commercial product, with a 30 day trial. This package is for the Standard version. [Edition comparison](https://www.hdsentinel.com/store.php)
+
+For more information, visit the [official website](https://www.hdsentinel.com/).</description>
+    <summary>Hard Disk Sentinel is an application designed to monitor HDD activity and track the disk temperature.</summary>
+    <releaseNotes>http://www.hdsentinel.com/revision.php</releaseNotes>
+    <copyright>© 2023 H.D.S. Hungary. All Rights Reserved.</copyright>
+    <tags>hdd-monitor disk-analyzer disk-temperature monitor analyzer analyze prevent hard disk drive sentinel alert analysis nas usb sd card sd-card smart report reporting health hdd ssd sshd nvme raid</tags>
+  </metadata>
+  <files>
+    <file src="tools\helpers\killAsap.ps1" target="tools\helpers\killAsap.ps1" />
+    <file src="tools\chocolateyInstall.ps1" target="tools\chocolateyInstall.ps1" />
+  </files>
+</package>

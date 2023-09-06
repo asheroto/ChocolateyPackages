@@ -1,11 +1,44 @@
 ﻿$ErrorActionPreference = "Stop"
 
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# WAIT
+# https://muut.com/startisback#!/general:winget-silent-args
+
+# https://startallback.com/download.php
 # Chocolatey package parameters
 $packageName    = "StartAllBack"
 $softwareName   = "StartAllBack"
-$version        = "3.6.11"
+$version        = "3.6.12"
 $url            = "https://startisback.sfo3.cdn.digitaloceanspaces.com/StartAllBack_$($version)_setup.exe"
-$checksum       = "9CF8A3E0E29E955DBED011E8ABE9DE5B6F221DB9B00D71B66B87287E83B50806"
+$checksum       = "A91908491311D2326BBAC3B32A0559E1BA9E8EB3DD2B188F35793F7A5BABA6DC"
 $silentArgs     = "/silent"
 $validExitCodes = @(0)
 
