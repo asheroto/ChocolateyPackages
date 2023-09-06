@@ -9,8 +9,10 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <licenseUrl>https://www.hdsentinel.com/eula.php</licenseUrl>
     <projectUrl>https://www.hdsentinel.com/hard_disk_sentinel.php</projectUrl>
-    <iconUrl></iconUrl>
-    <description>**Hard Disk Sentinel (HDSentinel)** is a comprehensive monitoring and analysis tool designed for both SSDs and HDDs across multiple operating systems. The software aims to identify, test, diagnose, and repair disk drive issues while providing detailed reports on disk health and performance. It supports internal and external hard disks, SSDs, hybrid drives (SSHDs), RAID arrays, and even Network Attached Storage (NAS) devices.
+    <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/63d2bfa0f5384d1b5b2e48f7831e862a6ecd49dd/hdsentinel/icon.png</iconUrl>
+    <description>![screenshot](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/63d2bfa0f5384d1b5b2e48f7831e862a6ecd49dd/hdsentinel/screenshot.png)
+
+**Hard Disk Sentinel (HDSentinel)** is a comprehensive monitoring and analysis tool designed for both SSDs and HDDs across multiple operating systems. The software aims to identify, test, diagnose, and repair disk drive issues while providing detailed reports on disk health and performance. It supports internal and external hard disks, SSDs, hybrid drives (SSHDs), RAID arrays, and even Network Attached Storage (NAS) devices.
 
 ## Features:
 
