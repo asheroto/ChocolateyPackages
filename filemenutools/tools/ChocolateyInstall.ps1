@@ -25,4 +25,8 @@ $packageArgs = @{
 Install-ChocolateyInstallPackage @packageArgs
 
 # Output to user
+Write-Output "---------------------------"
+Write-Output ""
 Write-Output "You may need to restart your computer in order for FileMenu Tools to work as expected."
+Write-Output ""
+Write-Output "---------------------------"
