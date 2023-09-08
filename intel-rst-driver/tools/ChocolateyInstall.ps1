@@ -76,9 +76,13 @@ $packageArgs = @{
 }
 
 # Output
+Write-Output "---------------------------"
+Write-Output ""
 Write-Output "Intel RST will be installed for generation $gen.`n"
 Write-Output "More information about the driver can be found here:"
 Write-Output "$infoUrl"
+Write-Output ""
+Write-Output "---------------------------"
 
 # Install
 Install-ChocolateyPackage @packageArgs
