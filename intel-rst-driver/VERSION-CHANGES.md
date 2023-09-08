@@ -1,0 +1,2 @@
+- Change URLs and checksums in ChocolateyInstall.ps1 (potentially 4 changes)
+- Change nuspec file (1 change)

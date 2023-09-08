@@ -32,29 +32,35 @@ function Get-IntelProcessorGeneration {
     }
 }
 
+# Variables
 $gen = Get-IntelProcessorGeneration
 $packageName = 'intel-rst-driver'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $checksumType = 'sha256'
 
+# Determine which version to download based on the processor generation
 switch ($gen) {
     7 {
         $infoUrl = 'https://www.intel.com/content/www/us/en/download/15667/intel-rapid-storage-technology-intel-rst-user-interface-and-driver.html'
+        $version = '16.8.5.1014.5'
         $url = 'https://downloadmirror.intel.com/773231/SetupRST.exe'
         $checksum = '11E737935F85721A6729F52AE1E4D3641DC738168FA3CC1BF1506D198F966AA6'
     }
     { $_ -in 8, 9 } {
         $infoUrl = 'https://www.intel.com/content/www/us/en/download/19755/intel-rapid-storage-technology-driver-installation-software-with-intel-optane-memory-8th-and-9th-gen-platforms.html'
+        $version = '17.11.3.1010.2'
         $url = 'https://downloadmirror.intel.com/773230/SetupRST.exe'
         $checksum = 'BC077F9C784305330DF66195FF8C96FCE753B1E370189A6E036005B9E589F7AD'
     }
     { $_ -in 10 } {
         $infoUrl = 'https://www.intel.com/content/www/us/en/download/19512/intel-rapid-storage-technology-driver-installation-software-with-intel-optane-memory-10th-and-11th-gen-platforms.html'
+        $version = '18.7.6.1010.3'
         $url = 'https://downloadmirror.intel.com/773229/SetupRST.exe'
         $checksum = 'A2B2E20D6D8100E9EE344746F80849524C64490B90686A13C09268CADB976B37'
     }
     { $_ -in 11, 12, 13 } {
         $infoUrl = 'https://www.intel.com/content/www/us/en/download/720755/intel-rapid-storage-technology-driver-installation-software-with-intel-optane-memory-11th-and-12th-gen-platforms.html'
+        $version = '19.5.2.1049.5'
         $url = 'https://downloadmirror.intel.com/751275/SetupRST.exe'
         $checksum = 'F671E1CBBD4313C40878A1AD6F4152585D0E10192CBAD39274E9D5EBE7276FE7'
     }
@@ -63,6 +69,29 @@ switch ($gen) {
     }
 }
 
+# If the package is already installed, throw error
+# Read HKEY_LOCAL_MACHINE\SOFTWARE\Intel\IRST\Version for the installed version
+# If the installed version is the same as or newer than the version to install, throw error
+# Don't match the last number in the version string, only x.x.x.x as that is what is in the registry
+$installedVersion = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Intel\IRST' -Name 'Version' -ErrorAction SilentlyContinue
+if ($installedVersion) {
+    $installedVersion = $installedVersion.Version
+    $installedVersionSegments = $installedVersion -split '\.'
+    $versionSegments = $version -split '\.'
+
+    # Take only the first four segments for comparison
+    $installedMainVersion = [string]::Join('.', $installedVersionSegments[0..3])
+    $mainVersionToInstall = [string]::Join('.', $versionSegments[0..3])
+
+    # Compare the versions
+    if ([version]$installedMainVersion -ge [version]$mainVersionToInstall) {
+        throw "Intel RST version $installedMainVersion is already installed."
+    }
+} else {
+    throw "Cannot detect installed version of Intel RST."
+}
+
+# Package arguments
 $packageArgs = @{
     packageName    = $packageName
     unzipLocation  = $toolsDir
@@ -78,7 +107,8 @@ $packageArgs = @{
 # Output
 Write-Output "---------------------------"
 Write-Output ""
-Write-Output "Intel RST will be installed for generation $gen.`n"
+Write-Output "Intel RST version $version will be installed for generation $gen."
+Write-Output ""
 Write-Output "More information about the driver can be found here:"
 Write-Output "$infoUrl"
 Write-Output ""
@@ -86,3 +116,10 @@ Write-Output "---------------------------"
 
 # Install
 Install-ChocolateyPackage @packageArgs
+
+# Output
+Write-Output "---------------------------"
+Write-Output ""
+Write-Output "Intel recommends that you restart the computer after installing the driver."
+Write-Output ""
+Write-Output "---------------------------"
