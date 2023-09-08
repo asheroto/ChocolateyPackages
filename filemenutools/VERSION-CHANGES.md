@@ -1,3 +1,2 @@
 - Download latest version
-- Change filename in ChocolateyInstall.ps1
-- Change version in filemenutools.nuspec
+- Change version in nuspec file

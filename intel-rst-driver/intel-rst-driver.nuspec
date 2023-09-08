@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>intel-rst-driver</id>
-        <version>18.7.6.1010</version>
+        <version>2023.04.14</version>
         <title>Intel® Rapid Storage Technology (Intel® RST) User Interface and Driver (Install)</title>
         <authors>Intel Corporation</authors>
         <owners>bcurran3, asheroto</owners>
@@ -25,26 +25,13 @@ The SetupRST.exe is the new installer that will install the Intel RST driver and
 
 ### Purpose
 
-The Intel® Rapid Storage Technology (Intel® RST) Driver 18.7.6.1010.3 supports the configuration and enabling of multiple features including:
+The Intel® Rapid Storage Technology (Intel® RST) Driver supports the configuration and enabling of multiple features including:
 
 - System acceleration with Intel® Optane™ memory
 - Configuration and maintenance of RAID 0/1/5/10
 - Intel® VMD support on 11th Gen platforms (See more details [here](https://www.intel.com/content/www/us/en/support/articles/000057787/memory-and-storage/intel-optane-memory.html))
 
-To manage these capabilities, download the Intel® Optane™ Memory and Storage Management application found on the Microsoft Store.
-
-**Notes:**
-
-- Support for Microsoft Windows* 11 x64 OS
-- The Intel® Rapid Storage Technology (Intel® RST) Driver 18.7.6.1010.3 supports 10th Gen and 11th Gen Intel Core platforms.
-- See the Release Notes or Readme files for installation instructions, supported hardware, what is new, bug fixes, and known issues.
-- For RST File Extraction (.zip file creation), refer to section 6.3 of the Readme file: Pre-Installation of Intel® RST driver using the Load Driver method.
-- Additional assistance can be found here:
-- RAID related support: Intel® Rapid Storage Technology Support page
-- Intel® Optane™ Memory User and Installation Guide
-- Intel® Optane™ memory-related support: Intel® Optane™ Memory support
-
-This package deploys the suitable Intel RST driver in alignment with your computer's CPU generation, as detailed in Intel's [official guidelines](https://www.intel.com/content/www/us/en/support/articles/000091087/technologies/intel-rapid-storage-technology-intel-rst.html).
+**This package deploys the suitable Intel RST driver in alignment with your computer's CPU generation**, as detailed in Intel's [official guidelines](https://www.intel.com/content/www/us/en/support/articles/000091087/technologies/intel-rapid-storage-technology-intel-rst.html).
 
 You can find more information about each driver's version by visiting the Intel RST download page associated with your computer's CPU generation.
 
