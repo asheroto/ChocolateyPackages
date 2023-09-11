@@ -85,7 +85,7 @@ if ($installedVersion) {
 
     # Compare the versions
     if ([version]$installedMainVersion -ge [version]$mainVersionToInstall) {
-        throw "Intel RST version $installedMainVersion is already installed."
+        return "Intel RST version $installedMainVersion is already installed."
     }
 } else {
     throw "Cannot detect installed version of Intel RST."
