@@ -69,26 +69,34 @@ switch ($gen) {
     }
 }
 
-# If the package is already installed, throw error
+# If the package is already installed, return error
 # Read HKEY_LOCAL_MACHINE\SOFTWARE\Intel\IRST\Version for the installed version
 # If the installed version is the same as or newer than the version to install, throw error
 # Don't match the last number in the version string, only x.x.x.x as that is what is in the registry
-$installedVersion = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Intel\IRST' -Name 'Version' -ErrorAction SilentlyContinue
-if ($installedVersion) {
-    $installedVersion = $installedVersion.Version
-    $installedVersionSegments = $installedVersion -split '\.'
-    $versionSegments = $version -split '\.'
+try {
+    $installedVersion = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Intel\IRST' -Name 'Version' -ErrorAction SilentlyContinue
+    if ($installedVersion) {
+        $installedVersion = $installedVersion.Version
+        $installedVersionSegments = $installedVersion -split '\.'
+        $versionSegments = $version -split '\.'
 
-    # Take only the first four segments for comparison
-    $installedMainVersion = [string]::Join('.', $installedVersionSegments[0..3])
-    $mainVersionToInstall = [string]::Join('.', $versionSegments[0..3])
+        # Take only the first four segments for comparison
+        $installedMainVersion = [string]::Join('.', $installedVersionSegments[0..3])
+        $mainVersionToInstall = [string]::Join('.', $versionSegments[0..3])
 
-    # Compare the versions
-    if ([version]$installedMainVersion -ge [version]$mainVersionToInstall) {
-        return "Intel RST version $installedMainVersion is already installed."
+        # Only perform the comparison if variables are not empty
+        if (-not [string]::IsNullOrEmpty($installedMainVersion) -and -not [string]::IsNullOrEmpty($mainVersionToInstall)) {
+            if ([version]$installedMainVersion -ge [version]$mainVersionToInstall) {
+                Write-Output "Intel RST version $installedMainVersion is already installed."
+            }
+        } else {
+            Write-Output "One or both version variables are empty. Skipping comparison."
+        }
+    } else {
+        throw "Cannot detect installed version of Intel RST."
     }
-} else {
-    throw "Cannot detect installed version of Intel RST."
+} catch {
+    Write-Output "An error occurred: $_"
 }
 
 # Package arguments
