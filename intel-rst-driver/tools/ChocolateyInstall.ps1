@@ -90,10 +90,10 @@ try {
                 return "Intel RST version $installedMainVersion is already installed."
             }
         } else {
-            throw "Cannot detect installed version of Intel RST. One or both version variables are empty."
+            throw "Cannot detect installed version of Intel RST. One or both version segment variables are empty."
         }
     } else {
-        throw "Cannot detect installed version of Intel RST."
+        throw "Cannot detect installed version of Intel RST. One or both version variables are empty."
     }
 } catch {
     throw "An error occurred when checking Intel RST version: $_"
