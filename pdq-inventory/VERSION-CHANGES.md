@@ -1,0 +1,4 @@
+- Download file from http://www2.adminarsenal.com/download-pdqinventory
+- Change filename and checksum in ChocolateyInstall.ps1 (two changes)
+- Change version in nuspec file (one change)
+- Update VERIFICATION.txt with filename and checksum (two changes)
