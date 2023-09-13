@@ -87,16 +87,16 @@ try {
         # Only perform the comparison if variables are not empty
         if (-not [string]::IsNullOrEmpty($installedMainVersion) -and -not [string]::IsNullOrEmpty($mainVersionToInstall)) {
             if ([version]$installedMainVersion -ge [version]$mainVersionToInstall) {
-                Write-Output "Intel RST version $installedMainVersion is already installed."
+                return "Intel RST version $installedMainVersion is already installed."
             }
         } else {
-            Write-Output "One or both version variables are empty. Skipping comparison."
+            throw "Cannot detect installed version of Intel RST. One or both version variables are empty."
         }
     } else {
         throw "Cannot detect installed version of Intel RST."
     }
 } catch {
-    Write-Output "An error occurred: $_"
+    throw "An error occurred when checking Intel RST version: $_"
 }
 
 # Package arguments
