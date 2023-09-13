@@ -75,7 +75,7 @@ switch ($gen) {
 # Don't match the last number in the version string, only x.x.x.x as that is what is in the registry
 try {
     $installedVersion = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Intel\IRST' -Name 'Version' -ErrorAction SilentlyContinue
-    if ($installedVersion) {
+    if ($installedVersion -and $version) {
         $installedVersion = $installedVersion.Version
         $installedVersionSegments = $installedVersion -split '\.'
         $versionSegments = $version -split '\.'
