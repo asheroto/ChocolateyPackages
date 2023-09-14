@@ -1,2 +1,3 @@
-- Download latest version
+- Download latest version from https://www.lopesoft.com/fmtools/FileMenuTools-setup.exe
 - Change version in nuspec file
+- Change checksum in VERIFICATION.txt
