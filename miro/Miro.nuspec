@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <id>miro</id>
+        <version>0.7.43.0</version>
+        <title>Miro</title>
+        <authors>Miro</authors>
+        <owners>asheroto</owners>
+        <licenseUrl>hhttps://miro.com/legal/terms-of-service/</licenseUrl>
+        <projectUrl>https://miro.com/</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <iconUrl></iconUrl>
+        <description>
+        <summary></summary>
+        <releaseNotes></releaseNotes>
+        <tags>miro project organization organizer organize productivity tool task management tracker organization collaboration teamwork</tags>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/miro</packageSourceUrl>
+        <docsUrl></docsUrl>
+    </metadata>
+    <files>
+        <file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg;screenshot.jpg" />
+    </files>
+</package>

@@ -1,0 +1,3 @@
+- Update filename & hash in ChocolateyInstall.ps1
+- Update version in Miro.nuspec
+- Change environmental variable MIRO_CURRENT_VERSION in https://console.apify.com/actors/waKjgzSXcZ6Q6eZ5J/source

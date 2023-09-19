@@ -26,7 +26,7 @@ ClickUp is an all-in-one productivity platform designed to consolidate and strea
 - **Integration:** ClickUp offers integration with a multitude of other services like Google Drive, Dropbox, Slack, and more. This means you can centralize your work even if it's spread across different platforms.
 - **Customizability:** From custom statuses to custom fields, ClickUp is fully adaptable to your team's needs and your project's requirements.</description>
         <summary>ClickUp: An all-in-one productivity platform that centralizes task management, project planning, and team collaboration.</summary>
-        <releaseNotes>hhttps://help.clickup.com/hc/en-us/articles/15087658515479-ClickUpdates-Release-Notes-</releaseNotes>
+        <releaseNotes>https://help.clickup.com/hc/en-us/articles/15087658515479-ClickUpdates-Release-Notes-</releaseNotes>
         <tags>clickup click up clickup.com project task organization organizer organize productivity tool task management tracker organization collaboration teamwork</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/ClickUp-Official</packageSourceUrl>
         <docsUrl>https://help.clickup.com/hc/en-us</docsUrl>
