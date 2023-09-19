@@ -11,12 +11,29 @@
         <projectUrl>https://miro.com/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/92dace2720844c60a041ac1481338616311d813c/miro/icon.png</iconUrl>
-        <description>Miro is a visual workspace for innovation where teams manage projects, design products, and build the future together. It empowers 60M+ users to create together seamlessly, regardless of location.</description>
+        <description>![screenshot](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/a3b69f387fd15903f15a14832444d2474d7c811d/miro/screenshot.jpg)
+
+## Summary
+
+Miro is a versatile visual workspace engineered to foster innovation and collaboration across teams of all sizes. It offers a rich set of native capabilities that support various workflows, making it an essential tool for product development, project management, and team engagement.
+
+## Features
+
+- **Product Development Workflows:** Miro provides a robust platform for wireframing, estimation, dependency mapping, and scaled product planning. It also features a powerful two-way sync with Jira, streamlining your product development process.
+- **Workshops and Async Collaboration:** Accelerate your team's progress with quick feedback cycles. Miro offers advanced facilitation tools and an interactive presentation experience, enabling both synchronous and asynchronous collaboration.
+- **Diagramming and Process Mapping:** Create intricate flowcharts, journey maps, and mind maps effortlessly. Miro comes with intelligent formatting and an extensive shapes library to make diagramming simple and efficient.
+- **AI Capabilities:** Say goodbye to mundane tasks. Miro's AI features auto-generate mind maps, diagrams, and intelligent summaries, allowing teams to focus more on analysis and execution.
+- **Content and Data Visualization:** Aggregate documentation, designs, survey results, and live data into a single collaborative workspace. Miro's powerful integrations make it easy to bring all your information together.
+- **Visual Project Management:** Keep track of tasks using a flexible and dynamic Kanban board that integrates with Jira cards and tables. This feature helps you understand relationships and dependencies at a glance.
+- **Integration and Scalability:** Miro seamlessly integrates with over 130+ apps, including popular tools like Asana, Zoom, and Slack, aligning your team in one secure, scalable workspace.
+- **Enterprise-Grade Security:** With granular permissions and controls, Miro ensures the protection and management of intellectual property, adhering to industry best practices and regulatory requirements.
+
+This comprehensive feature set makes Miro a go-to platform for teams aiming to innovate and collaborate effectively.</description>
         <summary>Miro: The Visual Workspace for Innovation</summary>
-        <releaseNotes>Initial release of the package.</releaseNotes>
-        <tags>miro project organization organizer organize productivity tool task management tracker organization collaboration teamwork</tags>
+        <releaseNotes>https://miro.com/changelog/</releaseNotes>
+        <tags>miro productivity tool task-management tracker teamwork visual-workspace innovation product-development workshops async-collaboration diagramming process-mapping ai-capabilities content-visualization data-visualization visual-project-management integration scalability enterprise-security</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/miro</packageSourceUrl>
-        <docsUrl>https://miro.com/blog/customer-stories/</docsUrl>
+        <docsUrl>https://help.miro.com/hc/en-us</docsUrl>
     </metadata>
     <files>
         <file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg;screenshot.jpg" />
