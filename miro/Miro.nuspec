@@ -10,13 +10,13 @@
         <licenseUrl>hhttps://miro.com/legal/terms-of-service/</licenseUrl>
         <projectUrl>https://miro.com/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <iconUrl></iconUrl>
-        <description>
-        <summary></summary>
-        <releaseNotes></releaseNotes>
+        <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/92dace2720844c60a041ac1481338616311d813c/miro/icon.png</iconUrl>
+        <description>Miro is a visual workspace for innovation where teams manage projects, design products, and build the future together. It empowers 60M+ users to create together seamlessly, regardless of location.</description>
+        <summary>Miro: The Visual Workspace for Innovation</summary>
+        <releaseNotes>Initial release of the package.</releaseNotes>
         <tags>miro project organization organizer organize productivity tool task management tracker organization collaboration teamwork</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/miro</packageSourceUrl>
-        <docsUrl></docsUrl>
+        <docsUrl>https://miro.com/blog/customer-stories/</docsUrl>
     </metadata>
     <files>
         <file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg;screenshot.jpg" />
