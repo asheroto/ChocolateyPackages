@@ -4,7 +4,7 @@
 $packageName    = "clickup-official"
 $softwareName   = "ClickUp*"
 $url            = "https://desktop.clickup.com/windows"
-$checksum       = "9051FC3CED88AFB143D9C56EF016D4659774DA9B812DFF49C44D0E020FE9CC1F"
+$checksum       = "C58E0AA802F269E755EE9D05623526AABF523BF872957F8D06E4668174AD7629"
 $silentArgs     = "/silent"
 $validExitCodes = @(0)
 
