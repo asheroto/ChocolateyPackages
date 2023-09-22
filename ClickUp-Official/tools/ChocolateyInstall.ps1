@@ -1,23 +1,23 @@
 ﻿$ErrorActionPreference = "Stop"
 
 # Chocolatey package parameters
-$packageName    = "clickup-official"
-$softwareName   = "ClickUp*"
-$url            = "https://desktop.clickup.com/windows"
-$checksum       = "C58E0AA802F269E755EE9D05623526AABF523BF872957F8D06E4668174AD7629"
-$silentArgs     = "/silent"
+$packageName = "clickup-official"
+$softwareName = "ClickUp*"
+$url = "https://desktop.clickup.com/windows"
+$checksum = "C58E0AA802F269E755EE9D05623526AABF523BF872957F8D06E4668174AD7629"
+$silentArgs = "/silent"
 $validExitCodes = @(0)
 
 # Package args
 $packageArgs = @{
-  packageName   = $packageName
-  fileType      = "exe"
-  url           = $url
-  checksum      = $checksum
-  checksumType  = "sha256"
-  silentArgs    = $silentArgs
-  validExitCodes= $validExitCodes
-  softwareName  = $softwareName
+    packageName    = $packageName
+    fileType       = "exe"
+    url            = $url
+    checksum       = $checksum
+    checksumType   = "sha256"
+    silentArgs     = $silentArgs
+    validExitCodes = $validExitCodes
+    softwareName   = $softwareName
 }
 
 # End ClickUp process
@@ -48,15 +48,16 @@ while ($counter -lt $timeoutSeconds) {
     $processes = Get-Process -Name $packageName -ErrorAction SilentlyContinue | Where-Object { $_.Path -ne $null -and $_.Path -notlike "$env:TEMP\*" }
 
     # Iterate over each process and attempt to close its window
-    foreach($process in $processes){
+    foreach ($process in $processes) {
         try {
-            # Attempt to close the window
-            $process.CloseMainWindow() | Out-Null
-            Start-Sleep -Seconds 1
-            $process.Refresh()
+            if ($process.MainWindowHandle -ne 0) {
+                Write-Output "Closing $packageName window..."
 
-            # Check if the window is successfully closed
-            if ($process.MainWindowHandle -eq 0) {
+                # Attempt to close the window
+                $process.CloseMainWindow() | Out-Null
+                Start-Sleep -Seconds 1
+                $process.Refresh()
+
                 Write-Output "$packageName window has been closed successfully."
                 $windowClosedSuccessfully = $true
                 break
