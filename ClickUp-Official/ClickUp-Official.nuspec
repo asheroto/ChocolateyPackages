@@ -24,7 +24,17 @@ ClickUp is an all-in-one productivity platform designed to consolidate and strea
 - **Team Collaboration:** ClickUp is not just a task manager, it's a platform for collaboration. Share documents, chat with team members, set up meetings, and collaborate in real time.
 - **Multiple Views:** Catering to individual preferences, ClickUp supports multiple views such as list, board, box, and more. Each member can choose the view they find the most comfortable to work with.
 - **Integration:** ClickUp offers integration with a multitude of other services like Google Drive, Dropbox, Slack, and more. This means you can centralize your work even if it's spread across different platforms.
-- **Customizability:** From custom statuses to custom fields, ClickUp is fully adaptable to your team's needs and your project's requirements.</description>
+- **Customizability:** From custom statuses to custom fields, ClickUp is fully adaptable to your team's needs and your project's requirements.
+
+## Notes
+The ClickUp executable that is downloaded upon package installation uses the same URL for each version. That means that when ClickUp releases a new version, it breaks the checksum since the file is different. Because the EULA does not allow for distribution, the executable cannot be included in the package. Therefore, this package will break.
+
+The package maintainer has a monitor that detects when the ClickUp version changes, and updates are usually released in a day or two following an update. However, approval times for Chocolatey packages can vary, so you may see a checksum error on this package when an update occurs.
+
+**Workarounds:**
+- Look under [Version History](https://community.chocolatey.org/packages/ClickUp-Official#versionhistory) and install the latest version with the `--version VERSION_NUMBER` argument.
+- Use the `--ignore-checksum` argument to install the latest approved version (ignore checksum not generally recommended).
+- Wait for the latest version to be approved.</description>
         <summary>ClickUp: An all-in-one productivity platform that centralizes task management, project planning, and team collaboration.</summary>
         <releaseNotes>https://help.clickup.com/hc/en-us/articles/15087658515479-ClickUpdates-Release-Notes-</releaseNotes>
         <tags>clickup click up clickup.com project task organization organizer organize productivity tool task management tracker organization collaboration teamwork</tags>
