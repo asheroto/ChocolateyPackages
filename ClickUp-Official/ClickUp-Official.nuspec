@@ -10,6 +10,7 @@
         <licenseUrl>https://clickup.com/terms</licenseUrl>
         <projectUrl>https://clickup.com/</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <copyright>Copyright 2023 ClickUp</copyright>
         <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/e7a0cb9e69990a17b97247459b260e0d5ab583f0/ClickUp/icon.png</iconUrl>
         <description>![ClickUp screenshot](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/03093956/ClickUp-Official/screenshot.jpg)
 
