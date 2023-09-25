@@ -1,2 +1,0 @@
-- Update filename & hash in ChocolateyInstall.ps1
-- Update version in nuspec file
