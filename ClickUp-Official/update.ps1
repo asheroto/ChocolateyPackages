@@ -48,7 +48,7 @@ function SendPackageUpdateAlert {
     $date = Get-Date -Format "yyyy-MM-dd hh:mm:ss tt"
     $body = "<html><body>"
     $body += "<font face='Arial'>"
-    $body += "<p>$Package has been updated to version $Version.</p>"
+    $body += "<p>$Package has been updated to version $Version. It is now ready for testing.</p>"
     $body += "<p><strong>Time:</strong> $date</p>"
     $body += "</font>"
     $body += "</body></html>"
