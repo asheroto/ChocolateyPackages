@@ -1,12 +1,13 @@
 $ErrorActionPreference = "Stop"
 
 # Initialize variables
+$packageName = "ClickUp-Official"
 $FILE_URL = 'https://desktop.clickup.com/windows'
 $downloadPath = '.\ClickUp-Temp.exe'
 $nuspecPath = '.\ClickUp-Official.nuspec'
 $installScriptPath = '.\tools\ChocolateyInstall.ps1'
 
-function SendAlert {
+function SendAlertRaw {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true)]
@@ -16,10 +17,14 @@ function SendAlert {
         [string]$Message
     )
 
+    # Note - you might consider using ntfy.sh, it's an awesome tool
+    # In this script, however, I'm using a custom service that I built
+    # This function gets the URL from a secure string file and sends the alert by making a POST request to the URL
+
     # Get the secret URL from the secure string file using the path in the environment variable
     $CredsFile = [System.Environment]::GetEnvironmentVariable('EMAIL_NOTIFICATION_CREDS_PATH', [System.EnvironmentVariableTarget]::User)
 
-    # Get the password from the file and convert to plaintext
+    # Convert the secure string to a string
     $secret = Get-Content $CredsFile | ConvertTo-SecureString
     $BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($secret)
     $alertUrl = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
@@ -34,29 +39,31 @@ function SendAlert {
     }
 }
 
-function SendPackageUpdateAlert {
+function SendAlert {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true)]
-        [string]$Package,
+        [string]$Subject,
 
         [Parameter(Mandatory = $true)]
-        [string]$Version
+        [string]$Message
     )
 
     # Create the HTML body for the notification
     $date = Get-Date -Format "yyyy-MM-dd hh:mm:ss tt"
     $body = "<html><body>"
     $body += "<font face='Arial'>"
-    $body += "<p>$Package has been updated to version $Version. It is now ready for testing.</p>"
+    $body += "<p>$Message</p>"
     $body += "<p><strong>Time:</strong> $date</p>"
     $body += "</font>"
     $body += "</body></html>"
 
-    SendAlert -Subject "$Package Package Updated" -Message $body
+    # Send the alert
+    SendAlertRaw -Subject $Subject -Message $body
 }
 
 try {
+
     # Download the file and get its ProductVersion
     Invoke-WebRequest -Uri $FILE_URL -OutFile $downloadPath
     $productVersion = (Get-Command $downloadPath).FileVersionInfo.ProductVersion
@@ -91,15 +98,24 @@ try {
             $updatedInstallScriptContent = $installScriptContent -replace '(\$checksum\s*=\s*)".*"', "`$1`"$newChecksum`""
             Set-Content -Path $installScriptPath -Value $updatedInstallScriptContent
 
-            Write-Output "Package updated."
-            SendPackageUpdateAlert -Package "ClickUp" -Version $productVersion
+            # Write the new version to the console
+            Write-Output "Updated to version $productVersion."
+
+            # Send an alert
+            SendAlert -Subject "$packageName Package Updated" -Message "$packageName has been updated to version $productVersion. It is now ready for testing."
         } else {
             Write-Output "No update needed."
         }
     } else {
         Write-Output "Invalid version format. Skipping update."
+
+        # Send an alert
+        SendAlert -Subject "$packageName Package Error" -Message "$packageName detected an invalid version format. Please check the update script and files."
     }
 } catch {
+    # Send an alert
+    SendAlert -Subject "$packageName Package Error" -Message "$packageName had an error when checking for updates. Please check the update script and files.<br><br><strong>Error:</strong> $_"
+
     Write-Output "An error occurred: $_"
 } finally {
     # Clean up the downloaded file
