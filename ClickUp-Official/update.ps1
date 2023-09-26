@@ -65,7 +65,12 @@ function SendAlert {
 try {
 
     # Download the file and get its ProductVersion
-    Invoke-WebRequest -Uri $FILE_URL -OutFile $downloadPath
+    # If aria2c is installed, use it to download the file
+    if (Get-Command aria2c -ErrorAction SilentlyContinue) {
+        aria2c --out=$downloadPath $FILE_URL
+    } else {
+        Invoke-WebRequest -Uri $FILE_URL -OutFile $downloadPath
+    }
     $productVersion = (Get-Command $downloadPath).FileVersionInfo.ProductVersion
 
     # Trim the version to 3 parts if it has 4
