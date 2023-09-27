@@ -1,5 +1,7 @@
 $ErrorActionPreference = "Stop"
 
+# Use PowerShell 7+ to run this script
+
 # Initialize variables
 $packageName = "ClickUp-Official"
 $FILE_URL = 'https://desktop.clickup.com/windows'
