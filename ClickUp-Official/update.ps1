@@ -67,7 +67,8 @@ function SendAlert {
 try {
 
     # Download the file and get its ProductVersion
-    # If aria2c is installed, use it to download the file
+    # If aria2c is installed, use it to download the file because it's much faster
+    # Otherwise, use Invoke-WebRequest
     if (Get-Command aria2c -ErrorAction SilentlyContinue) {
         aria2c --out=$downloadPath $FILE_URL
     } else {
