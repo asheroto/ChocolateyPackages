@@ -1,4 +1,6 @@
-﻿Write-Output "---------------------------"
+﻿$ErrorActionPreference = 'Stop'
+
+Write-Output "---------------------------"
 Write-Output ""
 Write-Output "Uninstalling FxSound"
 Write-Output ""

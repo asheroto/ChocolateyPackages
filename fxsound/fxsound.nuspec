@@ -4,56 +4,25 @@
 	<metadata>
 		<id>fxsound</id>
 		<title>FxSound</title>
-		<version>1.1.19.0</version>
+		<version>1.1.20</version>
 		<authors>FxSound LLC</authors>
 		<owners>asheroto</owners>
 		<projectUrl>https://www.fxsound.com/</projectUrl>
 		<summary>Boost volume, bass and sound quality on windows</summary>
-		<description>## Amazing sound for everything you listen to
+		<description>![FxSound Screenshot](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/705c627cf92c5be9646fe4b1a3c2c06ca28f39bc/fxsound/screenshot.png)
 
-### Music
+## Summary
 
-FxSound corrects the limitations of your devices and compressed audio.
+FxSound is a cutting-edge audio enhancement software that elevates your listening experience across all media. Whether it's music, video games, TV shows, or movies, FxSound enriches the audio quality to deliver an immersive experience. With a range of customization options and presets, it's the ultimate tool for audio perfection on any hardware.
 
-### Video Games
-
-Surround sound to create full immersion into your virtual world.
-
-### TV and Movies
-
-FxSound smooths and improves audio for your favorite shows and movies.
-
-### Transcription
-
-FxSound boosts your clarity to save your sanity. Rewind less, get paid more.
-
-## Customize your sound to your exact taste
-
-### EQ
-
-Balanced your sound with our 9-band EQ with customizable center frequencies.
-
-### Visualizer
-
-Feel your music in a new way.
-
-### Effects
-
-Boosted bass and volume that will make your neighbors complain.
-
-### Presets
-
-Presets professionally designed for music, gaming, movies, transcription, and more.
-
-## Perfect sound on any hardware
-
-### Get the sound you deserve
-
-Hear the expert-designed processing engine that's 20 years in the making.
-
-### Don't break the bank
-
-You don't need to spend thousands to get audiophile sound.</description>
+## Features
+- **Music:** FxSound corrects the limitations inherent in your devices and compressed audio, offering a richer musical experience.
+- **Video Games:** Experience surround sound that fully immerses you into your virtual worlds, making your gaming sessions more engaging.
+- **TV and Movies:** Elevate your viewing experience with smoother and enhanced audio quality for your favorite shows and films.
+- **Transcription:** Boost your audio clarity to make transcription tasks easier and more efficient. Rewind less and accomplish more.
+- **Customization:** Tailor your audio settings to your exact preferences with features like a 9-band EQ with customizable center frequencies, visualizers, and effects.
+- **Presets:** Choose from professionally designed presets suitable for various activities such as music, gaming, movies, and transcription.  
+- **Affordability:** Achieve audiophile-level sound without breaking the bank, thanks to FxSound's expert-designed processing engine that's been 20 years in the making.</description>
 		<docsUrl>https://www.fxsound.com/learning-center</docsUrl>
 		<tags>fxsound fx sound volume boost booster bass audio equalizer adjust adjustment quality</tags>
 		<copyright>2022 FxSound LLC</copyright>
