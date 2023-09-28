@@ -22,7 +22,7 @@ $packageInfo = @{
     FileDestinationPath    = '.\tools\fxsound_setup.exe'                    # Path to move/rename the temporary file to (if EXE is distributed in package)
     NuspecPath             = '.\fxsound.nuspec'                             # Path to the nuspec file
     InstallScriptPath      = '.\tools\ChocolateyInstall.ps1'                # Path to the ChocolateyInstall.ps1 script
-    VerificationPath       = '.\tools\legal\VERIFICATION.txt'               # Path to the VERIFICATION.txt file
+    VerificationPath       = '.\tools\VERIFICATION.txt'                     # Path to the VERIFICATION.txt file
     Alert                  = $true                                          # If the package is updated, send a message to the maintainer for review
 }
 
