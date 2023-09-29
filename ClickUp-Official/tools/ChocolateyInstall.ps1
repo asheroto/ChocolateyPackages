@@ -1,23 +1,15 @@
 $ErrorActionPreference = "Stop"
 
-# Chocolatey package parameters
-$packageName = "clickup-official"
-$softwareName = "ClickUp*"
-$url = "https://desktop.clickup.com/windows"
-$checksum = "C69304956BEB945477A49314E3E727842E91A3FB3F689D325BDEB7FBAB49F428"
-$silentArgs = "/silent"
-$validExitCodes = @(0)
-
 # Package args
 $packageArgs = @{
-    packageName    = $packageName
-    fileType       = "exe"
-    url            = $url
-    checksum       = $checksum
-    checksumType   = "sha256"
-    silentArgs     = $silentArgs
-    validExitCodes = $validExitCodes
-    softwareName   = $softwareName
+    packageName    = 'clickup-official'
+    fileType       = 'exe'
+    url            = 'https://desktop.clickup.com/windows'
+    checksum       = 'C69304956BEB945477A49314E3E727842E91A3FB3F689D325BDEB7FBAB49F428'
+    checksumType   = 'sha256'
+    silentArgs     = '/silent'
+    validExitCodes = @(0)
+    softwareName   = 'ClickUp*'
 }
 
 # End ClickUp process

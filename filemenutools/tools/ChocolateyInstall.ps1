@@ -1,24 +1,17 @@
-﻿$ErrorActionPreference 	= 'Stop'
+$ErrorActionPreference = 'Stop'
 
 # https://www.lopesoft.com/fmtools/FileMenuTools-setup.exe
 
-# Package vars
-$packageName 			= 'filemenutools'
-$softwareName 			= 'FileMenu Tools*'
-$silentArgs 			= '/VERYSILENT /NORESTART'
-$toolsPath      		= "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$fileLocation			= "$toolsPath\FileMenuTools-setup.exe"
-$fileType 				= 'exe'
-$validExitCodes 		= @(0)
-
 # Package args
 $packageArgs = @{
-	packageName    = $packageName
-	fileType       = $fileType
-	file           = $fileLocation
-	silentArgs     = $silentArgs
-	validExitCodes = $validExitCodes
-	softwareName   = $softwareName
+    packageName    = 'filemenutools'
+    fileType       = 'exe'
+    file           = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)\FileMenuTools-setup.exe"
+    checksum       = '57826EE29BF27B4A51FC71765048A6D19CCFF2C87645C8ED6C65D6E2EFCDB85B'
+    checksumType   = 'sha256'
+    silentArgs     = '/VERYSILENT /NORESTART'
+    validExitCodes = @(0)
+    softwareName   = 'FileMenu Tools*'
 }
 
 # Install

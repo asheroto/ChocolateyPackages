@@ -17,14 +17,14 @@ Set-Location $scriptPath
 # Create a hash table to store package information
 $packageInfo = @{
     PackageName            = "ClickUp-Official"
-    FileUrl                = 'https://desktop.clickup.com/windows'   # URL to download the file from
-    FileDownloadTempPath   = '.\ClickUp-Temp.exe'                     # Path to save the file to
-    FileDownloadTempDelete = $true                                          # Delete the temporary file after downloading and comparing to exiting version & checksum
-    # FileDestinationPath    = ''                    # Path to move/rename the temporary file to (if EXE is distributed in package)
-    NuspecPath             = '.\ClickUp-Official.nuspec'                             # Path to the nuspec file
-    InstallScriptPath      = '.\tools\ChocolateyInstall.ps1'                # Path to the ChocolateyInstall.ps1 script
-    # VerificationPath       = '.\tools\legal\VERIFICATION.txt'               # Path to the VERIFICATION.txt file
-    Alert                  = $true                                          # If the package is updated, send a message to the maintainer for review
+    FileUrl                = 'https://desktop.clickup.com/windows'      # URL to download the file from
+    FileDownloadTempPath   = '.\ClickUp-Temp.exe'                       # Path to save the file to
+    FileDownloadTempDelete = $true                                      # Delete the temporary file after downloading and comparing to exiting version & checksum
+    # FileDestinationPath    = ''                                       # Path to move/rename the temporary file to (if EXE is distributed in package)
+    NuspecPath             = '.\ClickUp-Official.nuspec'                # Path to the nuspec file
+    InstallScriptPath      = '.\tools\ChocolateyInstall.ps1'            # Path to the ChocolateyInstall.ps1 script
+    # VerificationPath       = '.\tools\legal\VERIFICATION.txt'         # Path to the VERIFICATION.txt file
+    Alert                  = $true                                      # If the package is updated, send a message to the maintainer for review
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table
