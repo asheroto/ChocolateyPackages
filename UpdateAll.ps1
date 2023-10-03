@@ -9,6 +9,7 @@ Set-Location $scriptPath
 ./fxsound/update.ps1
 ./Clickup-Official/update.ps1
 ./miro/update.ps1
+./StartAllBack/update.ps1
 
 # Return
 Pop-Location
