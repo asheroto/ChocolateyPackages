@@ -10,9 +10,9 @@ $ParentPath = Split-Path -Parent $ScriptPath
 
 # Create a hash table to store package information
 $packageInfo = @{
-    PackageName = "ClickUp-Official"
-    FileUrl     = 'https://desktop.clickup.com/windows'      # URL to download the file from
-    Alert       = $true                                      # If the package is updated, send a message to the maintainer for review
+    PackageName = "iventoy"                         # Package name
+    RepoUrl     = 'https://github.com/ventoy/PXE'   # URL to the repository
+    Alert       = $true                             # If the package is updated, send a message to the maintainer for review
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

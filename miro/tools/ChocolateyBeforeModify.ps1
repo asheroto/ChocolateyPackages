@@ -1,1 +1,3 @@
-﻿Get-Process Miro -ErrorAction SilentlyContinue | Stop-Process -ErrorAction Stop
+﻿$ErrorActionPreference = 'Stop'
+
+Get-Process Miro -ErrorAction SilentlyContinue | Stop-Process -ErrorAction Stop

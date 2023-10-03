@@ -1,27 +1,17 @@
-﻿$ErrorActionPreference = "Stop"
-
-# Chocolatey package parameters
-$packageName = "miro"
-$softwareName = "Miro*"
-$url = "https://desktop.miro.com/platforms/win32-x86/Miro.exe"
-$url64 = "https://desktop.miro.com/platforms/win32/Miro.exe"
-$checksum = "AB5975702159CD8F755B42B2A21DFA5860200F5BF4B8EFAEC2F6F797884595A0"
-$checksum64 = "0D7134AF97974C04EE9330F0D7869B859C69F580786964D1B1DE599A21BF888D"
-$silentArgs = "/silent"
-$validExitCodes = @(0)
+$ErrorActionPreference = "Stop"
 
 # Package args
 $packageArgs = @{
-    packageName    = $packageName
+    packageName    = "miro"
     fileType       = "exe"
-    url            = $url
-    url64          = $url64
-    checksum       = $checksum
-    checksum64     = $checksum64
+    url            = "https://desktop.miro.com/platforms/win32-x86/Miro.exe"
+    url64          = "https://desktop.miro.com/platforms/win32/Miro.exe"
+    checksum       = "751E8A2EF4147658FBC7E23C6F3267D89720E649D26537627D049910C091F811"
+    checksum64     = "0EE17D9680E12853E30ECAFA3F6BD79AB283E8E5AEBF37943AE0D2A5BFE42331"
     checksumType   = "sha256"
-    silentArgs     = $silentArgs
-    validExitCodes = $validExitCodes
-    softwareName   = $softwareName
+    silentArgs     = "/silent"
+    validExitCodes = @(0)
+    softwareName   = "Miro*"
 }
 
 # End process
