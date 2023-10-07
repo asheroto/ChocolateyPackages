@@ -13,7 +13,6 @@ $packageInfo = @{
     PackageName   = "ventoy"
     FileUrl       = "https://github.com/ventoy/Ventoy/releases/download/v{VERSION}/ventoy-{VERSION}-windows.zip"
     GitHubRepoUrl = "https://github.com/ventoy/Ventoy"
-    Alert         = $false
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

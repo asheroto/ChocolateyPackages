@@ -14,7 +14,6 @@ $packageInfo = @{
     GitHubRepoUrl = 'https://github.com/ventoy/PXE'
     FileUrl       = 'https://github.com/ventoy/PXE/releases/download/v{VERSION}/iventoy-{VERSION}-win32-free.zip'
     FileUrl64     = 'https://github.com/ventoy/PXE/releases/download/v{VERSION}/iventoy-{VERSION}-win64-free.zip'
-    Alert         = $true
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table
