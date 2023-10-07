@@ -10,11 +10,10 @@ $ParentPath = Split-Path -Parent $ScriptPath
 
 # Create a hash table to store package information
 $packageInfo = @{
-    PackageName   = "iventoy"
-    GitHubRepoUrl = 'https://github.com/ventoy/PXE'
-    FileUrl       = 'https://github.com/ventoy/PXE/releases/download/v{VERSION}/iventoy-{VERSION}-win32-free.zip'
-    FileUrl64     = 'https://github.com/ventoy/PXE/releases/download/v{VERSION}/iventoy-{VERSION}-win64-free.zip'
-    Alert         = $true
+    PackageName   = "ventoy"
+    FileUrl       = "https://github.com/ventoy/Ventoy/releases/download/v{VERSION}/ventoy-{VERSION}-windows.zip"
+    GitHubRepoUrl = "https://github.com/ventoy/Ventoy"
+    Alert         = $false
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table
