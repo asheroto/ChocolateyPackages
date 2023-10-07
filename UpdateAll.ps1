@@ -10,6 +10,8 @@ Set-Location $scriptPath
 ./Clickup-Official/update.ps1
 ./miro/update.ps1
 ./StartAllBack/update.ps1
+./ventoy/update.ps1
+./iventoy/update.ps1
 
 # Return
 Pop-Location
