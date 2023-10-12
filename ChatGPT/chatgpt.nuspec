@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <id>chatgpt</id>
+        <version>1.1.0</version>
+        <title>ChatGPT Desktop (Unofficial)</title>
+        <authors>lencx, yixinBC, tk103331, Irene-123, VinchanGit, xueweiwujxw, manudss, turric4n, Sturlen, beilunyang, 11weltonrodrigo, JacobLinCool, danielbayley</authors>
+        <owners>ltklionel, asheroto</owners>
+        <iconUrl>https://cdn.statically.io/gh/asheroto/chocolatey-projects-forked/main/ChatGPT/logo.png</iconUrl>
+        <copyright>Copyright 2023 lencx. Licensed under the GNU Affero General Public License v3.0</copyright>
+        <projectUrl>https://github.com/lencx/ChatGPT</projectUrl>
+        <licenseUrl>https://github.com/lencx/ChatGPT/blob/main/LICENSE</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <tags>chatgpt chatbot chat bot LLM AI machine-learning GUI lencx open-source</tags>
+        <packageSourceUrl>https://github.com/targed/chocolatey-projects/tree/main/ChatGPT</packageSourceUrl>
+        <releaseNotes>https://github.com/lencx/ChatGPT/blob/main/UPDATE_LOG.md</releaseNotes>
+        <summary>ChatGPT Desktop Application</summary>
+        <description>![ChatGPT Screenshot](https://cdn.statically.io/gh/asheroto/chocolatey-projects-forked/main/ChatGPT/screenshot.jpg)
+        
+## Summary
+
+This is an unofficial desktop application of ChatGPT. You can find more information about it on the [GitHub repository](https://github.com/lencx/ChatGPT).
+
+## Features
+
+-   Multi-platform: `macOS` `Linux` `Windows`
+-   Text-to-Speech
+-   Export ChatGPT history (PNG, PDF and Markdown)
+-   Automatic application upgrade notification
+-   Common shortcut keys
+-   System tray hover window
+-   Powerful menu items
+-   Support for slash commands and their configuration (can be configured manually or synchronized from a file)
+-   Customize global shortcuts
+-   Pop-up Search</description>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
+</package>
