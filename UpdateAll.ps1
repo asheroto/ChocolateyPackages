@@ -12,6 +12,8 @@ Set-Location $scriptPath
 ./StartAllBack/update.ps1
 ./ventoy/update.ps1
 ./iventoy/update.ps1
+./pdq-deploy/update.ps1
+./pdq-inventory/update.ps1
 
 # Return
 Pop-Location
