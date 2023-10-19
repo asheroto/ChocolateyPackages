@@ -27,7 +27,7 @@ SetPoint lets you customize your mouse buttons, keyboard F-keys and hot-keys, co
         <tags>logitech setpoint mouse utility util</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/logitech-setpoint</packageSourceUrl>
         <dependencies>
-            <dependency id="setpoint." version="6.90.66" />
+            <dependency id="setpoint" version="6.90.66" />
         </dependencies>
     </metadata>
 </package>
