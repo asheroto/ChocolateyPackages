@@ -9,7 +9,7 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <licenseUrl>https://software.intel.com/en-us/articles/end-user-license-agreement</licenseUrl>
         <projectUrl>https://www.intel.com/content/www/us/en/download/19512/intel-rapid-storage-technology-driver-installation-software-with-intel-optane-memory-10th-and-11th-gen-platforms.html</projectUrl>
-        <iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>
+        <iconUrl></iconUrl>
         <description>---
 
 ### [choco://intel-rst-driver](choco://intel-rst-driver)
