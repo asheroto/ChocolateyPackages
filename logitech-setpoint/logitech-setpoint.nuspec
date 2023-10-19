@@ -9,7 +9,7 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <licenseUrl>https://www.logitech.com/en-us/tos.html</licenseUrl>
         <projectUrl>http://support.logitech.com/en_us/software/setpoint</projectUrl>
-        <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/setpoint/setpoint_icon.png</iconUrl>
+        <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/eabaa1c8/logitech-setpoint/icon.png</iconUrl>
         <description>---
 
 ### [choco://setpoint](choco://setpoint)
