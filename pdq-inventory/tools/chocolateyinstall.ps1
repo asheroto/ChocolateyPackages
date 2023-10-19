@@ -1,22 +1,14 @@
-﻿# URL: http://www2.adminarsenal.com/download-pdqinventory
 $ErrorActionPreference = 'Stop'
-$packageName    = 'pdq-inventory'
-$softwareName   = 'PDQ Inventory*'
-$toolsPath      = Split-Path $MyInvocation.MyCommand.Definition
-$checksum       = '81CE443352E94C09E08584522AC1F8F34A3FFFC7058D49A896BA2B98E433C68B'
-$silentArgs     = '/s'
-$validExitCodes = @(0)
-$fileLocation   = "$toolsPath\Inventory_19.3.446.0.exe"
 
 $packageArgs = @{
-  packageName   = $packageName
-  fileType      = 'exe'
-  file          = $fileLocation
-  checksum      = $checksum
-  checksumType  = 'sha256'
-  silentArgs    = $silentArgs
-  validExitCodes= $validExitCodes
-  softwareName  = $softwareName
+    softwareName   = 'PDQ Inventory*'
+    packageName    = 'pdq-inventory'
+    fileType       = 'exe'
+    file           = "$(Split-Path $MyInvocation.MyCommand.Definition)\PDQ_Inventory_Setup.exe"
+    checksum       = 'F1D129AEB3C50F03C11278FF263781A9B5E0E54EBB4DAA0716297BF537FFF0B1'
+    checksumType   = 'sha256'
+    silentArgs     = '/s'
+    validExitCodes = @(0)
 }
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs
