@@ -36,6 +36,7 @@ This comprehensive feature set makes Miro a go-to platform for teams aiming to i
         <docsUrl>https://help.miro.com/hc/en-us</docsUrl>
     </metadata>
     <files>
-        <file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg;screenshot.jpg" />
+        <file src="update.ps1" target="" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>
