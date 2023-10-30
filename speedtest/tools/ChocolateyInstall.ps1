@@ -1,4 +1,5 @@
 $ErrorActionPreference = 'Stop'
+
 $toolsDir = [System.IO.Path]::GetDirectoryName($MyInvocation.MyCommand.Definition)
 $PackageParameters = Get-PackageParameters
 
@@ -19,6 +20,7 @@ $targetPath = [System.IO.Path]::Combine($installDir, 'speedtest.exe')
 
 # Add StartMenu shortcut
 if ($PackageParameters.StartMenuShortcut) {
+    Write-Output "Adding Start Menu shortcut..."
     $programsPath = [System.IO.Path]::Combine($env:ProgramData, 'Microsoft', 'Windows', 'Start Menu', 'Programs')
     $programsFilePath = [System.IO.Path]::Combine($programsPath, 'Speedtest CLI.lnk')
     Install-ChocolateyShortcut -ShortcutFilePath $programsFilePath -TargetPath $targetPath

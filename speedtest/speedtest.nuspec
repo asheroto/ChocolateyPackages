@@ -11,7 +11,9 @@
         <projectUrl>https://www.speedtest.net/apps/cli</projectUrl>
         <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/43a6f8921f4dcfc30c0c3844e85395f1f6850dea/speedtest/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Speedtest CLI by Ookla® brings trusted technology and a global server network to your command line, offering a robust way to measure internet connection performance metrics. Ideal for developers, system administrators, and computer enthusiasts, this package allows you to run tests without the need for a web browser.
+        <description>![Speedtest CLI screenshot](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/cf5f2605/speedtest/screenshot.png)
+        
+Speedtest CLI by Ookla® brings trusted technology and a global server network to your command line, offering a robust way to measure internet connection performance metrics. Ideal for developers, system administrators, and computer enthusiasts, this package allows you to run tests without the need for a web browser.
 
 ## Key Features
 - Measure download, upload, latency, and packet loss.
