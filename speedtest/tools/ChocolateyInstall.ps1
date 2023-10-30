@@ -1,13 +1,9 @@
-$ErrorActionPreference = 'Stop';
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$ErrorActionPreference = 'Stop'
+$toolsDir = [System.IO.Path]::GetDirectoryName($MyInvocation.MyCommand.Definition)
 $PackageParameters = Get-PackageParameters
 
-### PARAMETERS
-If ($PackageParameters.InstallDir) {
-    $installDir = $PackageParameters.InstallDir
-} else {
-    $installDir = "$toolsDir"
-}
+# Parameters
+$installDir = if ($PackageParameters.InstallDir) { $PackageParameters.InstallDir } else { $toolsDir }
 
 $packageArgs = @{
     packageName   = $env:ChocolateyPackageName
@@ -19,11 +15,11 @@ $packageArgs = @{
 }
 Install-ChocolateyZipPackage @packageArgs
 
-$targetPath = Join-Path "$installDir" "speedtest.exe"
+$targetPath = [System.IO.Path]::Combine($installDir, 'speedtest.exe')
 
 # Add StartMenu shortcut
-If ( $PackageParameters.StartMenuShortcut ) {
-    $programsPath = "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\"
-    $programsFilePath = Join-Path "$programsPath" "Speedtest CLI.lnk"
-    Install-ChocolateyShortcut -shortcutFilePath "$programsFilePath" -targetPath "$targetPath"
+if ($PackageParameters.StartMenuShortcut) {
+    $programsPath = [System.IO.Path]::Combine($env:ProgramData, 'Microsoft', 'Windows', 'Start Menu', 'Programs')
+    $programsFilePath = [System.IO.Path]::Combine($programsPath, 'Speedtest CLI.lnk')
+    Install-ChocolateyShortcut -ShortcutFilePath $programsFilePath -TargetPath $targetPath
 }

@@ -1,5 +1,6 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>speedtest</id>
         <version>1.2.0</version>
@@ -8,30 +9,36 @@
         <owners>asheroto</owners>
         <licenseUrl>https://www.speedtest.net/about/terms</licenseUrl>
         <projectUrl>https://www.speedtest.net/apps/cli</projectUrl>
-        <iconUrl>https://cdn.jsdelivr.net/gh/xmha97/chocolatey-coreteampackages@master/icons/speedtest.png</iconUrl>
+        <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/43a6f8921f4dcfc30c0c3844e85395f1f6850dea/speedtest/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Use Speedtest® for a quick, easy, one-tap connection internet speed test—accurate anywhere thanks to the Speedtest global server network.
+        <description>Speedtest CLI by Ookla® brings trusted technology and a global server network to your command line, offering a robust way to measure internet connection performance metrics. Ideal for developers, system administrators, and computer enthusiasts, this package allows you to run tests without the need for a web browser.
+
+## Key Features
+- Measure download, upload, latency, and packet loss.
+- Test on various platforms including Linux desktops and Raspberry Pi.
+- Automate performance data collection with scripts.
+- Output results in CSV, JSONL, or JSON formats.
 
 ## Package Parameters
 Command-line options for installer configuration:
-- `/InstallDir:PATH`
-- `/StartMenuShortcut` Create the Start Menu Shortcut
+- `/InstallDir:PATH` Specify the installation directory.
+- `/StartMenuShortcut` Create a Start Menu shortcut.
 
-### Examples
-- Install + start menu shortcut:
-`choco install speedtest --params "/StartMenuShortcut"`
-- Portable mode:
-`choco install speedtest --params "/InstallDir:C:\speedtest"`
+## Examples
+- Install with a Start Menu shortcut:  
+  `choco install speedtest --params "/StartMenuShortcut"`
+- Install in a custom directory:  
+  `choco install speedtest --params "/InstallDir:C:\speedtest"`
 
-### Default Parameters
-By default, **installation** of this package:
-- Will be installed in Chocolatey tools directory.
-- The Start menu shortcut is not created.</description>
+## Default Parameters
+By default, the package:
+- Installs in the Chocolatey tools directory.
+- Does not create a Start Menu shortcut.</description>
         <summary>Command-line interface for testing internet speed using Speedtest.net</summary>
         <copyright>Copyright © 2006-2023 Ookla, LLC. All Rights Reserved</copyright>
         <tags>speedtest internet bandwidth network speed test net ping latency</tags>
-        <packageSourceUrl></packageSourceUrl>
-        <docsUrl>https://support.speedtest.net/hc</docsUrl>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/speedtest</packageSourceUrl>
+        <docsUrl>https://help.speedtest.net/hc/en-us</docsUrl>
     </metadata>
     <files>
         <file src="update.ps1" target="" />
