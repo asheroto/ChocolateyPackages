@@ -1,25 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>logitech-options-plus</id>
-        <version>1.54.466136</version>
+        <version>1.56.474970</version>
         <title>Logi Options+</title>
         <authors>Logitech Inc.</authors>
-        <owners>asheroto</owners>
+        <owners>bcurran3, asheroto</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <licenseUrl>https://www.logitech.com/en-us/tos/terms.html</licenseUrl>
         <projectUrl>https://www.logitech.com/en-us/software/logi-options-plus.html</projectUrl>
         <iconUrl>https://rawcdn.githack.com/virtualex-itv/chocolatey-packages/6e0ab2474d0021afcfdc4ae12e4561efc3cd54e8/icons/logioptionsplus.png</iconUrl>
-        <description>Easier and more productive are the goals. How you do it is up to you. Logi Options+ is the next-gen app that lets you manage and customize your supported mice and supported keyboards —so they all seamlessly work to support you. Options+ is designed to transform how you work.
-
-**Please Note**: This is an automatically updated package. If you find it is out of date by more than a day or two, please contact the maintainer(s) and let them know the package is no longer updating correctly.</description>
+        <description>Easier and more productive are the goals. How you do it is up to you. Logi Options+ is the next-gen app that lets you manage and customize your supported mice and supported keyboards —so they all seamlessly work to support you. Options+ is designed to transform how you work.</description>
         <summary>Enhance your experience. Logi Options+ is the powerful, easy-to-use, next-gen application that enables customization for Logitech mice and keyboards so you can work how you want.</summary>
         <releaseNotes>https://support.logi.com/hc/en-us/articles/1500005516462-Logi-Options-Release-Notes</releaseNotes>
         <copyright>© 2023 Logitech. All rights reserved</copyright>
         <tags>logitech logi options mouse keyboard headset driver utility</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/logitech-options-plus</packageSourceUrl>
         <dependencies>
-            <dependency id="logioptionsplus" version="1.54.466136" />
+            <dependency id="logioptionsplus" version="1.56.474970" />
         </dependencies>
     </metadata>
 </package>
