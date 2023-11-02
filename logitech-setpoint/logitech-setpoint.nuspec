@@ -19,7 +19,10 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ![Screenshot of Logitech SetPoint](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/6b0cfafee48c4acbc588c8b7fd79d72e64ae5c3e/logitech-setpoint/screenshot.png)
 	
-SetPoint lets you customize your mouse buttons, keyboard F-keys and hot-keys, control tracking speed, and configure other device-specific settings. It can also notify you of your device's battery status, and whether Caps Lock and Num Lock are on.</description>
+SetPoint lets you customize your mouse buttons, keyboard F-keys and hot-keys, control tracking speed, and configure other device-specific settings. It can also notify you of your device's battery status, and whether Caps Lock and Num Lock are on.
+
+#### Package Note
+This is a virtual package to help find and install [Logitech Setpoint](https://community.chocolatey.org/packages/setpoint). It will install the program package `setpoint` as a dependency.</description>
         <summary>SetPoint lets you customize your mouse, keyboard, touchpad and number pad settings in Windows.</summary>
         <copyright>© Logitech. All rights reserved.</copyright>
         <tags>logitech setpoint mouse utility util</tags>

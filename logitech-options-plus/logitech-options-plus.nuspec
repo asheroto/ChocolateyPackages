@@ -27,7 +27,7 @@ This is a virtual package to help find and install [Logi Options+](https://commu
         <tags>logitech logi options mouse keyboard headset driver utility</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/logitech-options-plus</packageSourceUrl>
         <dependencies>
-            <dependency id="logioptionsplus" version="1.56.474970" />
+            <dependency id="logioptionsplus" />
         </dependencies>
     </metadata>
 </package>
