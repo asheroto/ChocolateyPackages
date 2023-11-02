@@ -11,13 +11,16 @@
         <licenseUrl>https://www.logitech.com/en-us/tos/terms.html</licenseUrl>
         <projectUrl>https://www.logitech.com/en-us/software/logi-options-plus.html</projectUrl>
         <iconUrl>https://rawcdn.githack.com/virtualex-itv/chocolatey-packages/6e0ab2474d0021afcfdc4ae12e4561efc3cd54e8/icons/logioptionsplus.png</iconUrl>
-        <description>
+        <description>![Screenshot of Logi Options+](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/6f54831d3dd40c62059fac76c03772911912cf86/logitech-options-plus/screenshot.jpg)
+
 ## Logi Options+
 
-Easier and more productive are the goals. How you do it is up to you. Logi Options+ is the next-gen app that lets you manage and customize your supported mice and supported keyboards —so they all seamlessly work to support you. Options+ is designed to transform how you work.
+[Logi Options+](https://www.logitech.com/en-us/software/logi-options-plus.html) lets you customize your [Logitech](https://www.logitech.com/) mouse and keyboard settings. It allows you to change function key shortcuts, customize mouse buttons, adjust point and scroll behavior, enable and disable touchpad gestures, and get on-screen notifications when your device’s battery runs low. It is a powerful tool that can help you personalize your Logitech devices to your liking.
 
-#### PACKAGE NOTE: This is a virtual package to help find and install [Logi Options+](https://community.chocolatey.org/packages/logioptionsplus). It will install the program package `logioptionsplus` as a dependency.
-        </description>
+You can find a list of supported devices for Logi Options+ at [Logitech Support](https://www.logitech.com/en-us/software/logi-options-plus.html?modalclick=options#supported-devices). The list is updated regularly by Logitech.
+
+#### Package Note
+This is a virtual package to help find and install [Logi Options+](https://community.chocolatey.org/packages/logioptionsplus). It will install the program package `logioptionsplus` as a dependency.</description>
         <summary>Enhance your experience. Logi Options+ is the powerful, easy-to-use, next-gen application that enables customization for Logitech mice and keyboards so you can work how you want.</summary>
         <releaseNotes>https://support.logi.com/hc/en-us/articles/1500005516462-Logi-Options-Release-Notes</releaseNotes>
         <copyright>© 2023 Logitech. All rights reserved</copyright>
