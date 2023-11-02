@@ -15,6 +15,7 @@ Set-Location $scriptPath
 ./pdq-deploy/update.ps1
 ./pdq-inventory/update.ps1
 ./speedtest/update.ps1
+./TablePlus/update.ps1
 
 # Return
 Pop-Location

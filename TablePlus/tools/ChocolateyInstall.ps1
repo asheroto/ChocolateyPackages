@@ -1,21 +1,17 @@
-﻿$ErrorActionPreference  = 'Stop'
-$packageName    = 'TablePlus'
-$softwareName   = 'TablePlus'
-$url            = 'https://download.tableplus.com/windows/5.4.3/TablePlusSetup.exe'
-$checksum       = '960D197D23DA9427B7EE8FF5FB88A7D6FF3721AAAC3B23BFF2030244D839621E'
-$silentArgs     = '/VERYSILENT'
-$validExitCodes = @(0)
+$ErrorActionPreference = "Stop"
+
+$version = "5.5.0"
 
 $packageArgs = @{
-  packageName   = $packageName
-  fileType      = 'exe'
-  file          = $fileLocation
-  url           = $url
-  checksum      = $checksum
-  checksumType  = 'sha256'
-  silentArgs    = $silentArgs
-  validExitCodes= $validExitCodes
-  softwareName  = $softwareName
+    packageName    = "TablePlus"
+    fileType       = "exe"
+    url            = "https://download.tableplus.com/windows/${version}/TablePlusSetup.exe"
+    checksum       = "1008F3E91386F6AE9F1F8877DD045B650AAAE5165F3A7CC936A7930A1851C8D3"
+    checksumType   = "sha256"
+    silentArgs     = "/VERYSILENT"
+    validExitCodes = @(0)
+    softwareName   = "TablePlus"
 }
+
 
 Install-ChocolateyPackage @packageArgs
