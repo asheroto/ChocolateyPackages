@@ -40,12 +40,13 @@ $checksumType = 'sha256'
 
 # Determine which version to download based on the processor generation
 switch ($gen) {
-    7 {
-        $infoUrl = 'https://www.intel.com/content/www/us/en/download/15667/intel-rapid-storage-technology-intel-rst-user-interface-and-driver.html'
-        $version = '16.8.5.1014.5'
-        $url = 'https://downloadmirror.intel.com/773231/SetupRST.exe'
-        $checksum = '11E737935F85721A6729F52AE1E4D3641DC738168FA3CC1BF1506D198F966AA6'
-    }
+    # In November 2023 Intel removed the info URL and download URL for the 7th generation driver. This section may be removed in the future.
+    # 7 {
+    #     $infoUrl = 'https://www.intel.com/content/www/us/en/download/15667/intel-rapid-storage-technology-intel-rst-user-interface-and-driver.html'
+    #     $version = '16.8.5.1014.5'
+    #     $url = 'https://downloadmirror.intel.com/773231/SetupRST.exe'
+    #     $checksum = '11E737935F85721A6729F52AE1E4D3641DC738168FA3CC1BF1506D198F966AA6'
+    # }
     { $_ -in 8, 9 } {
         $infoUrl = 'https://www.intel.com/content/www/us/en/download/19755/intel-rapid-storage-technology-driver-installation-software-with-intel-optane-memory-8th-and-9th-gen-platforms.html'
         $version = '17.11.3.1010.2'

@@ -35,7 +35,7 @@ The Intel® Rapid Storage Technology (Intel® RST) Driver supports the configura
 
 You can find more information about each driver's version by visiting the Intel RST download page associated with your computer's CPU generation.
 
-- [7th Gen Platforms](https://www.intel.com/content/www/us/en/download/15667/intel-rapid-storage-technology-intel-rst-user-interface-and-driver.html)
+- ~~[7th Gen Platforms](https://www.intel.com/content/www/us/en/download/15667/intel-rapid-storage-technology-intel-rst-user-interface-and-driver.html)~~ **Note:** In November 2023 Intel removed the info URL and download URL for the 7th generation driver. This link may be removed in the future.
 - [8th and 9th Gen Platforms](https://www.intel.com/content/www/us/en/download/19755/intel-rapid-storage-technology-driver-installation-software-with-intel-optane-memory-8th-and-9th-gen-platforms.html)
 - [10th and 11th Gen Platforms](https://www.intel.com/content/www/us/en/download/19512/intel-rapid-storage-technology-driver-installation-software-with-intel-optane-memory-10th-and-11th-gen-platforms.html) - this package does **not** use this driver for 11th gen platforms per Intel's recommendation and uses the one below instead
 - [11th up to 13th Gen Platforms](https://www.intel.com/content/www/us/en/download/720755/intel-rapid-storage-technology-driver-installation-software-with-intel-optane-memory-11th-and-12th-gen-platforms.html)</description>
