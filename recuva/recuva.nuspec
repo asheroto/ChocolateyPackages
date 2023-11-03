@@ -26,12 +26,9 @@
         <owners>asheroto</owners>
         <licenseUrl>https://www.ccleaner.com/legal/end-user-license-agreement</licenseUrl>
         <projectUrl>https://www.ccleaner.com/recuva</projectUrl>
-        <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/master/recuva/icon.png</iconUrl>
-        <requireLicenseAcceptance>CHANGE_THIS_VALUE</requireLicenseAcceptance>
-        <description>
-        ![Screenshot of Recuva](CHANGE_THIS_VALUE)
-
-        REMINDER TO USE "CLIPBOARD2MARKDOWN" TO CONVERT THIS SECTION TO MARKDOWN FORMAT.
+        <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/be5783b05c7c2b1147756be71d33e2503b9a27fa/recuva/icon.png</iconUrl>
+        <requireLicenseAcceptance>no</requireLicenseAcceptance>
+        <description>![Screenshot of Recuva](CHANGE_THIS_VALUE)
 
         Recover your deleted files quickly and easily with Recuva. Whether it's an accidental deletion or a computer crash, Recuva has you covered.
 
