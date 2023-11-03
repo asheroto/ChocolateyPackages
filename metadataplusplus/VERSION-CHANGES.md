@@ -1,5 +1,4 @@
-- Change filename in ChocolateyInstall.ps1
+- Download the new installer from https://logipole.com/download-en.htm
+- Change URL in ChocolateyInstall.ps1
+- Change checksum in ChocolateyInstall.ps1
 - Change version in metadataplusplus.nuspec
-- Download the new installer from https://logipole.com/download-en.htm and replace the old one in the tools folder
-- Update the checksum in ChocolateyInstall.ps1
-- Update VERIFICATION.txt
