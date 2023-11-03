@@ -11,32 +11,29 @@
         <projectUrl>https://logipole.com/metadata++-en.htm</projectUrl>
         <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/eb9b246b/metadataplusplus/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>Metadata++ works seamlessly with 64-bit Windows 10/11.
+        <description>![Screenshot of Metadata++](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/01b7d0d897429e26aca74bea319ef2deab43da91/metadataplusplus/screenshot.png)
 
-Performance
-Metadata++ is designed to be as fast as possible: quick navigation among directories, fast directories reading, fast and smooth painting of panels and thumbnails. In its portable version Metadata++ is configured to store all configuration and settings in the same folder that it is run from.
+[Metadata++](https://logipole.com/metadata++-en.htm) is a highly efficient tool tailored for managing metadata on 64-bit Windows 10/11 systems. It stands out for its remarkable speed and smooth user experience, ensuring quick navigation through directories, rapid directory reading, and fluid rendering of panels and thumbnails. Its portable version conveniently stores all configurations and settings in the same folder from which it is executed.
 
-Images / Photos Formats
-Support almost all kind of image formats able to carry metadata: CR2, CRW, JPEG, PNG, TIFF, RAW, WEBM...
+### Performance Optimized
+- Fast and intuitive interface for efficient metadata management.
 
-Audio Formats
-Support almost all kind of audio formats able to carry metadata: MP3, MP4, OGG, WAV...
+### Broad Format Support
+- **Image/Photo Formats**: Supports nearly all image formats capable of carrying metadata including CR2, CRW, JPEG, PNG, TIFF, RAW, and WEBM.
+- **Audio Formats**: Supports a wide range of audio formats including MP3, MP4, OGG, and WAV.
+- **Video Formats**: Supports various video formats such as AVI, MP4, DivX, and WEBM.
+- **Text Formats**: Accommodates almost all text formats including XML, OOXML, PDF, and RTF.
 
-Video Formats
-Support almost all kind of video formats able to carry metadata: AVI, MP4, DivX, WEBM...
+### Custom Sidecar Creation
+- Ability to create sidecars to house your custom metadata, even for files that traditionally don't support metadata. This feature allows you to rate any file format.
 
-Text Formats
-Support almost all kind of text formats able to carry metadata: XML, OOXML, PDF, RTF...
+### Additional Features
+- **Native UNICODE Display**: Ensures correct display of text and characters from any language.
+- **Search Plugin**: Enhances the ability to find and manage metadata across files.
+- **Multi-language Interface**: Available in English, French, Spanish, and Russian.
 
-All formats
-Metadata++ is able to create sidecars containing your own metadata, even for files that normally cant't include metadata.
-For example you can rate any kind of file format.
-
-Much much more
-Metadata++ has much more useful features built in, including native UNICODE display, Search plugin, Interface in English, French, Spanish, Russian...
-
-Do I have to uninstall Metadata++ before applying an update?
-No, the update will be installed on top of every old installation. But don't forget to close every running instance of Metadata++ before installing.</description>
+### Easy Updates
+- No need to uninstall before updating; new updates install over old versions seamlessly. Just ensure all instances of Metadata++ are closed before installing an update.</description>
         <summary>Metadata++ is a fast and effective metadata viewer/editor with support for all common file formats.</summary>
         <releaseNotes>https://logipole.com/metadata++-whatsnew-en.htm</releaseNotes>
         <copyright>Copyright © 1998-2022 Jean Piquemal. All rights reserved.</copyright>
