@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Recuva</id>
+    <version>1.53.1087</version>
+    <title>Recuva</title>
+    <authors>Piriform</authors>
+    <owners>Jivko Kolev</owners>
+    <licenseUrl>http://www.piriform.com/recuva</licenseUrl>
+    <projectUrl>http://www.piriform.com/recuva</projectUrl>
+    <iconUrl>https://raw.github.com/jivkok/Chocolatey-AutomaticPackages/master/Recuva/Recuva.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Accidentally deleted an important file? Lost something important when your computer crashed? No problem! Recuva recovers files deleted from your Windows computer, Recycle Bin, digital camera card, or MP3 player. And it's free!</description>
+    <summary>Recuva recovers files deleted from your Windows computer, Recycle Bin, digital camera card, or MP3 player.</summary>
+    <tags>undelete recover files</tags>
+  </metadata>
+</package>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn't appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>recuva</id>
+        <version>CHANGE_THIS_VALUE</version>
+        <title>Recuva</title>
+        <authors>Piriform</authors>
+        <owners>asheroto</owners>
+        <licenseUrl>https://www.ccleaner.com/legal/end-user-license-agreement</licenseUrl>
+        <projectUrl>https://www.ccleaner.com/recuva</projectUrl>
+        <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/master/recuva/icon.png</iconUrl>
+        <requireLicenseAcceptance>CHANGE_THIS_VALUE</requireLicenseAcceptance>
+        <description>
+        ![Screenshot of Recuva](CHANGE_THIS_VALUE)
+
+        REMINDER TO USE "CLIPBOARD2MARKDOWN" TO CONVERT THIS SECTION TO MARKDOWN FORMAT.
+
+        Recover your deleted files quickly and easily with Recuva. Whether it's an accidental deletion or a computer crash, Recuva has you covered.
+
+        ## Superior file recovery
+        - Recuva can recover pictures, music, documents, videos, emails or any other file type you've lost. It also supports recovery from any rewriteable media: memory cards, external hard drives, USB sticks and more&#8203;``【oaicite:3】``&#8203;.
+
+        ## Recovery from damaged disks
+        - Unlike most file recovery tools, Recuva can recover files from damaged or newly formatted drives, offering greater flexibility and a higher chance of recovery&#8203;``【oaicite:2】``&#8203;.
+
+        ## Deep scan for buried files
+        - For those hard to find files, Recuva has an advanced deep scan mode that scours your drives to find any traces of files you have deleted&#8203;``【oaicite:1】``&#8203;.
+
+        ## Securely delete files
+        - If you want to ensure a file is gone for good, Recuva's secure overwrite feature uses industry- and military-standard deletion techniques to keep your files erased&#8203;``【oaicite:0】``&#8203;.
+        </description>
+        <summary>Recuva recovers files deleted from your Windows computer, Recycle Bin, digital camera card, or MP3 player.</summary>
+        <releaseNotes>https://www.ccleaner.com/recuva/version-history</releaseNotes>
+        <copyright>© Copyright 2005-2023 Piriform Software Ltd - All rights reserved.</copyright>
+        <tags>recuva file-recovery data-recovery undelete recover files recovery recova</tags>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/recuva</packageSourceUrl>
+        <docsUrl>https://support.ccleaner.com/s/topic/0TO5p000000aaV9GAI/recuva?language=en_US</docsUrl>
+        <bugTrackerUrl>https://community.ccleaner.com/forum/17-recuva-bug-reporting/</bugTrackerUrl>
+    </metadata>
+    <files>
+        <file src="update.ps1" target="" />
+        <file src="tools\**" target="tools" />
+    </files>
+</package>
