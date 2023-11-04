@@ -37,6 +37,9 @@ $scriptBlock = {
         # Import the Chocolatey module using the provided path
         Import-Module (Join-Path -Path $chocoModulePath -ChildPath 'chocolateyInstaller.psm1')
 
+        # Notify the user that the registry keys are being added
+        Write-Host "Adding registry keys to prevent Google Chrome and Toolbar offers with Piriform products..." -ForegroundColor Cyan
+
         # Execute the Start-ChocolateyProcessAsAdmin cmdlet with the specified script
         Start-ChocolateyProcessAsAdmin "& `'$PreventChromeInstall`'" 2>&1 | Out-Null
     } catch {
