@@ -3,12 +3,6 @@ $ErrorActionPreference = "Stop"
 # Language code
 $LCID = (Get-Culture).LCID
 
-# Path to PreventChromeInstall.ps1
-$PreventChromeInstall = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\PreventChromeInstall.ps1"
-
-# Get the path to the Chocolatey module
-$chocoModulePath = (Get-Module -Name Chocolatey* | Select-Object -First 1).ModuleBase
-
 # Package args
 $packageArgs = @{
     PackageName    = "recuva"
@@ -27,6 +21,12 @@ $packageArgs = @{
 # Below, PreventChromeInstall.ps1 is executed as admin in a background job to minimize script output, reducing user confusion,
 # stemming from Chocolatey issue #1016 https://github.com/chocolatey/choco/issues/1016
 # ============================================================================ #
+
+# Path to PreventChromeInstall.ps1
+$PreventChromeInstall = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)\PreventChromeInstall.ps1"
+
+# Get the path to the Chocolatey module
+$chocoModulePath = (Get-Module -Name Chocolatey* | Select-Object -First 1).ModuleBase
 
 $scriptBlock = {
     param($PreventChromeInstall, $chocoModulePath)
