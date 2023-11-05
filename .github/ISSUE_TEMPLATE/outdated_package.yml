@@ -1,8 +1,8 @@
-name: ➡️ Outdated Package
+name: ➡️ Package Update Request
 description: Report an outdated package
-title: '[Outdated]: '
+title: '[Update]: '
 labels:
-- outdated
+- update-request
 body:
 - type: markdown
   attributes:
@@ -11,7 +11,7 @@ body:
 
       Please use the following format for the title
 
-      > [Outdated]: PDQ Deploy 1.2.5
+      > [Update]: PDQ Deploy 1.2.5
 
       Where `1.2.5` is the **current version of the software** (not the version available on the Chocolatey community repository).
 - type: checkboxes
