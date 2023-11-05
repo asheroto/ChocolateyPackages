@@ -13,7 +13,7 @@ body:
 
       > [Outdated]: PDQ Deploy 1.2.5
 
-      Where `1.2.5` is the current version of the software available (not the version available on the Chocolatey community repository).
+      Where `1.2.5` is the **current version of the software** (not the version available on the Chocolatey community repository).
 - type: checkboxes
   id: checklist
   attributes:
