@@ -15,7 +15,7 @@ Each Wednesday and Saturday, my PowerShell script will automatically update all 
 For updating packages, I use [Chocolatey Package Updater](https://github.com/asheroto/Chocolatey-Package-Updater), which is my solution inspired by the now archived [AU](https://github.com/majkinetor/au) repository.
 
 > [!NOTE]
-> In this repository, [UpdateAll.ps1](./UpdateAll.ps1) is a symbolic link to the [actual script](hocolatey-Package-Updater/Chocolatey-Package-Updater.ps1) in the Chocolatey Package Updater repository.
+> In this repository, [UpdateAll.ps1](./UpdateAll.ps1) is a symbolic link to the [actual script](Chocolatey-Package-Updater/Chocolatey-Package-Updater.ps1) in the Chocolatey Package Updater repository.
 
 # Package Issues
 
