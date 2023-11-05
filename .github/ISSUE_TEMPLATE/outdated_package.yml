@@ -48,6 +48,8 @@ body:
     label: Package URL
     description: URL of the package on the [Chocolatey Community Repository](https://community.chocolatey.org/packages)
     placeholder: https://community.chocolatey.org/packages/pdq-deploy
+  validations:
+    required: true
 - type: input
   id: current-choco-version
   attributes:
