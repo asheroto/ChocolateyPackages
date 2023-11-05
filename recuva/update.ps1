@@ -18,4 +18,3 @@ $packageInfo = @{
 
 # Call the UpdateChocolateyPackage function and pass the hash table
 UpdateChocolateyPackage @packageInfo
-#test
