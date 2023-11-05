@@ -38,6 +38,8 @@ body:
     label: What You Are Seeing?
     description: |
       In your own words, please describe the problem that you are experiencing. Please include screenshots if possible, as this can give a clearer indication of the problem.
+    placeholder: |-
+      Example: When I run `choco install pdq-deploy`, I get the following error message: `Error code ABC123`.
   validations:
     required: true
 - type: textarea
@@ -56,3 +58,5 @@ body:
     label: Additional Context
     description: |
       Please include any other information here that you feel may be relevant to the problem you are seeing but is not covered in the previous sections.
+    placeholder: |-
+      Example: Screenshots, logs, etc.
