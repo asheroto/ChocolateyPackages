@@ -35,7 +35,8 @@ $scriptBlock = {
         $ErrorActionPreference = "SilentlyContinue"
 
         # Import the Chocolatey module using the provided path
-        Import-Module (Join-Path -Path $chocoModulePath -ChildPath 'chocolateyInstaller.psm1')
+        $modulePath = [System.IO.Path]::Combine($chocoModulePath, 'chocolatey', 'Installer.psm1')
+        Import-Module $modulePath
 
         # Notify the user that the registry keys are being added
         Write-Host "Adding registry keys to prevent Google Chrome and Toolbar offers with Piriform products..." -ForegroundColor Cyan
