@@ -12,7 +12,7 @@ My profile on Chocolatey: https://community.chocolatey.org/profiles/asheroto
 
 Each Wednesday and Saturday, my PowerShell script will automatically update all packages that are out of date and push them to the repository. If you notice a package is out of date and you've waited a few days, please open an [Issue](../../issues) and I'll look into it.
 
-For updating packages, I use [Chocolatey Package Updater](https://github.com/asheroto/Chocolatey-Package-Updater), which is my solution inspired by the now archived [AU](https://github.com/majkinetor/au) repository.
+For updating packages, I use [Chocolatey Package Updater](Chocolatey-Package-Updater), which is my solution inspired by the now archived [AU](https://github.com/majkinetor/au) repository.
 
 > [!NOTE]
 > In this repository, [UpdateAll.ps1](UpdateAll.ps1) is a symbolic link to the [actual script](Chocolatey-Package-Updater/blob/main/Chocolatey-Package-Updater.ps1) in the Chocolatey Package Updater repository.
