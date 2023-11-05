@@ -1,0 +1,56 @@
+name: ➡️ Outdated Package
+description: Report an outdated package
+title: '[Outdated]: '
+labels:
+- outdated
+body:
+- type: markdown
+  attributes:
+    value: >-
+      ## **Example Title** #magic___^_^___line Please use the following format for the title #magic___^_^___line #magic___^_^___line > `[Outdated]: PDQ Deploy 1.2.5` #magic___^_^___line #magic___^_^___line Where `1.2.5` is the current version of the software available (not the version available on the Chocolatey community repository).
+- type: checkboxes
+  id: checklist
+  attributes:
+    label: Checklist
+    description: Before continuing, please confirm you have done the following.
+    options:
+    - label: >-
+        I have verified that there are no pending versions in the `Version History` section of the Chocolatey package
+      required: true
+    - label: >-
+        I have specified the name of the package and the current version of the software in the issue's title
+      required: true
+- type: input
+  id: package-name
+  attributes:
+    label: Package Name
+    description: Name of the package (not the software name)
+    placeholder: pdq-deploy
+  validations:
+    required: true
+- type: input
+  id: software-name
+  attributes:
+    label: Software Name
+    description: Name of the software
+    placeholder: PDQ Deploy
+  validations:
+    required: true
+- type: input
+  id: package-url
+  attributes:
+    label: Package URL
+    description: URL of the package on the Chocolatey Community Repository
+    placeholder: https://community.chocolatey.org/packages/pdq-deploy
+- type: input
+  id: current-choco-version
+  attributes:
+    label: Current Chocolatey Version
+    description: Current version available on the Chocolatey community repository
+    placeholder: 1.2.3
+- type: input
+  id: current-software-version
+  attributes:
+    label: Current Software Version
+    description: Current software version
+    placeholder: 1.2.5
