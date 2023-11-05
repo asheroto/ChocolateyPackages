@@ -17,6 +17,6 @@ For updating packages, I use [Chocolatey Package Updater](https://github.com/ash
 > [!NOTE]
 > In this repository, [Chocolatey-Package-Updater.ps1](https://github.com/asheroto/ChocolateyPackages/blob/master/UpdateAll.ps1) is a symbolic link to the [actual script](https://github.com/asheroto/Chocolatey-Package-Updater/blob/main/Chocolatey-Package-Updater.ps1) in the Chocolatey Package Updater repository.
 
-# Package Issues
+## Package Issues
 
 If you have an issue with a package, please open an [Issue](../../issues).
