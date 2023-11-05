@@ -4,9 +4,9 @@
 
 # Chocolatey Packages
 
-This is the repository for my [Chocolatey](https://chocolatey.org/) packages.
+This is the repository for the [Chocolatey](https://chocolatey.org/) packages that I maintain.
 
-My profile on Chocolatey: https://community.chocolatey.org/profiles/asheroto
+You can find the packages I maintain [here](https://community.chocolatey.org/profiles/asheroto).
 
 ## Updates
 
