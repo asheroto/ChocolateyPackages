@@ -10,7 +10,7 @@ You can find the packages I maintain [here](https://community.chocolatey.org/pro
 
 ## Updates
 
-Each Wednesday and Saturday, my PowerShell script will automatically update all packages that are out of date and push them to the repository.
+Each Wednesday and Saturday, my [PowerShell script](https://github.com/asheroto/ChocolateyPackages/blob/master/UpdateAll.ps1) will automatically update all packages that are out of date and push them to the repository.
 
 If you notice an outdated package, have verified no upcoming version in the `Version History`, and have waited a few days, kindly open an [Issue](../../issues), and I'll address it.
 
