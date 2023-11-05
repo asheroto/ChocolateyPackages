@@ -1,5 +1,5 @@
 name: 🔼 Package Update Request
-description: Report an outdated package
+description: Request an update to an outdated package
 title: '[Update Request]: '
 labels:
 - update-request
