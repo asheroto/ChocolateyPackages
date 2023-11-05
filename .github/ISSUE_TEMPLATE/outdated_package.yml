@@ -9,7 +9,9 @@ body:
     value: |
       ## **Example Title**
 
-      Please use the following format for the title `[Outdated]: PDQ Deploy 1.2.5`
+      Please use the following format for the title
+
+      > `[Outdated]: PDQ Deploy 1.2.5`
 
       Where `1.2.5` is the current version of the software available (not the version available on the Chocolatey community repository).
 - type: checkboxes
