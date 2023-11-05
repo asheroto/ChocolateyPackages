@@ -21,7 +21,7 @@ body:
     description: Before continuing, please confirm you have done the following.
     options:
     - label: >-
-        I have verified that there are no pending versions in the `Version History` section of the Chocolatey package [More info](https://github.com/asheroto/ChocolateyPackages/blob/master/README.md#updates)
+        I have verified that there are no pending versions in the `Version History` section of the Chocolatey package ([more info](https://github.com/asheroto/ChocolateyPackages/blob/master/README.md#updates))
       required: true
     - label: >-
         I have specified the name of the package and the current version of the software in the issue's title
