@@ -18,7 +18,7 @@ body:
   id: checklist
   attributes:
     label: Checklist
-    description: Before continuing, please confirm you have done the following.
+    description: Before continuing, please confirm you have done the following
     options:
     - label: >-
         I have verified that there are no pending versions in the `Version History` section of the Chocolatey package ([more info](https://github.com/asheroto/ChocolateyPackages/blob/master/README.md#updates))
