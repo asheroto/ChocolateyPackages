@@ -6,8 +6,12 @@ labels:
 body:
 - type: markdown
   attributes:
-    value: >-
-      ## **Example Title** #magic___^_^___line Please use the following format for the title #magic___^_^___line #magic___^_^___line > `[Outdated]: PDQ Deploy 1.2.5` #magic___^_^___line #magic___^_^___line Where `1.2.5` is the current version of the software available (not the version available on the Chocolatey community repository).
+    value: |
+      ## **Example Title**
+
+      Please use the following format for the title `[Outdated]: PDQ Deploy 1.2.5`
+
+      Where `1.2.5` is the current version of the software available (not the version available on the Chocolatey community repository).
 - type: checkboxes
   id: checklist
   attributes:
