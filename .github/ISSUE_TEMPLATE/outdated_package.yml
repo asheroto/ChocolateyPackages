@@ -60,3 +60,9 @@ body:
     label: Current Software Version
     description: Current version of the software available at the time of creating this issue
     placeholder: 1.2.5
+- type: textarea
+  id: comments
+  attributes:
+    label: Comments
+    description: |
+      Please include any other information here that you feel may be relevant
