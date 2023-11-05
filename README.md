@@ -13,7 +13,7 @@ You can find the packages I maintain [here](https://community.chocolatey.org/pro
 Each Wednesday and Saturday, my [PowerShell script](https://github.com/asheroto/ChocolateyPackages/blob/master/UpdateAll.ps1) will automatically update all packages that are out of date and push them to the repository. I also use [VisualPing.io](https://visualping.io) to monitor changes to certain packages and update them accordingly.
 
 If you notice an outdated package and want to request an update:
-- Verify there is not a pending version in the `Version History` section of the Chocolatey package
+- Verify there is not a pending version in the `Version History` section of the Chocolatey package on the [Chocolatey Community Repository](https://community.chocolatey.org/packages)
 - After a newer version of the software has been released, please wait a few days for me to update the package (usually within a day or two)
 - If the package is still outdated, open an [Issue](../../issues) and I'll address it
 
