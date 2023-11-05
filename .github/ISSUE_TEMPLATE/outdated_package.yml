@@ -52,11 +52,11 @@ body:
   id: current-choco-version
   attributes:
     label: Current Chocolatey Version
-    description: Current version available on the Chocolatey community repository
+    description: Current version available on the Chocolatey community repository at the time of creating this issue
     placeholder: 1.2.3
 - type: input
   id: current-software-version
   attributes:
     label: Current Software Version
-    description: Current software version
+    description: Current version of the software available at the time of creating this issue
     placeholder: 1.2.5
