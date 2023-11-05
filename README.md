@@ -10,7 +10,11 @@ You can find the packages I maintain [here](https://community.chocolatey.org/pro
 
 ## Updates
 
-Each Wednesday and Saturday, my PowerShell script will automatically update all packages that are out of date and push them to the repository. If you notice a package is out of date and you've waited a few days, please open an [Issue](../../issues) and I'll look into it.
+Each Wednesday and Saturday, my PowerShell script will automatically update all packages that are out of date and push them to the repository.
+
+If you notice an outdated package, have verified no upcoming version in the `Version History`, and have waited a few days, kindly open an [Issue](../../issues), and I'll address it.
+
+![image](https://github.com/asheroto/ChocolateyPackages/assets/49938263/d64649db-1b5f-4f8b-aae3-37313e4adb8f)
 
 For updating packages, I use [Chocolatey Package Updater](https://github.com/asheroto/Chocolatey-Package-Updater), which is my solution inspired by the now archived [AU](https://github.com/majkinetor/au) repository.
 
