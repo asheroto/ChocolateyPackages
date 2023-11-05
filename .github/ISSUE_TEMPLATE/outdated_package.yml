@@ -30,7 +30,7 @@ body:
   id: package-name
   attributes:
     label: Package Name
-    description: Name of the package (not the software name)
+    description: Name of the Chocolatey package (not the software name) on the [Chocolatey Community Repository](https://community.chocolatey.org/packages)
     placeholder: pdq-deploy
   validations:
     required: true
