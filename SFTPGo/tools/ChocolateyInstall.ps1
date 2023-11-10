@@ -1,15 +1,21 @@
-﻿$ErrorActionPreference = "Stop"
+﻿$ErrorActionPreference  = 'Stop'
+$packageName    = 'sftpgo'
+$softwareName   = 'SFTPGo'
+$url            = 'https://github.com/drakkan/sftpgo/releases/download/v2.5.4/sftpgo_v2.5.4_windows_x86_64.exe'
+$checksum       = '38AA95A6B7E6044977CBDBDAB86DC9F91FCC40285D10C1E5D432BA78AF498017'
+$silentArgs     = '/VERYSILENT'
+$validExitCodes = @(0)
 
 $packageArgs = @{
-    packageName    = "sftpgo"
-    fileType       = "exe"
-    $version       = "2.5.4"
-    url            = "https://github.com/drakkan/sftpgo/releases/download/v${version}/sftpgo_v${version}_windows_x86_64.exe"
-    checksum       = "38AA95A6B7E6044977CBDBDAB86DC9F91FCC40285D10C1E5D432BA78AF498017"
-    checksumType   = "sha256"
-    silentArgs     = "/VERYSILENT"
-    validExitCodes = @(0)
-    softwareName   = "SFTPGo"
+  packageName   = $packageName
+  fileType      = 'exe'
+  file          = $fileLocation
+  url           = $url
+  checksum      = $checksum
+  checksumType  = 'sha256'
+  silentArgs    = $silentArgs
+  validExitCodes= $validExitCodes
+  softwareName  = $softwareName
 }
 
 Install-ChocolateyPackage @packageArgs
@@ -35,15 +41,14 @@ Write-Output "Default configuration file location:"
 Write-Output "`t$DefaultConfigurationFilePath"
 Write-Output "Directory to create environment variable files to set custom configurations:"
 Write-Output "`t$EnvDirPath"
-Write-Output ""
 Write-Output "If the SFTPGo service does not start, make sure that TCP ports 2022 and 8080 are"
 Write-Output "not used by other services or change the SFTPGo configuration to suit your needs."
 Write-Output ""
 Write-Output "General information (README) location:"
 Write-Output "`thttps://github.com/drakkan/sftpgo"
 Write-Output "Getting started guide location:"
-Write-Output "`thttps://github.com/drakkan/sftpgo/blob/v${version}/docs/howto/getting-started.md"
+Write-Output "`thttps://github.com/drakkan/sftpgo/blob/v2.5.4/docs/howto/getting-started.md"
 Write-Output "Detailed information (docs folder) location:"
-Write-Output "`thttps://github.com/drakkan/sftpgo/tree/v${version}/docs"
+Write-Output "`thttps://github.com/drakkan/sftpgo/tree/v2.5.4/docs"
 Write-Output ""
 Write-Output "---------------------------"

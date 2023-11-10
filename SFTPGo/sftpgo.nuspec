@@ -1,18 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-    <metadata>
-        <id>sftpgo</id>
-        <version>2.5.4</version>
-        <title>SFTPGo</title>
-        <authors>Nicola Murino</authors>
-        <owners>asheroto, drakkan</owners>
-        <licenseUrl>https://github.com/drakkan/sftpgo/blob/main/LICENSE</licenseUrl>
-        <projectUrl>https://github.com/drakkan/sftpgo</projectUrl>
-        <iconUrl>https://cdn.statically.io/gh/drakkan/sftpgo/v2.5.4/static/img/logo.png</iconUrl>
-
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>SFTPGo allows you to securely share your files over SFTP and optionally over HTTP/S, FTP/S and WebDAV as well.
+	<metadata>
+		<id>sftpgo</id>
+		<version>2.5.4</version>
+		<packageSourceUrl>https://github.com/drakkan/sftpgo/tree/main/pkgs/choco</packageSourceUrl>
+		<owners>asheroto</owners>
+		<title>SFTPGo</title>
+		<authors>Nicola Murino</authors>
+		<projectUrl>https://github.com/drakkan/sftpgo</projectUrl>
+		<iconUrl>https://cdn.statically.io/gh/drakkan/sftpgo/v2.5.4/static/img/logo.png</iconUrl>
+		<licenseUrl>https://github.com/drakkan/sftpgo/blob/main/LICENSE</licenseUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<projectSourceUrl>https://github.com/drakkan/sftpgo</projectSourceUrl>
+		<docsUrl>https://github.com/drakkan/sftpgo/tree/v2.5.4/docs</docsUrl>
+		<bugTrackerUrl>https://github.com/drakkan/sftpgo/issues</bugTrackerUrl>
+		<tags>sftp sftp-server ftp webdav s3 azure-blob google-cloud-storage cloud-storage scp data-at-rest-encryption multi-factor-authentication multi-step-authentication</tags>
+		<summary>Fully featured and highly configurable SFTP server with optional HTTP/S,FTP/S and WebDAV support.</summary>
+		<description>SFTPGo allows you to securely share your files over SFTP and optionally over HTTP/S, FTP/S and WebDAV as well.
 Several storage backends are supported and they are configurable per-user, so you can serve a local directory for a user and an S3 bucket (or part of it) for another one.
 
 SFTPGo also supports virtual folders. A virtual folder can use any of the supported storage backends. So you can have, for example, a user with the S3 backend mapping a GCS bucket (or part of it) on a specified path and an encrypted local filesystem on another one. Virtual folders can be private or shared among multiple users, for shared virtual folders you can define different quota limits for each user.
@@ -27,17 +32,9 @@ You can find more info [here](https://github.com/drakkan/sftpgo).
 
 * This package installs SFTPGo as Windows Service.
 * After the first installation please take a look at the [Getting Started Guide](https://github.com/drakkan/sftpgo/blob/main/docs/howto/getting-started.md).</description>
-        <summary>Fully featured and highly configurable SFTP server with optional HTTP/S,FTP/S and WebDAV support.</summary>
-        <releaseNotes>https://github.com/drakkan/sftpgo/releases/tag/v2.5.4</releaseNotes>
-        <tags>sftp sftp-server ftp webdav s3 azure-blob google-cloud-storage cloud-storage scp data-at-rest-encryption multi-factor-authentication multi-step-authentication</tags>
-
-        <projectSourceUrl>https://github.com/drakkan/sftpgo</projectSourceUrl>
-        <packageSourceUrl>https://github.com/drakkan/sftpgo/tree/main/pkgs/choco</packageSourceUrl>
-        <docsUrl>https://github.com/drakkan/sftpgo/tree/v2.5.4/docs</docsUrl>
-        <bugTrackerUrl>https://github.com/drakkan/sftpgo/issues</bugTrackerUrl>
-        <files>
-            <file src="tools\**" target="tools" />
-            <file src="update.ps1" target="" />
-        </files>
-    </metadata>
+		<releaseNotes>https://github.com/drakkan/sftpgo/releases/tag/v2.5.4</releaseNotes>
+	</metadata>
+	<files>
+		<file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+	</files>
 </package>
