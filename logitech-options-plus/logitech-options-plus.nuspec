@@ -30,4 +30,7 @@ This is a virtual package to help find and install [Logi Options+](https://commu
             <dependency id="logioptionsplus" version="1.56.474970" />
         </dependencies>
     </metadata>
+    <files>
+        <file src="**" exclude="**\*.png;**\*.jpg;**\*.svg;**\*.md" />
+    </files>
 </package>

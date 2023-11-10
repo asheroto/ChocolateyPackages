@@ -31,4 +31,7 @@ This is a virtual package to help find and install [Logitech Setpoint](https://c
             <dependency id="setpoint" version="6.90.66" />
         </dependencies>
     </metadata>
+    <files>
+        <file src="**" exclude="**\*.png;**\*.jpg;**\*.svg;**\*.md" />
+    </files>
 </package>
