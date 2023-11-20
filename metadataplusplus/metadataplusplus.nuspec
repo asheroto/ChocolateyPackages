@@ -42,6 +42,6 @@
 		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/metadataplusplus</packageSourceUrl>
     </metadata>
     <files>
-        <file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>
