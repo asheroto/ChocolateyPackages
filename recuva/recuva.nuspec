@@ -43,7 +43,6 @@ Recover your deleted files quickly and easily with Recuva. Whether it's an accid
         <bugTrackerUrl>https://community.ccleaner.com/forum/17-recuva-bug-reporting/</bugTrackerUrl>
     </metadata>
     <files>
-        <file src="update.ps1" target="" />
         <file src="tools\**" target="tools" />
     </files>
 </package>
