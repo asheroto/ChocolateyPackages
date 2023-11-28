@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <title>NVM</title>
@@ -7,17 +8,18 @@
         <authors>coreybutler</authors>
         <owners>asheroto, kamack38</owners>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/nvm.install</packageSourceUrl>
-        <iconUrl>https://rawcdn.githack.com/kamack38/packages/e955e4a1bd6e62aa2aa4a4d6b28c693509ac3fb7/assets/nodejs.png</iconUrl>
+        <iconUrl>https://rawcdn.githack.com/asheroto/ChocolateyPackages/849690beb071cef45442560e1351130929fe8898/nvm.install/icon.png</iconUrl>
         <docsUrl>https://github.com/coreybutler/nvm-windows/wiki</docsUrl>
         <bugTrackerUrl>https://github.com/coreybutler/nvm-windows/issues</bugTrackerUrl>
         <projectUrl>https://github.com/coreybutler/nvm-windows</projectUrl>
         <projectSourceUrl>https://github.com/coreybutler/nvm-windows/tree/master</projectSourceUrl>
         <requireLicenseAcceptance>true</requireLicenseAcceptance>
         <licenseUrl>https://github.com/coreybutler/nvm-windows/blob/master/LICENSE</licenseUrl>
-        <copyright>Copyright (c) 2021 Ecor Ventures LLC.</copyright>
+        <copyright>Copyright (c) 2022 Ecor Ventures LLC.</copyright>
         <tags>nvm node nodejs node.js version manager windows</tags>
         <summary>A node.js version management utility for Windows. Ironically written in Go.</summary>
-        <description># NVM
+        <description><![CDATA[
+# NVM
 
 ## Overview
 
@@ -37,17 +39,18 @@ NVM for Windows is a command line tool. Simply type `nvm` in the console for hel
 
 - `nvm arch [32|64]`: Show if node is running in 32 or 64 bit mode. Specify 32 or 64 to override the default architecture.
 - `nvm current`: Display active version.
-- `nvm install ﹤version﹥ [arch]`: The version can be a specific version, "latest" for the latest current version, or "lts" for the most recent LTS version. Optionally specify whether to install the 32 or 64 bit version (defaults to system arch). Set [arch] to "all" to install 32 AND 64 bit versions. Add `--insecure` to the end of this command to bypass SSL validation of the remote download server.
+- `nvm install <version> [arch]`: The version can be a specific version, "latest" for the latest current version, or "lts" for the most recent LTS version. Optionally specify whether to install the 32 or 64 bit version (defaults to system arch). Set [arch] to "all" to install 32 AND 64 bit versions. Add `--insecure` to the end of this command to bypass SSL validation of the remote download server.
 - `nvm list [available]`: List the node.js installations. Type `available` at the end to show a list of versions available for download.
 - `nvm on`: Enable node.js version management.
 - `nvm off`: Disable node.js version management (does not uninstall anything).
 - `nvm proxy [url]`: Set a proxy to use for downloads. Leave `[url]` blank to see the current proxy. Set `[url]` to "none" to remove the proxy.
-- `nvm uninstall ﹤version﹥`: Uninstall a specific version.
-- `nvm use ﹤version﹥ [arch]`: Switch to use the specified version. Optionally use `latest`, `lts`, or `newest`. `newest` is the latest _installed_ version. Optionally specify 32/64bit architecture. `nvm use ﹤arch﹥` will continue using the selected version, but switch to 32/64 bit mode. For information about using `use` in a specific directory (or using `.nvmrc`), please refer to [issue #16](https://github.com/coreybutler/nvm-windows/issues/16).
-- `nvm root ﹤path﹥`: Set the directory where nvm should store different versions of node.js. If `﹤path﹥` is not set, the current root will be displayed.
+- `nvm uninstall <version>`: Uninstall a specific version.
+- `nvm use <version> [arch]`: Switch to use the specified version. Optionally use `latest`, `lts`, or `newest`. `newest` is the latest _installed_ version. Optionally specify 32/64bit architecture. `nvm use <arch>` will continue using the selected version, but switch to 32/64 bit mode. For information about using `use` in a specific directory (or using `.nvmrc`), please refer to [issue #16](https://github.com/coreybutler/nvm-windows/issues/16).
+- `nvm root <path>`: Set the directory where nvm should store different versions of node.js. If `<path>` is not set, the current root will be displayed.
 - `nvm version`: Displays the current running version of NVM for Windows.
-- `nvm node_mirror ﹤node_mirror_url﹥`: Set the node mirror.
-- `nvm npm_mirror ﹤npm_mirror_url﹥`: Set the npm mirror.</description>
+- `nvm node_mirror <node_mirror_url>`: Set the node mirror.
+- `nvm npm_mirror <npm_mirror_url>`: Set the npm mirror.
+]]>        </description>
         <releaseNotes>https://github.com/coreybutler/nvm-windows/releases/latest</releaseNotes>
     </metadata>
     <files>
