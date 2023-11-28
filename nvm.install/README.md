@@ -12,7 +12,7 @@ There are situations where the ability to switch between different versions of N
 
 ## Usage
 
-**nvm-windows runs in an Admin shell**. You'll need to start `powershell` or Command Prompt as Administrator to use nvm-windows
+**nvm-windows runs in an admin shell**. You'll need to start `Powershell` or `Command Prompt` as **Administrator** to use `nvm-windows`.
 
 NVM for Windows is a command line tool. Simply type `nvm` in the console for help. The basic commands are:
 
