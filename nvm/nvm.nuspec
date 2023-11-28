@@ -45,6 +45,7 @@ NVM for Windows is a command line tool. Simply type `nvm` in the console for hel
         <releaseNotes>https://github.com/coreybutler/nvm-windows/releases/latest</releaseNotes>
         <copyright>Copyright (c) 2022 Ecor Ventures LLC</copyright>
         <tags>nvm node nodejs node.js version management windows admin</tags>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/nvm</packageSourceUrl>
         <dependencies>
             <dependency id="nvm.install" version="1.1.12" />
         </dependencies>
