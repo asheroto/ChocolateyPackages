@@ -18,6 +18,7 @@ Set-Location $scriptPath
 ./TablePlus/update.ps1
 ./recuva/update.ps1
 ./nvm.install/update.ps1
+./metadataplusplus/update.ps1
 
 # Return
 Pop-Location

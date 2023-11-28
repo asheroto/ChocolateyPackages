@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>metadataplusplus</id>
-        <version>2.05.0</version>
+        <version>2.05.1</version>
         <title>Metadata++</title>
         <authors>Logipole</authors>
         <owners>asheroto</owners>
@@ -36,10 +36,13 @@
 - No need to uninstall before updating; new updates install over old versions seamlessly. Just ensure all instances of Metadata++ are closed before installing an update.</description>
         <summary>Metadata++ is a fast and effective metadata viewer/editor with support for all common file formats.</summary>
         <releaseNotes>https://logipole.com/metadata++-whatsnew-en.htm</releaseNotes>
-        <copyright>Copyright © 1998-2022 Jean Piquemal. All rights reserved.</copyright>
+        <copyright>Copyright © 2023 Jean Piquemal. All rights reserved.</copyright>
         <docsUrl>https://logipole.com/metadata++-en.htm</docsUrl>
         <tags>metadata++ metadataplusplus metadatapp metadata editor viewer tool</tags>
-		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/metadataplusplus</packageSourceUrl>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/metadataplusplus</packageSourceUrl>
+        <dependencies>
+            <dependency id="vcredist140"/>
+        </dependencies>
     </metadata>
     <files>
         <file src="tools\**" target="tools" />
