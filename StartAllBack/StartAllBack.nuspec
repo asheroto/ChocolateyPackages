@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>StartAllBack</id>
-        <version>3.7</version>
+        <version>3.7.1</version>
         <title>StartAllBack</title>
         <authors>StartAllBack</authors>
         <owners>asheroto</owners>
