@@ -2,14 +2,14 @@ $ErrorActionPreference = "Stop"
 
 # https://startallback.com/download.php
 
-$Version = "3.7.1"
+$Version = "3.7.2"
 
 # Package args
 $packageArgs = @{
     PackageName    = "StartAllBack"
     SoftwareName   = "StartAllBack"
     Url            = "https://startisback.sfo3.cdn.digitaloceanspaces.com/StartAllBack_${Version}_setup.exe"
-    Checksum       = "389A8F06DDCC22CFCB93BB79B020C84947CE90B27B09CF2A17C91729742F23BB"
+    Checksum       = "3BE58F4C6557874F3ADBE710A78A152833B5A8FF874B2EA2BE7F54FAC96705CE"
     ChecksumType   = "sha256"
     SilentArgs     = "/silent /elevated"
     ValidExitCodes = @(0)
