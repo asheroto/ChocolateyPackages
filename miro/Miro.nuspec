@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>miro</id>
-        <version>0.8.24</version>
+        <version>0.8.26</version>
         <title>Miro</title>
         <authors>Miro</authors>
         <owners>asheroto</owners>
