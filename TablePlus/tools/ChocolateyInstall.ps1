@@ -1,12 +1,12 @@
 $ErrorActionPreference = "Stop"
 
-$version = "5.7.1"
+$version = "5.8.0"
 
 $packageArgs = @{
     packageName    = "TablePlus"
     fileType       = "exe"
     url            = "https://download.tableplus.com/windows/${version}/TablePlusSetup.exe"
-    checksum       = "BF96F7A6445E2F453484B856B90650920687E7226765F8D06DA22A9B0215E1CA"
+    checksum       = "17A63DB214FC29A2D13AD59B6B633E492F127AA5C589A398E62F5C42C1264E26"
     checksumType   = "sha256"
     silentArgs     = "/VERYSILENT"
     validExitCodes = @(0)
