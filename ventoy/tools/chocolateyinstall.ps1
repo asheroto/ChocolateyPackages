@@ -3,13 +3,14 @@ $ErrorActionPreference = "Stop";
 # ventoy-$version
 # └── Ventoy.exe
 # └── Ventoy2Disk.exe
+# └── VentoyVlnk.exe
 # └── other data
 
 # Release URL: https://github.com/ventoy/Ventoy/releases
-$packageName   = "ventoy"
-$version       = "1.0.97" # Chocolatey package version may differ from the filename version
-$url           = "https://github.com/ventoy/Ventoy/releases/download/v${version}/${packageName}-${version}-windows.zip"
-$checksum      = "44FB53F26872C6304E1CB3D47B65D0613665666100C48DEEEE4CD87901FB500F"
+$packageName = "ventoy"
+$version = "1.0.97" # Chocolatey package version may differ from the filename version
+$url = "https://github.com/ventoy/Ventoy/releases/download/v${version}/${packageName}-${version}-windows.zip"
+$checksum = "44FB53F26872C6304E1CB3D47B65D0613665666100C48DEEEE4CD87901FB500F"
 $unzipLocation = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
 
 $packageArgs = @{
@@ -28,18 +29,37 @@ Install-ChocolateyZipPackage @packageArgs
 Copy-Item -Path "$unzipLocation\ventoy-$version\*" -Destination $unzipLocation -Force -Recurse -ErrorAction SilentlyContinue
 Remove-Item "$unzipLocation\ventoy-$version" -Force -Recurse -ErrorAction SilentlyContinue
 
+# Parse package parameters
+$pp = Get-PackageParameters
+
+# Parse package parameters
+$pp = Get-PackageParameters
+
 # Create shortcuts
+# Each entry in the array has the format: [Shortcut Name, Target Executable, Additional Arguments, Desktop Shortcut Flag, Start Menu Shortcut Flag]
 @(
-    , @('Ventoy', 'Ventoy2Disk.exe')
-    , @('Ventoy Plugson', 'VentoyPlugson.exe')
+    , @('Ventoy', 'Ventoy2Disk.exe', '', 'NoDesktopShortcutVentoy', 'NoStartMenuShortcutVentoy')
+    , @('Ventoy Plugson', 'VentoyPlugson.exe', '', 'NoDesktopShortcutVentoyPlugson', 'NoStartMenuShortcutVentoyPlugson')
+    , @('Ventoy Vlnk', 'VentoyVlnk.exe', '-s', 'NoDesktopShortcutVentoyVlnk', 'NoStartMenuShortcutVentoyVlnk')
 ) | ForEach-Object {
-    $targetPath = Join-Path $unzipLocation $_[1]
+    # Assigning values to variables for clarity
+    $shortcutName = $_[0]
+    $executableName = $_[1]
+    $additionalArguments = $_[2]
+    $noDesktopShortcutFlag = $_[3]
+    $noStartMenuShortcutFlag = $_[4]
 
-    # Create Programs shortcuts
-    $programsShortcutPath = Join-Path ([Environment]::GetFolderPath("Programs")) "$($_[0]).lnk"
-    Install-ChocolateyShortcut -ShortcutFilePath $programsShortcutPath -Target $targetPath -WorkingDirectory $unzipLocation
+    $targetPath = Join-Path $unzipLocation $executableName
 
-    # Create Desktop shortcuts
-    $desktopShortcutPath = Join-Path ([Environment]::GetFolderPath("Desktop")) "$($_[0]).lnk"
-    Install-ChocolateyShortcut -ShortcutFilePath $desktopShortcutPath -Target $targetPath -WorkingDirectory $unzipLocation
+    # Check and Create Desktop shortcuts
+    if (!$pp[$noDesktopShortcutFlag]) {
+        $desktopShortcutPath = Join-Path ([Environment]::GetFolderPath("Desktop")) "$shortcutName.lnk"
+        Install-ChocolateyShortcut -ShortcutFilePath $desktopShortcutPath -Target $targetPath -WorkingDirectory $unzipLocation -Arguments $additionalArguments
+    }
+
+    # Check and Create Programs shortcuts
+    if (!$pp[$noStartMenuShortcutFlag]) {
+        $programsShortcutPath = Join-Path ([Environment]::GetFolderPath("Programs")) "$shortcutName.lnk"
+        Install-ChocolateyShortcut -ShortcutFilePath $programsShortcutPath -Target $targetPath -WorkingDirectory $unzipLocation -Arguments $additionalArguments
+    }
 }
