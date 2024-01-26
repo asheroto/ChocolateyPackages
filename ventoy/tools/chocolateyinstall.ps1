@@ -1,4 +1,4 @@
-$ErrorActionPreference = "Stop";
+﻿$ErrorActionPreference = "Stop";
 
 # ventoy-$version
 # └── Ventoy.exe
@@ -32,9 +32,6 @@ Remove-Item "$unzipLocation\ventoy-$version" -Force -Recurse -ErrorAction Silent
 # Parse package parameters
 $pp = Get-PackageParameters
 
-# Parse package parameters
-$pp = Get-PackageParameters
-
 # Create shortcuts
 # Each entry in the array has the format: [Shortcut Name, Target Executable, Additional Arguments, Desktop Shortcut Flag, Start Menu Shortcut Flag]
 @(
@@ -46,19 +43,19 @@ $pp = Get-PackageParameters
     $shortcutName = $_[0]
     $executableName = $_[1]
     $additionalArguments = $_[2]
-    $noDesktopShortcutFlag = $_[3]
-    $noStartMenuShortcutFlag = $_[4]
+    $noDesktopShortcutFlag = $_[3].ToLower()
+    $noStartMenuShortcutFlag = $_[4].ToLower()
 
     $targetPath = Join-Path $unzipLocation $executableName
 
     # Check and Create Desktop shortcuts
-    if (!$pp[$noDesktopShortcutFlag]) {
+    if (!$pp[$noDesktopShortcutFlag.ToLower()]) {
         $desktopShortcutPath = Join-Path ([Environment]::GetFolderPath("Desktop")) "$shortcutName.lnk"
         Install-ChocolateyShortcut -ShortcutFilePath $desktopShortcutPath -Target $targetPath -WorkingDirectory $unzipLocation -Arguments $additionalArguments
     }
 
     # Check and Create Programs shortcuts
-    if (!$pp[$noStartMenuShortcutFlag]) {
+    if (!$pp[$noStartMenuShortcutFlag.ToLower()]) {
         $programsShortcutPath = Join-Path ([Environment]::GetFolderPath("Programs")) "$shortcutName.lnk"
         Install-ChocolateyShortcut -ShortcutFilePath $programsShortcutPath -Target $targetPath -WorkingDirectory $unzipLocation -Arguments $additionalArguments
     }
