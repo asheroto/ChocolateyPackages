@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>proxyman</id>
         <version>2.11.1</version>
@@ -9,9 +9,9 @@
         <owners>asheroto</owners>
         <licenseUrl>https://proxyman.io/eula</licenseUrl>
         <projectUrl>https://proxyman.io</projectUrl>
-        <iconUrl>CHANGE_THIS_VALUE</iconUrl>
+        <iconUrl>https://rawcdn.githack.com/asheroto/ChocolateyPackages/0cf5cf0d99d595e7894ae90adf6627629a25db98/proxyman/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>![Screenshot of Proxyman](CHANGE_THIS_VALUE)
+        <description>![Screenshot of Proxyman](https://rawcdn.githack.com/asheroto/ChocolateyPackages/0cf5cf0d99d595e7894ae90adf6627629a25db98/proxyman/screenshot.png)
 
 Modern and powerful HTTP debugging proxy tool.
 
@@ -20,7 +20,6 @@ Modern and powerful HTTP debugging proxy tool.
 - **Intuitive Interface**: Designed for ease of use with a modern UI.
 - **Advanced Debugging Features**: Breakpoints, request/response modification, and more.
 - **Extensive Support for Protocols**: Support for WebSocket, gRPC, and more.
-- **Native macOS Application**: Optimized for performance and ease of use on macOS.
 
 ## Basic Features
 - **Inspect HTTP/HTTPS traffic in plain text**
@@ -40,11 +39,14 @@ Modern and powerful HTTP debugging proxy tool.
 - JSONPath Filter
 - Customize Toolbar
 
-For more information, visit [Proxyman.io](https://proxyman.io/).</description>
+## License
+When used for personal purposes, there is no time limit on the free version. However, for commercial purposes, a license is required after 2 weeks. See the [license page](https://docs.proxyman.io/license) for more information.
+
+[Proxyman.io](https://proxyman.io/)</description>
         <summary>Capture, inspect, and manipulate HTTP/HTTPS traffic with ease.</summary>
-        <releaseNotes>CHANGE_THIS_VALUE</releaseNotes>
+        <releaseNotes>https://proxyman.io/changelog-windows</releaseNotes>
         <copyright>© 2023 Proxyman. All rights reserved</copyright>
-        <tags>proxyman http https proxy debugging tool macos</tags>
+        <tags>proxyman http https proxy debugging tool network development web monitoring inspection api testing security analysis traffic troubleshooting</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/proxyman</packageSourceUrl>
         <docsUrl>https://docs.proxyman.io/</docsUrl>
         <bugTrackerUrl>https://github.com/ProxymanApp/Proxyman/issues</bugTrackerUrl>
