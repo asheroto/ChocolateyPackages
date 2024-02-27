@@ -19,6 +19,7 @@ Set-Location $scriptPath
 ./recuva/update.ps1
 ./nvm.install/update.ps1
 ./metadataplusplus/update.ps1
+./proxyman/update.ps1
 
 # Return
 Pop-Location

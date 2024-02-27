@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>proxyman</id>
+        <version>2.11.1</version>
+        <title>Proxyman</title>
+        <authors>Proxyman</authors>
+        <owners>asheroto</owners>
+        <licenseUrl>https://proxyman.io/eula</licenseUrl>
+        <projectUrl>https://proxyman.io</projectUrl>
+        <iconUrl>CHANGE_THIS_VALUE</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>![Screenshot of Proxyman](CHANGE_THIS_VALUE)
+
+Modern and powerful HTTP debugging proxy tool.
+
+## Features
+- **High-performance HTTP Proxy**: Intercept and manipulate HTTP/HTTPS requests and responses.
+- **Intuitive Interface**: Designed for ease of use with a modern UI.
+- **Advanced Debugging Features**: Breakpoints, request/response modification, and more.
+- **Extensive Support for Protocols**: Support for WebSocket, gRPC, and more.
+- **Native macOS Application**: Optimized for performance and ease of use on macOS.
+
+## Basic Features
+- **Inspect HTTP/HTTPS traffic in plain text**
+- **SSL Proxying**
+- Proxying on iOS Devices, iOS Simulator and Android
+- Export Requests/ Responses
+- Content Filter
+- Body Syntax Highlighting
+- JSON/ Tree View Format
+- Horizontal/Vertical Layout
+- Finder Categorize
+- Multiple Tabs
+- Custom Previewer Tabs
+- Custom Header Columns
+- Highlight with Color &amp; Add Comment
+- MessagePack Body Previewer
+- JSONPath Filter
+- Customize Toolbar
+
+For more information, visit [Proxyman.io](https://proxyman.io/).</description>
+        <summary>Capture, inspect, and manipulate HTTP/HTTPS traffic with ease.</summary>
+        <releaseNotes>CHANGE_THIS_VALUE</releaseNotes>
+        <copyright>© 2023 Proxyman. All rights reserved</copyright>
+        <tags>proxyman http https proxy debugging tool macos</tags>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/proxyman</packageSourceUrl>
+        <docsUrl>https://docs.proxyman.io/</docsUrl>
+        <bugTrackerUrl>https://github.com/ProxymanApp/Proxyman/issues</bugTrackerUrl>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
+</package>
