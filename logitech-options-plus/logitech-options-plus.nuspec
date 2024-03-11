@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>logitech-options-plus</id>
-        <version>1.64.527952</version>
+        <version>1.66.531337</version>
         <title>Logi Options+</title>
         <authors>Logitech Inc.</authors>
         <owners>bcurran3, asheroto</owners>
@@ -17,9 +17,9 @@
 
 [Logi Options+](https://www.logitech.com/en-us/software/logi-options-plus.html) lets you customize your [Logitech](https://www.logitech.com/) mouse and keyboard settings. It allows you to change function key shortcuts, customize mouse buttons, adjust point and scroll behavior, enable and disable touchpad gestures, and get on-screen notifications when your device’s battery runs low. It is a powerful tool that can help you personalize your Logitech devices to your liking.
 
-You can find a list of supported devices for Logi Options+ at [Logitech Support](https://www.logitech.com/en-us/software/logi-options-plus.html?modalclick=options#supported-devices). The list is updated regularly by Logitech.
+You can find a list of supported devices for Logi Options+ at [Logitech Support](https://bit.ly/logi-options-plus-supported-devices). The list is updated regularly by Logitech.
 
-#### Package Note
+### Package Note
 This is a virtual package to help find and install [Logi Options+](https://community.chocolatey.org/packages/logioptionsplus). It will install the program package `logioptionsplus` as a dependency.</description>
         <summary>Enhance your experience. Logi Options+ is the powerful, easy-to-use, next-gen application that enables customization for Logitech mice and keyboards so you can work how you want.</summary>
         <releaseNotes>https://support.logi.com/hc/en-us/articles/1500005516462-Logi-Options-Release-Notes</releaseNotes>
@@ -27,7 +27,10 @@ This is a virtual package to help find and install [Logi Options+](https://commu
         <tags>logitech logi options mouse keyboard headset driver utility</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/logitech-options-plus</packageSourceUrl>
         <dependencies>
-            <dependency id="logioptionsplus" version="1.64.527952" />
+            <dependency id="logioptionsplus" version="1.66.531337" />
         </dependencies>
     </metadata>
+    <files>
+        <file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
+    </files>
 </package>
