@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>laravel-herd</id>
+        <version>1.0.1</version>
+        <title>Laravel Herd</title>
+        <authors>Beyond Code GmbH in cooperation with Laravel</authors>
+        <owners>asheroto</owners>
+        <licenseUrl>CHANGE_THIS_VALUE</licenseUrl>
+        <projectUrl>https://herd.laravel.com/windows</projectUrl>
+        <iconUrl>CHANGE_THIS_VALUE</iconUrl>
+        <requireLicenseAcceptance>CHANGE_THIS_VALUE</requireLicenseAcceptance>
+        <description>![Screenshot of Laravel Herd](CHANGE_THIS_VALUE)
+
+REMEMBER TO USE CLIPBOARD2MARKDOWN FOR COPYING DESCRIPTION FROM WEBSITE!
+Laravel Herd is a blazing fast, native Laravel and PHP development environment for Windows, providing all necessary tools for Laravel development, including PHP and nginx, with Herd Pro offering local service management for databases, caches, and additional testing and debugging capabilities.
+
+After installing Herd, it routes all requests to *.test domains to the correct sites on your local machine, and allows you to use composer, the Laravel installer, and Expose directly in your terminal.
+
+## Features
+- **Blazing Fast Development**: Streamlines Laravel and PHP setup on Windows.
+- **Multiple PHP Versions**: Supports PHP 7.4 - 8.3, allowing switching between versions swiftly.
+- **Integrated Services with Herd Pro**: Offers MySQL, Redis, Meilisearch, MinIO, and Laravel Reverb services.
+- **Debugging and Testing**: Advanced debugging with dump() and dd() integration and Xdebug support.
+- **Node.js Version Management**: Includes nvm for managing Node.js versions.
+
+For more information, visit [Herd's official website](https://herd.laravel.com/windows).</description>
+        <summary>Fast, native Laravel and PHP development environment for Windows with integrated services and debugging features.</summary>
+        <releaseNotes>https://herd.laravel.com/changelog</releaseNotes>
+        <copyright>© Beyond Code GmbH and Laravel</copyright>
+        <tags>laravel php development environment windows herd nvm xdebug mysql redis meilisearch minio</tags>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/herd</packageSourceUrl>
+        <docsUrl>https://herd.laravel.com/docs/windows/1/getting-started/about-herd</docsUrl>
+        <bugTrackerUrl>CHANGE_THIS_VALUE</bugTrackerUrl>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
+</package>
