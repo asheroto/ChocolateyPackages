@@ -20,7 +20,7 @@
 You can find a list of supported devices for Logi Options+ at [Logitech Support](https://bit.ly/logi-options-plus-supported-devices). The list is updated regularly by Logitech.
 
 ### Package Note
-This is a virtual package to help find and install [Logi Options+](https://community.chocolatey.org/packages/logioptionsplus). It will install the program package `logioptionsplus` as a dependency.</description>
+This is a virtual package to help find and install [Logi Options+](https://community.chocolatey.org/packages/logioptionsplus). It will install the package `logioptionsplus` as a dependency.</description>
         <summary>Enhance your experience. Logi Options+ is the powerful, easy-to-use, next-gen application that enables customization for Logitech mice and keyboards so you can work how you want.</summary>
         <releaseNotes>https://support.logi.com/hc/en-us/articles/1500005516462-Logi-Options-Release-Notes</releaseNotes>
         <copyright>© 2023 Logitech. All rights reserved</copyright>

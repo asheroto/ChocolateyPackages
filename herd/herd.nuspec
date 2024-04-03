@@ -2,7 +2,7 @@
 <!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
-        <id>laravel-herd</id>
+        <id>herd</id>
         <version>1.0.1</version>
         <title>Laravel Herd</title>
         <authors>Beyond Code GmbH in cooperation with Laravel</authors>
@@ -32,7 +32,8 @@ After installing Herd, it routes all requests to *.test domains to the correct s
 
 Herd is a free product, but has a paid version called [Herd Pro](https://herd.laravel.com/windows#plans) that offers additional features and services.
 
-For more information, visit [Herd's official website](https://herd.laravel.com/windows).</description>
+### Package Note
+This is a virtual package to help find and install [Laravel Herd](https://community.chocolatey.org/packages/laravel-herd). It will install the package `laravel-herd` as a dependency.</description>
         <summary>Fast, native Laravel and PHP development environment for Windows with integrated services and debugging features.</summary>
         <releaseNotes>https://herd.laravel.com/changelog</releaseNotes>
         <copyright>© Beyond Code GmbH and Laravel</copyright>
@@ -40,8 +41,8 @@ For more information, visit [Herd's official website](https://herd.laravel.com/w
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/laravel-herd</packageSourceUrl>
         <docsUrl>https://herd.laravel.com/docs/windows/1/getting-started/about-herd</docsUrl>
         <bugTrackerUrl>https://github.com/beyondcode/herd-community/issues</bugTrackerUrl>
+        <dependencies>
+            <dependency id="laravel-herd" version="1.0.1" />
+        </dependencies>
     </metadata>
-    <files>
-        <file src="tools\**" target="tools" />
-    </files>
 </package>
