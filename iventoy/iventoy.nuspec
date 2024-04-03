@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>iventoy</id>
-    <version>1.0.19</version>
+    <version>1.0.20</version>
     <title>iVentoy</title>
     <authors>iventoy.com</authors>
     <owners>asheroto</owners>
