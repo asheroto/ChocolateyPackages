@@ -1,7 +1,12 @@
 ﻿$ErrorActionPreference = "Stop";
 
 $packageName = "ventoy"
-$unzipLocation = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
+
+# Removed April 2024 to account for all users (stopped using LocalApplicationData)
+# $unzipLocation = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
+
+# Added April 2024 to account for all users (switched to ChocolateyInstall\lib\ventoy)
+$unzipLocation = [System.IO.Path]::Combine($env:ChocolateyInstall, "lib", $packageName)
 
 # Uninstalling shortcuts
 # Each entry in the array has the format: [Shortcut Name, Target Executable]

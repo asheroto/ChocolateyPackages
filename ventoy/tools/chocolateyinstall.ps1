@@ -11,7 +11,15 @@ $packageName = "ventoy"
 $version = "1.0.97" # Chocolatey package version may differ from the filename version
 $url = "https://github.com/ventoy/Ventoy/releases/download/v${version}/${packageName}-${version}-windows.zip"
 $checksum = "44FB53F26872C6304E1CB3D47B65D0613665666100C48DEEEE4CD87901FB500F"
-$unzipLocation = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
+
+# Remove Ventoy directory in old location if it exists (local app data) - implemented April 2024
+$oldUnzipLocation = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
+if (Test-Path $oldUnzipLocation) {
+    Remove-Item -Path $oldUnzipLocation -Recurse -Force -ErrorAction SilentlyContinue
+}
+
+# Set new install location to ChocolateyInstall\lib\ventoy - implemented April 2024
+$unzipLocation = [System.IO.Path]::Combine($env:ChocolateyInstall, "lib", $packageName)
 
 $packageArgs = @{
     packageName   = $packageName
