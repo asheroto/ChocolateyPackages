@@ -11,12 +11,23 @@ $checksum64    = "BE41A256B44C872CC15229E273B32F62E41E22371E14D6AEFE7F5A72C0D3E5
 # Set new install location to ChocolateyInstall\lib\iventoy - implemented April 2024
 $unzipLocation = [System.IO.Path]::Combine($env:ChocolateyInstall, "lib", $packageName)
 
+$packageArgs = @{
+    packageName    = $packageName
+    unzipLocation  = $unzipLocation
+    fileType       = 'ZIP'
+    url            = $url
+    checksum       = $checksum
+    checksumType   = 'sha256'
+    url64          = $url64
+    checksum64     = $checksum64
+    checksumType64 = 'sha256'
+}
+
+Install-ChocolateyZipPackage @packageArgs
+
 # Remove iVentoy directory in old location if it exists (local app data) - implemented April 2024
 $oldUnzipLocation = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
 if (Test-Path $oldUnzipLocation) {
-    # Remove all files/folders except the iso folder
-    Get-ChildItem -Path $oldUnzipLocation | Where-Object { $_.Name -ne "iso" } | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
-
     # Move the iso folder to the new location
     $isoPath = Join-Path $oldUnzipLocation "iso"
     if (Test-Path $isoPath) {
@@ -35,20 +46,6 @@ if (Test-Path $oldUnzipLocation) {
         }
     }
 }
-
-$packageArgs = @{
-    packageName    = $packageName
-    unzipLocation  = $unzipLocation
-    fileType       = 'ZIP'
-    url            = $url
-    checksum       = $checksum
-    checksumType   = 'sha256'
-    url64          = $url64
-    checksum64     = $checksum64
-    checksumType64 = 'sha256'
-}
-
-Install-ChocolateyZipPackage @packageArgs
 
 # Copy all files/folders from the iventoy-$version folder to the unzipLocation
 Copy-Item -Path "$unzipLocation\iventoy-$version\*" -Destination $unzipLocation -Force -Recurse -ErrorAction SilentlyContinue
