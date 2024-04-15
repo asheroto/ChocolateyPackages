@@ -1,33 +1,33 @@
-﻿$ErrorActionPreference	= "Stop";
+﻿$ErrorActionPreference = "Stop"
 
 $packageName = "iventoy"
 
-# Set new install location to ChocolateyInstall\lib\iventoy - implemented April 2024
+# Set new install location to $env:ChocolateyInstall\lib\iventoy - implemented April 2024
 $unzipLocation = [System.IO.Path]::Combine($env:ChocolateyInstall, "lib", $packageName)
 
-@(
-	, @('iVentoy', 'iVentoy_32.exe')
-	, @('iVentoy', 'iVentoy_64.exe')
-	, @('iVentoy ISOs', 'iso')
-) | ForEach-Object {
-	# Remove Programs shortcuts
-	$targetPath = Join-Path ([Environment]::GetFolderPath("Programs")) "$($_[0]).lnk"
+# Array of shortcut locations
+$shortcutFolders = @([Environment]::GetFolderPath("Programs"), [Environment]::GetFolderPath("Desktop"))
 
-	# If the $targetPath exists, remove the shortcut
-	if (Test-Path $targetPath) {
-		Remove-Item -Path $targetPath -ErrorAction SilentlyContinue
-	}
+# Shortcut base names
+$shortcutNames = @('iVentoy', 'iVentoy ISOs')
 
-	# Remove Desktop shortcuts
-	$targetPath = Join-Path ([Environment]::GetFolderPath("Desktop")) "$($_[0]).lnk"
-
-	# If the $targetPath exists, remove the shortcut
-	if (Test-Path $targetPath) {
-		Remove-Item -Path $targetPath -ErrorAction SilentlyContinue
-	}
+# Remove shortcuts from Programs and Desktop
+foreach ($folder in $shortcutFolders) {
+    foreach ($name in $shortcutNames) {
+        $targetPath = Join-Path $folder "$name.lnk"
+        if (Test-Path $targetPath) {
+            Remove-Item -Path $targetPath -ErrorAction SilentlyContinue
+        }
+    }
 }
 
+# On uninstall, remove all files/folders except the iso folder and its contents in $unzipLocation
 if (Test-Path $unzipLocation) {
-	# Remove all files/folders except the iso folder
-	Get-ChildItem -Path $unzipLocation | Where-Object { $_.Name -ne "iso" } | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
+    # Retrieve all items from the uninstall location, except the 'iso' folder
+    $items = Get-ChildItem -Path $unzipLocation -Recurse -Force | Where-Object { $_.FullName -notlike "*\iso\*" -and $_.FullName -ne "$unzipLocation\iso" }
+
+    # Remove each item that is not the 'iso' folder or its contents
+    foreach ($item in $items) {
+        Remove-Item -Path $item.FullName -Recurse -Force -ErrorAction SilentlyContinue
+    }
 }
