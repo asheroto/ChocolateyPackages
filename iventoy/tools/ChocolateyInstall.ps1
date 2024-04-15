@@ -1,12 +1,12 @@
 $ErrorActionPreference	= "Stop";
 
 # Release URL: https://github.com/ventoy/PXE/releases
-$packageName   = "iventoy"
-$version       = "1.0.20" # Chocolatey package version may differ from the filename version
-$url           = "https://github.com/ventoy/PXE/releases/download/v${version}/iventoy-${version}-win32-free.zip"
-$checksum      = "0C7A81FF54B7449B90A4774E3BE1EA692E8B7A9DCA941A2DC324A0FA844C3788"
-$url64         = "https://github.com/ventoy/PXE/releases/download/v${version}/iventoy-${version}-win64-free.zip";
-$checksum64    = "BE41A256B44C872CC15229E273B32F62E41E22371E14D6AEFE7F5A72C0D3E51A"
+$packageName = "iventoy"
+$version = "1.0.20" # Chocolatey package version may differ from the filename version
+$url = "https://github.com/ventoy/PXE/releases/download/v${version}/iventoy-${version}-win32-free.zip"
+$checksum = "0C7A81FF54B7449B90A4774E3BE1EA692E8B7A9DCA941A2DC324A0FA844C3788"
+$url64 = "https://github.com/ventoy/PXE/releases/download/v${version}/iventoy-${version}-win64-free.zip";
+$checksum64 = "BE41A256B44C872CC15229E273B32F62E41E22371E14D6AEFE7F5A72C0D3E51A"
 
 # Set new install location to ChocolateyInstall\lib\iventoy - implemented April 2024
 $unzipLocation = [System.IO.Path]::Combine($env:ChocolateyInstall, "lib", $packageName)
@@ -27,22 +27,42 @@ Install-ChocolateyZipPackage @packageArgs
 
 # Move iso folder and remove iVentoy directory in old location if it exists (local app data) - implemented April 2024
 $oldUnzipLocation = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
+$oldIsoPath = Join-Path $oldUnzipLocation "iso"
+
+# If the old location exists, move the iso folder to the new location
 if (Test-Path $oldUnzipLocation) {
-    # Move the iso folder to the new location
-    $isoPath = Join-Path $oldUnzipLocation "iso"
-    if (Test-Path $isoPath) {
-        # Ensure the new install location exists
-        if (-not (Test-Path $unzipLocation)) {
-            New-Item -Path $unzipLocation -ItemType Directory -Force
+    $isoContents = Get-ChildItem -Path $oldIsoPath -Recurse
+    if ($isoContents) {
+        # move iso folder to new location
+        Move-Item -Path $oldIsoPath -Destination $unzipLocation -Force -ErrorAction SilentlyContinue
+
+        # iso folder contains data, remove everything except the iso folder
+        Get-ChildItem -Path $unzipLocation -Recurse -Exclude "iso" |
+        Where-Object { -not $_.FullName.StartsWith($isoFolder, [System.StringComparison]::OrdinalIgnoreCase) } |
+        ForEach-Object {
+            try {
+                Remove-Item -Path $_.FullName -Force -Recurse -ErrorAction Stop
+            } catch {
+                Write-Output "Error removing item: $($_.Exception.Message)"
+            }
         }
 
-        # Move the iso folder
-        $newIsoPath = Join-Path $unzipLocation "iso"
-        Move-Item -Path $isoPath -Destination $newIsoPath -Force
-
-        # Remove the old unzip location if it is empty
-        if (-not (Get-ChildItem -Path $oldUnzipLocation)) {
-            Remove-Item -Path $oldUnzipLocation -Force
+        # Confirm the old iso folder was moved, if so, remove the iventoy directory
+        if (-Not (Test-Path $oldIsoPath)) {
+            try {
+                Remove-Item -Path $oldUnzipLocation -Recurse -Force -ErrorAction Stop
+            } catch {
+                Write-Output "Error removing directory ${oldUnzipLocation}: $($_.Exception.Message)"
+            }
+        } else {
+            Write-Output "Error moving iso folder to new location, old location still exists: ${oldIsoPath}"
+        }
+    } else {
+        # iso folder is empty, remove the entire iventoy directory
+        try {
+            Remove-Item -Path $unzipLocation -Recurse -Force -ErrorAction Stop
+        } catch {
+            Write-Output "Error removing directory ${unzipLocation}: $($_.Exception.Message)"
         }
     }
 }
