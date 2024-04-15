@@ -25,7 +25,7 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 
-# Remove iVentoy directory in old location if it exists (local app data) - implemented April 2024
+# Move iso folder and remove iVentoy directory in old location if it exists (local app data) - implemented April 2024
 $oldUnzipLocation = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
 if (Test-Path $oldUnzipLocation) {
     # Move the iso folder to the new location

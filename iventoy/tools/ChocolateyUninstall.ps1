@@ -1,7 +1,9 @@
 ﻿$ErrorActionPreference	= "Stop";
 
 $packageName = "iventoy"
-$unzipLocation = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
+
+# Set new install location to ChocolateyInstall\lib\iventoy - implemented April 2024
+$unzipLocation = [System.IO.Path]::Combine($env:ChocolateyInstall, "lib", $packageName)
 
 @(
 	, @('iVentoy', 'iVentoy_32.exe')

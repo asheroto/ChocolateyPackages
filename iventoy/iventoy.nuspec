@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
-  <metadata>
-    <id>iventoy</id>
-    <version>1.0.20</version>
-    <title>iVentoy</title>
-    <authors>iventoy.com</authors>
-    <owners>asheroto</owners>
-    <licenseUrl>https://www.iventoy.com/en/doc_license.html</licenseUrl>
-    <projectUrl>https://www.iventoy.com</projectUrl>
-    <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/iventoy</packageSourceUrl>
-    <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/d91d69ab/iventoy/icon.png</iconUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <description>![iventoy](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/d91d69ab/iventoy/boot_ground.png)
+    <metadata>
+        <id>iventoy</id>
+        <version>1.0.20</version>
+        <title>iVentoy</title>
+        <authors>iventoy.com</authors>
+        <owners>asheroto</owners>
+        <licenseUrl>https://www.iventoy.com/en/doc_license.html</licenseUrl>
+        <projectUrl>https://www.iventoy.com</projectUrl>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/iventoy</packageSourceUrl>
+        <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/d91d69ab/iventoy/icon.png</iconUrl>
+        <requireLicenseAcceptance>true</requireLicenseAcceptance>
+        <description>![iventoy](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/d91d69ab/iventoy/boot_ground.png)
 
 ## Summary
 - iVentoy is an enhanced version of the PXE server.
@@ -43,15 +43,22 @@
 - Variables Expansion supported for install script [Notes](https://www.iventoy.com/en/doc_autoinstall.html)
 - Automatically solve the driver missing during Linux installation.
 
-See [iventoy.com](https://www.iventoy.com/) for details.</description>
-    <summary>Ventoy is an open source tool to create bootable USB drive for ISO files.</summary>
-    <releaseNotes>https://www.iventoy.com/en/doc_news.html</releaseNotes>
-    <copyright>Copyright © 2020-2023 longpanda</copyright>
-    <tags>iventoy pxe boot network ipxe f12</tags>
-    <docsUrl>https://www.iventoy.com/en/doc_start.html</docsUrl>
-    <bugTrackerUrl>https://forums.ventoy.net/forumdisplay.php?fid=8</bugTrackerUrl>
-  </metadata>
-  <files>
-    <file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg;boot_ground.png" />
-  </files>
+See [iventoy.com](https://www.iventoy.com/) for details.
+
+## Package Note
+
+Starting with version `1.0.20`, iVentoy will now be installed to `$env:ChocolateyInstall\lib\iventoy`. This change was made because Chocolatey is intended to be used in a multi-user environment. Before this version, the package installation script was placing iVentoy in `$env:LocalAppData\iventoy`, which is limited to the current user only.
+
+**iso folder moved:** The `iso` folder will be moved to this new location and will not be deleted.
+**iso folder retention on uninstall:** If you choose to uninstall iVentoy, the `iso` folder will not be deleted.</description>
+        <summary>iVentoy is an enhanced PXE server that allows booting and installing multiple operating systems over the network from ISO files with simple setup and numerous advanced features for enterprise environments.</summary>
+        <releaseNotes>https://www.iventoy.com/en/doc_news.html</releaseNotes>
+        <copyright>Copyright © 2020-2023 longpanda</copyright>
+        <tags>iventoy pxe boot network ipxe f12</tags>
+        <docsUrl>https://www.iventoy.com/en/doc_start.html</docsUrl>
+        <bugTrackerUrl>https://forums.ventoy.net/forumdisplay.php?fid=8</bugTrackerUrl>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
 </package>

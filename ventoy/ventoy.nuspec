@@ -31,14 +31,11 @@
 -   Can be installed in USB/Local Disk/SSD/NVMe/SD Card
 -   Directly boot from ISO/WIM/IMG/VHD(x)/EFI files, no extraction needed
 -   Support to browse and boot ISO/WIM/IMG/VHD(x)/EFI files in local disk [Notes](https://www.ventoy.net/en/doc_vlnk.html)
--   No need to be continuous in disk for ISO/WIM/IMG/VHD(x)/EFI files
 -   Both MBR and GPT partition styles are supported
 -   x86 Legacy BIOS, IA32 UEFI, x86_64 UEFI, ARM64 UEFI, MIPS64EL UEFI supported
 -   IA32/x86_64 UEFI Secure Boot supported [Notes](https://www.ventoy.net/en/doc_secure.html)
 -   Linux Persistence supported [Notes](https://www.ventoy.net/en/plugin_persistence.html)
 -   Windows auto installation supported [Notes](https://www.ventoy.net/en/plugin_autoinstall.html)
--   Linux auto installation supported [Notes](https://www.ventoy.net/en/plugin_autoinstall.html)
--   Variables Expansion supported for Windows/Linux auto installation script [Notes](https://www.ventoy.net/en/plugin_autoinstall.html)
 -   Much more...
 
 See [ventoy.net](https://www.ventoy.net/) for details.
@@ -82,6 +79,6 @@ Starting with version `1.0.97.20240415`, Ventoy will now be installed to `$env:C
         <bugTrackerUrl>https://github.com/ventoy/Ventoy/issues</bugTrackerUrl>
     </metadata>
     <files>
-        <file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg;screenshot.png" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>
