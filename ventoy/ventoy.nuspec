@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>ventoy</id>
-        <version>1.0.97</version>
+        <version>1.0.97.20240415</version>
         <title>Ventoy</title>
         <authors>ventoy.net</authors>
         <owners>asheroto, Yato</owners>
@@ -67,7 +67,11 @@ This example command will install Ventoy without creating desktop shortcuts for 
 
 This command will install Ventoy without creating **any** desktop shortcuts...
 
-`choco install ventoy -params '/NoDesktopShortcutVentoy /NoDesktopShortcutVentoyPlugson /NoDesktopShortcutVentoyVlnk'`</description>
+`choco install ventoy -params '/NoDesktopShortcutVentoy /NoDesktopShortcutVentoyPlugson /NoDesktopShortcutVentoyVlnk'`
+
+## Package Note
+
+Starting with version `1.0.97.20240415`, Ventoy will now be installed to `$env:ChocolateyInstall\lib\ventoy`. This change was made because Chocolatey is intended to be used in a multi-user environment. Before this version, the package installation script was placing Ventoy in `$env:LocalAppData\ventoy`, which is limited to the current user only.</description>
         <summary>Ventoy is an open source tool to create bootable USB drive for ISO files.</summary>
         <releaseNotes>https://github.com/ventoy/Ventoy/releases</releaseNotes>
         <copyright>Copyright © 2019-2022 longpanda</copyright>

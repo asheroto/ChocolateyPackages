@@ -33,9 +33,14 @@ $packageArgs = @{
 # Install Ventoy zip package
 Install-ChocolateyZipPackage @packageArgs
 
-# Copy Ventoy.exe and Ventoy2Disk.exe to unzipLocation
-Copy-Item -Path "$unzipLocation\ventoy-$version\*" -Destination $unzipLocation -Force -Recurse -ErrorAction SilentlyContinue
-Remove-Item "$unzipLocation\ventoy-$version" -Force -Recurse -ErrorAction SilentlyContinue
+# Define the path to the version-specific Ventoy directory
+$ventoyVersionPath = [System.IO.Path]::Combine($unzipLocation, "ventoy-$version")
+
+# Copy all items from ventoy-$version directory to the unzipLocation
+Copy-Item -Path "$ventoyVersionPath\*" -Destination $unzipLocation -Force -Recurse -ErrorAction SilentlyContinue
+
+# Remove the version-specific Ventoy directory after copying its contents
+Remove-Item -Path $ventoyVersionPath -Force -Recurse -ErrorAction SilentlyContinue
 
 # Parse package parameters
 $pp = Get-PackageParameters
