@@ -14,13 +14,14 @@
 SoftPerfect Network Scanner is a free multi-threaded IPv4/IPv6 scanner with a modern interface and many advanced features. It is intended for both system administrators and general users interested in computer security. The program pings computers, scans for listening TCP/UDP ports and discovers shared folders, including system and hidden ones.
 
 In addition, it can retrieve practically any information about network computers via WMI, SNMP, HTTP, NetBios and has a bunch of other features. It can also resolve host names and auto-detect the local and external IP address range. To assist with network administration, it supports remote shutdown and Wake-On-LAN.
+
 		</description>
 		<docsUrl>https://www.softperfect.com/products/networkscanner/manual/</docsUrl>
-		<packageSourceUrl>https://github.com/digitalcardboard/chocolatey-packages/tree/master/manual/netscan</packageSourceUrl>
+		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/netscan.install</packageSourceUrl>
 		<tags>admin netscan portscanner network netbios snmp scanner</tags>
 		<copyright>© 2000-2024 SoftPerfect Pty Ltd, Australia</copyright>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl>http://cdn.rawgit.com/asheroto/Chocolatey-Packages/master/icons/netscan.install/icon.png</iconUrl>
+		<iconUrl>https://rawcdn.githack.com/asheroto/ChocolateyPackages/ec28c6ed222f4dd659ef70b2ed065e7e67f9af7e/netscan.install/icon.png</iconUrl>
 		<releaseNotes>https://www.softperfect.com/products/changelog.php?product_id=1</releaseNotes>
 		<dependencies>
 			<dependency id="netscan.install" />
