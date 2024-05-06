@@ -4,7 +4,7 @@
 	<metadata>
 		<id>netscan</id>
 		<title>SoftPerfect Network Scanner</title>
-		<version>8.1.4</version>
+		<version>8.2.1</version>
 		<authors>SoftPerfect</authors>
 		<owners>digitalcardboard</owners>
 		<projectUrl>https://www.softperfect.com/products/networkscanner/</projectUrl>
@@ -18,9 +18,9 @@ In addition, it can retrieve practically any information about network computers
 		<docsUrl>https://www.softperfect.com/products/networkscanner/manual/</docsUrl>
 		<packageSourceUrl>https://github.com/digitalcardboard/chocolatey-packages/tree/master/manual/netscan</packageSourceUrl>
 		<tags>admin netscan portscanner network netbios snmp scanner</tags>
-		<copyright>2000–2016 SoftPerfect, Australia</copyright>
+		<copyright>© 2000-2024 SoftPerfect Pty Ltd, Australia</copyright>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl>http://cdn.rawgit.com/digitalcardboard/chocolatey-packages/master/icons/netscan.png</iconUrl>
+		<iconUrl>http://cdn.rawgit.com/asheroto/Chocolatey-Packages/master/icons/netscan.install/icon.png</iconUrl>
 		<releaseNotes>https://www.softperfect.com/products/changelog.php?product_id=1</releaseNotes>
 		<dependencies>
 			<dependency id="netscan.install" />

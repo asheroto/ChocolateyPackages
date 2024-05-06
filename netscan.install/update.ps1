@@ -10,9 +10,8 @@ $ParentPath = Split-Path -Parent $ScriptPath
 
 # Create a hash table to store package information
 $packageInfo = @{
-    PackageName         = "fxsound"
-    FileUrl             = 'https://download.fxsound.com/fxsoundlatest'   # URL to download the file from
-    FileDestinationPath = '.\tools\fxsound_setup.exe'                    # Path to move/rename the temporary file to (if EXE is distributed in package)
+    PackageName         = "netscan.install"
+    FileUrl             = 'https://www.softperfect.com/download/freeware/netscan_setup.exe'   # URL to download the file from
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table
