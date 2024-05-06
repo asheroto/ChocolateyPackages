@@ -9,7 +9,7 @@
         <owners>asheroto, digitalcardboard</owners>
         <projectUrl>https://www.softperfect.com/products/networkscanner/</projectUrl>
         <summary>SoftPerfect Network Scanner is a free multi-threaded IPv4/IPv6 scanner with a modern interface and many advanced features.</summary>
-        <description>![Screenshot](https://rawcdn.githack.com/asheroto/ChocolateyPackages/ec28c6ed222f4dd659ef70b2ed065e7e67f9af7e/netscan.install/icon.png)
+        <description>![Screenshot](https://rawcdn.githack.com/asheroto/ChocolateyPackages/271ab8e5613d50510f06944385692b9cb3852cc4/netscan.install/screenshot.png)
 
 This fast, highly configurable IPv4/IPv6 scanner can streamline many of your network support procedures. Its well-designed interface, light weight and portability coupled with an extensive range of options and advanced features make SoftPerfect Network Scanner an invaluable tool, whether you are a professional system administrator, someone providing occasional network maintenance, or a general user interested in computer security.
 
@@ -39,7 +39,7 @@ This package supersedes the `netscan32` and `netscan64` packages. You should con
         <tags>admin netscan portscanner network netbios snmp scanner port scan soft perfect softperfect open active</tags>
         <copyright>© 2000-2024 SoftPerfect Pty Ltd, Australia</copyright>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <iconUrl>https://rawcdn.githack.com/asheroto/ChocolateyPackages/ec28c6ed222f4dd659ef70b2ed065e7e67f9af7e/netscan.install/icon.png</iconUrl>
+        <iconUrl>https://rawcdn.githack.com/asheroto/ChocolateyPackages/271ab8e5613d50510f06944385692b9cb3852cc4/netscan.install/icon.png</iconUrl>
         <releaseNotes>https://www.softperfect.com/products/changelog.php?product_id=1</releaseNotes>
         <dependencies>
             <dependency id="netscan.install" />
