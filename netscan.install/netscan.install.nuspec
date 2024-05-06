@@ -36,7 +36,7 @@ SoftPerfect Network Scanner can ping computers, scan ports, discover shared fold
 This package supersedes the `netscan32` and `netscan64` packages. You should consider uninstalling the deprecated packages to prevent any confusion.</description>
         <docsUrl>https://www.softperfect.com/products/networkscanner/manual/</docsUrl>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/netscan.install</packageSourceUrl>
-        <tags>admin netscan portscanner network netbios snmp scanner port scan soft perfect softperfect open active</tags>
+        <tags>netscan portscanner network netbios snmp scanner port scan soft perfect softperfect open active net</tags>
         <copyright>© 2000-2024 SoftPerfect Pty Ltd, Australia</copyright>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <iconUrl>https://rawcdn.githack.com/asheroto/ChocolateyPackages/271ab8e5613d50510f06944385692b9cb3852cc4/netscan.install/icon.png</iconUrl>
