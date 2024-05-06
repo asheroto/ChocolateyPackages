@@ -1,29 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-	<metadata>
-		<id>netscan.install</id>
-		<title>SoftPerfect Network Scanner (Install)</title>
-		<version>8.2.1</version>
-		<authors>SoftPerfect</authors>
-		<owners>digitalcardboard</owners>
-		<projectUrl>https://www.softperfect.com/products/networkscanner/</projectUrl>
-		<summary>SoftPerfect Network Scanner is a free multi-threaded IPv4/IPv6 scanner with a modern interface and many advanced features.</summary>
-		<description>__Note: This package supersedes the `netscan32` and `netscan64` packages. You should consider uninstalling the deprecated packages to prevent any confusion.__
+    <metadata>
+        <id>netscan.install</id>
+        <title>SoftPerfect Network Scanner (Install)</title>
+        <version>8.2.1</version>
+        <authors>SoftPerfect</authors>
+        <owners>asheroto, digitalcardboard</owners>
+        <projectUrl>https://www.softperfect.com/products/networkscanner/</projectUrl>
+        <summary>SoftPerfect Network Scanner is a free multi-threaded IPv4/IPv6 scanner with a modern interface and many advanced features.</summary>
+        <description>![Screenshot](https://rawcdn.githack.com/asheroto/ChocolateyPackages/ec28c6ed222f4dd659ef70b2ed065e7e67f9af7e/netscan.install/icon.png)
 
-SoftPerfect Network Scanner is a free multi-threaded IPv4/IPv6 scanner with a modern interface and many advanced features. It is intended for both system administrators and general users interested in computer security. The program pings computers, scans for listening TCP/UDP ports and discovers shared folders, including system and hidden ones.
+This fast, highly configurable IPv4/IPv6 scanner can streamline many of your network support procedures. Its well-designed interface, light weight and portability coupled with an extensive range of options and advanced features make SoftPerfect Network Scanner an invaluable tool, whether you are a professional system administrator, someone providing occasional network maintenance, or a general user interested in computer security.
 
-In addition, it can retrieve practically any information about network computers via WMI, SNMP, HTTP, NetBios and has a bunch of other features. It can also resolve host names and auto-detect the local and external IP address range. To assist with network administration, it supports remote shutdown and Wake-On-LAN.
-		</description>
-		<docsUrl>https://www.softperfect.com/products/networkscanner/manual/</docsUrl>
-		<packageSourceUrl>https://github.com/digitalcardboard/chocolatey-packages/tree/master/manual/netscan.install</packageSourceUrl>
-		<tags>admin netscan portscanner network netbios snmp scanner</tags>
-		<copyright>2000-2016 SoftPerfect, Australia</copyright>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl>http://cdn.rawgit.com/digitalcardboard/chocolatey-packages/master/icons/netscan.png</iconUrl>
-		<releaseNotes>https://www.softperfect.com/products/changelog.php?product_id=1</releaseNotes>
-	</metadata>
-	<files>
-		<file src="tools\**" target="tools" />
-	</files>
+SoftPerfect Network Scanner can ping computers, scan ports, discover shared folders and retrieve practically any information about network devices via WMI, SNMP, HTTP, SSH and PowerShell. It also scans for remote services, registry, files and performance counters; offers flexible filtering and display options and exports NetScan results to a variety of formats from XML to JSON.
+
+## Key Features
+- **IPv4 and IPv6 Support**: Fully supports both IPv4 and IPv6 discovery.
+- **Ping Sweep**: Performs a ping sweep and displays live devices.
+- **Hardware MAC-Addresses Detection**: Detects hardware MAC-addresses, even across routers.
+- **Shared Folders Discovery**: Discovers writable and hidden shared folders.
+- **IP Address Detection**: Detects internal and external IP addresses.
+- **System Information Retrieval**: Retrieves any system information via WMI, remote registry, file system and service manager.
+- **Port Scanning**: Scans for listening TCP ports, some UDP and SNMP services.
+- **User and System Information**: Retrieves currently logged-on users, configured user accounts, uptime, etc.
+- **Remote Command Execution**: Supports remote SSH, PowerShell and VBScript command execution.
+- **Third Party Application Integration**: Launches external third party applications.
+- **Network Management Tools**: Supports Wake-On-LAN, remote shutdown and sending network messages.
+- **Data Export**: Exports results to HTML, XML, JSON, CSV and TXT.
+- **Nmap Integration**: Integrates with Nmap for OS discovery, vulnerability tests, and much more.
+- **Portability**: Can be run from a USB flash drive without installation.
+
+## Package Note
+
+This package supersedes the `netscan32` and `netscan64` packages. You should consider uninstalling the deprecated packages to prevent any confusion.</description>
+        <docsUrl>https://www.softperfect.com/products/networkscanner/manual/</docsUrl>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/netscan.install</packageSourceUrl>
+        <tags>admin netscan portscanner network netbios snmp scanner port scan soft perfect softperfect open active</tags>
+        <copyright>© 2000-2024 SoftPerfect Pty Ltd, Australia</copyright>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <iconUrl>https://rawcdn.githack.com/asheroto/ChocolateyPackages/ec28c6ed222f4dd659ef70b2ed065e7e67f9af7e/netscan.install/icon.png</iconUrl>
+        <releaseNotes>https://www.softperfect.com/products/changelog.php?product_id=1</releaseNotes>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
 </package>
