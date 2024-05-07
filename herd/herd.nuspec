@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>herd</id>
-        <version>1.0.1</version>
+        <version>1.1.0</version>
         <title>Laravel Herd</title>
         <authors>Beyond Code GmbH in cooperation with Laravel</authors>
         <owners>asheroto</owners>
