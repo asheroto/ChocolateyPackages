@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Do not remove this test for UTF-8: if “Ω” doesn't appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
 	<metadata>
 		<id>hp-universal-print-driver-ps</id>
 		<version>7.2.0.25780</version>
@@ -10,7 +10,7 @@
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
 		<licenseUrl>https://support.hp.com/us-en/document/ish_4416646-4390016-16</licenseUrl>
 		<projectUrl>https://support.hp.com/us-en/drivers/selfservice/upd/4157320</projectUrl>
-		<iconUrl></iconUrl>
+		<iconUrl>https://rawcdn.githack.com/asheroto/ChocolateyPackages/b95d6fdab4e1eea631b402c1ac483bf52d3c2b0e/hp-universal-print-driver-ps/icon.svg</iconUrl>
 		<docsUrl>https://support.hp.com/us-en/product/hp-universal-print-driver-series-for-windows/503548/manuals</docsUrl>
 		<description># One versatile print driver for your PC or laptop
 

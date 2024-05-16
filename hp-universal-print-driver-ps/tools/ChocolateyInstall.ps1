@@ -9,9 +9,9 @@ $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $version    = "7.2.0.25780"
 
 $packageArgs = @{
-    packageName    = 'hp-universal-print-driver-pcl'
+    packageName    = 'hp-universal-print-driver-ps'
     url            = "https://ftp.hp.com/pub/softlib/software13/printers/UPD/upd-ps-x64-${version}.exe"
-    checksum       = '4421364A087B2C23540980AABE45185BE7FD5A81F2E246A708E26FFCEE437124'
+    checksum       = '2A0FE7B900BCEF037F652AE354AB3C6BDB881BDDC5297C6F2620AC0DFA0B4B5E'
     softwareName   = 'HP Universal Printing PS'
     fileLocation   = "$toolsDir\unzippedfiles\install.exe"
     unzipLocation  = "$toolsDir\unzippedfiles"
