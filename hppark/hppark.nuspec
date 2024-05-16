@@ -26,7 +26,7 @@ The PARK is designed to streamline the management of HP print environments, maki
 
 [User Guide](https://support.hp.com/us-en/product/setup-user-guides/hp-universal-print-driver-series-for-windows/503548)
 
-## Package Note
+## Package Notes
 This package is NOT the [HP Smart Printer Administrator Resource Kit](https://support.hp.com/us-en/drivers/supd/model/33835514), but instead is the [HP Printer Administrator Resource Kit](https://support.hp.com/us-en/drivers/upd/model/4157320).</description>
         <summary>HP Printer Administrator Resource Kit (PARK) is a collection of tools, scripts and documentation to help print administrators install, deploy, configure and manage the HP Universal Print Driver.</summary>
         <releaseNotes>https://support.hp.com/us-en/product/setup-user-guides/hp-universal-print-driver-series-for-windows/503548</releaseNotes>
