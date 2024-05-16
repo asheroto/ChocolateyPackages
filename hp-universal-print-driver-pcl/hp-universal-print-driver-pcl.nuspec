@@ -40,7 +40,7 @@ This is the PCL driver, not the PS driver.
 HP removed the download link for the 32-bit version of the driver. This package will only install the 64-bit version of the driver. If you need the 32-bit version, please use a previous version of this package.</description>
         <summary>HP Universal Print Driver for Windows (PS) - One versatile print driver for your PC or laptop</summary>
         <releaseNotes>https://kaas.hpcloud.hp.com/pdf-public/pdf_8592592_en-US-1.pdf</releaseNotes>
-        <copyright>© 2024Copyright HPDevelopment Company, L.P.</copyright>
+        <copyright>© 2024 Copyright HPDevelopment Company, L.P.</copyright>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/hp-universal-print-driver-pcl</packageSourceUrl>
         <tags>hp universal print printer driver upd pcl pcl6</tags>
     </metadata>

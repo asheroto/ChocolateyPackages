@@ -7,16 +7,17 @@ $driverName = 'HP Universal Printing PS'
 Restart-Service -Name Spooler -Force
 
 # Remove printers using that driver
-Get-Printer | ? { $_.DriverName -eq $driverName } | Remove-Printer
+Get-Printer | Where-Object { $_.DriverName -eq $driverName } | Remove-Printer
 
 # Remove driver
-Remove-PrinterDriver $driverName
+Remove-PrinterDriver -Name $driverName
 
 # Notify user that the driver has been removed
-Write-Output "---------------------------"
-Write-Output ""
-Write-Output "Printers using the $driverName driver have been removed. This is required to remove the driver."
-Write-Output ""
-Write-Output "The $driverName driver has been removed."
-Write-Output ""
-Write-Output "---------------------------"
+$outputMessage = @"
+---------------------------
+Printers using the $driverName driver have been removed. This is required to remove the driver.
+
+The $driverName driver has been removed.
+---------------------------
+"@
+Write-Output $outputMessage
