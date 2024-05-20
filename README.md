@@ -14,7 +14,7 @@ Each Wednesday and Saturday, my [PowerShell script](https://github.com/asheroto/
 
 If you notice an outdated package and want to request an update:
 - Verify there is not a pending version in the `Version History` section of the Chocolatey package on the [Chocolatey Community Repository](https://community.chocolatey.org/packages)
-- After a newer version of the software has been released, please wait a few days for me to update the package (usually within a day or two)
+- After a newer version of the software has been released, please wait a few days for me to update the package ([update script](https://github.com/asheroto/ChocolateyPackages/blob/master/UpdateAll.ps1) runs every Wed and Sat)
 - If the package is still outdated, open an [Issue](../../issues) and I'll address it
 
 ![image](https://github.com/asheroto/ChocolateyPackages/assets/49938263/d64649db-1b5f-4f8b-aae3-37313e4adb8f)
