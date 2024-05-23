@@ -1,3 +1,5 @@
+﻿$ErrorActionPreference = 'Stop'
+
 $packageName = 'MessagesForWeb'
 [array]$key = Get-UninstallRegistryKey -SoftwareName "Messages for Web*"
 

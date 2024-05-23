@@ -12,10 +12,11 @@
         <bugTrackerUrl>https://github.com/asheroto/MessagesForWeb/issues</bugTrackerUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/030999ae/MessagesForWeb/icon.png</iconUrl>
-        <description>Google Messages for Web in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Alt+M to show the window.</description>
+        <description>![Screenshot](https://rawcdn.githack.com/asheroto/ChocolateyPackages/ac2f45ae1865a61ceb7581191ea8024761226413/MessagesForWeb/screenshot.png)
+        Google Messages for Web in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Alt+M to show the window.</description>
         <summary>Google Messages for Web in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Alt+M to show the window.</summary>
         <releaseNotes>https://github.com/asheroto/MessagesForWeb/releases</releaseNotes>
-        <tags>MessagesForWeb click up MessagesForWeb.com project task organization organizer</tags>
+        <tags>MessagesForWeb messages for web messaging google android phone sms mms computer</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/MessagesForWeb</packageSourceUrl>
         <docsUrl>https://github.com/asheroto/MessagesForWeb</docsUrl>
     </metadata>

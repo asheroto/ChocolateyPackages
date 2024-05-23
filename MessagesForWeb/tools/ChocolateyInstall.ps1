@@ -1,4 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop'
+
 $packageName = 'MessagesForWeb'
 $softwareName = 'Messages for Web'
 $url = 'https://github.com/asheroto/MessagesForWeb/releases/download/1.0.1/MessagesForWeb.exe'

@@ -1,1 +1,3 @@
-﻿Get-Process MessagesForWeb -ErrorAction SilentlyContinue | Stop-Process -ErrorAction Stop
+﻿$ErrorActionPreference = 'Stop'
+
+Get-Process MessagesForWeb -ErrorAction SilentlyContinue | Stop-Process -ErrorAction Stop
