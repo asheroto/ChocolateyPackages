@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-	<metadata>
-		<id>MessagesForWeb</id>
-		<version>1.0.0</version>
-		<title>Messages for Web</title>
-		<authors>asheroto</authors>
-		<owners>asheroto</owners>
-		<licenseUrl>https://github.com/asheroto/MessagesForWeb/blob/master/LICENSE</licenseUrl>
-		<projectUrl>https://github.com/asheroto/MessagesForWeb</projectUrl>
-		<bugTrackerUrl>https://github.com/asheroto/MessagesForWeb/issues</bugTrackerUrl>
-		<requireLicenseAcceptance>false</requireLicenseAcceptance>
-		<iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/030999ae/MessagesForWeb/icon.png</iconUrl>
-		<description>Google Messages for Web in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Alt+M to show the window.</description>
-		<summary>Google Messages for Web in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Alt+M to show the window.</summary>
-		<releaseNotes>https://github.com/asheroto/MessagesForWeb/releases</releaseNotes>
-		<tags>MessagesForWeb click up MessagesForWeb.com project task organization organizer</tags>
-		<packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/MessagesForWeb</packageSourceUrl>
-		<docsUrl>https://github.com/asheroto/MessagesForWeb</docsUrl>
-	</metadata>
-	<files>
-		<file src="**" exclude="**\*.md;**\icon.png;**\icon.jpg;**\icon.svg" />
-	</files>
+    <metadata>
+        <id>MessagesForWeb</id>
+        <version>1.0.1</version>
+        <title>Messages for Web</title>
+        <authors>asheroto</authors>
+        <owners>asheroto</owners>
+        <licenseUrl>https://github.com/asheroto/MessagesForWeb/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/asheroto/MessagesForWeb</projectUrl>
+        <bugTrackerUrl>https://github.com/asheroto/MessagesForWeb/issues</bugTrackerUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/030999ae/MessagesForWeb/icon.png</iconUrl>
+        <description>Google Messages for Web in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Alt+M to show the window.</description>
+        <summary>Google Messages for Web in a native Windows application that runs on startup and hides to the system tray. Press Ctrl+Alt+M to show the window.</summary>
+        <releaseNotes>https://github.com/asheroto/MessagesForWeb/releases</releaseNotes>
+        <tags>MessagesForWeb click up MessagesForWeb.com project task organization organizer</tags>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/MessagesForWeb</packageSourceUrl>
+        <docsUrl>https://github.com/asheroto/MessagesForWeb</docsUrl>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
 </package>

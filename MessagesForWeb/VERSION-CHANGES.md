@@ -1,2 +1,2 @@
-- Change filename in ChocolateyInstall.ps1
+- Change filename & checksum in ChocolateyInstall.ps1
 - Change version in MessagesForWeb.nuspec
