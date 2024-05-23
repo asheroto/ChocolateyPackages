@@ -43,6 +43,6 @@ The package maintainer has a monitor that detects when the ClickUp version chang
         <docsUrl>https://help.clickup.com/hc/en-us</docsUrl>
     </metadata>
     <files>
-        <file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg;screenshot.jpg" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>

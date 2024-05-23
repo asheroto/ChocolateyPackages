@@ -21,6 +21,7 @@ Set-Location $scriptPath
 ./metadataplusplus/update.ps1
 ./proxyman/update.ps1
 ./netscan.install/update.ps1
+./hdsentinel/update.ps1
 
 # Return
 Pop-Location
