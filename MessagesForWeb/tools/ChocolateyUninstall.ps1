@@ -1,23 +1,20 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'MessagesForWeb'
-[array]$key = Get-UninstallRegistryKey -SoftwareName "Messages for Web*"
+$key = Get-UninstallRegistryKey -SoftwareName "Messages for Web*" | Select-Object -First 1
 
 # Exit if the package is already uninstalled
-if ($key.length -eq 0) { Return 0 }
+if (-not $key) { return $null }
 
-$uninstallString = $key[0].UninstallString
-$file = $uninstallString
-$silentArgs = $uninstallString.Replace("MsiExec.exe /X", "") + " /qn"
-$fileType = 'msi'
-$validExitCodes = @(0);
+$uninstallString = $key.UninstallString
+$silentArgs = $uninstallString.Replace("MsiExec.exe /X", "").Trim() + " /qn"
 
 $packageArgs = @{
     packageName    = $packageName
-    file           = $file
+    file           = 'MsiExec.exe'
     silentArgs     = $silentArgs
-    fileType       = $fileType
-    validExitCodes = $validExitCodes
+    fileType       = 'msi'
+    validExitCodes = @(0)
 }
 
 Uninstall-ChocolateyPackage @packageArgs
