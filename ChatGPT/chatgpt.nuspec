@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>chatgpt</id>
-        <version>1.1.0</version>
+        <version>1.1.0.20240531</version>
         <title>ChatGPT Desktop (Unofficial)</title>
         <authors>lencx, yixinBC, tk103331, Irene-123, VinchanGit, xueweiwujxw, manudss, turric4n, Sturlen, beilunyang, 11weltonrodrigo, JacobLinCool, danielbayley</authors>
         <owners>ltklionel, asheroto</owners>
@@ -13,7 +13,9 @@
         <licenseUrl>https://github.com/lencx/ChatGPT/blob/main/LICENSE</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <tags>chatgpt chatbot chat bot LLM AI machine-learning GUI lencx open-source</tags>
-        <packageSourceUrl>https://github.com/targed/chocolatey-projects/tree/main/ChatGPT</packageSourceUrl>
+        <projectSourceUrl>https://github.com/lencx/ChatGPT</projectSourceUrl>
+        <bugTrackerUrl>https://github.com/lencx/ChatGPT/issues</bugTrackerUrl>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/ChatGPT</packageSourceUrl>
         <releaseNotes>https://github.com/lencx/ChatGPT/blob/main/UPDATE_LOG.md</releaseNotes>
         <summary>ChatGPT Desktop Application</summary>
         <description>![ChatGPT Screenshot](https://cdn.statically.io/gh/asheroto/chocolatey-projects-forked/main/ChatGPT/screenshot.jpg)
