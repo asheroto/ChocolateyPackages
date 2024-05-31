@@ -60,8 +60,11 @@ For more information, visit [StartAllBack.com](https://startallback.com/).</desc
         <tags>startallback start all back start-all-back classic classic-ui classic-shell classic-start customization windows 11 win11 windows11 taskbar start-menu file-explorer explorer ribbon recolor style effects details-pane old-search ui</tags>
         <docsUrl>https://www.startisback.com/#faq-tab</docsUrl>
         <bugTrackerUrl>https://msfn.org/board/forum/181-startisback/</bugTrackerUrl>
+        <dependencies>
+            <dependency id="autohotkey.portable" />
+        </dependencies>
     </metadata>
     <files>
-        <file src="**" exclude="*.md;icon.png;icon.jpg;icon.svg;screenshot.jpg;screenshot.png" />
+        <file src="tools\**" target="tools" />
     </files>
 </package>

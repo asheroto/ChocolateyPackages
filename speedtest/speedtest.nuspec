@@ -43,7 +43,6 @@ By default, the package:
         <docsUrl>https://help.speedtest.net/hc/en-us</docsUrl>
     </metadata>
     <files>
-        <file src="update.ps1" target="" />
         <file src="tools\**" target="tools" />
     </files>
 </package>

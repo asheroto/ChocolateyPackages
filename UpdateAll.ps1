@@ -22,6 +22,7 @@ Set-Location $scriptPath
 ./proxyman/update.ps1
 ./netscan.install/update.ps1
 ./hdsentinel/update.ps1
+./logitech-options-plus/update.ps1
 
 # Return
 Pop-Location
