@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>ventoy</id>
-        <version>1.0.98</version>
+        <version>1.0.98.20240603</version>
         <title>Ventoy</title>
         <authors>ventoy.net</authors>
         <owners>asheroto, Yato</owners>
@@ -15,60 +15,76 @@
 
 ## Summary
 
--   Ventoy is an open source tool to create bootable USB drive for ISO/WIM/IMG/VHD(x)/EFI files.
--   With ventoy, you don't need to format the disk over and over, you just need to copy the ISO/WIM/IMG/VHD(x)/EFI files to the USB drive and boot them directly.
--   You can copy many files at a time and ventoy will give you a boot menu to select them [(screenshot)](https://www.ventoy.net/en/screenshot.html).
--   You can also browse ISO/WIM/IMG/VHD(x)/EFI files in local disks and boot them.
--   x86 Legacy BIOS, IA32 UEFI, x86_64 UEFI, ARM64 UEFI and MIPS64EL UEFI are supported in the same way.
--   Most types of OS supported (Windows/WinPE/Linux/ChromeOS/Unix/VMware/Xen...)
--   1100+ image files are tested [(list)](https://www.ventoy.net/en/isolist.html), 90%+ distros in [distrowatch.com](http://distrowatch.com/dwres.php?resource=popularity) supported [(details)](https://www.ventoy.net/en/distrowatch.html).
+-   Ventoy creates bootable USB drives with ISO/WIM/IMG/VHD(x)/EFI files.
+-   No need to format repeatedly; just copy files to USB and boot.
+-   Boot menu for multiple files [(screenshot)](https://www.ventoy.net/en/screenshot.html).
+-   Compatible with x86 Legacy BIOS, IA32 UEFI, x86_64 UEFI, ARM64 UEFI, MIPS64EL UEFI.
+-   Supports most OS types (Windows/WinPE/Linux/ChromeOS/Unix/VMware/Xen...).
+-   Tested with 1100+ image files [(list)](https://www.ventoy.net/en/isolist.html).
 
 ## Features
 
--   100% open source [license](https://www.ventoy.net/en/doc_license.html)
--   Very simple to use [Get started](https://www.ventoy.net/en/doc_start.html)
--   Fast (limited only by the speed of copying iso file)
--   Can be installed in USB/Local Disk/SSD/NVMe/SD Card
--   Directly boot from ISO/WIM/IMG/VHD(x)/EFI files, no extraction needed
--   Support to browse and boot ISO/WIM/IMG/VHD(x)/EFI files in local disk [Notes](https://www.ventoy.net/en/doc_vlnk.html)
--   Both MBR and GPT partition styles are supported
--   x86 Legacy BIOS, IA32 UEFI, x86_64 UEFI, ARM64 UEFI, MIPS64EL UEFI supported
--   IA32/x86_64 UEFI Secure Boot supported [Notes](https://www.ventoy.net/en/doc_secure.html)
--   Linux Persistence supported [Notes](https://www.ventoy.net/en/plugin_persistence.html)
--   Windows auto installation supported [Notes](https://www.ventoy.net/en/plugin_autoinstall.html)
+-   100% open-source [license](https://www.ventoy.net/en/doc_license.html)
+-   Fast &amp; simple to use [Get started](https://www.ventoy.net/en/doc_start.html)
+-   Install on USB/Local Disk/SSD/NVMe/SD Card
+-   Boot directly from ISO/WIM/IMG/VHD(x)/EFI files
+-   Browse and boot files from local disk [Notes](https://www.ventoy.net/en/doc_vlnk.html)
+-   Compatible with x86 Legacy BIOS, IA32 UEFI, x86_64 UEFI, ARM64 UEFI, MIPS64EL UEFI
+-   Supports Linux Persistence [Notes](https://www.ventoy.net/en/plugin_persistence.html)
+-   Supports Windows auto installation [Notes](https://www.ventoy.net/en/plugin_autoinstall.html)
 -   Much more...
 
 See [ventoy.net](https://www.ventoy.net/) for details.
 
 ## Package Parameters
 
-This package allows you to control the creation of desktop and start menu shortcuts for Ventoy and its components during installation. If you need Chocolatey to remember the arguments for upgrades, you can make use of the [useRememberedArgumentsForUpgrades](https://docs.chocolatey.org/en-us/configuration#userememberedargumentsforupgrades) feature within Chocolatey itself (not enabled by default)
+Control the creation of desktop and start menu shortcuts during installation. Enable [useRememberedArgumentsForUpgrades](https://docs.chocolatey.org/en-us/configuration#userememberedargumentsforupgrades) to remember arguments for upgrades (not enabled by default).
 
 ### Disable Desktop Shortcuts
 
--   `/NoDesktopShortcutVentoy`: Disables the creation of a desktop shortcut for **Ventoy**.
--   `/NoDesktopShortcutVentoyPlugson`: Disables the creation of a desktop shortcut for **Ventoy Plugson**.
--   `/NoDesktopShortcutVentoyVlnk`: Disables the creation of a desktop shortcut for **Ventoy Vlnk**.
+-   `/NoDesktopShortcutVentoy`: Disable desktop shortcut for **Ventoy**.
+-   `/NoDesktopShortcutVentoyPlugson`: Disable desktop shortcut for **Ventoy Plugson**.
+-   `/NoDesktopShortcutVentoyVlnk`: Disable desktop shortcut for **Ventoy Vlnk**.
 
 ### Disable Start Menu Shortcuts
 
--   `/NoStartMenuShortcutVentoy`: Disables the creation of a start menu shortcut for **Ventoy**.
--   `/NoStartMenuShortcutVentoyPlugson`: Disables the creation of a start menu shortcut for **Ventoy Plugson**.
--   `/NoStartMenuShortcutVentoyVlnk`: Disables the creation of a start menu shortcut for **Ventoy Vlnk**.
+-   `/NoStartMenuShortcutVentoy`: Disable start menu shortcut for **Ventoy**.
+-   `/NoStartMenuShortcutVentoyPlugson`: Disable start menu shortcut for **Ventoy Plugson**.
+-   `/NoStartMenuShortcutVentoyVlnk`: Disable start menu shortcut for **Ventoy Vlnk**.
+
+### Create Desktop Shortcuts for Additional Executables
+
+These EXEs can be found in the `ventoy\altexe` folder.
+
+-   `/CreateDesktopShortcutVentoyX64`: Create desktop shortcut for **Ventoy x64**.
+-   `/CreateDesktopShortcutVentoyPlugsonX64`: Create desktop shortcut for **Ventoy Plugson x64**.
+-   `/CreateDesktopShortcutVentoyARM`: Create desktop shortcut for **Ventoy ARM**.
+-   `/CreateDesktopShortcutVentoyARM64`: Create desktop shortcut for **Ventoy ARM64**.
+
+### Create Start Menu Shortcuts for Additional Executables
+
+These EXEs can be found in the `ventoy\altexe` folder.
+
+-   `/CreateStartMenuShortcutVentoyX64`: Create start menu shortcut for **Ventoy x64**.
+-   `/CreateStartMenuShortcutVentoyPlugsonX64`: Create start menu shortcut for **Ventoy Plugson x64**.
+-   `/CreateStartMenuShortcutVentoyARM`: Create start menu shortcut for **Ventoy ARM**.
+-   `/CreateStartMenuShortcutVentoyARM64`: Create start menu shortcut for **Ventoy ARM64**.
 
 ### Examples
 
-This example command will install Ventoy without creating desktop shortcuts for **Ventoy Plugson** and **Ventoy Vlnk**...
-
-`choco install ventoy -params '/NoDesktopShortcutVentoyPlugson /NoDesktopShortcutVentoyVlnk'`
-
-This command will install Ventoy without creating **any** desktop shortcuts...
+Install Ventoy without creating any desktop shortcuts...
 
 `choco install ventoy -params '/NoDesktopShortcutVentoy /NoDesktopShortcutVentoyPlugson /NoDesktopShortcutVentoyVlnk'`
 
+Install Ventoy and create desktop shortcuts for **Ventoy x64** and **Ventoy Plugson x64**...
+
+`choco install ventoy -params '/CreateDesktopShortcutVentoyX64 /CreateDesktopShortcutVentoyPlugsonX64'`
+
 ## Package Note
 
-Starting with version `1.0.97.20240415`, Ventoy will now be installed to `$env:ChocolateyInstall\lib\ventoy`. This change was made because Chocolatey is intended to be used in a multi-user environment. Before this version, the package installation script was placing Ventoy in `$env:LocalAppData\ventoy`, which is limited to the current user only.</description>
+Starting with version `1.0.97.20240415`, Ventoy is installed to `$env:ChocolateyInstall\lib\ventoy`. Before this, it was placed in `$env:LocalAppData\ventoy`, which is user-specific.
+
+Starting with version `1.0.98.20240603`, Ventoy Start Menu shortcuts are now created inside of the `Ventoy` folder. Before this, they were created in root of the Start Menu Programs folder.</description>
         <summary>Ventoy is an open source tool to create bootable USB drive for ISO files.</summary>
         <releaseNotes>https://github.com/ventoy/Ventoy/releases</releaseNotes>
         <copyright>Copyright © 2019-2022 longpanda</copyright>
