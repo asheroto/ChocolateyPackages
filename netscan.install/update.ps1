@@ -11,7 +11,8 @@ $ParentPath = Split-Path -Parent $ScriptPath
 # Create a hash table to store package information
 $packageInfo = @{
     PackageName         = "netscan.install"
-    FileUrl             = 'https://www.softperfect.com/download/freeware/netscan_setup.exe'   # URL to download the file from
+    FileUrl             = 'https://www.softperfect.com/download/freeware/netscan_setup.exe'
+    IgnoreVersion       = "8.2.1"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table
