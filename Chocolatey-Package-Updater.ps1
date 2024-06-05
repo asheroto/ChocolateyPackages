@@ -270,7 +270,7 @@ function HandleUpdateResult {
 }
 
 # Import the Chocolatey package updater functions
-. (Join-Path (Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Definition)) 'functions.ps1')
+. Join-Path -Path (Split-Path -Parent $MyInvocation.MyCommand.Definition) -ChildPath 'functions.ps1'
 
 function Write-Section {
     <#
