@@ -1,13 +1,20 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'MessagesForWeb'
-$key = Get-UninstallRegistryKey -SoftwareName "Messages for Web*" | Select-Object -First 1
+$softwareName = 'Messages for Web'
+$key = Get-UninstallRegistryKey -SoftwareName "$softwareName*" | Select-Object -First 1
 
 # Exit if the package is already uninstalled
 if (-not $key) { return $null }
 
 $uninstallString = $key.UninstallString
-$silentArgs = $uninstallString.Replace("MsiExec.exe /X", "").Trim() + " /qn"
+
+# Check if silent uninstall arguments are already included
+if ($uninstallString -notmatch '/qn') {
+    $silentArgs = $uninstallString.Replace("MsiExec.exe /X", "").Trim() + " /qn"
+} else {
+    $silentArgs = $uninstallString
+}
 
 $packageArgs = @{
     packageName    = $packageName
