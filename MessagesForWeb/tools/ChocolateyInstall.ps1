@@ -1,9 +1,9 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 $packageName = 'MessagesForWeb'
 $softwareName = 'Messages for Web'
 $url = 'https://github.com/asheroto/MessagesForWeb/releases/download/1.0.1/MessagesForWeb.exe'
-$checksum = '934CE9F24C226228BDA85BB9BA6D1A72F3B8C2A0C6B22DD91314CD170D01A900'
+$checksum = '7CFA3EA4137E89F8C17F4E69E31A9475255A4BCBA7F7D4C1F08ACEC5DDF3DC4C'
 $silentArgs = '/quiet'
 $validExitCodes = @(0)
 
