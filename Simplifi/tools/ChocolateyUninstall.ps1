@@ -1,21 +1,27 @@
-$packageName 		= 'Simplifi'
-[array]$key 		= Get-UninstallRegistryKey -SoftwareName "Simplifi*"
+﻿$ErrorActionPreference = 'Stop'
+
+$packageName = 'Simplifi'
+$softwareName = 'Simplifi'
+[array]$key = Get-UninstallRegistryKey -SoftwareName "$softwareName*"
 
 # Exit if the package is already uninstalled
-if($key.length -eq 0) { Return 0 }
+if (-not $key) { return $null }
 
-$uninstallString 	= $key[0].UninstallString
-$file 				= $uninstallString
-$silentArgs 		= $uninstallString.Replace("MsiExec.exe /X", "") + " /qn"
-$fileType			= 'msi'
-$validExitCodes 	= @(0);
+$uninstallString = $key.UninstallString
+
+# Check if silent uninstall arguments are already included
+if ($uninstallString -notmatch '/qn') {
+    $silentArgs = $uninstallString.Replace("MsiExec.exe /X", "").Trim() + " /qn"
+} else {
+    $silentArgs = $uninstallString
+}
 
 $packageArgs = @{
-	packageName    = $packageName
-	file           = $file
-	silentArgs     = $silentArgs
-	fileType       = $fileType
-	validExitCodes = $validExitCodes
+    packageName    = $packageName
+    file           = 'MsiExec.exe'
+    silentArgs     = $silentArgs
+    fileType       = 'msi'
+    validExitCodes = @(0)
 }
 
 Uninstall-ChocolateyPackage @packageArgs

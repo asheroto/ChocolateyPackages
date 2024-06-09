@@ -842,6 +842,19 @@ function UpdateChocolateyPackage {
                 # Write the new version to the console
                 Write-Output "Updated to version $ProductVersion"
 
+                # Delete any nupkg files in the package folder if it exists
+                $nupkgFiles = Get-ChildItem -Path $ScriptPath -Filter "$PackageName.*.nupkg" -File
+                if ($nupkgFiles) {
+                    foreach ($nupkgFile in $nupkgFiles) {
+                        Write-Output "Deleting old nupkg file: $nupkgFile"
+                        Remove-Item -Path $nupkgFile.FullName -Force
+                    }
+                }
+
+                # Run 'choco pack' to create the nupkg file
+                Write-Output "Creating nupkg file..."
+                choco pack
+
                 # Send an alert if enabled
                 Write-Debug "Sending alert..."
                 SendAlert -Subject "$PackageName Package Updated" -Message "$PackageName has been updated to version $ProductVersion. It is now ready for testing." -Alert $Alert

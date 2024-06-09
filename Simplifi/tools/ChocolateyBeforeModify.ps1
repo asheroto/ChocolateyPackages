@@ -1,1 +1,3 @@
-﻿Get-Process Simplifi -ErrorAction SilentlyContinue | Stop-Process -ErrorAction Stop
+﻿$ErrorActionPreference = 'Stop'
+
+Get-Process Simplifi -ErrorAction SilentlyContinue | Stop-Process -ErrorAction Stop

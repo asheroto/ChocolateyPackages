@@ -1,28 +1,29 @@
-﻿$ErrorActionPreference  = 'Stop'
-$packageName    = 'Simplifi'
-$softwareName   = 'Simplifi'
-$url            = 'https://github.com/asheroto/Simplifi/releases/download/1.0.4/Simplifi.exe'
-$checksum       = '9FBBE11144DB2C57DC39509D36569715981FB1C1F05C9AE1D38731F4B7717BBC'
-$silentArgs     = '/quiet'
+$ErrorActionPreference = 'Stop'
+$packageName = 'Simplifi'
+$softwareName = 'Simplifi'
+$version = "1.0.5"
+$url = "https://github.com/asheroto/Simplifi/releases/download/${version}/Simplifi.exe"
+$checksum = '5EA43865E45D83D07906F66F1CF4EE53F8F3AEEB106D125AA3A12F288B5EAC1D'
+$silentArgs = '/quiet'
 $validExitCodes = @(0)
 
 $packageArgs = @{
-  packageName   = $packageName
-  fileType      = 'exe'
-  file          = $fileLocation
-  url           = $url
-  checksum      = $checksum
-  checksumType  = 'sha256'
-  silentArgs    = $silentArgs
-  validExitCodes= $validExitCodes
-  softwareName  = $softwareName
+    packageName    = $packageName
+    fileType       = 'exe'
+    file           = $fileLocation
+    url            = $url
+    checksum       = $checksum
+    checksumType   = 'sha256'
+    silentArgs     = $silentArgs
+    validExitCodes = $validExitCodes
+    softwareName   = $softwareName
 }
 
 # Install the package
 Install-ChocolateyPackage @packageArgs
 
 # Set the path, confirm it exists, start the process if it does
-$SimplifiPath = Join-Path $env:APPDATA 'Simplifi\Simplifi.exe'
+$SimplifiPath = [System.IO.Path]::Combine($env:APPDATA, 'Simplifi', 'Simplifi.exe')
 if ((Test-Path $SimplifiPath)) { Start-Process $SimplifiPath -ArgumentList '-startup' }
 
 Write-Output ""
