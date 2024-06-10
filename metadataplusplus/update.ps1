@@ -12,8 +12,8 @@ $ParentPath = Split-Path -Parent $ScriptPath
 $packageInfo = @{
     PackageName              = "metadataplusplus"
     ScrapeUrl                = 'https://logipole.com/download-en.htm'               # URL to scrape for version number
-    ScrapePattern            = '(?<=Product version: <b>)[\d.]+(?=</b>)'            # Regex pattern to match version number
-    DownloadUrlScrapePattern = '(?<=<a href=")[^"]+\.exe(?=")'                      # Regex pattern to find download URL
+    ScrapePattern            = '(?<=Metadata\+\+ v )[\d.]+(?=</b>)'                 # Regex pattern to match version number
+    DownloadUrlScrapePattern = '(?<=<a href=")[^"]*metadata\+\+-[\d-]+\.exe(?=")'   # Updated regex pattern to find download URL
     FileUrl                  = 'SCRAPE'                                             # Set to SCRAPE if using DownloadUrlScrapePattern
 }
 
