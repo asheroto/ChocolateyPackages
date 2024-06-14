@@ -1,26 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>httptoolkit</id>
-        <version>1.15.0</version>
+        <version>1.16.0</version>
         <title>HTTP Toolkit</title>
-        <authors>httptoolkit.com</authors>
+        <authors>HTTP Toolkit</authors>
         <owners>asheroto</owners>
         <licenseUrl>https://github.com/httptoolkit/httptoolkit-desktop?tab=AGPL-3.0-1-ov-file#readme</licenseUrl>
         <projectUrl>https://httptoolkit.com/</projectUrl>
-        <iconUrl>https://httptoolkit.com/images/httptoolkit_logo.png</iconUrl>
-        <requireLicenseAcceptance>CHANGE_THIS_VALUE</requireLicenseAcceptance>
-        <description>![Screenshot of HTTP Toolkit](https://rawcdn.githack.com/asheroto/ChocolateyPackages/ef39830922819df3edafc4d2cdfddced92bcd27e/httptoolkit/screenshot.webp)
+        <iconUrl>https://rawcdn.githack.com/asheroto/ChocolateyPackages/14e60acfa2e30d5cd2d37d1d5c1a05dd71d18e04/httptoolkit/icon.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>![Screenshot of HTTP Toolkit](https://raw.githubusercontent.com/asheroto/ChocolateyPackages/14e60acfa2e30d5cd2d37d1d5c1a05dd71d18e04/httptoolkit/screenshot.png)
+
+HTTP Toolkit is a suite of open-source tools for debugging, testing, and building with HTTP(S) traffic. It offers a powerful, simple interface to capture, view, and manipulate HTTP requests and responses. HTTP Toolkit is composed of several repositories, read the README for more information.
 
 ## Features
 - **HTTP Debugging**: Debug any HTTP(S) traffic from any app, instantly.
-- **Automatic setup**: Auto-configure your device or use manual setup.
+- **Automatic Setup**: Auto-configure your device or use manual setup.
 - **Interception**: Intercept &amp; rewrite HTTP traffic on the fly.
-- **Real-time view**: See the whole conversation in real-time.
+- **Real-time View**: See the whole conversation in real-time.
 - **HTTPS Support**: Full support for intercepting HTTPS traffic.
-- **Mock &amp; edit**: Mock endpoints, rewrite requests, and responses.
-- **Powerful filters**: Filter traffic by URL, headers, body, and more.
+- **Mock &amp; Edit**: Mock endpoints, rewrite requests, and responses.
+- **Powerful Filters**: Filter traffic by URL, headers, body, and more.
+
+The [httptoolkit GitHub organization](https://github.com/httptoolkit) contains the entire project, including the account management servers and paid features. All components are open source, licensed under a mixture of copyleft AGPL and permissive Apache-2/MIT licenses.
+
+All repos:
+* [HTTP Toolkit Website](https://github.com/httptoolkit/httptoolkit-website) - the source for [the website](https://httptoolkit.com), including the marketing pages, the blog, and the docs.
+* [HTTP Toolkit UI](https://github.com/httptoolkit/httptoolkit-ui) - the core of the product, a TypeScript + React app that powers most of the functionality you use, except for things that can't be done in a web page (i.e. starting a proxy, and setting up client interception).
+* [HTTP Toolkit Server](https://github.com/httptoolkit/httptoolkit-server) - the backend of the product, a TypeScript + node.js server that does the things the UI can't do: starting a proxy, and setting up client interception.
+* [Mockttp](https://github.com/httptoolkit/mockttp) - the HTTP(S) proxy itself, and all low-level logic around that, as a standalone TypeScript library. Used in HTTP Toolkit for traffic interception, but also usable standalone as a testing tool, or as a programmatically controllable intercepting HTTP(S) proxy.
+* [HTTP Toolkit for Android](https://github.com/httptoolkit/httptoolkit-android) - the Android app, a native Kotlin + Java app that manages certificate trust &amp; enforces HTTP interception on Android devices.
+* [HTTP Toolkit Desktop](https://github.com/httptoolkit/httptoolkit-desktop) - a TypeScript + Electron wrapper, which combines the UI &amp; the server and builds convenient per-platform installers.
+
+Each repo has a README explaining setup and functionality.
 
 For more information, visit [HTTP Toolkit](https://httptoolkit.com/).</description>
         <summary>Debug any HTTP(S) traffic from any app, instantly</summary>
@@ -35,3 +49,6 @@ For more information, visit [HTTP Toolkit](https://httptoolkit.com/).</descripti
         <file src="tools\**" target="tools" />
     </files>
 </package>
+
+
+
