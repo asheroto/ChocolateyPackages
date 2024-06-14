@@ -8,7 +8,7 @@
         <authors>HTTP Toolkit</authors>
         <owners>asheroto</owners>
         <licenseUrl>https://github.com/httptoolkit/httptoolkit-desktop?tab=AGPL-3.0-1-ov-file#readme</licenseUrl>
-        <projectUrl>https://httptoolkit.com/</projectUrl>
+        <projectUrl>https://httptoolkit.com</projectUrl>
         <iconUrl>https://rawcdn.githack.com/asheroto/ChocolateyPackages/14e60acfa2e30d5cd2d37d1d5c1a05dd71d18e04/httptoolkit/icon.png</iconUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>![Screenshot of HTTP Toolkit](https://raw.githubusercontent.com/asheroto/ChocolateyPackages/14e60acfa2e30d5cd2d37d1d5c1a05dd71d18e04/httptoolkit/screenshot.png)
@@ -49,6 +49,3 @@ For more information, visit [HTTP Toolkit](https://httptoolkit.com/).</descripti
         <file src="tools\**" target="tools" />
     </files>
 </package>
-
-
-
