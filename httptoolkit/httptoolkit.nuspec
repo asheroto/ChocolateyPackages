@@ -3,15 +3,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>httptoolkit</id>
-        <version>CHANGE_THIS_VALUE</version>
+        <version>1.15.0</version>
         <title>HTTP Toolkit</title>
         <authors>httptoolkit.com</authors>
         <owners>asheroto</owners>
-        <licenseUrl>https://httptoolkit.com/license/</licenseUrl>
+        <licenseUrl>https://github.com/httptoolkit/httptoolkit-desktop?tab=AGPL-3.0-1-ov-file#readme</licenseUrl>
         <projectUrl>https://httptoolkit.com/</projectUrl>
         <iconUrl>https://httptoolkit.com/images/httptoolkit_logo.png</iconUrl>
         <requireLicenseAcceptance>CHANGE_THIS_VALUE</requireLicenseAcceptance>
-        <description>![Screenshot of HTTP Toolkit](https://httptoolkit.com/images/httptoolkit_screenshot.png)
+        <description>![Screenshot of HTTP Toolkit](https://rawcdn.githack.com/asheroto/ChocolateyPackages/ef39830922819df3edafc4d2cdfddced92bcd27e/httptoolkit/screenshot.webp)
 
 ## Features
 - **HTTP Debugging**: Debug any HTTP(S) traffic from any app, instantly.
