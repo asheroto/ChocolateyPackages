@@ -1,6 +1,6 @@
 <#PSScriptInfo
 
-.VERSION 0.0.11
+.VERSION 0.0.12
 
 .GUID 9b612c16-25c0-4a40-afc7-f876274e7e8c
 
@@ -24,6 +24,7 @@
 [Version 0.0.9] - Improved ProductVersion/FileVersion detection, only returns applicable Chocolatey version number despite the version provided in the metadata of the file/installer.
 [Version 0.0.10] - Added disable IPv6 to aria2c args.
 [Version 0.0.11] - Added ignore version.
+[Version 0.0.12] - Added AutoPush for automatic pushing to Chocolatey community repository.
 
 #>
 
@@ -80,7 +81,7 @@ To update a Chocolatey package with additional parameters, run the following com
 UpdateChocolateyPackage -PackageName "fxsound" -FileUrl "https://download.fxsound.com/fxsoundlatest" -FileDownloadTempPath ".\fxsound_setup_temp.exe" -FileDestinationPath ".\tools\fxsound_setup.exe" -NuspecPath ".\fxsound.nuspec" -InstallScriptPath ".\tools\ChocolateyInstall.ps1" -VerificationPath ".\tools\VERIFICATION.txt" -Alert $true
 
 .NOTES
-- Version: 0.0.11
+- Version: 0.0.12
 - Created by: asheroto
 - See project site for instructions on how to use including full parameter list and examples.
 
@@ -99,7 +100,7 @@ param (
 # Initial vars
 # ============================================================================ #
 
-$CurrentVersion = '0.0.11'
+$CurrentVersion = '0.0.12'
 $RepoOwner = 'asheroto'
 $RepoName = 'Chocolatey-Package-Updater'
 $SoftwareName = 'Chocolatey Package Updater'
@@ -268,10 +269,15 @@ function HandleUpdateResult {
         Write-Output $FailureMessage
     }
 }
-
-function SendAlertRaw {
+function SendEmailNtfy {
     [CmdletBinding()]
     param (
+        [Parameter(Mandatory = $true)]
+        [string]$PackageName,
+
+        [Parameter(Mandatory = $true)]
+        [string]$Email,
+
         [Parameter(Mandatory = $true)]
         [string]$Subject,
 
@@ -279,39 +285,37 @@ function SendAlertRaw {
         [string]$Message
     )
 
-    # Note - you might consider using ntfy.sh, it's an awesome tool
-    # In this script, however, I'm using a custom service that I built
-    # This function gets the URL from a secure string file (encrypted) and sends the alert by making a POST request to the URL
-    # If you just want to make a GET/POST request, comment out the lines below until you get to the if($alertUrl)/Invoke-WebRequest section and replace with your own code
+    if (-not $Email) {
+        Write-Warning "Email address is not specified. Alert will not be sent."
+        return
+    }
 
-    # To save the URL as a secure string, run the following command in the comment block:
-    <#
-        # Connect
-        $CredsFile = "C:\Path\To\SecureString\Folder\SecretURL.txt"
+    $alertUrl = "https://ntfy.sh/Chocolatey-Package-Updater-$PackageName"
 
-        # Store credential in a file as secure string
-        Read-Host "Secret URL" -AsSecureString | ConvertFrom-SecureString | Out-File $CredsFile
-    #>
+    $headers = @{
+        Title = $Subject
+        Tags  = "email"
+        Email = $Email
+    }
 
-    # Environment variable contains path to $CredsFile (create or change below as needed)
-    # Get the secret URL from the secure string file using the path in the environment variable
-    $CredsFile = [System.Environment]::GetEnvironmentVariable('EMAIL_NOTIFICATION_CREDS_PATH', [System.EnvironmentVariableTarget]::User)
+    $Request = @{
+        Method      = "POST"
+        URI         = $alertUrl
+        Headers     = $headers
+        Body        = $Message
+    }
 
-    # Convert the secure string to a string
-    $secret = Get-Content $CredsFile | ConvertTo-SecureString
-    $BSTR = [System.Runtime.InteropServices.Marshal]::SecureStringToBSTR($secret)
-    $alertUrl = [System.Runtime.InteropServices.Marshal]::PtrToStringAuto($BSTR)
-
-    # Replace {SUBJECT} and {MESSAGE} in the URL
-    $alertUrl = $alertUrl -replace '{SUBJECT}', $Subject
-    $alertUrl = $alertUrl -replace '{MESSAGE}', $Message
-
-    if ($alertUrl) {
-        try {
-            Invoke-WebRequest -Uri $alertUrl -Method Post -Body $Message -ContentType "text/plain" | Out-Null
-            Write-Output "Alert sent."
-        } catch {
-            Write-Warning "Failed to send alert."
+    try {
+        $response = Invoke-RestMethod @Request
+        Write-Output "Email sent."
+        if ($PSCmdlet.MyInvocation.BoundParameters['Debug']) {
+            Write-Debug "Response: $($response | ConvertTo-Json -Depth 3)"
+        }
+    } catch {
+        Write-Warning "Failed to send email."
+        Write-Warning "Error details: $_"
+        if ($PSCmdlet.MyInvocation.BoundParameters['Debug']) {
+            Write-Debug $_.Exception.Message
         }
     }
 }
@@ -320,38 +324,40 @@ function SendAlert {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true)]
+        [string]$PackageName,
+
+        [Parameter(Mandatory = $true)]
         [string]$Subject,
 
         [Parameter(Mandatory = $true)]
         [string]$Message,
 
         [Parameter(Mandatory = $false)]
-        [boolean]$Alert = $true
+        [boolean]$Alert = $true,
+
+        [Parameter(Mandatory = $false)]
+        [string]$Email
     )
 
-    # If Alert is false, let the user know that the alert is disabled
     if (!$Alert) {
         Write-Output "Alert disabled. Skipping alert."
         return
     }
 
-    # Output sending alert
+    if (-not $Email) {
+        Write-Warning "Email address is not specified. Alert will not be sent."
+        return
+    }
+
     Write-Output "Sending alert..."
 
-    # Create the HTML body for the notification
     $date = Get-Date -Format "yyyy-MM-dd hh:mm:ss tt"
-    $body = "<html><body>"
-    $body += "<font face='Arial'>"
-    $body += "<p>$Message</p>"
-    $body += "<p><strong>Time:</strong> $date</p>"
-    $body += "</font>"
-    $body += "</body></html>"
+    $body = "$Message`n`nTime: $date"
 
     Write-Verbose "Sending alert with subject: $Subject"
     Write-Verbose "Sending alert with body:`n$body"
 
-    # Send the alert
-    SendAlertRaw -Subject $Subject -Message $body
+    SendEmailNtfy -Subject $Subject -Message $body -Email $Email -PackageName $PackageName
 }
 
 function Write-Section {
@@ -488,6 +494,9 @@ function UpdateChocolateyPackage {
         [boolean]$Alert = $true,
 
         [Parameter(Mandatory = $false)]
+        [string]$AlertEmailAddress,
+
+        [Parameter(Mandatory = $false)]
         [string]$ScrapeUrl,
 
         [Parameter(Mandatory = $false)]
@@ -503,7 +512,10 @@ function UpdateChocolateyPackage {
         [string]$GitHubRepoUrl,
 
         [Parameter(Mandatory = $false)]
-        [string]$IgnoreVersion
+        [string]$IgnoreVersion,
+
+        [Parameter(Mandatory = $false)]
+        [boolean]$AutoPush
     )
 
     function Try-DeleteFile {
@@ -674,6 +686,18 @@ function UpdateChocolateyPackage {
         return $result
     }
 
+    function Remove-LeadingZeroesFromVersion {
+        param (
+            [string]$VersionNumber
+        )
+
+        $versionParts = $VersionNumber -split '\.'
+        $cleanedVersionParts = $versionParts | ForEach-Object { [int]$_ }
+        $cleanedVersion = ($cleanedVersionParts -join '.')
+
+        return $cleanedVersion
+    }
+
     # ============================================================================ #
     #  Main Script
     # ============================================================================ #
@@ -765,6 +789,12 @@ function UpdateChocolateyPackage {
         if ($FileUrl64) {
             DownloadFile -Url $FileUrl64 -TempPath $FileDownloadTempPath64 -Is64Bit $true
             $ProductVersion64 = Get-ProductVersion -FileDownloadTempPath $FileDownloadTempPath64 -ForceVersionNumber $ForceVersionNumber
+        }
+
+        # Remove leading zeroes from version numbers
+        $ProductVersion = Remove-LeadingZeroesFromVersion -VersionNumber $ProductVersion
+        if ($ProductVersion64) {
+            $ProductVersion64 = Remove-LeadingZeroesFromVersion -VersionNumber $ProductVersion64
         }
 
         # Nuspec Version and Checksums
@@ -935,9 +965,20 @@ function UpdateChocolateyPackage {
                 Write-Output "Creating nupkg file..."
                 choco pack
 
+                # If AutoPush is enabled, push the package to Chocolatey
+                if ($AutoPush) {
+                    Write-Output "Pushing package to Chocolatey..."
+                    choco push "$PackageName.$ProductVersion.nupkg"
+                }
+
+                # If AlertEmailAddress is not specified, try using the environment variable CHOCO_PACKAGE_UPDATER_ALERT_EMAIL, if set
+                if (-not $AlertEmailAddress) {
+                    $AlertEmailAddress = $env:CHOCO_PACKAGE_UPDATER_ALERT_EMAIL
+                }
+
                 # Send an alert if enabled
                 Write-Debug "Sending alert..."
-                SendAlert -Subject "$PackageName Package Updated" -Message "$PackageName has been updated to version $ProductVersion. It is now ready for testing." -Alert $Alert
+                SendAlert -Subject "$PackageName Package Updated" -Message "$PackageName has been updated to version $ProductVersion." -Alert $Alert -Email $AlertEmailAddress -Package $PackageName
 
                 # If the destination path is specified, move the downloaded file to the specified destination
                 if ($FileDestinationPath) {
@@ -968,12 +1009,12 @@ function UpdateChocolateyPackage {
 
             # Send an alert if enabled
             Write-Debug "Sending package error alert..."
-            SendAlert -Subject "$PackageName Package Error" -Message "$PackageName detected an invalid version format. Please check the update script and files." -Alert $Alert
+            SendAlert -Subject "$PackageName Package Error" -Message "$PackageName detected an invalid version format. Please check the update script and files." -Alert $Alert -Email $AlertEmailAddress -Package $PackageName
         }
     } catch {
         # Send an alert if enabled
         Write-Debug "Sending package error alert..."
-        SendAlert -Subject "$PackageName Package Error" -Message "$PackageName had an error when checking for updates. Please check the update script and files.<br><br><strong>Error:</strong> $_" -Alert $Alert
+        SendAlert -Subject "$PackageName Package Error" -Message "$PackageName had an error when checking for updates. Please check the update script and files.<br><br><strong>Error:</strong> $_" -Alert $Alert -Email $AlertEmailAddress -Package $PackageName
 
         # Write the error to the console
         Write-Warning "An error occurred: $_"
