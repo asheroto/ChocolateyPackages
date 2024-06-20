@@ -16,7 +16,7 @@ Set-Location $scriptPath
 ./pdq-inventory/update.ps1
 ./speedtest/update.ps1
 ./TablePlus/update.ps1
-./recuva/update.ps1
+# ./recuva/update.ps1
 ./nvm.install/update.ps1
 ./metadataplusplus/update.ps1
 ./proxyman/update.ps1

@@ -14,6 +14,8 @@ $packageInfo = @{
     ScrapeUrl     = 'https://tableplus.com/blog/2018/09/changelogs-windows.html'                                    # URL to scrape for version number
     ScrapePattern = '(?<=TablePlus\s)[\d.]+(?=\s-\sBuild)'                                                          # Regex pattern to match version number
     FileUrl       = "https://files.tableplus.com/windows/{VERSION}/TablePlusSetup.exe"                              # URL to download the file from
+    AutoPush      = $true
+    EnvFilePath   = "..\.env"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

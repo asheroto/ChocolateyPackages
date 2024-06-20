@@ -13,6 +13,8 @@ $packageInfo = @{
     PackageName   = "Simplifi"
     FileUrl       = "https://github.com/asheroto/Simplifi/releases/download/{VERSION}/Simplifi.exe"
     GitHubRepoUrl = "https://github.com/asheroto/Simplifi"
+    AutoPush      = $true
+    EnvFilePath   = "..\.env"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

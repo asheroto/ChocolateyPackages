@@ -14,6 +14,7 @@ $packageInfo = @{
     FileUrl             = "http://www2.adminarsenal.com/download-pdqdeploy"          # URL to download the file from
     FileDestinationPath = '.\tools\PDQ_Deploy_Setup.exe'                             # Path to move/rename the temporary file to (if EXE is distributed in package)
     AutoPush            = $true
+    EnvFilePath         = "..\.env"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

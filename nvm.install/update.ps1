@@ -13,6 +13,8 @@ $packageInfo = @{
     PackageName   = "nvm.install"
     FileUrl       = "https://github.com/coreybutler/nvm-windows/releases/download/{VERSION}/nvm-setup.zip"
     GitHubRepoUrl = "https://github.com/coreybutler/nvm-windows"
+    AutoPush      = $true
+    EnvFilePath   = "..\.env"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

@@ -12,7 +12,8 @@ $ParentPath = Split-Path -Parent $ScriptPath
 $packageInfo = @{
     PackageName = "ClickUp-Official"
     FileUrl     = 'https://desktop.clickup.com/windows'      # URL to download the file from
-    Alert       = $true                                      # If the package is updated, send a message to the maintainer for review
+    AutoPush    = $true
+    EnvFilePath = "..\.env"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

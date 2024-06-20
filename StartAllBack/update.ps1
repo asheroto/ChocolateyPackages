@@ -14,6 +14,8 @@ $packageInfo = @{
     ScrapeUrl     = 'https://startallback.com/'                                                                     # URL to scrape for version number
     ScrapePattern = '(?<=<span class="title">Download v)[\d.]+'                                                     # Regex pattern to match version number
     FileUrl       = "https://startisback.sfo3.cdn.digitaloceanspaces.com/StartAllBack_{VERSION}_setup.exe"          # URL to download the file from
+    AutoPush      = $true
+    EnvFilePath   = "..\.env"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

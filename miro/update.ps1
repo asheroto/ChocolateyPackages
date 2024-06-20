@@ -13,7 +13,8 @@ $packageInfo = @{
     PackageName = "miro"
     FileUrl     = 'https://desktop.miro.com/platforms/win32-x86/Miro.exe'   # URL to download the file from
     FileUrl64   = 'https://desktop.miro.com/platforms/win32/Miro.exe'       # URL to download the file from
-    Alert       = $true                                                     # If the package is updated, send a message to the maintainer for review
+    AutoPush    = $true
+    EnvFilePath = "..\.env"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

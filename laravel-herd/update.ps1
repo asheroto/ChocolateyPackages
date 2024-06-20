@@ -14,6 +14,8 @@ $packageInfo = @{
     ScrapeUrl     = 'https://herd.laravel.com/changelog'                                                            # URL to scrape for version number
     ScrapePattern = '(?<=<h3 class="pl-6 md:pl-0">)[\d.]+(?=</h3>)'                                                 # Regex pattern to scrape for version number
     FileUrl       = "https://download.herdphp.com/app_versions/Herd-{VERSION}-setup.exe"                            # URL to download the file from
+    AutoPush      = $true
+    EnvFilePath   = "..\.env"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

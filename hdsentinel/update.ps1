@@ -14,6 +14,8 @@ $packageInfo = @{
     ScrapeUrl     = 'https://www.hdsentinel.com/download.php'
     ScrapePattern = '(?<=<b>v)[\d.]+'
     FileUrl       = 'https://www.harddisksentinel.com/hdsentinel_setup.zip'
+    AutoPush      = $true
+    EnvFilePath   = "..\.env"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

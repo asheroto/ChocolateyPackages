@@ -4,3 +4,4 @@
 *.log
 .vscode/launch.json
 functions.ps1
+.env

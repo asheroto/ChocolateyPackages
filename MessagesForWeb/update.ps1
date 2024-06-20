@@ -13,6 +13,8 @@ $packageInfo = @{
     PackageName   = "MessagesForWeb"
     FileUrl       = "https://github.com/asheroto/MessagesForWeb/releases/download/{VERSION}/MessagesForWeb.exe"
     GitHubRepoUrl = "https://github.com/asheroto/MessagesForWeb"
+    AutoPush      = $true
+    EnvFilePath   = "..\.env"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

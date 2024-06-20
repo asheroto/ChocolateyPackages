@@ -10,6 +10,8 @@ $packageInfo = @{
     PackageName   = "sftpgo"
     FileUrl       = "https://github.com/drakkan/sftpgo/releases/download/v{VERSION}/sftpgo_v{VERSION}_windows_x86_64.exe"
     GitHubRepoUrl = "https://github.com/drakkan/sftpgo"
+    AutoPush      = $true
+    EnvFilePath   = "..\.env"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

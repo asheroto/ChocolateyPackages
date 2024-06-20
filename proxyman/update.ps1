@@ -13,6 +13,8 @@ $packageInfo = @{
     PackageName   = "proxyman"
     FileUrl       = "https://github.com/ProxymanApp/proxyman-windows-linux/releases/download/{VERSION}/Proxyman.Setup.{VERSION}.exe"
     GitHubRepoUrl = "https://github.com/ProxymanApp/proxyman-windows-linux"
+    AutoPush      = $true
+    EnvFilePath   = "..\.env"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

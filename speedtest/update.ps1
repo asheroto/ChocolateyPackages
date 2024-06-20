@@ -14,6 +14,8 @@ $packageInfo = @{
     ScrapeUrl     = 'https://www.speedtest.net/apps/cli'                                                            # URL to scrape for version number
     ScrapePattern = '(?<=ookla-speedtest-)[\d.]+(?=-win64\.zip)'                                                    # Regex pattern to match version number
     FileUrl       = "https://install.speedtest.net/app/cli/ookla-speedtest-{VERSION}-win64.zip"                     # URL to download the file from
+    AutoPush      = $true
+    EnvFilePath   = "..\.env"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

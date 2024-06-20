@@ -13,6 +13,8 @@ $packageInfo = @{
     PackageName   = "httptoolkit"
     FileUrl       = "https://github.com/httptoolkit/httptoolkit-desktop/releases/download/v{VERSION}/HttpToolkit-installer-{VERSION}.exe"
     GitHubRepoUrl = "https://github.com/httptoolkit/httptoolkit-desktop"
+    AutoPush      = $true
+    EnvFilePath   = "..\.env"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table
