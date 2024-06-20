@@ -30,4 +30,7 @@ This is a virtual package to help find and install [Logi Options+](https://commu
             <dependency id="logioptionsplus" version="1.74.577900" />
         </dependencies>
     </metadata>
+    <files>
+        <file src="*.nuspec" exclude="update.ps1" />
+    </files>
 </package>
