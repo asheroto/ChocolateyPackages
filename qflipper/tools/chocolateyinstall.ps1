@@ -1,10 +1,11 @@
 $ErrorActionPreference = 'Stop'
-$packageName = 'httptoolkit'
-$softwareName = 'httptoolkit'
-$version = "1.17.2"
-$url = "https://github.com/httptoolkit/httptoolkit-desktop/releases/download/v${VERSION}/HttpToolkit-installer-${VERSION}.exe"
-$checksum = 'EC46915433A8365A4F9358B2ACA3DBDA22DE05093CB2511C82FE1C492DF7D8C5'
-$silentArgs = '/S'
+$version = "1.3.3"
+
+$packageName    = 'qFlipper'
+$softwareName   = 'qFlipper*'
+$url            = "https://update.flipperzero.one/builds/qFlipper/${version}/qFlipperSetup-64bit-${version}.exe"
+$checksum       = '0AD49533997A8FEDFEC9525CE2F0BE1860D66D5AE8625164717059CF03512BBA'
+$silentArgs     = '/S'
 $validExitCodes = @(0)
 
 $packageArgs = @{
@@ -19,5 +20,4 @@ $packageArgs = @{
     softwareName   = $softwareName
 }
 
-# Install the package
 Install-ChocolateyPackage @packageArgs

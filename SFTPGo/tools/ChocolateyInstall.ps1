@@ -1,8 +1,8 @@
-﻿$ErrorActionPreference  = 'Stop'
+$ErrorActionPreference  = 'Stop'
 $packageName    = 'sftpgo'
 $softwareName   = 'SFTPGo'
 $url            = 'https://github.com/drakkan/sftpgo/releases/download/v2.5.4/sftpgo_v2.5.4_windows_x86_64.exe'
-$checksum       = '38AA95A6B7E6044977CBDBDAB86DC9F91FCC40285D10C1E5D432BA78AF498017'
+$checksum       = 'DACF5370782953591DC67D4B172381A30FE4C064325B5C2A785BB815BBE31EC8'
 $silentArgs     = '/VERYSILENT'
 $validExitCodes = @(0)
 
