@@ -11,8 +11,9 @@ $ParentPath = Split-Path -Parent $ScriptPath
 # Create a hash table to store package information
 $packageInfo = @{
     PackageName          = "filemenutools"
-    FileUrl              = 'https://www.lopesoft.com/fmtools/FileMenuTools-setup.exe'    # URL to download the file from
-    FileDestinationPath  = '.\tools\FileMenuTools-setup.exe'                             # Path to move/rename the temporary file to (if EXE is distributed in package)
+    FileUrl              = 'https://www.lopesoft.com/fmtools/FileMenuTools-setup.exe'
+    FileDestinationPath  = '.\tools\FileMenuTools-setup.exe'
+    AutoPush             = $true
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

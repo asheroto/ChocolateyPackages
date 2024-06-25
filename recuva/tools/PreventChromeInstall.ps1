@@ -1,4 +1,5 @@
-﻿# Adds a registry key to prevent Google Chrome from installing with Piriform products
+﻿$ErrorActionPreference = 'Stop'
+# Adds a registry key to prevent Google Chrome from installing with Piriform products
 
 Function Add-RegistryProperty {
     <#

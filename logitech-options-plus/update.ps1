@@ -6,8 +6,6 @@ $nuspecContent = Get-Content $nuspecFile -Raw
 $versionTagPattern = '<version>(.*?)<\/version>'
 $dependencyVersionPattern = '(<dependency id="logioptionsplus" version=")([^"]+)(" \/\>)'
 
-# Define 
-
 # Check the current version
 $currentVersionMatch = [regex]::Match($nuspecContent, $versionTagPattern)
 if ($currentVersionMatch.Success) {

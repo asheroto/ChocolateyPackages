@@ -1,4 +1,4 @@
-$ErrorActionPreference 	= 'Stop'
+﻿$ErrorActionPreference 	= 'Stop'
 
 # Package vars
 $packageName 		= 'filemenutools'
