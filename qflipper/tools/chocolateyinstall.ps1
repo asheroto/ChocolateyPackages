@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $version = "1.3.3"
 
 $packageName    = 'qFlipper'

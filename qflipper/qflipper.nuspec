@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-  <metadata>
-
-    <id>qflipper</id>
-    <version>1.3.3</version>
-    <packageSourceUrl>https://github.com/Poewa/ChocoPackages/tree/master/qFlipper</packageSourceUrl>
-    <owners>Poewa</owners>
-    <title>qFlipper (Install)</title>
-    <authors>gsurkov</authors>
-
-    <projectUrl>https://github.com/flipperdevices/qFlipper</projectUrl>
-
-    <iconUrl>https://rawcdn.githack.com/Poewa/ChocoPackages/107491ec033369c1a00821e7cad6cfd3ea1d71cf/Icons/qFlipper_macOS_256px.png</iconUrl>
-
-    <licenseUrl>https://github.com/flipperdevices/qFlipper/blob/dev/LICENSE</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/flipperdevices/qflipper</projectSourceUrl>
-    <docsUrl>https://docs.flipperzero.one/</docsUrl>
-
-
-    <tags>qflipper</tags>
-    <summary>Graphical desktop application for updating Flipper Zero firmware via PC</summary>
-    <description>qFlipper is completely open source and based on Qt framework. Runs on Windows, macOS, Linux.</description>
-
-  </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
+    <metadata>
+        <id>qflipper</id>
+        <version>1.3.3</version>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/qflipper</packageSourceUrl>
+        <owners>asheroto</owners>
+        <title>qFlipper (Install)</title>
+        <authors>flipperdevices</authors>
+        <projectUrl>https://github.com/flipperdevices/qFlipper</projectUrl>
+        <bugTrackerUrl>https://github.com/flipperdevices/qFlipper/issues</bugTrackerUrl>
+        <iconUrl>https://rawcdn.githack.com/asheroto/ChocolateyPackages/e2e94aeedf3227ae1bc955150a967ab666073a45/qflipper/icon.png</iconUrl>
+        <licenseUrl>https://github.com/flipperdevices/qFlipper/blob/dev/LICENSE</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <projectSourceUrl>https://github.com/flipperdevices/qFlipper</projectSourceUrl>
+        <releaseNotes>https://github.com/flipperdevices/qFlipper/releases</releaseNotes>
+        <docsUrl>https://docs.flipper.net</docsUrl>
+        <tags>qflipper flipper zero official firmware updater flash</tags>
+        <summary>Graphical desktop application for updating Flipper Zero firmware via PC</summary>
+        <description>![screenshot](https://rawcdn.githack.com/asheroto/ChocolateyPackages/e2e94aeedf3227ae1bc955150a967ab666073a45/qflipper/screenshot.png)
+    qFlipper is a cross-platform graphical desktop application designed to update [Flipper Zero](https://flipperzero.one/) firmware. Based on the Qt framework, qFlipper is open source and supports Windows, macOS, and Linux. The tool provides a user-friendly interface for managing and updating your Flipper Zero device efficiently.
+        </description>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
 </package>
