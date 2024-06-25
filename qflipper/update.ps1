@@ -13,7 +13,7 @@ $packageInfo = @{
     PackageName   = "qFlipper"
     GitHubRepoUrl = "https://github.com/flipperdevices/qFlipper"
     FileUrl       = "https://update.flipperzero.one/builds/qFlipper/{VERSION}/qFlipperSetup-64bit-{VERSION}.exe"
-    AutoPush      = $false
+    AutoPush      = $true
     EnvFilePath   = "..\.env"
 }
 
