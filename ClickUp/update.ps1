@@ -13,6 +13,7 @@ $packageInfo = @{
     PackageName   = "ClickUp"
     FileUrl       = "https://github.com/asheroto/ClickUp/releases/download/{VERSION}/ClickUp.exe"
     GitHubRepoUrl = "https://github.com/asheroto/ClickUp"
+    AutoPush      = $true
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

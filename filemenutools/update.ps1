@@ -1,17 +1,12 @@
 [CmdletBinding()] # Enables -Debug parameter for troubleshooting
 param ()
 
-# Use PowerShell 7+ to run this script
+# Set vars to the script and the parent path
+$ScriptPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
+$ParentPath = Split-Path -Parent $ScriptPath
 
-# Remember current directory
-Push-Location
-
-# Change to the directory of this script
-$scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
-Set-Location $scriptPath
-
-# Imports the Chocolatey-Package-Updater functions
-. ..\Chocolatey-Package-Updater.ps1
+# Import the UpdateChocolateyPackage function
+. (Join-Path $ParentPath 'Chocolatey-Package-Updater.ps1')
 
 # Create a hash table to store package information
 $packageInfo = @{
@@ -22,6 +17,3 @@ $packageInfo = @{
 
 # Call the UpdateChocolateyPackage function and pass the hash table
 UpdateChocolateyPackage @packageInfo
-
-# Return to the original directory
-Pop-Location

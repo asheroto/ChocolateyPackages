@@ -13,6 +13,8 @@ $packageInfo = @{
     PackageName   = "chatgpt"
     GitHubRepoUrl = 'https://github.com/lencx/ChatGPT'
     FileUrl       = 'https://github.com/lencx/ChatGPT/releases/download/v{version}/ChatGPT_{version}_windows_x86_64.msi'
+    IgnoreVersion = "1.1.0"
+    AutoPush      = $true
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table
