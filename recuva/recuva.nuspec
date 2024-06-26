@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>recuva</id>
-        <version>1.53.2096</version>
+        <version>1.54.120</version>
         <title>Recuva</title>
         <authors>Piriform</authors>
         <owners>asheroto</owners>

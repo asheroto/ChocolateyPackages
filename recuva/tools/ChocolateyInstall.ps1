@@ -10,9 +10,9 @@ if ($Env:ChocolateyPackageParameters -match '/UseSystemLocale') {
 $packageArgs = @{
     PackageName    = "recuva"
     SoftwareName   = "Recuva"
-    Version        = '1.53.2096'
-    Url            = 'https://download.ccleaner.com/rcsetup153.exe'
-    Checksum       = 'B3DF198D64BA6F401611F56743BD344C1B02915F9E5D571D271EF8557FEAF56C'
+    Version        = '1.54.120'
+    Url            = 'https://download.ccleaner.com/rcsetup154.exe'
+    Checksum       = 'dbf0895d886b428c8465ee57aea56a7e7b6e4c003efd04ca00d216a2d821eac9'
     ChecksumType   = "sha256"
     SilentArgs     = "/S $locale"
     ValidExitCodes = @(0)
@@ -24,8 +24,5 @@ Write-Host "Adding registry keys to prevent Google Chrome and Toolbar offers wit
 
 # Install Chocolatey package
 Install-ChocolateyPackage @packageArgs
-
-
-
 
 

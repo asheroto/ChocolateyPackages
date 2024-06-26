@@ -37,71 +37,67 @@ function Get-LatestVersionAndUrl {
     }
 }
 
-# Function to calculate the checksum of a file
-function Get-RemoteChecksum {
-    param (
-        [string]$Url,
-        [string]$Algorithm = 'SHA256'
-    )
-
-    $webClient = New-Object System.Net.WebClient
-    $tempFile = [System.IO.Path]::GetTempFileName()
-    $webClient.DownloadFile($Url, $tempFile)
-
-    $hashAlgorithm = [System.Security.Cryptography.HashAlgorithm]::Create($Algorithm)
-    $fileStream = [System.IO.File]::OpenRead($tempFile)
-    $checksumBytes = $hashAlgorithm.ComputeHash($fileStream)
-    $fileStream.Close()
-
-    $checksum = [BitConverter]::ToString($checksumBytes) -replace '-', ''
-    Remove-Item -Path $tempFile
-
-    return $checksum
-}
-
-# Get the latest version and URL
-$Latest = Get-LatestVersionAndUrl
-
-# Calculate the checksum
-$checksum = Get-RemoteChecksum -Url $Latest.URL32
-
 # Paths to the files
 $nuspecFilePath = Resolve-Path "recuva.nuspec"
 $installScriptPath = Resolve-Path ".\tools\chocolateyInstall.ps1"
 
-# Read the .nuspec file content
-$nuspecContent = Get-Content $nuspecFilePath -Raw
+# Get the current version from the nuspec file
+$currentVersionPattern = [regex]::new('<version>(.*?)</version>')
+$currentNuspecContent = Get-Content $nuspecFilePath -Raw
+$currentVersionMatch = $currentVersionPattern.Match($currentNuspecContent)
+$currentVersion = if ($currentVersionMatch.Success) { $currentVersionMatch.Groups[1].Value } else { '' }
 
-# Update version in nuspec file using regex replacement
-$nuspecContent = [regex]::Replace($nuspecContent, '(<version>)(.*?)(</version>)', "<version>$($Latest.Version)</version>")
-Set-Content -Path $nuspecFilePath -Value $nuspecContent -Encoding utf8NoBOM
-Write-Output "Updated version in nuspec file to $Latest.Version."
+# Get the latest version and URL
+$Latest = Get-LatestVersionAndUrl
 
-# Read the ChocolateyInstall.ps1 script content
-$installScriptContent = Get-Content $installScriptPath -Raw
+if ($Latest.Version -ne $currentVersion) {
+    Write-Output "Version has changed from $currentVersion to $($Latest.Version). Updating files..."
 
-# Update the URL, checksum, and version in ChocolateyInstall.ps1 script using regex replacement
-$installScriptContent = $installScriptContent `
-    -replace "(?<=Url\s*=\s*')[^']*", "$($Latest.URL32)" `
-    -replace "(?<=Checksum\s*=\s*')[^']*", "$checksum" `
-    -replace "(?<=Version\s*=\s*')[^']*", "$($Latest.Version)"
+    # Calculate the checksum
+    $checksum = Get-RemoteChecksum -Url $Latest.URL32
 
-Set-Content -Path $installScriptPath -Value $installScriptContent -Encoding utf8NoBOM
-Write-Output "Updated URL, checksum, and version in ChocolateyInstall.ps1 script."
+    # Update version in nuspec file using regex replacement
+    $nuspecContent = [regex]::Replace($currentNuspecContent, '(<version>)(.*?)(</version>)', "<version>$($Latest.Version)</version>")
+    Set-Content -Path $nuspecFilePath -Value $nuspecContent -Encoding utf8NoBOM
+    Write-Output "Updated version in nuspec file to $Latest.Version."
 
-# Optional: Run 'choco pack' to create the nupkg file
-Write-Output "Creating nupkg file..."
-choco pack
+    # Read the ChocolateyInstall.ps1 script content
+    $installScriptContent = Get-Content $installScriptPath -Raw
 
-# Optional: Push the package to Chocolatey
-if ($AutoPush) {
-    $filename = "recuva.$($Latest.Version).nupkg"
-    Write-Output "Pushing $filename to Chocolatey..."
-    choco push $filename
+    # Update the URL, checksum, and version in ChocolateyInstall.ps1 script using regex replacement
+    $installScriptContent = $installScriptContent `
+        -replace "(?<=Url\s*=\s*')[^']*", "$($Latest.URL32)" `
+        -replace "(?<=Checksum\s*=\s*')[^']*", "$checksum" `
+        -replace "(?<=Version\s*=\s*')[^']*", "$($Latest.Version)"
+
+    Set-Content -Path $installScriptPath -Value $installScriptContent -Encoding utf8NoBOM
+    Write-Output "Updated URL, checksum, and version in ChocolateyInstall.ps1 script."
+
+    # Delete any nupkg files in the package folder if it exists
+    $nupkgFiles = Get-ChildItem -Path (Split-Path -Parent $MyInvocation.MyCommand.Definition) -Filter "*.nupkg"
+    if ($nupkgFiles) {
+        foreach ($nupkgFile in $nupkgFiles) {
+            Write-Output "Deleting old nupkg file: $nupkgFile"
+            Remove-Item -Path $nupkgFile.FullName -Force
+        }
+    }
+
+    # Run 'choco pack' to create the nupkg file
+    Write-Output "Creating nupkg file..."
+    choco pack
+
+    # Push the package to Chocolatey
+    if ($AutoPush) {
+        $filename = "recuva.$($Latest.Version).nupkg"
+        Write-Output "Pushing $filename to Chocolatey..."
+        choco push $filename
+    }
+
+    # Import the Chocolatey package updater functions
+    . (Join-Path (Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Definition)) 'functions.ps1')
+
+    # Send Alert
+    SendAlert -Subject "Recuva Updated" -Message "Recuva has been updated to version $($Latest.Version). Files have been updated."
+} else {
+    Write-Output "Version has not changed. No updates required."
 }
-
-# Import the Chocolatey package updater functions
-. (Join-Path (Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Definition)) 'functions.ps1')
-
-# Send Alert
-SendAlert -Subject "Recuva Updated" -Message "Recuva has been updated to version $($Latest.Version) but has NOT been automatically pushed to confirm it's still working right."
