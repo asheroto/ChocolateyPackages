@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 # Adds a registry key to prevent Google Chrome from installing with Piriform products
 
-Function Add-RegistryProperty {
+Function Add-PiriformRegistryKey {
     <#
     .SYNOPSIS
     Adds a registry key property to prevent Google Chrome and Toolbar offers with Piriform products.
@@ -29,5 +29,5 @@ if ([Environment]::Is64BitOperatingSystem) {
 }
 
 # Add the registry properties
-Add-RegistryProperty -RegistryPath $regDirChrome
-Add-RegistryProperty -RegistryPath $regDirToolbar
+Add-PiriformRegistryKey -RegistryPath $regDirChrome
+Add-PiriformRegistryKey -RegistryPath $regDirToolbar
