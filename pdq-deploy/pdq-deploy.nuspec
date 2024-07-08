@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>pdq-deploy</id>
-        <version>19.3.570</version>
+        <version>19.3.575</version>
         <title>PDQ Deploy (Install)</title>
         <authors>PDQ</authors>
         <owners>asheroto</owners>
