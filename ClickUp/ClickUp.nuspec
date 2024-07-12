@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>ClickUp</id>
-        <version>1.1.4</version>
+        <version>1.1.4.20240712</version>
         <title>ClickUp (unofficial)</title>
         <authors>asheroto</authors>
         <owners>asheroto</owners>
