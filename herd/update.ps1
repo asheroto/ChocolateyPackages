@@ -1,11 +1,16 @@
-# Load the nuspec file content
-$nuspecFile = "logitech-options-plus.nuspec"
-$nuspecContent = Get-Content $nuspecFile -Raw
+# Variables
+$nuspecFile = "herd.nuspec"
+$dependencyID = "laravel-herd"
+$regexPattern = 'Laravel Herd\s*([\d.]+)'
+$packageName = "Laravel Herd"
 $AutoPush = $true
+
+# Load the nuspec file content
+$nuspecContent = Get-Content $nuspecFile -Raw
 
 # Define regex patterns for the version and dependency version
 $versionTagPattern = '<version>(.*?)<\/version>'
-$dependencyVersionPattern = '(<dependency id="logioptionsplus" version=")([^"]+)(" \/\>)'
+$dependencyVersionPattern = '(<dependency id="' + $dependencyID + '" version=")([^"]+)(" \/\>)'
 
 # Check the current version
 $currentVersionMatch = [regex]::Match($nuspecContent, $versionTagPattern)
@@ -17,11 +22,11 @@ if ($currentVersionMatch.Success) {
 }
 
 # Fetch the webpage content
-$url = "https://community.chocolatey.org/packages/logioptionsplus"
+$url = "https://community.chocolatey.org/packages/$dependencyID"
 $pageContent = Invoke-WebRequest -Uri $url -UseBasicParsing
 
 # Use a regex pattern to extract the version number from the HTML content
-$versionPattern = [regex]::new('Logi Options\+\s*([\d.]+)', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+$versionPattern = [regex]::new($regexPattern, [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
 $versionMatch = $versionPattern.Match($pageContent.Content)
 
 # Check if a match is found and output the version number
@@ -37,7 +42,7 @@ if ($versionMatch.Success) {
         $nuspecContent = [regex]::Replace($nuspecContent, $versionTagPattern, "<version>$versionNumber</version>")
 
         # Update the dependency version
-        $nuspecContent = [regex]::Replace($nuspecContent, $dependencyVersionPattern, "<dependency id=`"logioptionsplus`" version=`"$versionNumber`" />")
+        $nuspecContent = [regex]::Replace($nuspecContent, $dependencyVersionPattern, "<dependency id=`"$dependencyID`" version=`"$versionNumber`" />")
 
         # Save the updated content back to the nuspec file
         Set-Content -Path $nuspecFile -Value $nuspecContent -Encoding UTF8
@@ -62,13 +67,13 @@ if ($versionMatch.Success) {
             $filename = "recuva.$($Latest.Version).nupkg"
             Write-Output "Pushing $filename to Chocolatey..."
             choco push $filename
-        }        
+        }
 
         # Import the Chocolatey package updater functions
         . (Join-Path (Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Definition)) 'functions.ps1')
 
         # Send Alert
-        SendAlert -Subject "Logi Options+ Updated" -Message "Logi Options+ has been updated to version $versionNumber. Auto push enabled."
+        SendAlert -Subject "$packageName Updated" -Message "$packageName has been updated to version $versionNumber. Auto push enabled."
     } else {
         Write-Output "No new version available."
     }

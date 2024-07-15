@@ -1,6 +1,8 @@
 [CmdletBinding()] # Enables -Debug parameter for troubleshooting
 param ()
 
+$AutoPush = $false
+
 # Define the API URL
 $apiUrl = 'https://www.ccleaner.com/en-us/api/knowledge/search?guid=f89265d7-1f47-4f3c-beb1-fc64b5a866fa&w=recuva'
 
@@ -97,7 +99,7 @@ if ($Latest.Version -ne $currentVersion) {
     . (Join-Path (Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Definition)) 'functions.ps1')
 
     # Send Alert
-    SendAlert -Subject "Recuva Updated" -Message "Recuva has been updated to version $($Latest.Version). Files have been updated."
+    SendAlert -Subject "Recuva Updated" -Message "Recuva has been updated to version $($Latest.Version). Auto push NOT enabled."
 } else {
     Write-Output "Version has not changed. No updates required."
 }

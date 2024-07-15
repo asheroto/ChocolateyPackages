@@ -15,6 +15,7 @@ Set-Location $scriptPath
 ./httptoolkit/update.ps1
 ./iventoy/update.ps1
 ./laravel-herd/update.ps1
+./herd/update.ps1
 ./logitech-options-plus/update.ps1
 ./MessagesForWeb/update.ps1
 ./metadataplusplus/update.ps1
