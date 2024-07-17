@@ -99,7 +99,7 @@ if ($Latest.Version -ne $currentVersion) {
     . (Join-Path (Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Definition)) 'functions.ps1')
 
     # Send Alert
-    SendAlert -Subject "Recuva Updated" -Message "Recuva has been updated to version $($Latest.Version). Auto push NOT enabled."
+    SendAlert -Subject "Recuva Updated" -Message "Recuva has been updated to version $($Latest.Version). Auto push NOT enabled. Current version is $currentVersion."
 } else {
     Write-Output "Version has not changed. No updates required."
 }
