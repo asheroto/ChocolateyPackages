@@ -1,10 +1,17 @@
 [CmdletBinding()] # Enables -Debug parameter for troubleshooting
 param ()
 
+# Variables
 $AutoPush = $false
-
-# Define the API URL
 $apiUrl = 'https://www.ccleaner.com/en-us/api/knowledge/search?guid=f89265d7-1f47-4f3c-beb1-fc64b5a866fa&w=recuva'
+$nuspecFilePath = Resolve-Path "recuva.nuspec"
+$installScriptPath = Resolve-Path ".\tools\chocolateyInstall.ps1"
+$currentVersionPattern = [regex]::new('<version>(.*?)</version>')
+$alertSubject = "Recuva Updated"
+$alertMessageTemplate = "Recuva has been updated to version {0}. Auto push NOT enabled. Current version is {1}."
+$recuvaFileUrlTemplate = "https://download.ccleaner.com/rcsetup{0}.exe"
+$recuvaFilenameTemplate = "recuva.{0}.nupkg"
+$AutoPush = $false
 
 # Function to get the latest version and download URL
 function Get-LatestVersionAndUrl {
@@ -26,7 +33,7 @@ function Get-LatestVersionAndUrl {
         Write-Output "Version Number (Short): $versionNumberShort"
 
         # Define the URL to download the installer using the shortened version number
-        $fileUrl = "https://download.ccleaner.com/rcsetup$($versionNumberShort.Replace('.', '')).exe"
+        $fileUrl = [string]::Format($recuvaFileUrlTemplate, $versionNumberShort.Replace('.', ''))
         Write-Debug "Download URL: $fileUrl"
 
         return @{
@@ -39,12 +46,7 @@ function Get-LatestVersionAndUrl {
     }
 }
 
-# Paths to the files
-$nuspecFilePath = Resolve-Path "recuva.nuspec"
-$installScriptPath = Resolve-Path ".\tools\chocolateyInstall.ps1"
-
 # Get the current version from the nuspec file
-$currentVersionPattern = [regex]::new('<version>(.*?)</version>')
 $currentNuspecContent = Get-Content $nuspecFilePath -Raw
 $currentVersionMatch = $currentVersionPattern.Match($currentNuspecContent)
 $currentVersion = if ($currentVersionMatch.Success) { $currentVersionMatch.Groups[1].Value } else { '' }
@@ -90,7 +92,7 @@ if ($Latest.Version -ne $currentVersion) {
 
     # Push the package to Chocolatey
     if ($AutoPush) {
-        $filename = "recuva.$($Latest.Version).nupkg"
+        $filename = [string]::Format($recuvaFilenameTemplate, $Latest.Version)
         Write-Output "Pushing $filename to Chocolatey..."
         choco push $filename
     }
@@ -99,7 +101,8 @@ if ($Latest.Version -ne $currentVersion) {
     . (Join-Path (Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Definition)) 'functions.ps1')
 
     # Send Alert
-    SendAlert -Subject "Recuva Updated" -Message "Recuva has been updated to version $($Latest.Version). Auto push NOT enabled. Current version is $currentVersion."
+    $alertMessage = [string]::Format($alertMessageTemplate, $Latest.Version, $currentVersion)
+    SendAlert -Subject $alertSubject -Message $alertMessage
 } else {
     Write-Output "Version has not changed. No updates required."
 }
