@@ -1,11 +1,16 @@
-# Load the nuspec file content
+# Variables
+$PackageName = "logitech-options-plus"
 $nuspecFile = "logitech-options-plus.nuspec"
-$nuspecContent = Get-Content $nuspecFile -Raw
 $AutoPush = $true
-
-# Define regex patterns for the version and dependency version
 $versionTagPattern = '<version>(.*?)<\/version>'
 $dependencyVersionPattern = '(<dependency id="logioptionsplus" version=")([^"]+)(" \/\>)'
+$versionPattern = [regex]::new('Logi Options\+\s*([\d.]+)', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+$url = "https://community.chocolatey.org/packages/logioptionsplus"
+$alertSubject = "Logi Options+ Updated"
+$alertMessageTemplate = "Logi Options+ has been updated to version {0}. Auto push enabled."
+
+# Load the nuspec file content
+$nuspecContent = Get-Content $nuspecFile -Raw
 
 # Check the current version
 $currentVersionMatch = [regex]::Match($nuspecContent, $versionTagPattern)
@@ -17,11 +22,9 @@ if ($currentVersionMatch.Success) {
 }
 
 # Fetch the webpage content
-$url = "https://community.chocolatey.org/packages/logioptionsplus"
 $pageContent = Invoke-WebRequest -Uri $url -UseBasicParsing
 
 # Use a regex pattern to extract the version number from the HTML content
-$versionPattern = [regex]::new('Logi Options\+\s*([\d.]+)', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
 $versionMatch = $versionPattern.Match($pageContent.Content)
 
 # Check if a match is found and output the version number
@@ -59,16 +62,17 @@ if ($versionMatch.Success) {
 
         # Push the package to Chocolatey
         if ($AutoPush) {
-            $filename = "recuva.$($Latest.Version).nupkg"
+            $filename = "$PackageName.$versionNumber.nupkg"
             Write-Output "Pushing $filename to Chocolatey..."
             choco push $filename
-        }        
+        }
 
         # Import the Chocolatey package updater functions
         . (Join-Path (Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Definition)) 'functions.ps1')
 
         # Send Alert
-        SendAlert -Subject "Logi Options+ Updated" -Message "Logi Options+ has been updated to version $versionNumber. Auto push enabled."
+        $alertMessage = [string]::Format($alertMessageTemplate, $versionNumber)
+        SendAlert -Subject $alertSubject -Message $alertMessage
     } else {
         Write-Output "No new version available."
     }
