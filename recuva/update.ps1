@@ -54,7 +54,10 @@ $currentVersion = if ($currentVersionMatch.Success) { $currentVersionMatch.Group
 # Get the latest version and URL
 $Latest = Get-LatestVersionAndUrl
 
-if ($Latest.Version -ne $currentVersion) {
+# Write the latest version
+Write-Output "Latest Version: $($Latest.Version)"
+
+if ($Latest.Version -ne $currentVersion -and $Latest.Version -ne '') {
     Write-Output "Version has changed from $currentVersion to $($Latest.Version). Updating files..."
 
     # Calculate the checksum
