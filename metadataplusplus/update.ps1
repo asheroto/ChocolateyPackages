@@ -17,6 +17,7 @@ $packageInfo = @{
     FileUrl                  = 'SCRAPE'                                             # Set to SCRAPE if using DownloadUrlScrapePattern
     AutoPush                 = $true
     EnvFilePath              = "..\.env"
+    IgnoreVersion            = '2.5.2'
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table
