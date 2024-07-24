@@ -57,7 +57,7 @@ $Latest = Get-LatestVersionAndUrl
 # Write the latest version
 Write-Output "Latest Version: $($Latest.Version)"
 
-if ($Latest.Version -ne $currentVersion -and $Latest.Version -ne '') {
+if ($Latest.Version -ne $currentVersion -and $currentVersion -ne '') {
     Write-Output "Version has changed from $currentVersion to $($Latest.Version). Updating files..."
 
     # Calculate the checksum
