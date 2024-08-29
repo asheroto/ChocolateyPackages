@@ -19,8 +19,3 @@ $packageInfo = @{
 
 # Call the UpdateChocolateyPackage function and pass the hash table
 UpdateChocolateyPackage @packageInfo
-
-# Create a file on the desktop to remind to update netscan
-$desktopPath = [Environment]::GetFolderPath("Desktop")
-$filePath = Join-Path $desktopPath "netscan.install.txt"
-Set-Content -Path $filePath -Value "Don't forget to update netscan"
