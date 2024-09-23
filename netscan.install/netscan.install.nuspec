@@ -4,7 +4,7 @@
     <metadata>
         <id>netscan.install</id>
         <title>SoftPerfect Network Scanner (Install)</title>
-        <version>8.2.2.20240910</version>
+        <version>8.2.2.20240923</version>
         <authors>SoftPerfect</authors>
         <owners>asheroto, digitalcardboard</owners>
         <projectUrl>https://www.softperfect.com/products/networkscanner/</projectUrl>
@@ -33,7 +33,9 @@ SoftPerfect Network Scanner can ping computers, scan ports, discover shared fold
 
 ## Package Note
 
-This package supersedes the `netscan32` and `netscan64` packages. You should consider uninstalling the deprecated packages to prevent any confusion.</description>
+This package supersedes the `netscan32` and `netscan64` packages. You should consider uninstalling the deprecated packages to prevent any confusion.
+
+SoftPerfect frequently updates the executable but keeps the same download URL. As a result, the checksum might change, and you may need to use `--ignore-checksum` with this package.</description>
         <docsUrl>https://www.softperfect.com/products/networkscanner/manual/</docsUrl>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/netscan.install</packageSourceUrl>
         <tags>netscan portscanner network netbios snmp scanner port scan soft perfect softperfect open active net</tags>
