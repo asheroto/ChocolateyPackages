@@ -46,7 +46,7 @@ This is an ***early version*** of ChatGPT Desktop available for Plus, Team, Ente
 
 This package simply uses `winget` to install the [ChatGPT package from the Microsoft Store](https://apps.microsoft.com/detail/9nt1r1c2hh7j). If you don't already have `winget`, it will automatically be installed first.
 
-If you're interested in the unofficial desktop app by [lencx/ChatGPT](https://github.com/lencx/ChatGPT), you can explore it on [this repo](https://community.chocolatey.org/packages/ChatGPT). While it remains functional, it hasn't received updates since August 2023, and some features may not work as expected. The developer has also introduced a newer project called [Noi](https://github.com/lencx/Noi), though its last update was in early 2024.
+If you're interested in the unofficial desktop app by [lencx/ChatGPT](https://github.com/lencx/ChatGPT), you can explore it on [this repo](https://community.chocolatey.org/packages/ChatGPT).
 
 We're hoping that the official ChatGPT desktop app (this repo) will see ongoing improvements.</description>
         <dependencies>
