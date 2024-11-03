@@ -7,7 +7,7 @@
         <title>ChatGPT Desktop (Official)</title>
         <authors>OpenAI</authors>
         <owners>asheroto</owners>
-        <iconUrl></iconUrl>
+        <iconUrl>https://rawcdn.githack.com/asheroto/ChocolateyPackages/cc941cce458f6f381a68a8ec7099e29c0e293dc6/ChatGPT-Official/icon.png</iconUrl>
         <copyright>Copyright 2024 OpenAI.</copyright>
         <projectUrl>https://www.microsoft.com/store/productId/9NT1R1C2HH7J</projectUrl>
         <licenseUrl>https://openai.com/policies/terms-of-use</licenseUrl>
@@ -15,10 +15,40 @@
         <tags>chatgpt chatbot chat bot LLM AI machine-learning GUI official desktop app</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/ChatGPT-Official</packageSourceUrl>
         <summary>Official ChatGPT Desktop Application</summary>
-        <description>
-### Package Note
-This is an early version of ChatGPT Desktop available for Plus, Team, Enterprise, and Education users.
-        </description>
+        <description>![ChatGPT Screenshot](https://rawcdn.githack.com/asheroto/ChocolateyPackages/cc941cce458f6f381a68a8ec7099e29c0e293dc6/ChatGPT-Official/screenshot.png)
+# ChatGPT Desktop App
+
+[ChatGPT in the Microsoft Store](https://apps.microsoft.com/detail/9nt1r1c2hh7j)
+
+The **ChatGPT Desktop App** brings the full power of OpenAI's ChatGPT to your Windows PC, enabling efficient, real-time assistance for all your tasks. This official desktop app is currently available to ChatGPT Plus, Team, Enterprise, and Edu users, with plans to extend access to all users later this year.
+
+With the desktop app, you can do more than chat. Access advanced features, such as uploading files and photos for analysis, and interact with OpenAI's newest and most advanced model, **o1-preview**. Use **Advanced Voice** to speak directly with ChatGPT, getting hands-free advice and answers as you work.
+
+## Key Features
+
+- **Instant Access**: Launch ChatGPT instantly with the [Alt + Space] shortcut for quicker answers. (note: 
+- **Stay Productive**: Keep ChatGPT within reach alongside your open apps using the companion window.
+- **File and Photo Uploads**: Summarize and analyze multiple documents and images directly within ChatGPT.
+- **Professional Input**: Generate ideas for marketing, business plans, and more with expert guidance.
+- **Creative Inspiration**: Get personalized gift ideas, or use DALL•E to create custom greeting cards and visuals.
+
+## Why ChatGPT Desktop?
+
+- **Newest Model Access**: Get the latest from OpenAI, with continuous improvements and cutting-edge capabilities.
+- **Advanced Voice Interaction**: Chat hands-free to boost productivity and engagement.
+- **Multi-Purpose Tool**: Brainstorm, summarize documents, get creative, and automate responses all in one place.
+
+Join millions of users optimizing their workflows.
+
+## Package Note
+
+This is an ***early version*** of ChatGPT Desktop available for Plus, Team, Enterprise, and Education users. There are glitches. 😊
+
+This package simply uses `winget` to install the [ChatGPT package from the Microsoft Store](https://apps.microsoft.com/detail/9nt1r1c2hh7j). If you don't already have `winget`, it will automatically be installed first.
+
+If you're interested in the unofficial desktop app by [lencx/ChatGPT](https://github.com/lencx/ChatGPT), you can explore it on [this repo](https://community.chocolatey.org/packages/ChatGPT). While it remains functional, it hasn't received updates since August 2023, and some features may not work as expected. The developer has also introduced a newer project called [Noi](https://github.com/lencx/Noi), though its last update was in early 2024.
+
+We're hoping that the official ChatGPT desktop app (this repo) will see ongoing improvements.</description>
         <dependencies>
             <dependency id="winget"/>
         </dependencies>
