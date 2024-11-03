@@ -7,15 +7,18 @@
         <title>ChatGPT Desktop (Official)</title>
         <authors>OpenAI</authors>
         <owners>asheroto</owners>
-        <iconUrl>https://store-images.s-microsoft.com/image/apps.64314.14423064005243201.ff003f01-b27e-4e67-9aa6-33c671187261.c7133ceb-d688-4f51-b158-23818ec236ff?h=210</iconUrl>
+        <iconUrl></iconUrl>
         <copyright>Copyright 2024 OpenAI.</copyright>
         <projectUrl>https://www.microsoft.com/store/productId/9NT1R1C2HH7J</projectUrl>
         <licenseUrl>https://openai.com/policies/terms-of-use</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <tags>chatgpt chatbot chat bot LLM AI machine-learning GUI official desktop</tags>
+        <tags>chatgpt chatbot chat bot LLM AI machine-learning GUI official desktop app</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/ChatGPT-Official</packageSourceUrl>
         <summary>Official ChatGPT Desktop Application</summary>
-        <description>Experience the power of ChatGPT on your desktop. Engage in natural conversations, get instant answers, and streamline your workflow with this official desktop application from OpenAI.</description>
+        <description>
+### Package Note
+This is an early version of ChatGPT Desktop available for Plus, Team, Enterprise, and Education users.
+        </description>
         <dependencies>
             <dependency id="winget"/>
         </dependencies>
