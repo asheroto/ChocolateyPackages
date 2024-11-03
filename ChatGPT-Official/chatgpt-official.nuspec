@@ -8,7 +8,7 @@
         <authors>OpenAI</authors>
         <owners>asheroto</owners>
         <iconUrl>https://rawcdn.githack.com/asheroto/ChocolateyPackages/cc941cce458f6f381a68a8ec7099e29c0e293dc6/ChatGPT-Official/icon.png</iconUrl>
-        <copyright>Copyright 2024 OpenAI.</copyright>
+        <copyright>Copyright © 2015-2024 OpenAI</copyright>
         <projectUrl>https://www.microsoft.com/store/productId/9NT1R1C2HH7J</projectUrl>
         <licenseUrl>https://openai.com/policies/terms-of-use</licenseUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
