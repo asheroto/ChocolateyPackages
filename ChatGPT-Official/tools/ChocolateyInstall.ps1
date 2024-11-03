@@ -11,6 +11,8 @@ Start-Process -NoNewWindow -Wait -FilePath winget -ArgumentList "install --id $m
 # echo "Last exit code: $LASTEXITCODE"
 if ($null -eq $LASTEXITCODE -or $LASTEXITCODE -eq 0) {
     Write-Output "Installation completed successfully."
+    Write-Output ""
+    Write-Output "To launch, click Start and search for ChatGPT."
 } else {
     Write-Output "Installation failed. Please verify the Microsoft Store ID and try again."
     throw "The installation did not complete successfully."

@@ -6,7 +6,7 @@
         <version>1.1.0.20241102</version>
         <title>ChatGPT Desktop (Unofficial)</title>
         <authors>lencx, yixinBC, tk103331, Irene-123, VinchanGit, xueweiwujxw, manudss, turric4n, Sturlen, beilunyang, 11weltonrodrigo, JacobLinCool, danielbayley</authors>
-        <owners>asheroto</owners>
+        <owners>asheroto, ltklionel</owners>
         <iconUrl>https://rawcdn.githack.com/asheroto/ChocolateyPackages/a159719474fd728a8d99e17b9aaca02f418492f2/ChatGPT/logo.png</iconUrl>
         <copyright>Copyright 2023 lencx. Licensed under the GNU Affero General Public License v3.0</copyright>
         <projectUrl>https://github.com/lencx/ChatGPT</projectUrl>
