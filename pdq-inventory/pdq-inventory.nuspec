@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>pdq-inventory</id>
-        <version>19.3.625</version>
+        <version>19.3.626</version>
         <title>PDQ Inventory (Install)</title>
         <authors>PDQ</authors>
         <owners>asheroto</owners>
@@ -71,7 +71,6 @@ Share your reports and collections with other admins by creating a server/client
         </dependencies>
     </metadata>
     <files>
-        <file src="update.ps1" target="" />
         <file src="tools\**" target="tools" />
     </files>
 </package>

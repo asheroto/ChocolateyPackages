@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>pdq-deploy</id>
-        <version>19.3.625</version>
+        <version>19.3.626</version>
         <title>PDQ Deploy (Install)</title>
         <authors>PDQ</authors>
         <owners>asheroto</owners>
@@ -53,7 +53,6 @@ To be sure that these files are used during the installation, be sure to check t
         </dependencies>
     </metadata>
     <files>
-        <file src="update.ps1" target="" />
         <file src="tools\**" target="tools" />
     </files>
 </package>
