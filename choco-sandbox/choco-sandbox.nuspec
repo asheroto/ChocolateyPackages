@@ -41,7 +41,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * Automatically runs choco-sandbox-customize.ps1 for further customization if it exists.</description>
     <releaseNotes>
 ### CHANGELOG:
-* 1.0.1 - choco commands in choco-sandbox.ps1 now use -y, chocolatey package cache handling changed for better compatibility, added hints to choco-sandbox.ps1 for those who don't RTFM
+* 1.0.1 - choco commands in choco-sandbox.ps1 now use -y, chocolatey package cache handling changed for better compatibility, added hints to choco-sandbox.ps1
 * 1.0.0 - Initial release. No upgrades or features planned, only maintenance if needed for future Windows or Windows Sandbox compatibility.
     </releaseNotes>
     <dependencies>
