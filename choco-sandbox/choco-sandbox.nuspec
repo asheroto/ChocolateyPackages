@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>choco-sandbox</id>
+    <version>1.0.1</version>
+    <owners>bcurran3</owners>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</packageSourceUrl>
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
+    <title>(unofficial) Chocolatey Sandbox</title>
+    <authors>bcurran3</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-sandbox/choco-sandbox_icon.png</iconUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>bcurran3 unofficial chocolatey powershell sandbox test environment packagers maintainers</tags>
+    <summary>Chocolatey Sandbox runs Windows Sandbox with Chocolatey pre-installed.</summary>
+    <description>
+---
+
+### [choco://choco-sandbox](choco://choco-sandbox)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+![Screenshot of choco-sandbox](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-sandbox/choco-sandbox_screenshot.png)
+	
+### WHAT IS THIS?
+**Chocolatey Sandbox** sets up a customized and customizable [Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview) environment with Chocolatey installed.
+	
+### WHO IS THIS FOR?
+**Chocolatey Sandbox** is for anyone who may want to "test drive" Chocolatey packages in a [sandbox](https://en.wikipedia.org/wiki/Sandbox_(computer_security)).
+
+
+### FEATURES:
+* Installs Chocolatey from the web on first run and caches it for subsequent runs of the sandbox.
+* Automatically upgrades Chocolatey to the latest version on every run.
+* Automatically sets up the default PowerShell profile with Chocolatey tab completion as well as some shortcuts (cup, cinst, cuninst, clist).
+* Automatically installs packages from packages.config if it exists.
+* Automatically runs choco-sandbox-customize.ps1 for further customization if it exists.
+
+
+---
+
+**If you find Chocolatey Sandbox useful, please consider donating:
+https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
+
+---
+    </description>
+    <releaseNotes>
+### CHANGELOG:
+* 1.0.1 - choco commands in choco-sandbox.ps1 now use -y, chocolatey package cache handling changed for better compatibility, added hints to choco-sandbox.ps1 for those who don't RTFM
+* 1.0.0 - Initial release. No upgrades or features planned, only maintenance if needed for future Windows or Windows Sandbox compatibility.
+    </releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
+      <dependency id="windows-sandbox" version="0.0.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

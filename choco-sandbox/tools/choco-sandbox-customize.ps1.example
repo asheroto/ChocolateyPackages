@@ -1,0 +1,4 @@
+# Rename this file to choco-sandbox-customize.ps1 and it will run automatically
+# everytime you run Chocolatey Sandbox. Uses this for any further customization. 
+
+choco feature enable -n allowGlobalConfirmation

@@ -1,0 +1,13 @@
+<Configuration>
+<VGpu>Default</VGpu>
+<Networking>Default</Networking>
+<MappedFolders>
+   <MappedFolder>
+     <HostFolder>C:\tools\BCURRAN3\choco-sandbox</HostFolder>
+     <ReadOnly>false</ReadOnly>
+   </MappedFolder>
+</MappedFolders>
+<LogonCommand>
+   <Command>powershell -ExecutionPolicy Unrestricted -Command "start powershell {-NoExit -File C:\Users\WDAGUtilityAccount\Desktop\choco-sandbox\choco-sandbox.ps1}"</Command>
+</LogonCommand>
+</Configuration>
