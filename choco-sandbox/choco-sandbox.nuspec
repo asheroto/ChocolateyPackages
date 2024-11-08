@@ -10,7 +10,7 @@
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <title>Chocolatey Sandbox (unofficial)</title>
     <authors>bcurran3</authors>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox/tools</projectUrl>
     <iconUrl>https://rawcdn.githack.com/asheroto/ChocolateyPackages/f518f3403c80044de3c2e8e138358e8a8ecdf586/choco-sandbox/icon.png</iconUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <copyright>public domain</copyright>
