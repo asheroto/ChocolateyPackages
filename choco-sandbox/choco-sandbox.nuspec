@@ -4,11 +4,11 @@
   <metadata>
     <id>choco-sandbox</id>
     <version>1.0.1</version>
-    <owners>bcurran3</owners>
+    <owners>asheroto</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
-    <title>(unofficial) Chocolatey Sandbox</title>
+    <title>Chocolatey Sandbox (unofficial)</title>
     <authors>bcurran3</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-sandbox/choco-sandbox_icon.png</iconUrl>
@@ -16,10 +16,9 @@
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>bcurran3 unofficial chocolatey powershell sandbox test environment packagers maintainers</tags>
+    <tags>bcurran3 unofficial chocolatey powershell sandbox test environment packagers maintainers sand box choco install</tags>
     <summary>Chocolatey Sandbox runs Windows Sandbox with Chocolatey pre-installed.</summary>
-    <description>
----
+    <description>---
 
 ### [choco://choco-sandbox](choco://choco-sandbox)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
@@ -34,7 +33,6 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 ### WHO IS THIS FOR?
 **Chocolatey Sandbox** is for anyone who may want to "test drive" Chocolatey packages in a [sandbox](https://en.wikipedia.org/wiki/Sandbox_(computer_security)).
 
-
 ### FEATURES:
 * Installs Chocolatey from the web on first run and caches it for subsequent runs of the sandbox.
 * Automatically upgrades Chocolatey to the latest version on every run.
@@ -42,14 +40,12 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * Automatically installs packages from packages.config if it exists.
 * Automatically runs choco-sandbox-customize.ps1 for further customization if it exists.
 
-
 ---
 
 **If you find Chocolatey Sandbox useful, please consider donating:
 https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 
----
-    </description>
+---</description>
     <releaseNotes>
 ### CHANGELOG:
 * 1.0.1 - choco commands in choco-sandbox.ps1 now use -y, chocolatey package cache handling changed for better compatibility, added hints to choco-sandbox.ps1 for those who don't RTFM
