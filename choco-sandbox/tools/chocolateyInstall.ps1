@@ -1,19 +1,20 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName  = 'choco-sandbox'
+
+$packageName = 'choco-sandbox'
 $shortcutName = 'Chocolatey Sandbox.lnk'
-$scriptDir    = "$(Get-ToolsLocation)\BCURRAN3\choco-sandbox"
-$script       = 'choco-sandbox.ps1'
-$toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$exe          = "$toolsDir\choco-sandbox.wsb"
+$scriptDir = "$(Get-ToolsLocation)\BCURRAN3\choco-sandbox"
+$script = 'choco-sandbox.ps1'
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$exe = "$toolsDir\choco-sandbox.wsb"
 
 Confirm-WinMinimumBuild 18305
 
 # Update the WSB (config) file if the Chocolatey Tools Location is non-default
-if ($(Get-ToolsLocation) -ne "C:\tools"){
-	[xml]$WSBConfig = Get-Content "$exe"
+if ($(Get-ToolsLocation) -ne "C:\tools") {
+    [xml]$WSBConfig = Get-Content "$exe"
     $WSBConfig.Configuration.MappedFolders.MappedFolder.HostFolder = "$scriptDir"
     Write-Host "  ** Updating WSB file with your defined Chocolatey tools dir." -Foreground Magenta
-	$WSBConfig.Save("$exe")
+    $WSBConfig.Save("$exe")
 }
 
 # New storage location moving forward for all my Chocolatey scripts
@@ -30,8 +31,8 @@ Move-Item "$toolsDir\ReadMe.txt" "$scriptDir" -Force -ErrorAction SilentlyContin
 
 # Make shortcuts
 Install-ChocolateyShortcut -shortcutFilePath "$ENV:Public\Desktop\$shortcutName" -targetPath $exe -IconLocation "$toolsDir\Chocolatey Sandbox.ico" -RunAsAdmin
-if (Test-Path "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey"){
-    Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName" -targetPath $exe  -IconLocation "$toolsDir\Chocolatey Sandbox.ico" -RunAsAdmin
-   } else {
-     Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath $exe  -IconLocation "$toolsDir\Chocolatey Sandbox.ico" -RunAsAdmin
-    }
+if (Test-Path "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey") {
+    Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName" -targetPath $exe -IconLocation "$toolsDir\Chocolatey Sandbox.ico" -RunAsAdmin
+} else {
+    Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath $exe -IconLocation "$toolsDir\Chocolatey Sandbox.ico" -RunAsAdmin
+}
