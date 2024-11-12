@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 
 # https://www.lopesoft.com/fmtools/FileMenuTools-setup.exe
 

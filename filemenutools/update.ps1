@@ -14,6 +14,8 @@ $packageInfo = @{
     FileUrl              = 'https://www.lopesoft.com/fmtools/FileMenuTools-setup.exe'
     FileDestinationPath  = '.\tools\FileMenuTools-setup.exe'
     AutoPush             = $true
+    EnvFilePath         = "..\.env"
+    IgnoreVersion       = "8.4.2"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

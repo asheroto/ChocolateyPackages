@@ -15,6 +15,7 @@ $packageInfo = @{
     FileDestinationPath = '.\tools\fxsound_setup.exe'                    # Path to move/rename the temporary file to (if EXE is distributed in package)
     AutoPush            = $true
     EnvFilePath         = "..\.env"
+    IgnoreVersion       = "1.1.27"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

@@ -1,6 +1,6 @@
 <#PSScriptInfo
 
-.VERSION 0.1.0
+.VERSION 0.1.1
 
 .GUID 9b612c16-25c0-4a40-afc7-f876274e7e8c
 
@@ -26,6 +26,7 @@
 [Version 0.0.11] - Added ignore version.
 [Version 0.0.12] - Added AutoPush for automatic pushing to Chocolatey community repository.
 [Version 0.1.0] - Added Mailjet support for alerting.
+[Version 0.1.1] - Fix bug with FileDestinationPath occurring after choco pack.
 
 #>
 
@@ -82,7 +83,7 @@ To update a Chocolatey package with additional parameters, run the following com
 UpdateChocolateyPackage -PackageName "fxsound" -FileUrl "https://download.fxsound.com/fxsoundlatest" -FileDownloadTempPath ".\fxsound_setup_temp.exe" -FileDestinationPath ".\tools\fxsound_setup.exe" -NuspecPath ".\fxsound.nuspec" -InstallScriptPath ".\tools\ChocolateyInstall.ps1" -VerificationPath ".\tools\VERIFICATION.txt" -Alert $true -EnvFilePath "..\.env"
 
 .NOTES
-- Version: 0.1.0
+- Version: 0.1.1
 - Created by: asheroto
 - See project site for instructions on how to use including full parameter list and examples.
 
@@ -101,7 +102,7 @@ param (
 # Initial vars
 # ============================================================================ #
 
-$CurrentVersion = '0.1.0'
+$CurrentVersion = '0.1.1'
 $RepoOwner = 'asheroto'
 $RepoName = 'Chocolatey-Package-Updater'
 $SoftwareName = 'Chocolatey Package Updater'
@@ -1023,6 +1024,26 @@ function UpdateChocolateyPackage {
                     }
                 }
 
+                # If the destination path is specified, move the downloaded file to the specified destination
+                if ($FileDestinationPath) {
+                    Write-Debug "Moving file `"${FileDownloadTempPath}`" to `"${FileDestinationPath}`""
+                    try {
+                        Move-Item $FileDownloadTempPath -Destination $FileDestinationPath -Force
+                    } catch {
+                        throw "Failed to move file `"${FileDownloadTempPath}`" to `"${FileDestinationPath}`" with error: $_"
+                    }
+                }
+
+                # If the destination path is specified, move the downloaded file to the specified destination for 64-bit
+                if ($FileUrl64 -and $FileDestinationPath64) {
+                    Write-Debug "Moving file `"${FileDownloadTempPath64}`" to `"${FileDestinationPath64}`""
+                    try {
+                        Move-Item $FileDownloadTempPath64 -Destination $FileDestinationPath64 -Force
+                    } catch {
+                        throw "Failed to move file `"${FileDownloadTempPath64}`" to `"${FileDestinationPath64}`" with error: $_"
+                    }
+                }
+
                 # Write the new version to the console
                 Write-Output "Updated to version $ProductVersion"
 
@@ -1053,26 +1074,6 @@ function UpdateChocolateyPackage {
                 Write-Debug "Sending alert..."
                 $alertMessage = "$PackageName has been updated to version $ProductVersion.`n$pushStatus"
                 SendAlert -Subject "$PackageName Package Updated" -Message $alertMessage -Alert $Alert -EnvFilePath $EnvFilePath
-
-                # If the destination path is specified, move the downloaded file to the specified destination
-                if ($FileDestinationPath) {
-                    Write-Debug "Moving file `"${FileDownloadTempPath}`" to `"${FileDestinationPath}`""
-                    try {
-                        Move-Item $FileDownloadTempPath -Destination $FileDestinationPath -Force
-                    } catch {
-                        throw "Failed to move file `"${FileDownloadTempPath}`" to `"${FileDestinationPath}`" with error: $_"
-                    }
-                }
-
-                # If the destination path is specified, move the downloaded file to the specified destination for 64-bit
-                if ($FileUrl64 -and $FileDestinationPath64) {
-                    Write-Debug "Moving file `"${FileDownloadTempPath64}`" to `"${FileDestinationPath64}`""
-                    try {
-                        Move-Item $FileDownloadTempPath64 -Destination $FileDestinationPath64 -Force
-                    } catch {
-                        throw "Failed to move file `"${FileDownloadTempPath64}`" to `"${FileDestinationPath64}`" with error: $_"
-                    }
-                }
             } else {
                 # Package is up to date
                 Write-Output "No update needed. No alert sent."
