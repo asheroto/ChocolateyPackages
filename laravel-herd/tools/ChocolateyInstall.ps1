@@ -2,14 +2,14 @@ $ErrorActionPreference = "Stop"
 
 # https://herd.laravel.com/windows
 
-$Version = "1.11.2"
+$Version = "1.12.0"
 
 # Package args
 $packageArgs = @{
     PackageName    = "Laravel Herd"
     SoftwareName   = "Laravel Herd"
     Url            = "https://download.herdphp.com/app_versions/Herd-${Version}-setup.exe"
-    Checksum       = "3B627BB9C4E20BFD6DBA20BF3ECE48FECCAAC74CAD59B6FFD9254B256582507D"
+    Checksum       = "302B85C65AE4DF3BCA50494780DCFD3005565F2AA76282C3A7C7AAC4DD17884B"
     ChecksumType   = "sha256"
     SilentArgs     = "/S"
     ValidExitCodes = @(0)
