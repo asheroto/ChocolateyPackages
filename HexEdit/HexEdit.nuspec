@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>HexEdit</id>
+    <version>2.0.9</version>
+    <title>HexEdit</title>
+    <authors>James Brown</authors>
+    <owners>asheroto</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/strobejb/HexEdit/blob/master/LICENCE.TXT</licenseUrl>
+    <projectUrl>http://www.catch22.net/software/hexedit</projectUrl>
+    <projectSourceUrl></projectSourceUrl>
+    <description>Hexadecimal file editor for Microsoft Windows. HexEdit allows the user to view and edit any type of file, no matter what format it is saved in. With a maximum file size limit of 16Exabytes (17,179,869,184 gigabytes!!), HexEdit can cut, copy, paste, insert and delete any amount of data with no decrease in performance with larger files. With unlimited multi-level undo and redo capability, no matter how large the file, HexEdit brings a new level of control over file editing.</description>
+    <summary>Hexadecimal file editor</summary>
+    <tags>hex editor</tags>
+  </metadata>
+  <files>
+    <file src="Tools\ChocolateyInstall.ps1" target="Tools\ChocolateyInstall.ps1" />
+  </files>
+</package>

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>proxyman</id>
-        <version>2.17.0</version>
+        <version>2.18.0</version>
         <title>Proxyman</title>
         <authors>Proxyman</authors>
         <owners>asheroto</owners>
