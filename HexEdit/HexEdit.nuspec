@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>HexEdit</id>
     <version>2.0.9.3</version>
@@ -8,12 +9,29 @@
     <owners>asheroto</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://github.com/strobejb/HexEdit/blob/master/LICENCE.TXT</licenseUrl>
+    <copyright>Copyright (C) 2012 James Brown</copyright>
+    <bugTrackerUrl>https://github.com/strobejb/HexEdit/issues</bugTrackerUrl>
     <projectUrl>https://www.catch22.net/software/hexedit</projectUrl>
     <projectSourceUrl>https://github.com/strobejb/HexEdit</projectSourceUrl>
     <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/HexEdit</packageSourceUrl>
     <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/86d6d2d3/HexEdit/icon.png</iconUrl>
     <releaseNotes>https://github.com/strobejb/HexEdit/releases</releaseNotes>
-    <description>Hexadecimal file editor for Microsoft Windows. HexEdit allows the user to view and edit any type of file, no matter what format it is saved in. With a maximum file size limit of 16Exabytes (17,179,869,184 gigabytes!!), HexEdit can cut, copy, paste, insert and delete any amount of data with no decrease in performance with larger files. With unlimited multi-level undo and redo capability, no matter how large the file, HexEdit brings a new level of control over file editing.</description>
+    <description>![Screenshot of HexEdit](https://cdn.statically.io/gh/asheroto/ChocolateyPackages/6a4713aa/HexEdit/screenshot.jpg)
+
+## HexEdit Chocolatey Package Summary
+
+HexEdit is a fast, lightweight, and powerful hex editor designed for viewing and editing binary files. It features a modern and intuitive user interface with support for large files, search and replace functionality, and various editing modes. HexEdit is ideal for developers, reverse engineers, and anyone needing precise control over binary data.
+
+### Features
+- **Efficient File Handling**: Handles large files efficiently with minimal memory usage.
+- **Search and Replace**: Supports searching for patterns and replacing data within files.
+- **Editing Modes**: Provides insert and overwrite modes for flexible data manipulation.
+- **Bookmarks**: Add bookmarks to quickly navigate specific locations within files.
+- **File Comparison**: View and analyze differences between binary files.
+- **Customizable Layout**: Adjust layouts and colors to suit your workflow.
+- **Portable Application**: No installation required; runs directly from the executable.
+
+HexEdit is an excellent tool for professionals working with binary files or requiring a reliable hex editor.</description>
     <summary>Hexadecimal file editor</summary>
     <tags>hex editor edit modify change hexadecimal</tags>
   </metadata>

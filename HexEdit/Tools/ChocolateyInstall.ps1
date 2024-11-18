@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'HexEdit'
 $url = 'https://github.com/strobejb/HexEdit/releases/download/v2.0.9/HexEdit_Release_x86.zip'
