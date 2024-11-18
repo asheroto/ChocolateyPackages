@@ -10,7 +10,9 @@ $packageArgs = @{
     packageName   = $packageName
     unzipLocation = $drop
     url           = $url
+    checksum      = 'E83CF6A8300579EB025D73AF01BC55805AD5DC4E660352F86037626B78D34F93'
     url64bit      = $url64
+    checksum64    = 'DF9B67F4A2727F81F29EE0132344100AA25AADBF0977E55BFAC566809ABC47EC'
 }
 
 Install-ChocolateyZipPackage @packageArgs
