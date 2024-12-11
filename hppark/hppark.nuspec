@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>hppark</id>
-        <version>1.9.1</version>
+        <version>1.9.2</version>
         <title>HP Printer Administrator Resource Kit (Portable)</title>
         <authors>HP Inc.</authors>
-        <owners>bcurran3</owners>
+        <owners>asheroto</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <licenseUrl>https://support.hp.com/us-en/document/ish_4416646-4390016-16</licenseUrl>
         <projectUrl>https://support.hp.com/us-en/drivers/selfservice/UPD/4157320/model/4157320</projectUrl>

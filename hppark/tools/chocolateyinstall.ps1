@@ -6,8 +6,8 @@
 # Using VisualPing to monitor the version as it supports clicking. Check ran weekly.
 
 # Parameters
-$toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$version      = "1.9.1"
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$version = "1.9.2"
 $shortcutName = 'HP PARK.lnk'
 
 # Package arguments
@@ -16,7 +16,7 @@ $packageArgs = @{
     unzipLocation = $toolsDir
     fileType      = 'ZIP'
     url           = "https://ftp.hp.com/pub/softlib/software13/printers/UPD/HP-PARK-v${VERSION}.zip"
-    checksum      = '0E9AD16CC1A9879E4963A9D994A9438F22997AD908B6567F359EDE379980ED5A'
+    checksum      = '29d5ff4ddcd1f2d200dddc3334f5ae0b6b1f2cecb508ca75cb1c7afce120766b'
     checksumType  = 'sha256'
 }
 
