@@ -5,13 +5,13 @@
 # Using the link from the download button won't work for scraping the version number due to the HP website.
 # Using VisualPing to monitor the version as it supports clicking. Check ran weekly.
 
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$version    = "7.2.0.25780"
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$version = "7.3.0.25919"
 
 $packageArgs = @{
     packageName    = 'hp-universal-print-driver-ps'
-    url            = "https://ftp.hp.com/pub/softlib/software13/printers/UPD/upd-ps-x64-${version}.exe"
-    checksum       = '2A0FE7B900BCEF037F652AE354AB3C6BDB881BDDC5297C6F2620AC0DFA0B4B5E'
+    url            = "https://ftp.hp.com/pub/softlib/software13/printers/UPD/upd-ps-x64-${version}.zip"
+    checksum       = '822ffbb02f33a5d18f8485b0674c35efc801e8890cf1dde41137c0956a7eed88'
     softwareName   = 'HP Universal Printing PS'
     fileLocation   = "$toolsDir\unzippedfiles\install.exe"
     unzipLocation  = "$toolsDir\unzippedfiles"

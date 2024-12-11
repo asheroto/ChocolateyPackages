@@ -12,7 +12,7 @@ $ParentPath = Split-Path -Parent $ScriptPath
 $packageInfo = @{
     PackageName   = "netscan.install"
     FileUrl       = 'https://www.softperfect.com/download/freeware/netscan_setup.exe'
-    IgnoreVersion = "8.2.2"
+    IgnoreVersion = "8.2.3"
     AutoPush      = $true
     EnvFilePath   = "..\.env"
 }

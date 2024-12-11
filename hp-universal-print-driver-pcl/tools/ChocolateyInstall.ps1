@@ -6,13 +6,13 @@
 # Using VisualPing to monitor the version as it supports clicking. Check ran weekly.
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$version    = "7.2.0.25780"
+$version = "7.3.0.25919"
 
 $packageArgs = @{
-    packageName    = 'hp-universal-print-driver-pcl'
-    url            = "https://ftp.hp.com/pub/softlib/software13/printers/UPD/upd-pcl6-x64-${version}.exe"
-    checksum       = '4421364A087B2C23540980AABE45185BE7FD5A81F2E246A708E26FFCEE437124'
-    softwareName   = 'HP Universal Printing PCL 6'
+	packageName    = 'hp-universal-print-driver-pcl'
+	url            = "https://ftp.hp.com/pub/softlib/software13/printers/UPD/upd-pcl6-x64-${version}.zip"
+	checksum       = 'ffd4461878d45eaec730b237a247946f968fd4a9e51a03d7c49775cefdfbc61a'
+	softwareName   = 'HP Universal Printing PCL 6'
 	fileLocation   = "$toolsDir\unzippedfiles\install.exe"
 	unzipLocation  = "$toolsDir\unzippedfiles"
 	fileType       = 'ZIP'
@@ -25,7 +25,7 @@ $packageArgs = @{
 # Make sure Print Spooler service is up and running
 try {
 	$serviceName = 'Spooler'
-	$spoolerService = Get-CimInstance -ClassName Win32_Service -Property StartMode,State -Filter "Name='$serviceName'"
+	$spoolerService = Get-CimInstance -ClassName Win32_Service -Property StartMode, State -Filter "Name='$serviceName'"
 	if ($null -eq $spoolerService) { throw "Service $serviceName was not found" }
 	Write-Output "Print Spooler service state: $($spoolerService.StartMode) / $($spoolerService.State)"
 	if ($spoolerService.StartMode -ne 'Auto' -or $spoolerService.State -ne 'Running') {

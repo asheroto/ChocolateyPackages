@@ -50,7 +50,7 @@ If you're interested in the unofficial desktop app by [lencx/ChatGPT](https://gi
 
 We're hoping that the official ChatGPT desktop app (this repo) will see ongoing improvements.</description>
         <dependencies>
-            <dependency id="winget"/>
+            <dependency id="winget-cli"/>
         </dependencies>
     </metadata>
     <files>
