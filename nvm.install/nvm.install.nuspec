@@ -4,7 +4,7 @@
     <metadata>
         <title>NVM</title>
         <id>nvm.install</id>
-        <version>1.1.12</version>
+        <version>1.2.2</version>
         <authors>coreybutler</authors>
         <owners>asheroto, kamack38</owners>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/nvm.install</packageSourceUrl>

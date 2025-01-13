@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>nvm</id>
-        <version>1.1.12</version>
+        <version>1.2.2</version>
         <title>NVM</title>
         <authors>coreybutler</authors>
         <owners>asheroto, kamack38</owners>
@@ -47,7 +47,7 @@ NVM for Windows is a command line tool. Simply type `nvm` in the console for hel
         <tags>nvm node nodejs node.js version management windows admin</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/nvm</packageSourceUrl>
         <dependencies>
-            <dependency id="nvm.install" version="1.1.12" />
+            <dependency id="nvm.install" version="1.2.2" />
         </dependencies>
     </metadata>
 </package>

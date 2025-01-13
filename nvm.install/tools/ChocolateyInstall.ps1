@@ -10,9 +10,9 @@ $nvmPath = Join-Path $env:ProgramData 'nvm'
 $packageArgs = @{
     packageName   = $packageName
     fileType      = 'zip'
-    version       = '1.1.12'
-    url           = "https://github.com/coreybutler/nvm-windows/releases/download/1.1.12/nvm-setup.zip"
-    checksum      = '4E076C1B80DBC97A21DA75792CC35F292247C034DAA698044FED30A00020AD6F'
+    version       = '1.2.2'
+    url           = "https://github.com/coreybutler/nvm-windows/releases/download/1.2.2/nvm-setup.zip"
+    checksum      = '5AB9927FB41206614CBD1BF2F387FB8A074CAF3ED35E27DE16CCDCD0A4D95DBE'
     checksumType  = 'sha256'
     unzipLocation = $toolsDir
 }
