@@ -13,9 +13,8 @@ $packageInfo = @{
     PackageName         = "pdq-inventory"                                               # Package name
     FileUrl             = "http://www2.adminarsenal.com/download-pdqinventory"          # URL to download the file from
     FileDestinationPath = '.\tools\PDQ_Inventory_Setup.exe'                             # Path to move/rename the temporary file to (if EXE is distributed in package)
-    AutoPush            = $true
+    AutoPush            = $false
     EnvFilePath         = "..\.env"
-    IgnoreVersion       = "19.3.626"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table
