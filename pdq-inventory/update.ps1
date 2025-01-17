@@ -20,3 +20,9 @@ $packageInfo = @{
 
 # Call the UpdateChocolateyPackage function and pass the hash table
 UpdateChocolateyPackage @packageInfo
+
+# If the FileDestinationPath doesn't exist, create a file on the desktop called PDQ-Inventory-Error.txt
+if (-not (Test-Path $packageInfo.FileDestinationPath)) {
+    $ErrorFile = [System.IO.Path]::Combine([System.Environment]::GetFolderPath('Desktop'), 'PDQ-Inventory-Error.txt')
+    Set-Content -Path $ErrorFile -Value "PDQ Inventory failed to update. Please check the logs for more information."
+}
