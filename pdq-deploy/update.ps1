@@ -15,6 +15,7 @@ $packageInfo = @{
     FileDestinationPath = '.\tools\PDQ_Deploy_Setup.exe'                             # Path to move/rename the temporary file to (if EXE is distributed in package)
     AutoPush            = $false
     EnvFilePath         = "..\.env"
+    IgnoreVersion       = '19.4.40'
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table
