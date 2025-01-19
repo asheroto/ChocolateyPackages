@@ -21,6 +21,9 @@ $packageInfo = @{
 # Call the UpdateChocolateyPackage function and pass the hash table
 UpdateChocolateyPackage @packageInfo
 
+# Wait 5 seconds
+Start-Sleep -Seconds 5
+
 # If the FileDestinationPath doesn't exist, create a file on the desktop called PDQ-Deploy-Error.txt
 if (-not (Test-Path $packageInfo.FileDestinationPath)) {
     $ErrorFile = [System.IO.Path]::Combine([System.Environment]::GetFolderPath('Desktop'), 'PDQ-Deploy-Error.txt')
