@@ -1,6 +1,19 @@
 [CmdletBinding()] # Enables -Debug parameter for troubleshooting
 param ()
 
+# ============================================================================ #
+# Get current nupkg version
+# ============================================================================ #
+# Get list of nupkg files
+$packageFiles = Get-ChildItem -Path $ParentPath -Filter "*.nupkg"
+
+# Get file version using regex from $packageFiles
+$existingPackageFileVersion = $packageFiles.Name -replace '.*?(\d+\.\d+\.\d+).*', '$1'
+
+# ============================================================================ #
+# Update
+# ============================================================================ #
+
 # Set vars to the script and the parent path
 $ScriptPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $ParentPath = Split-Path -Parent $ScriptPath
@@ -37,6 +50,15 @@ $RepoName = "Ventoy"
 # Get the latest version from GitHub
 $releaseInfo = Get-GitHubRelease -Owner $RepoOwner -Repo $RepoName
 $version = $releaseInfo.LatestVersion -replace '^v', ''  # Remove leading 'v' if present
+
+# If the latest version is the same as the current version without leading zeroes, exit
+$versionWithoutLeadingZeroes = $version -replace '\b0+(\d+)', '$1'
+Write-Output "versionWithoutLeadingZeroes: $versionWithoutLeadingZeroes"
+Write-Output "existingPackageFileVersion: $existingPackageFileVersion"
+if ($versionWithoutLeadingZeroes -eq $existingPackageFileVersion) {
+    Write-Output "Latest Ventoy version is the same as the current version. Exiting..."
+    exit
+}
 
 Write-Output "Latest Ventoy Version: $version"
 
