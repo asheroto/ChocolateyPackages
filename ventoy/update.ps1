@@ -2,26 +2,28 @@
 param ()
 
 # ============================================================================ #
-# Get current nupkg version
-# ============================================================================ #
-# Get list of nupkg files
-$packageFiles = Get-ChildItem -Path $ParentPath -Filter "*.nupkg"
-
-# Get file version using regex from $packageFiles
-$existingPackageFileVersion = $packageFiles.Name -replace '.*?(\d+\.\d+\.\d+).*', '$1'
-
-# ============================================================================ #
 # Update
 # ============================================================================ #
 
-# Set vars to the script and the parent path
+# Set script and parent paths
 $ScriptPath = Split-Path -Parent $MyInvocation.MyCommand.Definition
 $ParentPath = Split-Path -Parent $ScriptPath
+$VentoyPath = Join-Path $ParentPath "ventoy"
 
 # Import the UpdateChocolateyPackage function
 . (Join-Path $ParentPath 'Chocolatey-Package-Updater.ps1')
 
-# Create a hash table to store package information
+# ============================================================================ #
+# Get current nupkg version
+# ============================================================================ #
+
+# Get list of nupkg files
+$packageFiles = Get-ChildItem -Path $VentoyPath -Filter "*.nupkg"
+
+# Extract file version using regex
+$existingPackageFileVersion = $packageFiles.Name -replace '.*?(\d+\.\d+\.\d+).*', '$1'
+
+# Define package info
 $packageInfo = @{
     PackageName   = "ventoy"
     FileUrl       = "https://github.com/ventoy/Ventoy/releases/download/v{VERSION}/ventoy-{VERSION}-windows.zip"
@@ -31,7 +33,7 @@ $packageInfo = @{
     Alert         = $false
 }
 
-# Call the UpdateChocolateyPackage function and pass the hash table
+# Call the update function
 UpdateChocolateyPackage @packageInfo
 
 # ============================================================================ #
@@ -40,30 +42,31 @@ UpdateChocolateyPackage @packageInfo
 
 Write-Output "Modifying version number for Ventoy"
 
-# Dot-source Chocolatey-Package-Updater.ps1 from the parent directory
-. (Join-Path (Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Definition)) 'Chocolatey-Package-Updater.ps1')
-
 # Define repository details
 $RepoOwner = "ventoy"
 $RepoName = "Ventoy"
 
 # Get the latest version from GitHub
 $releaseInfo = Get-GitHubRelease -Owner $RepoOwner -Repo $RepoName
-$version = $releaseInfo.LatestVersion -replace '^v', ''  # Remove leading 'v' if present
 
-# If the latest version is the same as the current version without leading zeroes, exit
-$versionWithoutLeadingZeroes = $version -replace '\b0+(\d+)', '$1'
+# Remove "v" in $releaseInfo.LatestVersion
+$latestVersion = $releaseInfo.LatestVersion -replace '^v', ''
+
+# Normalize version for comparison
+$versionWithoutLeadingZeroes = $latestVersion -replace '\b0+(\d+)', '$1'
 Write-Output "versionWithoutLeadingZeroes: $versionWithoutLeadingZeroes"
 Write-Output "existingPackageFileVersion: $existingPackageFileVersion"
+
+# Exit if versions match
 if ($versionWithoutLeadingZeroes -eq $existingPackageFileVersion) {
     Write-Output "Latest Ventoy version is the same as the current version. Exiting..."
     exit
 }
 
-Write-Output "Latest Ventoy Version: $version"
+Write-Output "Latest Ventoy Version: $latestVersion"
 
 # Define ChocolateyInstall.ps1 path
-$chocolateyInstallPath = [System.IO.Path]::Combine($PSScriptRoot, "tools", "ChocolateyInstall.ps1")
+$chocolateyInstallPath = Join-Path $VentoyPath "tools\ChocolateyInstall.ps1"
 
 # Ensure ChocolateyInstall.ps1 exists before proceeding
 if (-Not (Test-Path $chocolateyInstallPath)) {
@@ -71,12 +74,14 @@ if (-Not (Test-Path $chocolateyInstallPath)) {
     exit 1
 }
 
-# Read and update ChocolateyInstall.ps1 with the latest version
+# Update ChocolateyInstall.ps1 with the latest version
 $chocolateyInstall = Get-Content $chocolateyInstallPath
-$chocolateyInstall = $chocolateyInstall -replace '\$version = "\d+\.\d+\.\d+"', "`$version = `"$version`""
-
-# Uncomment the line below to apply changes
+$chocolateyInstall = $chocolateyInstall -replace '\$version = "\d+\.\d+\.\d+"', "`$version = `"$latestVersion`""
 Set-Content -Path $chocolateyInstallPath -Value $chocolateyInstall
+
+# Remember current location and switch to Ventoy directory
+Push-Location
+Set-Location -Path $VentoyPath
 
 # ============================================================================ #
 # Repackage & push the Chocolatey package
@@ -85,10 +90,8 @@ Set-Content -Path $chocolateyInstallPath -Value $chocolateyInstall
 # Repackage the Chocolatey package
 choco pack
 
-# Define the nupkg path by combining package name and version and push the package
-$normalizedVersion = ($version -split '\.') -join '.'
-$normalizedVersion = $normalizedVersion -replace '\b0+(\d+)', '$1'
-$packagePath = [System.IO.Path]::Combine($PSScriptRoot, "$($packageInfo.PackageName).$normalizedVersion.nupkg")
+# Define package path
+$packagePath = Join-Path $PSScriptRoot "$($packageInfo.PackageName).$versionWithoutLeadingZeroes.nupkg"
 Write-Output "Pushing package: $packagePath"
 
 # Push the package
@@ -98,12 +101,15 @@ choco push $packagePath
 # Alert
 # ============================================================================ #
 
-# Import the Chocolatey package updater functions
-. (Join-Path (Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Definition)) 'functions.ps1')
+# Import alert functions
+. (Join-Path $ParentPath 'functions.ps1')
 
-# Define vars
+# Define alert details
 $alertSubject = "Ventoy Updated"
-$alertMessage = "Ventoy has been updated to version ${normalizedVersion}. Auto push enabled."
+$alertMessage = "Ventoy has been updated to version ${version}. Auto push enabled."
 
-# Send Alert
+# Send alert
 SendAlert -Subject $alertSubject -Message $alertMessage
+
+# Restore previous location
+Pop-Location
