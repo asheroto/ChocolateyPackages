@@ -11,7 +11,7 @@ $ParentPath = Split-Path -Parent $ScriptPath
 # Create a hash table to store package information
 $packageInfo = @{
     PackageName   = "httptoolkit"
-    FileUrl       = "https://github.com/httptoolkit/httptoolkit-desktop/releases/download/v{VERSION}/HttpToolkit-installer-{VERSION}.exe"
+    FileUrl       = "https://github.com/httptoolkit/httptoolkit-desktop/releases/download/v{VERSION}/HttpToolkit-{VERSION}.exe"
     GitHubRepoUrl = "https://github.com/httptoolkit/httptoolkit-desktop"
     AutoPush      = $true
     EnvFilePath   = "..\.env"
