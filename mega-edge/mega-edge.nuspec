@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>mega-edge</id>
-    <version>3.119.0</version>
+    <version>5.49.3</version>
     <title>MEGA for Edge</title>
     <authors>Mega Limited</authors>
     <owners>asheroto</owners>
@@ -27,4 +27,3 @@ MEGA web extension app.
     </dependencies>
   </metadata>
 </package>
-
