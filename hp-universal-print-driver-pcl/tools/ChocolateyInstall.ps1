@@ -6,12 +6,12 @@
 # Using VisualPing to monitor the version as it supports clicking. Check ran weekly.
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$version = "7.3.0.25919"
+$version = "7.4.0.25959"
 
 $packageArgs = @{
 	packageName    = 'hp-universal-print-driver-pcl'
 	url            = "https://ftp.hp.com/pub/softlib/software13/printers/UPD/upd-pcl6-x64-${version}.zip"
-	checksum       = 'ffd4461878d45eaec730b237a247946f968fd4a9e51a03d7c49775cefdfbc61a'
+	checksum       = '00C03CC11FC58A40D415E95EB60236394C984E0061935146A8E658F847C07E4D'
 	softwareName   = 'HP Universal Printing PCL 6'
 	fileLocation   = "$toolsDir\unzippedfiles\install.exe"
 	unzipLocation  = "$toolsDir\unzippedfiles"
