@@ -9,7 +9,7 @@ $pkgTitle = "HDSentinel"
 $instType = "EXE"
 $url = "https://www.harddisksentinel.com/hdsentinel_setup.zip"
 $silentArgs = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-"
-$checksum = "3AC9B9D5230D151D559344B0C8E40C94B6AE8B5BE97678A6AD033C1CA5718ECF"
+$checksum = "967C68A7399A74962D4602EDA4CC37C85DD0BE15E9270CED4DAEDB28ED0C05DE"
 $checksumType = "sha256"
 $validExitCodes = @(0)
 
