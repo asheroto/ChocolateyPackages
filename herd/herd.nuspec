@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>herd</id>
-        <version>1.8.0</version>
+        <version>1.19.0</version>
         <title>Laravel Herd</title>
         <authors>Beyond Code GmbH in cooperation with Laravel</authors>
         <owners>asheroto</owners>
@@ -42,7 +42,8 @@ This is a virtual package to help find and install [Laravel Herd](https://commun
         <docsUrl>https://herd.laravel.com/docs/windows/1/getting-started/about-herd</docsUrl>
         <bugTrackerUrl>https://github.com/beyondcode/herd-community/issues</bugTrackerUrl>
         <dependencies>
-            <dependency id="laravel-herd" version="1.8.0" />
+            <dependency id="laravel-herd" version="1.19.0" />
         </dependencies>
     </metadata>
 </package>
+

@@ -1,6 +1,10 @@
 [CmdletBinding()] # Enables -Debug parameter for troubleshooting
 param ()
 
+Write-Output ("-" * 60)
+Write-Output "recuva"
+Write-Output ("-" * 60)
+
 # Variables
 $AutoPush = $false
 $apiUrl = 'https://www.ccleaner.com/en-us/api/knowledge/search?guid=f89265d7-1f47-4f3c-beb1-fc64b5a866fa&w=recuva'
@@ -12,6 +16,12 @@ $alertMessageTemplate = "Recuva has been updated to version {0}. Auto push NOT e
 $recuvaFileUrlTemplate = "https://download.ccleaner.com/rcsetup{0}.exe"
 $recuvaFilenameTemplate = "recuva.{0}.nupkg"
 $AutoPush = $false
+
+# Remember location
+Push-Location
+
+# Change folder to this script's folder
+Set-Location (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 # Function to get the latest version and download URL
 function Get-LatestVersionAndUrl {
@@ -109,3 +119,6 @@ if ($Latest.Version -ne $currentVersion -and $currentVersion -ne '') {
 } else {
     Write-Output "Version has not changed. No updates required."
 }
+
+# Return to the original location
+Pop-Location

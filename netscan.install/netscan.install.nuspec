@@ -4,7 +4,7 @@
     <metadata>
         <id>netscan.install</id>
         <title>SoftPerfect Network Scanner (Install)</title>
-        <version>8.2.3.20240304</version>
+        <version>8.2.4</version>
         <authors>SoftPerfect</authors>
         <owners>asheroto, digitalcardboard</owners>
         <projectUrl>https://www.softperfect.com/products/networkscanner/</projectUrl>

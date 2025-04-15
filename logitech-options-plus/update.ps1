@@ -1,3 +1,7 @@
+Write-Output ("-" * 60)
+Write-Output "logitech-options-plus"
+Write-Output ("-" * 60)
+
 # Variables
 $PackageName = "logitech-options-plus"
 $nuspecFile = "logitech-options-plus.nuspec"
@@ -8,6 +12,12 @@ $versionPattern = [regex]::new('Logi Options\+\s*([\d.]+)', [System.Text.Regular
 $url = "https://community.chocolatey.org/packages/logioptionsplus"
 $alertSubject = "Logi Options+ Updated"
 $alertMessageTemplate = "Logi Options+ has been updated to version {0}. Auto push enabled."
+
+# Remember location
+Push-Location
+
+# Change folder to this script's folder
+Set-Location (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 # Load the nuspec file content
 $nuspecContent = Get-Content $nuspecFile -Raw
@@ -80,3 +90,6 @@ if ($versionMatch.Success) {
     Write-Output "Version number not found."
     exit
 }
+
+# Return to the original location
+Pop-Location

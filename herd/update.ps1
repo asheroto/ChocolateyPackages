@@ -1,9 +1,19 @@
+Write-Output ("-" * 60)
+Write-Output "herd"
+Write-Output ("-" * 60)
+
 # Variables
 $nuspecFile = "herd.nuspec"
 $dependencyID = "laravel-herd"
 $regexPattern = 'Laravel Herd\s*([\d.]+)'
 $packageName = "Laravel Herd"
 $AutoPush = $true
+
+# Remember location
+Push-Location
+
+# Change folder to this script's folder
+Set-Location (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 
 # Load the nuspec file content
 $nuspecContent = Get-Content $nuspecFile -Raw
@@ -81,3 +91,6 @@ if ($versionMatch.Success) {
     Write-Output "Version number not found."
     exit
 }
+
+# Return to the original location
+Pop-Location
