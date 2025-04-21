@@ -11,7 +11,7 @@ $ParentPath = Split-Path -Parent $ScriptPath
 # Create a hash table to store package information
 $packageInfo = @{
     PackageName   = "laravel-herd"
-    ScrapeUrl     = 'https://herd.laravel.com/changelog'
+    ScrapeUrl     = 'https://herd.laravel.com/docs/windows/changelog/index'
     ScrapePattern = '(?<=<div class="cursor-pointer[^>]*?>)[\d.]+(?=</div>)'
     FileUrl       = "https://download.herdphp.com/app_versions/Herd-{VERSION}-setup.exe"
     AutoPush      = $true
