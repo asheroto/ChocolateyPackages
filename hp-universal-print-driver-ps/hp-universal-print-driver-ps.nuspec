@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
 	<metadata>
 		<id>hp-universal-print-driver-ps</id>
-		<version>7.4.0.25959</version>
+		<version>7.6.0.26178</version>
 		<title>HP Universal Print Driver for Windows PS (Install)</title>
 		<authors>HP Inc</authors>
 		<owners>bcurran3, asheroto</owners>

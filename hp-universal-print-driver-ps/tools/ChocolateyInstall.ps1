@@ -6,7 +6,7 @@
 # Using VisualPing to monitor the version as it supports clicking. Check ran weekly.
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$version = "7.4.0.25959"
+$version = "7.6.0.26178"
 
 $packageArgs = @{
     packageName    = 'hp-universal-print-driver-ps'
