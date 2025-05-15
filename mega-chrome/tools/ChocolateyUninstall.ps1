@@ -1,10 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
-$bits = Get-ProcessorBits
-$packageName = 'mega-chrome'
-$extensionID = 'bigefpfhnfcobdlfbedofhhaibnlghod'
+$Bits = Get-ProcessorBits
+$ExtensionID = 'bigefpfhnfcobdlfbedofhhaibnlghod'
+$BasePath = if ($Bits -eq 64) { 'HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions' } else { 'HKLM:\SOFTWARE\Google\Chrome\Extensions' }
+$ExtensionPath = Join-Path -Path $BasePath -ChildPath $ExtensionID
 
-if ($bits -eq 64) {
-    Remove-Item "HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\$extensionID" -Force -ErrorAction SilentlyContinue | out-null
-   }else{
-    Remove-Item "HKLM:\SOFTWARE\Google\Chrome\Extensions\$extensionID" -Force -ErrorAction SilentlyContinue | out-null
-}
+Remove-Item -Path $ExtensionPath -Force -ErrorAction SilentlyContinue | Out-Null

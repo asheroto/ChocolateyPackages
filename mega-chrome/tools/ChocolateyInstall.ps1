@@ -1,16 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'
-$bits = Get-ProcessorBits
-$packageName = 'mega-chrome'
-$extensionID = 'bigefpfhnfcobdlfbedofhhaibnlghod'
-if ($bits -eq 64) {
-    if (Test-Path -Path "HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\$extensionID") {
-        Write-Host "Extension already installed." -foreground "magenta" -backgroundcolor "blue"
-    } else {
-        New-Item -Force -Path "HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\$extensionID" | out-null
-        New-ItemProperty -Path "HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\$extensionID\" -Name "update_url" -Value "https://clients2.google.com/service/update2/crx" | out-null
-        New-ItemProperty -Path "HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\$extensionID\" -Name "ChocolateyPackageName" -Value "$packageName" | out-null
-    }
+$Bits = Get-ProcessorBits
+$PackageName = 'mega-chrome'
+$ExtensionID = 'bigefpfhnfcobdlfbedofhhaibnlghod'
+$BasePath = if ($Bits -eq 64) { 'HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions' } else { 'HKLM:\SOFTWARE\Google\Chrome\Extensions' }
+$ExtensionPath = Join-Path -Path $BasePath -ChildPath $ExtensionID
+
+if (Test-Path -Path $ExtensionPath) {
+    Write-Output "Extension already installed."
 } else {
-    New-Item -Force -Path "HKLM:\SOFTWARE\Google\Chrome\Extensions\$extensionID" | out-null
-    New-ItemProperty -Path "HKLM:\SOFTWARE\Google\Chrome\Extensions\$extensionID\" -Name "update_url" -Value "https://clients2.google.com/service/update2/crx" | out-null
+    New-Item -Force -Path $ExtensionPath | Out-Null
+    New-ItemProperty -Path $ExtensionPath -Name 'update_url' -Value 'https://clients2.google.com/service/update2/crx' | Out-Null
+    if ($Bits -eq 64) {
+        New-ItemProperty -Path $ExtensionPath -Name 'ChocolateyPackageName' -Value $PackageName | Out-Null
+    }
 }
