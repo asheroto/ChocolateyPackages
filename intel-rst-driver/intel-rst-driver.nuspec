@@ -12,9 +12,9 @@
         <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/c3ff025cd0d826e6301635e7de2a1b77ef238d2e/intel-rst-driver/icon.png</iconUrl>
         <description>### Detailed Description
 
-**Note:** Intel recommends that end users utilize driver updates provided by their system manufacturer/provider or via Windows* Update to eliminate the potential impact caused by loading non-customized drivers. System manufacturers regularly customize Intel generic drivers to meet the needs of their specific system design. In such cases, use of the Intel generic driver update is not recommended.
+**Note:** Intel recommends that end users utilize driver updates provided by their system manufacturer/provider or via Windows Update to eliminate the potential impact caused by loading non-customized drivers. System manufacturers regularly customize Intel generic drivers to meet the needs of their specific system design. In such cases, use of the Intel generic driver update is not recommended.
 
-The SetupRST.exe is the new installer that will install the Intel RST driver and start the process of installing the Intel® Optane™ Memory and Storage Management application from the Microsoft Store*
+The SetupRST.exe is the new installer that will install the Intel RST driver and start the process of installing the Intel® Optane™ Memory and Storage Management application.
 
 ### Purpose
 

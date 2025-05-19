@@ -76,34 +76,28 @@ switch ($gen) {
     }
 }
 
-# If the package is already installed, return error
-# Read HKEY_LOCAL_MACHINE\SOFTWARE\Intel\IRST\Version for the installed version
-# If the installed version is the same as or newer than the version to install, throw error
-# Don't match the last number in the version string, only x.x.x.x as that is what is in the registry
+# Check if Intel RST is already installed and compare versions
+# Only compare the first four segments (x.x.x.x), as stored in the registry
 try {
-    $installedVersion = Get-ItemProperty -Path 'HKLM:\SOFTWARE\Intel\IRST' -Name 'Version' -ErrorAction SilentlyContinue
-    if ($installedVersion -and $version) {
-        $installedVersion = $installedVersion.Version
-        $installedVersionSegments = $installedVersion -split '\.'
-        $versionSegments = $version -split '\.'
+    $regPath = 'HKLM:\SOFTWARE\Intel\IRST'
+    $installed = Get-ItemProperty -Path $regPath -Name 'Version' -ErrorAction SilentlyContinue
 
-        # Take only the first four segments for comparison
-        $installedMainVersion = [string]::Join('.', $installedVersionSegments[0..3])
-        $mainVersionToInstall = [string]::Join('.', $versionSegments[0..3])
+    if ($null -ne $installed -and $null -ne $version) {
+        $installedVersion = ($installed.Version -split '\.')[0..3] -join '.'
+        $targetVersion = ($version -split '\.')[0..3] -join '.'
 
-        # Only perform the comparison if variables are not empty
-        if (-not [string]::IsNullOrEmpty($installedMainVersion) -and -not [string]::IsNullOrEmpty($mainVersionToInstall)) {
-            if ([version]$installedMainVersion -ge [version]$mainVersionToInstall) {
-                return "Intel RST version $installedMainVersion is already installed."
+        if (-not [string]::IsNullOrWhiteSpace($installedVersion) -and -not [string]::IsNullOrWhiteSpace($targetVersion)) {
+            if ([version]$installedVersion -ge [version]$targetVersion) {
+                return "Intel RST version $installedVersion is already installed or newer."
             }
         } else {
-            throw "Cannot detect installed version of Intel RST. One or both version segment variables are empty."
+            throw "Version comparison failed: one or both version values are empty."
         }
     } else {
-        throw "Cannot detect installed version of Intel RST. One or both version variables are empty."
+        throw "Unable to retrieve version info: registry or input version missing."
     }
 } catch {
-    throw "An error occurred when checking Intel RST version: $_"
+    throw "Intel RST version check failed: $_"
 }
 
 # Package arguments
