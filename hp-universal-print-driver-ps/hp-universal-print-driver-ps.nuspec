@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
 	<metadata>
 		<id>hp-universal-print-driver-ps</id>
-		<version>7.6.0.26178</version>
+		<version>7.7.0.26201</version>
 		<title>HP Universal Print Driver for Windows PS (Install)</title>
 		<authors>HP Inc</authors>
 		<owners>bcurran3, asheroto</owners>
@@ -37,7 +37,9 @@ Users are more self-sufficient when the HP UPD is deployed, reducing the need fo
 
 This is the PS driver, not the PCL driver.
 
-HP removed the download link for the 32-bit version of the driver. This package will only install the 64-bit version of the driver. If you need the 32-bit version, please use a previous version of this package.</description>
+HP removed the download link for the 32-bit version of the driver. This package will only install the 64-bit version of the driver. If you need the 32-bit version, please use a previous version of this package.
+
+**Download Note**: HP often removes older driver versions when releasing updates, which can cause the Chocolatey package to fail.</description>
 		<summary>HP Universal Print Driver for Windows (PS) - One versatile print driver for your PC or laptop</summary>
 		<releaseNotes>https://kaas.hpcloud.hp.com/pdf-public/pdf_8592592_en-US-1.pdf</releaseNotes>
 		<copyright>© 2024 Copyright HPDevelopment Company, L.P.</copyright>
