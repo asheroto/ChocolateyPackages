@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>logitech-options-plus</id>
-        <version>1.91.722586</version>
+        <version>1.92.731496</version>
         <title>Logi Options+</title>
         <authors>Logitech Inc.</authors>
         <owners>bcurran3, asheroto</owners>
@@ -27,13 +27,14 @@ This is a virtual package to help find and install [Logi Options+](https://commu
         <tags>logitech logi options mouse keyboard headset driver utility</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/logitech-options-plus</packageSourceUrl>
         <dependencies>
-            <dependency id="logioptionsplus" version="1.91.722586" />
+            <dependency id="logioptionsplus" version="1.92.731496" />
         </dependencies>
     </metadata>
     <files>
         <file src="*.nuspec" exclude="update.ps1" />
     </files>
 </package>
+
 
 
 
