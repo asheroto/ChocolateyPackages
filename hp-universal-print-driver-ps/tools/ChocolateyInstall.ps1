@@ -1,17 +1,17 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 # Download
-# https://support.hp.com/us-en/drivers/upd/4157320
+# https://support.hp.com/us-en/drivers/hp-universal-print-driver-series-for-windows/model/3271558
 # Using the link from the download button won't work for scraping the version number due to the HP website.
 # Using VisualPing to monitor the version as it supports clicking. Check ran weekly.
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$version = "7.7.0.26201"
+$version = "7.8.0.26261"
 
 $packageArgs = @{
     packageName    = 'hp-universal-print-driver-ps'
-    url            = "https://ftp.hp.com/pub/softlib/software13/printers/UPD/upd-ps-x64-${version}.zip"
-    checksum       = 'EEB3F2A7286BAD701CE2075C5C7045FBDD4464E22F6FD72D34BC2CBD4232546E'
+	url            = "https://ftp.hp.com/pub/softlib/software13/UPD/upd-ps-x64-${version}.zip"
+    checksum       = '84D89A5A040B5BFA8ED06B281667178512C9FDAF533FC5921A34C1CAE321D3E8'
     softwareName   = 'HP Universal Printing PS'
     fileLocation   = "$toolsDir\unzippedfiles\install.exe"
     unzipLocation  = "$toolsDir\unzippedfiles"

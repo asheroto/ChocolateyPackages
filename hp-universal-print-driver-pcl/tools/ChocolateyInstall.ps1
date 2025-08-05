@@ -1,17 +1,18 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 # Download
-# https://support.hp.com/us-en/drivers/upd/4157320
+# https://support.hp.com/us-en/drivers/hp-universal-print-driver-series-for-windows/model/3271558
 # Using the link from the download button won't work for scraping the version number due to the HP website.
 # Using VisualPing to monitor the version as it supports clicking. Check ran weekly.
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$version = "7.7.0.26201"
+$version = "7.8.0.26261"
 
 $packageArgs = @{
 	packageName    = 'hp-universal-print-driver-pcl'
-	url            = "https://ftp.hp.com/pub/softlib/software13/printers/UPD/upd-pcl6-x64-${version}.zip"
-	checksum       = 'ECBCE92D057C1F730F3BB049D9ECA9762A2DF8BB9B936FB376D4FFBDF5022290'
+
+	url            = "https://ftp.hp.com/pub/softlib/software13/UPD/upd-pcl6-x64-${version}.zip"
+	checksum       = '248EA75AA33F94A680D445C0CCA1787D335C49583E2F0F36933C7C3E7A93E98A'
 	softwareName   = 'HP Universal Printing PCL 6'
 	fileLocation   = "$toolsDir\unzippedfiles\install.exe"
 	unzipLocation  = "$toolsDir\unzippedfiles"

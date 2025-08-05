@@ -7,7 +7,7 @@ Write-Output ("-" * 60)
 
 # Variables
 $AutoPush = $false
-$apiUrl = 'https://www.ccleaner.com/en-us/api/knowledge/search?guid=f89265d7-1f47-4f3c-beb1-fc64b5a866fa&w=recuva'
+$apiUrl = 'https://www.ccleaner.com/recuva/version-history'
 $nuspecFilePath = Resolve-Path "recuva.nuspec"
 $installScriptPath = Resolve-Path ".\tools\chocolateyInstall.ps1"
 $currentVersionPattern = [regex]::new('<version>(.*?)</version>')
@@ -26,33 +26,25 @@ Set-Location (Split-Path -Parent $MyInvocation.MyCommand.Definition)
 # Function to get the latest version and download URL
 function Get-LatestVersionAndUrl {
     $response = Invoke-WebRequest -Uri $apiUrl -UseBasicParsing
-    $jsonContent = $response.Content | ConvertFrom-Json
+    $html = $response.Content
 
-    # Extract the full version number from the URL
-    $versionPattern = [regex]::new('recuva-v(\d+-\d+-\d+)', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
-    $versionMatch = $versionPattern.Match($jsonContent.url)
+    # Extract version number from the span with data-qa-id="version-history__latest-version"
+    $versionPattern = [regex]::new('<span[^>]*data-qa-id="version-history__latest-version"[^>]*>v([\d\.]+)</span>', 'IgnoreCase')
+    $versionMatch = $versionPattern.Match($html)
 
-    # Extract the shortened version number from the title
-    $titlePattern = [regex]::new('Recuva v(\d+\.\d+)', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
-    $titleMatch = $titlePattern.Match($jsonContent.title)
+    if ($versionMatch.Success) {
+        $version = $versionMatch.Groups[1].Value
+        Write-Output "Found version: $version"
 
-    if ($versionMatch.Success -and $titleMatch.Success) {
-        $versionNumberFull = $versionMatch.Groups[1].Value -replace '-', '.'
-        $versionNumberShort = $titleMatch.Groups[1].Value
-        Write-Output "Version Number (Full): $versionNumberFull"
-        Write-Output "Version Number (Short): $versionNumberShort"
-
-        # Define the URL to download the installer using the shortened version number
-        $fileUrl = [string]::Format($recuvaFileUrlTemplate, $versionNumberShort.Replace('.', ''))
-        Write-Debug "Download URL: $fileUrl"
+        $fileUrl = [string]::Format($recuvaFileUrlTemplate, $version.Replace('.', ''))
 
         return @{
             URL32   = $fileUrl
-            Version = $versionNumberFull
+            Version = $version
         }
     } else {
         Write-Output "Version number not found."
-        exit
+        exit 1
     }
 }
 
