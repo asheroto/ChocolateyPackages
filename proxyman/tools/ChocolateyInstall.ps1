@@ -1,8 +1,8 @@
 $ErrorActionPreference = 'Stop'
 
-$version = "2.27.0"
+$version = "3.1.0"
 $url = "https://github.com/ProxymanApp/proxyman-windows-linux/releases/download/${version}/Proxyman.Setup.${version}.exe"
-$checksum = "7F1FCC39010038288D7ACEC95D869817A8AD8E6B1806AD7C140303B03043931D"
+$checksum = "CC08E7B7781A435E29F112133DCBD9A002C25CA71B4D7EB15B780A058BD4B1C7"
 
 # Package args
 $packageArgs = @{
