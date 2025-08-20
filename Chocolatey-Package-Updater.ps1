@@ -1029,6 +1029,7 @@ function UpdateChocolateyPackage {
                     Write-Debug "Moving file `"${FileDownloadTempPath}`" to `"${FileDestinationPath}`""
                     try {
                         Move-Item $FileDownloadTempPath -Destination $FileDestinationPath -Force
+                        Sleep -Seconds 1 # Sleep to release any file locks
                     } catch {
                         throw "Failed to move file `"${FileDownloadTempPath}`" to `"${FileDestinationPath}`" with error: $_"
                     }
@@ -1039,6 +1040,7 @@ function UpdateChocolateyPackage {
                     Write-Debug "Moving file `"${FileDownloadTempPath64}`" to `"${FileDestinationPath64}`""
                     try {
                         Move-Item $FileDownloadTempPath64 -Destination $FileDestinationPath64 -Force
+                        Sleep -Seconds 1 # Sleep to release any file locks
                     } catch {
                         throw "Failed to move file `"${FileDownloadTempPath64}`" to `"${FileDestinationPath64}`" with error: $_"
                     }
