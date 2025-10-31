@@ -1,9 +1,9 @@
 $ErrorActionPreference = 'Stop'
 $packageName = 'httptoolkit'
 $softwareName = 'httptoolkit'
-$version = "1.22.1"
+$version = "1.23.0"
 $url = "https://github.com/httptoolkit/httptoolkit-desktop/releases/download/v${VERSION}/HttpToolkit-${VERSION}.exe"
-$checksum = '2E0F3F1099EE98A9CD2240E2696C6A75092666F8F48728B2B023AE301B52EB36'
+$checksum = '8DFAD1D4596768881226CF95AD40FB06EDCB386B5AD36702D2EC215B1237CE17'
 $silentArgs = '/S'
 $validExitCodes = @(0)
 
