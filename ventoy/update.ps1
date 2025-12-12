@@ -28,7 +28,7 @@ $packageInfo = @{
     PackageName   = "ventoy"
     FileUrl       = "https://github.com/ventoy/Ventoy/releases/download/v{VERSION}/ventoy-{VERSION}-windows.zip"
     GitHubRepoUrl = "https://github.com/ventoy/Ventoy"
-    AutoPush      = $true
+    AutoPush      = $false
     EnvFilePath   = "..\.env"
     Alert         = $false
 }
