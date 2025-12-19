@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>httptoolkit</id>
-        <version>1.24.1</version>
+        <version>1.24.2</version>
         <title>HTTP Toolkit</title>
         <authors>HTTP Toolkit</authors>
         <owners>asheroto</owners>
