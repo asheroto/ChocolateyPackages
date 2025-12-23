@@ -14,9 +14,9 @@ $ErrorActionPreference = "Stop";
 
 # Release URL: https://github.com/ventoy/Ventoy/releases
 $packageName = "ventoy"
-$version = "1.1.09" # Chocolatey package version may differ from the filename version
+$version = "1.1.10" # Chocolatey package version may differ from the filename version
 $url = "https://github.com/ventoy/Ventoy/releases/download/v${version}/${packageName}-${version}-windows.zip"
-$checksum = "FF531A78D60C604CEE67D56D02102A1147E647D0FB8FB8516F77712D05D5B99D"
+$checksum = "C65E6BFF33A376BD3FD3243EB9CDD923C07F7D051C934C7B6AD72F7BF6C80049"
 
 # Remove Ventoy directory in old location if it exists (local app data) - implemented April 2024
 $oldUnzipLocation = Join-Path ([Environment]::GetFolderPath("LocalApplicationData")) $packageName
