@@ -24,4 +24,4 @@ Install-ChocolateyZipPackage @packageArgs
 New-Item -Path "$toolsDir\nvm-setup.exe.ignore" -ItemType File
 
 # Start installation process
-Start-Process "$toolsDir\nvm-setup.exe" -ArgumentList "/VERYSILENT /NOCIONS /DIR=$nvmPath"
+Start-Process "$toolsDir\nvm-setup.exe" -ArgumentList "/VERYSILENT /NOCIONS /DIR=$nvmPath" -Wait

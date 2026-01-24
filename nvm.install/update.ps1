@@ -15,6 +15,7 @@ $packageInfo = @{
     GitHubRepoUrl = "https://github.com/coreybutler/nvm-windows"
     AutoPush      = $true
     EnvFilePath   = "..\.env"
+    IgnoreVersion = '1.2.2'
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table
