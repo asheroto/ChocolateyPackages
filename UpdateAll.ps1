@@ -22,8 +22,8 @@ Set-Location $scriptPath
 ./miro/update.ps1
 ./netscan.install/update.ps1
 ./nvm.install/update.ps1
-./pdq-deploy/update.ps1
-./pdq-inventory/update.ps1
+# ./pdq-deploy/update.ps1
+# ./pdq-inventory/update.ps1
 ./proxyman/update.ps1
 ./recuva/update.ps1
 ./qflipper/update.ps1
