@@ -12,7 +12,6 @@ $packageArgs = @{
 	packageName    = 'hp-universal-print-driver-pcl'
 
 	url            = "https://ftp.hp.com/pub/softlib/software13/UPD/upd-pcl6-x64-${version}.zip"
-	https://ftp.hp.com/pub/softlib/software13/printers/UPD/upd-pcl6-x64-7.9.0.26347.zip
 	checksum       = '248EA75AA33F94A680D445C0CCA1787D335C49583E2F0F36933C7C3E7A93E98A'
 	softwareName   = 'HP Universal Printing PCL 6'
 	fileLocation   = "$toolsDir\unzippedfiles\install.exe"
@@ -38,7 +37,7 @@ try {
 	Write-Warning "Unexpected error while checking Print Spooler service: $($_.Exception.Message)"
 }
 
-New-Item $packageArgs.fileLocation -Type directory | Out-Null
+New-Item $packageArgs.unzipLocation -Type directory | Out-Null
 
 Install-ChocolateyZipPackage @packageArgs
 
