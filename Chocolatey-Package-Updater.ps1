@@ -1,6 +1,6 @@
 <#PSScriptInfo
 
-.VERSION 0.1.1
+.VERSION 0.2.0
 
 .GUID 9b612c16-25c0-4a40-afc7-f876274e7e8c
 
@@ -27,6 +27,7 @@
 [Version 0.0.12] - Added AutoPush for automatic pushing to Chocolatey community repository.
 [Version 0.1.0] - Added Mailjet support for alerting.
 [Version 0.1.1] - Fix bug with FileDestinationPath occurring after choco pack.
+[Version 0.2.0] - Alert only sent when AutoPush is false. Exit code checked after choco pack/push. Removed redundant Test-Path check. ScrapeUrl fetched once and reused. Get-LatestGitHubReleaseVersion consolidated with Get-GitHubRelease. Removed unused AlertEmailAddress parameter. Sleep replaced with Start-Sleep. Fixed GitHub tag v-prefix being included in version comparisons. Updated version regex to handle 2- to 4-part version numbers. Added GitHub API rate limit detection with clear error message and optional GITHUB_TOKEN support. Added validation that $ScriptPath is defined and that FileUrl or DownloadUrlScrapePattern is provided. Made FileUrl optional when DownloadUrlScrapePattern is used. Fixed Remove-LeadingZeroesFromVersion to safely skip non-numeric version segments. Renamed Load-DotEnv to Import-DotEnv and Try-DeleteFile to Remove-FileIfPossible to use approved PowerShell verbs.
 
 #>
 
@@ -83,7 +84,7 @@ To update a Chocolatey package with additional parameters, run the following com
 UpdateChocolateyPackage -PackageName "fxsound" -FileUrl "https://download.fxsound.com/fxsoundlatest" -FileDownloadTempPath ".\fxsound_setup_temp.exe" -FileDestinationPath ".\tools\fxsound_setup.exe" -NuspecPath ".\fxsound.nuspec" -InstallScriptPath ".\tools\ChocolateyInstall.ps1" -VerificationPath ".\tools\VERIFICATION.txt" -Alert $true -EnvFilePath "..\.env"
 
 .NOTES
-- Version: 0.1.1
+- Version: 0.2.0
 - Created by: asheroto
 - See project site for instructions on how to use including full parameter list and examples.
 
@@ -102,7 +103,7 @@ param (
 # Initial vars
 # ============================================================================ #
 
-$CurrentVersion = '0.1.1'
+$CurrentVersion = '0.2.0'
 $RepoOwner = 'asheroto'
 $RepoName = 'Chocolatey-Package-Updater'
 $SoftwareName = 'Chocolatey Package Updater'
@@ -148,9 +149,21 @@ function Get-GitHubRelease {
     )
     try {
         $url = "https://api.github.com/repos/$Owner/$Repo/releases/latest"
-        $response = Invoke-RestMethod -Uri $url -ErrorAction Stop
+        $headers = @{ Accept = 'application/vnd.github+json' }
+        if ($env:GITHUB_TOKEN) {
+            $headers['Authorization'] = "Bearer $env:GITHUB_TOKEN"
+        }
+        try {
+            $response = Invoke-RestMethod -Uri $url -Headers $headers -ErrorAction Stop
+        } catch {
+            if ($_.Exception.Response.StatusCode.value__ -in @(403, 429)) {
+                Write-Error "GitHub API rate limit exceeded. Set the GITHUB_TOKEN environment variable to increase the limit."
+                exit 1
+            }
+            throw
+        }
 
-        $latestVersion = $response.tag_name
+        $latestVersion = $response.tag_name -replace '^v', ''
         $publishedAt = $response.published_at
 
         # Convert UTC time string to local time
@@ -290,7 +303,7 @@ function SendEmailMailjet {
 
     # Load environment variables from the specified file if specified
     if ($EnvFilePath) {
-        Load-DotEnv -Path $EnvFilePath
+        Import-DotEnv -Path $EnvFilePath
     }
 
     $ApiKey = $env:MAILJET_API_KEY
@@ -380,7 +393,7 @@ function SendAlert {
     SendEmailMailjet -Subject $Subject -TextContent $body -EnvFilePath $EnvFilePath
 }
 
-function Load-DotEnv {
+function Import-DotEnv {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true)]
@@ -513,16 +526,11 @@ function Get-LatestGitHubReleaseVersion {
     # Extract the username and repo name from the provided URL
     $repoDetails = $GitHubRepoUrl -replace '^https://github.com/', '' -split '/'
 
-    $username = $repoDetails[0]
-    $repoName = $repoDetails[1]
+    $data = Get-GitHubRelease -Owner $repoDetails[0] -Repo $repoDetails[1]
+    $latestVersionTag = $data.LatestVersion
 
-    $apiUrl = "https://api.github.com/repos/$username/$repoName/releases/latest"
-
-    $response = Invoke-RestMethod -Uri $apiUrl
-    $latestVersionTag = $response.tag_name
-
-    # Use regex to extract version number
-    if ($latestVersionTag -match '(\d+\.\d+\.\d+)') {
+    # Use regex to extract version number (handles 2- to 4-part versions)
+    if ($latestVersionTag -match '(\d+(?:\.\d+){1,3})') {
         return $matches[1]
     } else {
         throw "Failed to extract version from tag: $latestVersionTag"
@@ -535,7 +543,7 @@ function UpdateChocolateyPackage {
         [Parameter(Mandatory = $true)]
         [string]$PackageName,
 
-        [Parameter(Mandatory = $true)]
+        [Parameter(Mandatory = $false)]
         [string]$FileUrl,
 
         [Parameter(Mandatory = $false)]
@@ -566,9 +574,6 @@ function UpdateChocolateyPackage {
         [boolean]$Alert = $true,
 
         [Parameter(Mandatory = $false)]
-        [string]$AlertEmailAddress,
-
-        [Parameter(Mandatory = $false)]
         [string]$ScrapeUrl,
 
         [Parameter(Mandatory = $false)]
@@ -593,7 +598,7 @@ function UpdateChocolateyPackage {
         [string]$EnvFilePath
     )
 
-    function Try-DeleteFile {
+    function Remove-FileIfPossible {
         # Try to delete the file and return true if successful, false if not
         param (
             [string]$filePath
@@ -615,7 +620,7 @@ function UpdateChocolateyPackage {
         $fileName = [System.IO.Path]::GetFileName($filePath)
         $elapsedTime = 0
         while ($elapsedTime -lt $maxTimeout) {
-            if (Try-DeleteFile -filePath $filePath) {
+            if (Remove-FileIfPossible -filePath $filePath) {
                 Write-Output "$fileName deleted"
                 return
             }
@@ -767,7 +772,10 @@ function UpdateChocolateyPackage {
         )
 
         $versionParts = $VersionNumber -split '\.'
-        $cleanedVersionParts = $versionParts | ForEach-Object { [int]$_ }
+        $cleanedVersionParts = $versionParts | ForEach-Object {
+            $n = 0
+            if ([int]::TryParse($_, [ref]$n)) { $n } else { $_ }
+        }
         $cleanedVersion = ($cleanedVersionParts -join '.')
 
         return $cleanedVersion
@@ -780,6 +788,14 @@ function UpdateChocolateyPackage {
     try {
         # Heading
         Write-Section "Updating package: $PackageName"
+
+        # Validate required context
+        if (-not (Get-Variable -Name ScriptPath -Scope Global -ErrorAction SilentlyContinue) -and -not $ScriptPath) {
+            throw "Variable `$ScriptPath must be defined in the calling script before dot-sourcing Chocolatey-Package-Updater.ps1."
+        }
+        if (-not $FileUrl -and -not $DownloadUrlScrapePattern -and -not $DownloadUrlScrapePattern64) {
+            throw "Either -FileUrl or -DownloadUrlScrapePattern must be provided."
+        }
 
         # Initialization and Path Management
         Push-Location
@@ -800,11 +816,14 @@ function UpdateChocolateyPackage {
 
         # Scrape Version if Applicable
         $ForceVersionNumber = ''
-        if ($ScrapeUrl -and $ScrapePattern) {
+        $page = $null
+        if ($ScrapeUrl -and ($ScrapePattern -or $DownloadUrlScrapePattern -or $DownloadUrlScrapePattern64)) {
             Write-Debug "Scraping URL: $ScrapeUrl"
-            Write-Debug "Scrape pattern: $ScrapePattern"
-
             $page = Invoke-WebRequest -Uri $ScrapeUrl
+        }
+
+        if ($ScrapeUrl -and $ScrapePattern) {
+            Write-Debug "Scrape pattern: $ScrapePattern"
             if ($page.Content -match $ScrapePattern -and $matches[0] -match '^\d+(\.\d+){1,3}$') {
                 Write-Output "Scraped version: $($matches[0])"
                 $ForceVersionNumber = $matches[0]
@@ -815,10 +834,7 @@ function UpdateChocolateyPackage {
 
         # Scrape download URL if applicable
         if ($ScrapeUrl -and $DownloadUrlScrapePattern) {
-            Write-Debug "Scraping URL: $ScrapeUrl"
             Write-Debug "Download URL scrape pattern: $DownloadUrlScrapePattern"
-
-            $page = Invoke-WebRequest -Uri $ScrapeUrl
             if ($page.Content -match $DownloadUrlScrapePattern) {
                 Write-Output "Scraped download URL: $($matches[0])"
                 $FileUrl = $matches[0]
@@ -828,10 +844,7 @@ function UpdateChocolateyPackage {
 
             # Scrape 64-bit download URL if applicable
             if ($DownloadUrlScrapePattern64) {
-                Write-Debug "Scraping URL: $ScrapeUrl"
-                Write-Debug "Download URL scrape pattern (64-bit): $DownloadUrlScrapePattern"
-
-                $page = Invoke-WebRequest -Uri $ScrapeUrl
+                Write-Debug "Download URL scrape pattern (64-bit): $DownloadUrlScrapePattern64"
                 if ($page.Content -match $DownloadUrlScrapePattern64) {
                     Write-Output "Scraped 64-bit download URL: $($matches[0])"
                     $FileUrl64 = $matches[0]
@@ -1016,11 +1029,9 @@ function UpdateChocolateyPackage {
 
                     # checksum64
                     if ($FileUrl64) {
-                        if (Test-Path $VerificationPath) {
-                            Write-Debug "Verification path is set and file exists. Updating checksum64 in verification file: $VerificationPath."
-                            $verificationResult64 = UpdateFileContent -FilePath $VerificationPath -Pattern $VerificationPattern64 -Replacement $NewChecksum64
-                            HandleUpdateResult -Result $verificationResult64 -SuccessMessage "Updated checksum64 in verification file" -FailureMessage "Did not update checksum64 in verification file, ignore error if not used`nMessage: $verificationResult64"
-                        }
+                        Write-Debug "Verification path is set and file exists. Updating checksum64 in verification file: $VerificationPath."
+                        $verificationResult64 = UpdateFileContent -FilePath $VerificationPath -Pattern $VerificationPattern64 -Replacement $NewChecksum64
+                        HandleUpdateResult -Result $verificationResult64 -SuccessMessage "Updated checksum64 in verification file" -FailureMessage "Did not update checksum64 in verification file, ignore error if not used`nMessage: $verificationResult64"
                     }
                 }
 
@@ -1029,7 +1040,7 @@ function UpdateChocolateyPackage {
                     Write-Debug "Moving file `"${FileDownloadTempPath}`" to `"${FileDestinationPath}`""
                     try {
                         Move-Item $FileDownloadTempPath -Destination $FileDestinationPath -Force
-                        Sleep -Seconds 1 # Sleep to release any file locks
+                        Start-Sleep -Seconds 1 # Sleep to release any file locks
                     } catch {
                         throw "Failed to move file `"${FileDownloadTempPath}`" to `"${FileDestinationPath}`" with error: $_"
                     }
@@ -1040,7 +1051,7 @@ function UpdateChocolateyPackage {
                     Write-Debug "Moving file `"${FileDownloadTempPath64}`" to `"${FileDestinationPath64}`""
                     try {
                         Move-Item $FileDownloadTempPath64 -Destination $FileDestinationPath64 -Force
-                        Sleep -Seconds 1 # Sleep to release any file locks
+                        Start-Sleep -Seconds 1 # Sleep to release any file locks
                     } catch {
                         throw "Failed to move file `"${FileDownloadTempPath64}`" to `"${FileDestinationPath64}`" with error: $_"
                     }
@@ -1061,21 +1072,24 @@ function UpdateChocolateyPackage {
                 # Run 'choco pack' to create the nupkg file
                 Write-Output "Creating nupkg file..."
                 choco pack
+                if ($LASTEXITCODE -ne 0) { throw "choco pack failed with exit code $LASTEXITCODE" }
 
                 # If AutoPush is enabled, push the package to Chocolatey
                 if ($AutoPush) {
                     $filename = "$PackageName.$ProductVersion.nupkg"
                     Write-Output "Pushing $filename to Chocolatey..."
                     choco push $filename
+                    if ($LASTEXITCODE -ne 0) { throw "choco push failed with exit code $LASTEXITCODE" }
                 }
 
-                # Determine the push status
-                $pushStatus = if ($AutoPush) { "Pushed: TRUE" } else { "Pushed: FALSE" }
-
-                # Send an alert if enabled
-                Write-Debug "Sending alert..."
-                $alertMessage = "$PackageName has been updated to version $ProductVersion.`n$pushStatus"
-                SendAlert -Subject "$PackageName Package Updated" -Message $alertMessage -Alert $Alert -EnvFilePath $EnvFilePath
+                # Send an alert only if not pushed (pushed packages are already visible on Chocolatey)
+                if (-not $AutoPush) {
+                    Write-Output "Sending alert..."
+                    $alertMessage = "$PackageName has been updated to version $ProductVersion.`nPushed: FALSE"
+                    SendAlert -Subject "$PackageName Package Updated" -Message $alertMessage -Alert $Alert -EnvFilePath $EnvFilePath
+                } else {
+                    Write-Debug "Package was pushed; skipping alert."
+                }
             } else {
                 # Package is up to date
                 Write-Output "No update needed. No alert sent."

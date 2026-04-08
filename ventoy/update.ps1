@@ -31,6 +31,7 @@ $packageInfo = @{
     AutoPush      = $false
     EnvFilePath   = "..\.env"
     Alert         = $false
+    IgnoreVersion = "1.11"
 }
 
 # Call the update function
@@ -51,6 +52,12 @@ $releaseInfo = Get-GitHubRelease -Owner $RepoOwner -Repo $RepoName
 
 # Remove "v" in $releaseInfo.LatestVersion
 $latestVersion = $releaseInfo.LatestVersion -replace '^v', ''
+
+# Exit if this version is marked as ignored
+if ($latestVersion -eq $packageInfo.IgnoreVersion) {
+    Write-Output "Latest Ventoy version ($latestVersion) is set to IgnoreVersion. Skipping..."
+    exit
+}
 
 # Normalize version for comparison
 $versionWithoutLeadingZeroes = $latestVersion -replace '\b0+(\d+)', '$1'

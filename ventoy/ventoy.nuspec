@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
     <metadata>
         <id>ventoy</id>
-        <version>1.1.11</version>
+        <version>1.1.11.20260407</version>
         <title>Ventoy</title>
         <authors>ventoy.net</authors>
         <owners>asheroto, Yato</owners>
@@ -54,19 +54,15 @@ Control the creation of desktop and start menu shortcuts during installation. En
 
 ### Create Desktop Shortcuts for Additional Executables
 
-These EXEs can be found in the `ventoy\altexe` folder.
-
--   `/CreateDesktopShortcutVentoyX64`: Create desktop shortcut for **Ventoy x64**.
--   `/CreateDesktopShortcutVentoyPlugsonX64`: Create desktop shortcut for **Ventoy Plugson x64**.
+-   `/CreateDesktopShortcutVentoy32`: Create desktop shortcut for **Ventoy (32-bit)**.
+-   `/CreateDesktopShortcutVentoyPlugson32`: Create desktop shortcut for **Ventoy Plugson (32-bit)**.
 -   `/CreateDesktopShortcutVentoyARM`: Create desktop shortcut for **Ventoy ARM**.
 -   `/CreateDesktopShortcutVentoyARM64`: Create desktop shortcut for **Ventoy ARM64**.
 
 ### Create Start Menu Shortcuts for Additional Executables
 
-These EXEs can be found in the `ventoy\altexe` folder.
-
--   `/CreateStartMenuShortcutVentoyX64`: Create start menu shortcut for **Ventoy x64**.
--   `/CreateStartMenuShortcutVentoyPlugsonX64`: Create start menu shortcut for **Ventoy Plugson x64**.
+-   `/CreateStartMenuShortcutVentoy32`: Create start menu shortcut for **Ventoy (32-bit)**.
+-   `/CreateStartMenuShortcutVentoyPlugson32`: Create start menu shortcut for **Ventoy Plugson (32-bit)**.
 -   `/CreateStartMenuShortcutVentoyARM`: Create start menu shortcut for **Ventoy ARM**.
 -   `/CreateStartMenuShortcutVentoyARM64`: Create start menu shortcut for **Ventoy ARM64**.
 
@@ -76,9 +72,9 @@ Install Ventoy without creating any desktop shortcuts...
 
 `choco install ventoy -params '/NoDesktopShortcutVentoy /NoDesktopShortcutVentoyPlugson /NoDesktopShortcutVentoyVlnk'`
 
-Install Ventoy and create desktop shortcuts for **Ventoy x64** and **Ventoy Plugson x64**...
+Install Ventoy and create desktop shortcuts for **Ventoy (32-bit)** and **Ventoy Plugson (32-bit)**...
 
-`choco install ventoy -params '/CreateDesktopShortcutVentoyX64 /CreateDesktopShortcutVentoyPlugsonX64'`
+`choco install ventoy -params '/CreateDesktopShortcutVentoy32 /CreateDesktopShortcutVentoyPlugson32'`
 
 ## Package Note
 

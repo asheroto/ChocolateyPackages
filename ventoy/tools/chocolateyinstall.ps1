@@ -64,10 +64,10 @@ Get-ChildItem -Path ([Environment]::GetFolderPath("Programs")) -Filter "Ventoy*.
 	Move-Item -Path $_.FullName -Destination $startMenuFolder -Force -ErrorAction SilentlyContinue
 }
 
-# Create shortcuts for default executables
+# Create shortcuts for default executables (x64 by default)
 @(
-	, @('Ventoy', 'Ventoy2Disk.exe', '', 'NoDesktopShortcutVentoy', 'NoStartMenuShortcutVentoy')
-	, @('Ventoy Plugson', 'VentoyPlugson.exe', '', 'NoDesktopShortcutVentoyPlugson', 'NoStartMenuShortcutVentoyPlugson')
+	, @('Ventoy', 'altexe\Ventoy2Disk_X64.exe', '', 'NoDesktopShortcutVentoy', 'NoStartMenuShortcutVentoy')
+	, @('Ventoy Plugson', 'altexe\VentoyPlugson_X64.exe', '', 'NoDesktopShortcutVentoyPlugson', 'NoStartMenuShortcutVentoyPlugson')
 	, @('Ventoy Vlnk', 'VentoyVlnk.exe', '-s', 'NoDesktopShortcutVentoyVlnk', 'NoStartMenuShortcutVentoyVlnk')
 ) | ForEach-Object {
 	# Assigning values to variables for clarity
@@ -92,10 +92,10 @@ Get-ChildItem -Path ([Environment]::GetFolderPath("Programs")) -Filter "Ventoy*.
 	}
 }
 
-# Create shortcuts for altexe executables if specified
+# Create shortcuts for alt executables if specified (32-bit and ARM)
 @(
-	, @('Ventoy x64', 'altexe\Ventoy2Disk_X64.exe', '', 'CreateDesktopShortcutVentoyX64', 'CreateStartMenuShortcutVentoyX64')
-	, @('Ventoy Plugson x64', 'altexe\VentoyPlugson_X64.exe', '', 'CreateDesktopShortcutVentoyPlugsonX64', 'CreateStartMenuShortcutVentoyPlugsonX64')
+	, @('Ventoy (32-bit)', 'Ventoy2Disk.exe', '', 'CreateDesktopShortcutVentoy32', 'CreateStartMenuShortcutVentoy32')
+	, @('Ventoy Plugson (32-bit)', 'VentoyPlugson.exe', '', 'CreateDesktopShortcutVentoyPlugson32', 'CreateStartMenuShortcutVentoyPlugson32')
 	, @('Ventoy ARM', 'altexe\Ventoy2Disk_ARM.exe', '', 'CreateDesktopShortcutVentoyARM', 'CreateStartMenuShortcutVentoyARM')
 	, @('Ventoy ARM64', 'altexe\Ventoy2Disk_ARM64.exe', '', 'CreateDesktopShortcutVentoyARM64', 'CreateStartMenuShortcutVentoyARM64')
 ) | ForEach-Object {
