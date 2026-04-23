@@ -2,25 +2,20 @@ $ErrorActionPreference	= "Stop";
 
 # Release URL: https://github.com/ventoy/PXE/releases
 $packageName = "iventoy"
-$version = "1.0.26" # Chocolatey package version may differ from the filename version
-$url = "https://github.com/ventoy/PXE/releases/download/v${version}/iventoy-${version}-win32-free.zip"
-$checksum = "21F601D5C5DEC464FF9A8ABED4511FE0E38C08A97AE1D8C111353211C83DDB99"
-$url64 = "https://github.com/ventoy/PXE/releases/download/v${version}/iventoy-${version}-win64-free.zip";
-$checksum64 = "A8011BA717AB6715BBB06857D8725E95708CCF387EDC6392B3C85ED86BDFA1AF"
+$version = "1.0.28" # Chocolatey package version may differ from the filename version
+$url = "https://github.com/ventoy/PXE/releases/download/v${version}/iventoy-${version}-win64-free.zip"
+$checksum = "62981E71D264FCDF0954B8E451A1F62D07A6E84C2EB002BBD5415053FAB7417A"
 
 # Set new install location to ChocolateyInstall\lib\iventoy - implemented April 2024
 $unzipLocation = [System.IO.Path]::Combine($env:ChocolateyInstall, "lib", $packageName)
 
 $packageArgs = @{
-    packageName    = $packageName
-    unzipLocation  = $unzipLocation
-    fileType       = 'ZIP'
-    url            = $url
-    checksum       = $checksum
-    checksumType   = 'sha256'
-    url64          = $url64
-    checksum64     = $checksum64
-    checksumType64 = 'sha256'
+    packageName   = $packageName
+    unzipLocation = $unzipLocation
+    fileType      = 'ZIP'
+    url           = $url
+    checksum      = $checksum
+    checksumType  = 'sha256'
 }
 
 Install-ChocolateyZipPackage @packageArgs
@@ -73,7 +68,6 @@ Remove-Item "$unzipLocation\iventoy-$version" -Force -Recurse -ErrorAction Silen
 
 # Create shortcuts
 @(
-    , @('iVentoy', 'iVentoy_32.exe')
     , @('iVentoy', 'iVentoy_64.exe')
     , @('iVentoy ISOs', 'iso')
 ) | ForEach-Object {

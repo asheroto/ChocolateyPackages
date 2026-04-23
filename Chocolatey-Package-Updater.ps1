@@ -1,6 +1,6 @@
 <#PSScriptInfo
 
-.VERSION 0.2.0
+.VERSION 0.2.1
 
 .GUID 9b612c16-25c0-4a40-afc7-f876274e7e8c
 
@@ -672,7 +672,7 @@ function UpdateChocolateyPackage {
 
             # Construct the aria2c command line arguments
             # Using spoofed user agent because some sites block aria2c
-            $aria2cArgs = @("-d", $directoryPart, "-o", $filePart, $url, "--disable-ipv6")
+            $aria2cArgs = @("-d", $directoryPart, "-o", $filePart, $url, "--disable-ipv6", "--allow-overwrite=true")
 
             if ($DebugPreference -eq 'SilentlyContinue') {
                 $aria2cArgs += '--quiet'
@@ -680,6 +680,10 @@ function UpdateChocolateyPackage {
 
             # Run aria2c
             & 'aria2c' $aria2cArgs
+            if ($LASTEXITCODE -ne 0) {
+                Write-Debug "aria2c failed (exit code $LASTEXITCODE), falling back to Invoke-WebRequest."
+                Invoke-WebRequest -Uri $url -OutFile $tempPath
+            }
         } else {
             Write-Debug "Using Invoke-WebRequest to download the file."
             Invoke-WebRequest -Uri $url -OutFile $tempPath
@@ -802,9 +806,6 @@ function UpdateChocolateyPackage {
         Set-Location $ScriptPath
         Write-Debug "Current directory: $pwd"
 
-        # Temporary File Cleanup
-        CleanupFileDownload
-
         # FileDownloadTempPath Management
         if (-not $FileDownloadTempPath) {
             $FileDownloadTempPath = Join-Path -Path $env:TEMP -ChildPath "${PackageName}_setup_temp.exe"
@@ -813,6 +814,9 @@ function UpdateChocolateyPackage {
         if ($FileUrl64 -and -not $FileDownloadTempPath64) {
             $FileDownloadTempPath64 = Join-Path -Path $env:TEMP -ChildPath "${PackageName}_setup_temp_64.exe"
         }
+
+        # Temporary File Cleanup (must run after paths are set)
+        CleanupFileDownload
 
         # Scrape Version if Applicable
         $ForceVersionNumber = ''
