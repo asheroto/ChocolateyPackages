@@ -11,7 +11,7 @@ $version = "7.9.0.26347"
 $packageArgs = @{
 	packageName    = 'hp-universal-print-driver-pcl'
 
-	url            = "https://ftp.hp.com/pub/softlib/software13/UPD/upd-pcl6-x64-${version}.zip"
+	url            = "https://ftp.hp.com/pub/softlib/software13/printers/UPD/upd-pcl6-x64-${version}.zip"
 	checksum       = '248EA75AA33F94A680D445C0CCA1787D335C49583E2F0F36933C7C3E7A93E98A'
 	softwareName   = 'HP Universal Printing PCL 6'
 	fileLocation   = "$toolsDir\unzippedfiles\install.exe"
