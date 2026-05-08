@@ -1,23 +1,20 @@
 $ErrorActionPreference = 'Stop'
 
 $packageName = 'ClickUp'
-$softwareName = 'ClickUp'
-$version = '1.1.6'
-$url = "https://github.com/asheroto/ClickUp/releases/download/${VERSION}/ClickUp.exe"
-$checksum = '48807C5B4A48679DFFF67CA537852ABE5152A4A3955FF8E8584B4A441C220CE3'
+$version = '1.1.7'
+$url = "https://github.com/asheroto/ClickUp/releases/download/$version/ClickUp.exe"
+$checksum = '9F6BEBA1D811536ED742EE63C37746973A02E5D7E1EF62B088EFDBF4F417C895'
 $silentArgs = '/quiet'
 $validExitCodes = @(0)
 
 $packageArgs = @{
     packageName    = $packageName
     fileType       = 'exe'
-    file           = $fileLocation
     url            = $url
     checksum       = $checksum
     checksumType   = 'sha256'
     silentArgs     = $silentArgs
     validExitCodes = $validExitCodes
-    softwareName   = $softwareName
 }
 
 # Install the package
