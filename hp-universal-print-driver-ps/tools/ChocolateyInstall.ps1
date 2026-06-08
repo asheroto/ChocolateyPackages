@@ -6,12 +6,12 @@
 # Using VisualPing to monitor the version as it supports clicking. Check ran weekly.
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$version = "8.1.0.26560"
+$version = "8.2.0.26778"
 
 $packageArgs = @{
     packageName    = 'hp-universal-print-driver-ps'
-	url            = "https://ftp.hp.com/pub/softlib/software13/printers/UPD/upd-ps-x64-${version}.zip"
-    checksum       = '84D89A5A040B5BFA8ED06B281667178512C9FDAF533FC5921A34C1CAE321D3E8'
+	url            = "https://ftp.hp.com/pub/softlib/software13/printers/UPD/upd-ps-win10-x64-${version}.zip"
+    checksum       = '26B228E9035FF93FBEF9C2F7272389B7AFD5F7299EFBB6E73956D2F225D62A29'
     softwareName   = 'HP Universal Printing PS'
     fileLocation   = "$toolsDir\unzippedfiles\install.exe"
     unzipLocation  = "$toolsDir\unzippedfiles"
