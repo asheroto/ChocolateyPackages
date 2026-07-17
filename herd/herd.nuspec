@@ -45,11 +45,7 @@ This is a virtual package to help find and install [Laravel Herd](https://commun
             <dependency id="laravel-herd" version="1.29.0" />
         </dependencies>
     </metadata>
+    <files>
+        <file src="*.nuspec" exclude="update.ps1" />
+    </files>
 </package>
-
-
-
-
-
-
-
