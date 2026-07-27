@@ -12,7 +12,7 @@ $ParentPath = Split-Path -Parent $ScriptPath
 $packageInfo = @{
     PackageName   = "laravel-herd"
     ScrapeUrl     = 'https://herd.laravel.com/docs/windows/changelog/index'
-    ScrapePattern = '(?<=<div class="cursor-pointer[^>]*?>)[\d.]+(?=</div>)'
+    ScrapePattern = '(?<=data-component-part="update-label"[^>]*>)[\d.]+(?=</button>)'
     FileUrl       = "https://download.herdphp.com/app_versions/Herd-{VERSION}-setup.exe"
     AutoPush      = $true
     EnvFilePath   = "..\.env"
