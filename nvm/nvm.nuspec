@@ -1,53 +1,67 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>nvm</id>
-        <version>1.2.2.20251229</version>
+        <version>2.0.0</version>
         <title>NVM</title>
-        <authors>coreybutler</authors>
+        <authors>Author Software</authors>
         <owners>asheroto, kamack38</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <licenseUrl>https://github.com/coreybutler/nvm-windows/blob/master/LICENSE</licenseUrl>
-        <projectUrl>https://github.com/coreybutler/nvm-windows</projectUrl>
+        <licenseUrl>https://github.com/nvm-windows/nvm/blob/main/installer/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/nvm-windows/nvm</projectUrl>
         <iconUrl>https://rawcdn.githack.com/kamack38/chocopkgs/9bb968ea5a6c72ed74ac22406b93a9f1ca4491a5/assets/nodejs.png</iconUrl>
-        <description># NVM
+        <description><![CDATA[
+# NVM for Windows
 
 ## Overview
 
-Manage multiple installations of node.js on a Windows computer.
+Manage multiple installations of Node.js on a Windows computer.
 
-This has always been a node version manager, not an io.js manager, so there is no back-support for io.js. Node 4+ is supported. Remember when running `nvm install` or `nvm use`, Windows usually requires administrative rights (to create symlinks).
+Version 2 is a complete rewrite of NVM for Windows. Highlights:
 
-![Showcase](https://rawcdn.githack.com/coreybutler/staticassets/a99973bfb0e52d3ba029facccd90153703a2397d/images/nvm-1.1.8-screenshot.jpg)
+- No administrator rights required. The default "shim" mode needs no special permissions; "link" mode uses NTFS junctions for zero latency.
+- Per-directory version switching using `.nvmrc`, `.node-version`, `package.json`, or custom runtime config files, with optional on-demand installs.
+- Parallel installations and faster downloads.
+- Publisher verification to prevent untrusted Node.js swaps, native Windows event logging, and unified package manager handling.
 
-There are situations where the ability to switch between different versions of Node.js can be very useful. For example, if you want to test a module you're developing with the latest bleeding edge version without uninstalling the stable version of node, this utility can help.
+Full documentation: https://docs.nvm-windows.com
 
-## Usage
+## Package notes
 
-**nvm-windows runs in an Admin shell**. You'll need to start `powershell` or Command Prompt as Administrator to use nvm-windows
+- The installer is per-user. It installs under the local AppData of the account running the install and adds itself to that user's PATH. Chocolatey runs elevated, so NVM is set up for the elevated user.
+- Upgrading from the previous 1.x package runs the installer's built-in v1 migration. It copies your settings and every installed Node.js version into the new per-user folder, then removes the 1.x install and its system environment variables.
+- **The migration is slow.** Expect 10 to 30 minutes, longer with many Node.js versions (11 versions took about 14 minutes on a fast machine). It will look stuck. Each version is copied by a robocopy.exe process you can watch in Task Manager. Do not interrupt it.
+- For a fast upgrade without migration, run `choco uninstall nvm.install` first (this deletes all 1.x Node.js versions and global npm packages), then install 2.x and reinstall versions with `nvm install <version>`.
+- This package depends on `autohotkey.portable`. The 2.x installer asks for confirmation when it finds an existing installation, even in silent mode (see https://github.com/nvm-windows/nvm/issues/1386), and a small AutoHotkey script answers that prompt. It runs only during install and exits on its own.
 
-NVM for Windows is a command line tool. Simply type `nvm` in the console for help. The basic commands are:
+## Commands
 
-- `nvm arch [32|64]`: Show if node is running in 32 or 64 bit mode. Specify 32 or 64 to override the default architecture.
-- `nvm current`: Display active version.
-- `nvm install ﹤version﹥ [arch]`: The version can be a specific version, "latest" for the latest current version, or "lts" for the most recent LTS version. Optionally specify whether to install the 32 or 64 bit version (defaults to system arch). Set [arch] to "all" to install 32 AND 64 bit versions. Add `--insecure` to the end of this command to bypass SSL validation of the remote download server.
-- `nvm list [available]`: List the node.js installations. Type `available` at the end to show a list of versions available for download.
-- `nvm on`: Enable node.js version management.
-- `nvm off`: Disable node.js version management (does not uninstall anything).
-- `nvm proxy [url]`: Set a proxy to use for downloads. Leave `[url]` blank to see the current proxy. Set `[url]` to "none" to remove the proxy.
-- `nvm uninstall ﹤version﹥`: Uninstall a specific version.
-- `nvm use ﹤version﹥ [arch]`: Switch to use the specified version. Optionally use `latest`, `lts`, or `newest`. `newest` is the latest _installed_ version. Optionally specify 32/64bit architecture. `nvm use ﹤arch﹥` will continue using the selected version, but switch to 32/64 bit mode. For information about using `use` in a specific directory (or using `.nvmrc`), please refer to [issue #16](https://github.com/coreybutler/nvm-windows/issues/16).
-- `nvm root ﹤path﹥`: Set the directory where nvm should store different versions of node.js. If `﹤path﹥` is not set, the current root will be displayed.
-- `nvm version`: Displays the current running version of NVM for Windows.
-- `nvm node_mirror ﹤node_mirror_url﹥`: Set the node mirror.
-- `nvm npm_mirror ﹤npm_mirror_url﹥`: Set the npm mirror.</description>
+Type `nvm` in a terminal for help, or `nvm <command> --help` for details on a command. From `nvm --help` in v2.0.0:
+
+- `nvm install <version>` (aliases `i`, `add`): Install one or more Node.js versions (e.g. `latest`, `lts`, `lts/iron`, `x.x.x`, `x.x`, `x`).
+- `nvm uninstall <version>` (aliases `rm`, `un`): Uninstall one or more Node.js versions.
+- `nvm use <version>`: Switch the default Node.js version. `nvm use lts` and `nvm use latest` also work.
+- `nvm pin [version]`: Pin project Node.js version (ex: write `.nvmrc`).
+- `nvm list` (alias `ls`): List the installed Node.js versions. `nvm list releases` lists downloadable versions and `nvm list cached` lists cached ones.
+- `nvm alias`: Manage Node.js version aliases (`add`, `list`, `remove`).
+- `nvm default`: Show the default version.
+- `nvm env`: Display nvm environment details.
+- `nvm cache`: View and manage the nvm cache (`add`, `list`, `remove`).
+- `nvm config` (alias `cfg`): View and manage the nvm configuration (`list`, `get`, `set`, `reset`).
+- `nvm on`: Manage Node.js with nvm.
+- `nvm off`: Stop managing Node.js with nvm.
+- `nvm doctor`: Detect and fix common issues (`--autofix` fixes them automatically).
+- `nvm upgrade`: Upgrade nvm (`--check` only checks for updates).
+
+Full command reference: https://docs.nvm-windows.com/commands
+    ]]></description>
         <summary>A node.js version management utility for Windows.</summary>
-        <releaseNotes>https://github.com/coreybutler/nvm-windows/releases/latest</releaseNotes>
-        <copyright>Copyright (c) 2022 Ecor Ventures LLC</copyright>
-        <tags>nvm node nodejs node.js version management windows admin</tags>
+        <releaseNotes>https://github.com/nvm-windows/nvm/releases/latest</releaseNotes>
+        <copyright>Copyright (c) 2026 Author Software Inc.</copyright>
+        <tags>nvm node nodejs node.js version manager windows</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/nvm</packageSourceUrl>
         <dependencies>
-            <dependency id="nvm.install" version="1.2.2.20251229" />
+            <dependency id="nvm.install" version="2.0.0" />
         </dependencies>
     </metadata>
 </package>

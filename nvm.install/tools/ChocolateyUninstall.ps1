@@ -5,7 +5,7 @@ $ErrorActionPreference = 'Stop'
 $packageName = 'nvm.install'
 $packageSearch = 'NVM for Windows*'
 $fileType = 'exe'
-$silentArgs = '/SILENT /SUPPRESSMSGBOXES'
+$silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
 $validExitCodes = @(0)
 
 # Registry paths to search for installed packages

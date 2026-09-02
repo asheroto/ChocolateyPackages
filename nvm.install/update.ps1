@@ -11,11 +11,10 @@ $ParentPath = Split-Path -Parent $ScriptPath
 # Create a hash table to store package information
 $packageInfo = @{
     PackageName   = "nvm.install"
-    FileUrl       = "https://github.com/coreybutler/nvm-windows/releases/download/{VERSION}/nvm-setup.zip"
-    GitHubRepoUrl = "https://github.com/coreybutler/nvm-windows"
+    FileUrl       = "https://github.com/nvm-windows/nvm/releases/download/v{VERSION}/nvm-{VERSION}-amd64-setup.exe"
+    GitHubRepoUrl = "https://github.com/nvm-windows/nvm"
     AutoPush      = $true
     EnvFilePath   = "..\.env"
-    IgnoreVersion = '1.2.2'
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table
