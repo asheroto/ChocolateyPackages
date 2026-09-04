@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>nvm</id>
-        <version>2.0.0</version>
+        <version>2.0.1-hotfix.1</version>
         <title>NVM</title>
         <authors>Author Software</authors>
         <owners>asheroto, kamack38</owners>
@@ -32,7 +32,6 @@ Full documentation: https://docs.nvm-windows.com
 - Upgrading from the previous 1.x package runs the installer's built-in v1 migration. It copies your settings and every installed Node.js version into the new per-user folder, then removes the 1.x install and its system environment variables.
 - **The migration is slow.** Expect 10 to 30 minutes, longer with many Node.js versions (11 versions took about 14 minutes on a fast machine). It will look stuck. Each version is copied by a robocopy.exe process you can watch in Task Manager. Do not interrupt it.
 - For a fast upgrade without migration, run `choco uninstall nvm.install` first (this deletes all 1.x Node.js versions and global npm packages), then install 2.x and reinstall versions with `nvm install <version>`.
-- This package depends on `autohotkey.portable`. The 2.x installer asks for confirmation when it finds an existing installation, even in silent mode (see https://github.com/nvm-windows/nvm/issues/1386), and a small AutoHotkey script answers that prompt. It runs only during install and exits on its own.
 
 ## Commands
 
@@ -61,7 +60,7 @@ Full command reference: https://docs.nvm-windows.com/commands
         <tags>nvm node nodejs node.js version manager windows</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/nvm</packageSourceUrl>
         <dependencies>
-            <dependency id="nvm.install" version="2.0.0" />
+            <dependency id="nvm.install" version="2.0.1-hotfix.1" />
         </dependencies>
     </metadata>
 </package>

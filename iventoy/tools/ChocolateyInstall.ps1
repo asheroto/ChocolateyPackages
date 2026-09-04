@@ -2,9 +2,9 @@ $ErrorActionPreference	= "Stop";
 
 # Release URL: https://github.com/ventoy/PXE/releases
 $packageName = "iventoy"
-$version = "1.0.39" # Chocolatey package version may differ from the filename version
+$version = "1.0.40" # Chocolatey package version may differ from the filename version
 $url = "https://github.com/ventoy/PXE/releases/download/v${version}/iventoy-${version}-win64-free.zip"
-$checksum = "AD1966B195A902CE04801CCB8914B1E4F828A279AB5C42B01AD493AC69B8D9A2"
+$checksum = "6AE7724833366B39A8E73E301A957E729ECE4812A2C1CFF5A7BE1B486A1BCE7B"
 
 # Set new install location to ChocolateyInstall\lib\iventoy - implemented April 2024
 $unzipLocation = [System.IO.Path]::Combine($env:ChocolateyInstall, "lib", $packageName)
