@@ -15,6 +15,11 @@ $packageInfo = @{
     GitHubRepoUrl = "https://github.com/nvm-windows/nvm"
     AutoPush      = $true
     EnvFilePath   = "..\.env"
+    # We are intentionally ahead of the latest STABLE release on a prerelease build
+    # (package 2.0.1-hotfix0001, from upstream 2.0.1-hotfix.1). The updater reads GitHub's
+    # latest stable release, which is 2.0.0, so ignore 2.0.0 to avoid overwriting the hotfix
+    # build. Clear this once stable 2.0.1 ships so the updater picks it up.
+    IgnoreVersion = "2.0.0"
 }
 
 # Call the UpdateChocolateyPackage function and pass the hash table

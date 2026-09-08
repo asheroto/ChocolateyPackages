@@ -18,15 +18,15 @@ Full documentation: https://docs.nvm-windows.com
 - The installer is per-user. It installs under the local AppData of the account running the install and adds itself to that user's PATH. Chocolatey runs elevated, so NVM is set up for the elevated user.
 - Upgrading from the previous 1.x package runs the installer's built-in v1 migration. It copies your settings and every installed Node.js version into the new per-user folder, then removes the 1.x install and its system environment variables.
 - **The migration is slow.** Expect 10 to 30 minutes, longer with many Node.js versions (11 versions took about 14 minutes on a fast machine). It will look stuck. Each version is copied by a robocopy.exe process you can watch in Task Manager. Do not interrupt it.
-- For a fast upgrade without migration, run `choco uninstall nvm.install` first (this deletes all 1.x Node.js versions and global npm packages), then install 2.x and reinstall versions with `nvm install <version>`.
+- For a fast upgrade without migration, run `choco uninstall nvm.install` first (this deletes all 1.x Node.js versions and global npm packages), then install 2.x and reinstall versions with `nvm install {version}`.
 
 ## Commands
 
-Type `nvm` in a terminal for help, or `nvm <command> --help` for details on a command. From `nvm --help` in v2.0.0:
+Type `nvm` in a terminal for help, or `nvm {command} --help` for details on a command. From `nvm --help` in v2.0.0:
 
-- `nvm install <version>` (aliases `i`, `add`): Install one or more Node.js versions (e.g. `latest`, `lts`, `lts/iron`, `x.x.x`, `x.x`, `x`).
-- `nvm uninstall <version>` (aliases `rm`, `un`): Uninstall one or more Node.js versions.
-- `nvm use <version>`: Switch the default Node.js version. `nvm use lts` and `nvm use latest` also work.
+- `nvm install {version}` (aliases `i`, `add`): Install one or more Node.js versions (e.g. `latest`, `lts`, `lts/iron`, `x.x.x`, `x.x`, `x`).
+- `nvm uninstall {version}` (aliases `rm`, `un`): Uninstall one or more Node.js versions.
+- `nvm use {version}`: Switch the default Node.js version. `nvm use lts` and `nvm use latest` also work.
 - `nvm pin [version]`: Pin project Node.js version (ex: write `.nvmrc`).
 - `nvm list` (alias `ls`): List the installed Node.js versions. `nvm list releases` lists downloadable versions and `nvm list cached` lists cached ones.
 - `nvm alias`: Manage Node.js version aliases (`add`, `list`, `remove`).

@@ -1,8 +1,11 @@
 $ErrorActionPreference = 'Stop'
 
 # Define the version
-# ponytail: testing the 2.0.1-hotfix.1 prerelease, which is the first build to fix the silent
-# migration prompt (nvm-windows/nvm#1386) and drop robocopy /V (#1387). Swap to 2.0.1 when it ships.
+# This is the upstream release tag used to build the download URL, so it keeps the dotted form.
+# The package (nuspec) version drops the dot -> 2.0.1-hotfix0001, because the Chocolatey community
+# feed handles SemVer 1.0 prerelease tags (no dot) reliably but chokes on SemVer 2.0 dotted ones.
+# ponytail: 2.0.1-hotfix.1 is the first build to fix the silent migration prompt
+# (nvm-windows/nvm#1386) and drop robocopy /V (#1387). Swap to stable 2.0.1 when it ships.
 $Version = "2.0.1-hotfix.1"
 
 # Package args
