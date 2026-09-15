@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+    <metadata>
+        <id>systeminformer</id>
+        <version>4.0.26241.138</version>
+        <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/systeminformer</packageSourceUrl>
+        <owners>wanwan, asheroto</owners>
+        <title>System Informer (Install)</title>
+        <authors>Winsider Seminars &amp; Solutions, Inc.</authors>
+        <projectUrl>https://systeminformer.com/</projectUrl>
+        <iconUrl>https://cdn.statically.io/gh/asheroto/ChocolateyPackages/master/systeminformer/icon.png</iconUrl>
+        <copyright>Winsider Seminars &amp; Solutions, Inc.</copyright>
+        <licenseUrl>https://github.com/winsiderss/systeminformer/blob/master/LICENSE.txt</licenseUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <projectSourceUrl>https://github.com/winsiderss/systeminformer</projectSourceUrl>
+        <docsUrl>https://systeminformer.com/readme</docsUrl>
+        <bugTrackerUrl>https://github.com/winsiderss/systeminformer/issues</bugTrackerUrl>
+        <releaseNotes>https://github.com/winsiderss/systeminformer/releases</releaseNotes>
+        <tags>systeminformer processhacker process-manager task-manager system-monitor process-monitor performance-monitoring monitoring debugger security malware profiling admin foss</tags>
+        <summary>A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware.</summary>
+        <description># System Informer
+
+A free, powerful, multi-purpose tool that helps you monitor system resources, debug software and detect malware. Formerly known as Process Hacker. Brought to you by Winsider Seminars &amp; Solutions, Inc.
+
+## System Requirements
+
+Windows 10 or higher, 32-bit, 64-bit, or ARM64.
+
+## Features
+
+- A detailed overview of system activity with highlighting.
+- Graphs and statistics allow you to quickly track down resource hogs and runaway processes.
+- Can't edit or delete a file? Discover which processes are using that file.
+- See what programs have active network connections, and close them if necessary.
+- Get real-time information on disk access.
+- View detailed stack traces with kernel-mode, WOW64 and .NET support.
+- Go beyond services.msc: create, edit and control services.
+- 100% [Free Software](https://www.gnu.org/philosophy/free-sw.en.html) ([MIT](https://opensource.org/licenses/MIT))
+
+## Antivirus False Positives
+
+System Informer includes a kernel driver and can inspect and terminate other processes, so some antivirus engines flag it. These detections are false positives. The installer is signed by Winsider Seminars &amp; Solutions Inc. and the software is open source. See the developer discussion:
+
+- [Avast detects the driver as vulnerable (#1908)](https://github.com/winsiderss/systeminformer/issues/1908)
+- [Windows Defender flagged as a virus and crashed (#1722)](https://github.com/winsiderss/systeminformer/issues/1722)
+- [Antivirus false alarms: can we fight them? (#1715)](https://github.com/winsiderss/systeminformer/issues/1715)
+- [Flagged as a Potentially Unwanted Application (#1668)](https://github.com/winsiderss/systeminformer/issues/1668)
+- [Trojan:Win32/Sabsik.TE.B!ml detected by Windows Defender (#1665)](https://github.com/winsiderss/systeminformer/issues/1665)
+
+## Notes
+
+- The application is not started after installation.
+- This package tracks the stable release channel published at [systeminformer.com/downloads](https://systeminformer.com/downloads), not the canary builds.</description>
+    </metadata>
+    <files>
+        <file src="tools\**" target="tools" />
+    </files>
+</package>

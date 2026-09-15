@@ -31,6 +31,7 @@ Set-Location $scriptPath
 #./SFTPGo/update.ps1                    # Author pushes updates to Chocolatey
 ./speedtest/update.ps1
 ./StartAllBack/update.ps1
+./systeminformer/update.ps1
 ./TablePlus/update.ps1
 ./ventoy/update.ps1
 
