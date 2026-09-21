@@ -2,11 +2,10 @@ $ErrorActionPreference = 'Stop'
 
 # Define the version
 # This is the upstream release tag used to build the download URL, so it keeps the dotted form.
-# The package (nuspec) version drops the dot -> 2.0.1-hotfix0001, because the Chocolatey community
-# feed handles SemVer 1.0 prerelease tags (no dot) reliably but chokes on SemVer 2.0 dotted ones.
-# ponytail: 2.0.1-hotfix.1 is the first build to fix the silent migration prompt
-# (nvm-windows/nvm#1386) and drop robocopy /V (#1387). Swap to stable 2.0.1 when it ships.
-$Version = "2.0.1-hotfix.1"
+# For prerelease tags the package (nuspec) version drops the dot (-hotfix.N -> -hotfix000N), because
+# the Chocolatey community feed handles SemVer 1.0 prerelease tags (no dot) reliably but chokes on
+# SemVer 2.0 dotted ones.
+$Version = "2.0.1-hotfix.2"
 
 # Package args
 # v2 is an Inno Setup installer that installs per-user (PrivilegesRequired=lowest) into
@@ -17,7 +16,7 @@ $packageArgs = @{
     FileType       = 'exe'
     SoftwareName   = 'NVM for Windows'
     Url            = "https://github.com/nvm-windows/nvm/releases/download/v${Version}/nvm-${Version}-amd64-setup.exe"
-    Checksum       = '1F0BAA3A094E6796E639617BAC1DFA35C7B998477801D47E376201077D857FF7'
+    Checksum       = 'DE1C8FC443DC590E1BFB17E1B266C7005B00378397C34749ED491EDCA17D7CE9'
     ChecksumType   = 'sha256'
     SilentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
     ValidExitCodes = @(0)
