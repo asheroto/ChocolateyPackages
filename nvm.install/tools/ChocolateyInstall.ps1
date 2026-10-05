@@ -5,18 +5,18 @@ $ErrorActionPreference = 'Stop'
 # For prerelease tags the package (nuspec) version drops the dot (-hotfix.N -> -hotfix000N), because
 # the Chocolatey community feed handles SemVer 1.0 prerelease tags (no dot) reliably but chokes on
 # SemVer 2.0 dotted ones.
-$Version = "2.0.1-hotfix.2"
+$Version = "2.0.1"
 
 # Package args
 # v2 is an Inno Setup installer that installs per-user (PrivilegesRequired=lowest) into
 # %LOCALAPPDATA%\Author Software\nvm and adds itself to the current user's PATH.
-# ponytail: amd64 installer only. It runs on arm64 hosts via emulation; add a native arm64 branch if someone asks.
+# ponytail: x64 installer only. It runs on arm64 hosts via emulation; add a native arm64 branch if someone asks.
 $packageArgs = @{
     PackageName    = $env:ChocolateyPackageName
     FileType       = 'exe'
     SoftwareName   = 'NVM for Windows'
-    Url            = "https://github.com/nvm-windows/nvm/releases/download/v${Version}/nvm-${Version}-amd64-setup.exe"
-    Checksum       = 'DE1C8FC443DC590E1BFB17E1B266C7005B00378397C34749ED491EDCA17D7CE9'
+    Url            = "https://github.com/nvm-windows/nvm/releases/download/v${Version}/nvm-${Version}-x64-setup.exe"
+    Checksum       = '2BA6AB6290FDC7D1E608E76C97577CA6E1DF772B2D59AB8EBC01E10788DE8E57'
     ChecksumType   = 'sha256'
     SilentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART'
     ValidExitCodes = @(0)

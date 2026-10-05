@@ -1,7 +1,7 @@
 $ErrorActionPreference = "Stop"
 
 # Define the version
-$Version = "3.9.25"
+$Version = "3.9.27"
 
 # Define tools directory
 $toolsDir = Split-Path $MyInvocation.MyCommand.Definition
@@ -11,7 +11,7 @@ $packageArgs = @{
     PackageName    = "StartAllBack"
     SoftwareName   = "StartAllBack"
     Url            = "https://startisback.sfo3.cdn.digitaloceanspaces.com/StartAllBack_${Version}_setup.exe"
-    Checksum       = "2D185E739A69C617BF7DB02C088627CFDC3FC1A4EB75E6C3010C175C5CD9D9DC"
+    Checksum       = "E88B39E6E3BAD9E252F02D47ADE1FA9FD38AC54AA85A7A61FA5E4401F7628C42"
     ChecksumType   = "sha256"
     SilentArgs     = "/silent /elevated"
     ValidExitCodes = @(0)
