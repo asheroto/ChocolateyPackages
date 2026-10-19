@@ -4,7 +4,7 @@
     <metadata>
         <id>netscan</id>
         <title>SoftPerfect Network Scanner</title>
-        <version>26.7.0</version>
+        <version>26.9.0</version>
         <authors>SoftPerfect</authors>
         <owners>asheroto, digitalcardboard</owners>
         <projectUrl>https://www.softperfect.com/products/networkscanner/</projectUrl>
@@ -42,7 +42,7 @@ This package supersedes the `netscan32` and `netscan64` packages. You should con
         <iconUrl>https://rawcdn.githack.com/asheroto/ChocolateyPackages/271ab8e5613d50510f06944385692b9cb3852cc4/netscan.install/icon.png</iconUrl>
         <releaseNotes>https://www.softperfect.com/products/changelog.php?product_id=1</releaseNotes>
         <dependencies>
-            <dependency id="netscan.install" />
+            <dependency id="netscan.install" version="26.9.0" />
         </dependencies>
     </metadata>
 </package>
