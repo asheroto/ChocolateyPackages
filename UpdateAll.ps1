@@ -21,6 +21,7 @@ Set-Location $scriptPath
 ./metadataplusplus/update.ps1
 ./miro/update.ps1
 ./netscan.install/update.ps1
+./netscan/update.ps1                    # Must run after netscan.install
 ./nvm.install/update.ps1
 # ./pdq-deploy/update.ps1
 # ./pdq-inventory/update.ps1

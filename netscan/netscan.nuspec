@@ -37,7 +37,7 @@ This package supersedes the `netscan32` and `netscan64` packages. You should con
         <docsUrl>https://www.softperfect.com/products/networkscanner/manual/</docsUrl>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/netscan.install</packageSourceUrl>
         <tags>netscan portscanner network netbios snmp scanner port scan soft perfect softperfect open active net</tags>
-        <copyright>© 2000-2024 SoftPerfect Pty Ltd, Australia</copyright>
+        <copyright>© 2000-2026 SoftPerfect Pty Ltd, Australia</copyright>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <iconUrl>https://rawcdn.githack.com/asheroto/ChocolateyPackages/271ab8e5613d50510f06944385692b9cb3852cc4/netscan.install/icon.png</iconUrl>
         <releaseNotes>https://www.softperfect.com/products/changelog.php?product_id=1</releaseNotes>
