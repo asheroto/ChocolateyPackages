@@ -28,7 +28,7 @@ This is a virtual package to help find and install [Logitech Setpoint](https://c
         <tags>logitech setpoint mouse utility util</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/logitech-setpoint</packageSourceUrl>
         <dependencies>
-            <dependency id="setpoint" version="6.90.66" />
+            <dependency id="setpoint" version="[6.90.66]" />
         </dependencies>
     </metadata>
     <files>

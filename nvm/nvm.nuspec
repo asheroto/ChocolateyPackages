@@ -60,7 +60,7 @@ Full command reference: https://docs.nvm-windows.com/commands
         <tags>nvm node nodejs node.js version manager windows</tags>
         <packageSourceUrl>https://github.com/asheroto/ChocolateyPackages/tree/master/nvm</packageSourceUrl>
         <dependencies>
-            <dependency id="nvm.install" version="2.0.1" />
+            <dependency id="nvm.install" version="[2.0.1]" />
         </dependencies>
     </metadata>
 </package>

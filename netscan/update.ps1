@@ -32,7 +32,7 @@ try {
     # Update the package version and the dependency version
     $content = Get-Content $NuspecPath -Raw
     $content = $content -replace '(?<=<version>).*?(?=</version>)', $InstallVersion
-    $content = $content -replace '<dependency id="netscan.install"[^/]*/>', "<dependency id=`"netscan.install`" version=`"$InstallVersion`" />"
+    $content = $content -replace '<dependency id="netscan.install"[^/]*/>', "<dependency id=`"netscan.install`" version=`"[$InstallVersion]`" />"
     Set-Content -Path $NuspecPath -Value $content -NoNewline
     Write-Output "Updated to version $InstallVersion"
 

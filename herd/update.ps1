@@ -52,7 +52,7 @@ if ($versionMatch.Success) {
         $nuspecContent = [regex]::Replace($nuspecContent, $versionTagPattern, "<version>$versionNumber</version>")
 
         # Update the dependency version
-        $nuspecContent = [regex]::Replace($nuspecContent, $dependencyVersionPattern, "<dependency id=`"$dependencyID`" version=`"$versionNumber`" />")
+        $nuspecContent = [regex]::Replace($nuspecContent, $dependencyVersionPattern, "<dependency id=`"$dependencyID`" version=`"[$versionNumber]`" />")
 
         # Save the updated content back to the nuspec file
         Set-Content -Path $nuspecFile -Value $nuspecContent -Encoding UTF8
@@ -74,7 +74,7 @@ if ($versionMatch.Success) {
 
         # Push the package to Chocolatey
         if ($AutoPush) {
-            $filename = "recuva.$($Latest.Version).nupkg"
+            $filename = "herd.$versionNumber.nupkg"
             Write-Output "Pushing $filename to Chocolatey..."
             choco push $filename
         }

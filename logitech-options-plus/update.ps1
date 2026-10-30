@@ -50,7 +50,7 @@ if ($versionMatch.Success) {
         $nuspecContent = [regex]::Replace($nuspecContent, $versionTagPattern, "<version>$versionNumber</version>")
 
         # Update the dependency version
-        $nuspecContent = [regex]::Replace($nuspecContent, $dependencyVersionPattern, "<dependency id=`"logioptionsplus`" version=`"$versionNumber`" />")
+        $nuspecContent = [regex]::Replace($nuspecContent, $dependencyVersionPattern, "<dependency id=`"logioptionsplus`" version=`"[$versionNumber]`" />")
 
         # Save the updated content back to the nuspec file
         Set-Content -Path $nuspecFile -Value $nuspecContent -Encoding UTF8
