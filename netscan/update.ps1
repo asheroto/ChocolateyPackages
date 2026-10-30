@@ -11,6 +11,7 @@ $ParentPath = Split-Path -Parent $ScriptPath
 $PackageName = 'netscan'
 $NuspecPath = Join-Path $ScriptPath "$PackageName.nuspec"
 $InstallNuspecPath = Join-Path $ParentPath 'netscan.install\netscan.install.nuspec'
+$IgnoreVersion = '26.9.0'
 
 Push-Location $ScriptPath
 try {
@@ -24,7 +25,7 @@ try {
         throw "Invalid netscan.install version: $InstallVersion"
     }
 
-    if ($InstallVersion -eq $NuspecVersion) {
+    if ($InstallVersion -eq $NuspecVersion -or $InstallVersion -eq $IgnoreVersion) {
         Write-Output "No update needed."
         return
     }

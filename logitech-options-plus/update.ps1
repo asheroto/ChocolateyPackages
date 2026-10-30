@@ -6,6 +6,7 @@ Write-Output ("-" * 60)
 $PackageName = "logitech-options-plus"
 $nuspecFile = "logitech-options-plus.nuspec"
 $AutoPush = $true
+$IgnoreVersion = '2.8.981479.20261005'
 $versionTagPattern = '<version>(.*?)<\/version>'
 $dependencyVersionPattern = '(<dependency id="logioptionsplus" version=")([^"]+)(" \/\>)'
 $versionPattern = [regex]::new('Logi Options\+\s*([\d.]+)', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
@@ -43,7 +44,7 @@ if ($versionMatch.Success) {
     Write-Output "Version Number: $versionNumber"
 
     # Compare the fetched version number with the current version number
-    if ($versionNumber -ne $currentVersion) {
+    if ($versionNumber -ne $currentVersion -and $versionNumber -ne $IgnoreVersion) {
         Write-Output "New version available: $versionNumber"
 
         # Update the main version

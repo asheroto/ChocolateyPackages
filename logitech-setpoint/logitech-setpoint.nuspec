@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>logitech-setpoint</id>
-        <version>6.90.66</version>
+        <version>6.90.66.20261030</version>
         <title>Logitech SetPoint</title>
         <authors>Logitech</authors>
         <owners>asheroto, bcurran3</owners>
